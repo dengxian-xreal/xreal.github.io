@@ -1,21 +1,41 @@
-# Docsify
+# Website
 
-<!-- toc -->
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## 修改
-基于 [docsify](https://docsify.js.org/#/) 做了一些修改：
-* 代码高亮加入行号支持，同时把 Prism 支持的语言都打包加进来了。
-* 左侧导航栏加入了类似于 GitBook 的标题索引，可以设置 `showLevel: false` 来关闭索引。
-* 页面支持生成 toc 目录，在需要生成目录的地方加入 `<!-- toc -->` 即可，可以通过 `tocLevel: 3` 来设置生成目录的最小标题级别。
-* 对样式做了一些修改。
+### Installation
 
-可以点击 [这里](http://doc.zhangjikai.com/template/template.rar) 下载模版文件，直接可以使用。更多的使用方法可以参考 [官网](https://docsify.js.org/)。
+```
+$ yarn
+```
 
+### Local Development
 
+```
+$ yarn start
+```
 
-## Change
-* Add line number for highlight code.
-* Add number index for sidebar.
-* Add toc auto generation for markdown file.
-* Change css style.
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
