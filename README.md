@@ -1,41 +1,26 @@
-# Website
+# NRSDK Documentation
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
 
-```
-$ yarn
-```
+1. Git clone this repo
 
-### Local Development
+2. Open a terminal or command prompt and go to this project directory.
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
+3. Install Docusaurus
 
 ```
-$ yarn build
+npm install
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
+4. Use the following command to start the Docusaurus Development Server:
 
 ```
-$ USE_SSH=true yarn deploy
+npm run start
 ```
 
-Not using SSH:
+This will launch your Docusaurus site locally, and you can view your site at http:// localhost:3000 in your browser.
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+5. Then you can modify the md files in /docs with any markdown editor you like, such as Typora, and you can commit pull requests.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
