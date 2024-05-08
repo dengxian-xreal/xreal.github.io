@@ -12,21 +12,21 @@ The core features provided by NRSDK are Spatial Computing, Optimized Rendering, 
 
 - **Multi-modal Interactions** provide intuitive choices of interactions for various use cases.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FfJ8cMOd9krKGsr6qDXxx%2F%25E6%2588%25AA%25E5%25B1%258F2023-05-26%252019.56.12.png&width=768&dpr=4&quality=100&sign=98e0c52b81a876864767f1cab3cfc786347dd738b86202a7674ab5d5843f83e4)
+![NRSDKArchitecture](./Images/NRSDKArchitecture.png)
 
 ### Spatial Computing
 
 - **6DoF Tracking** technology uses the two SLAM cameras located on both sides of the XREAL glasses to identify feature points, tracking how these points move over time. Combining the movement of these points with readings from the glasses’ IMU sensors, NRSDK accurately tracks both the position and orientation of the glasses as it moves through environment. 6DoF tracking also provides developers with real-time mapping constructions and 3D point clouds, giving the applications information on the physical structures of the environment.
 
-![https://nreal-public.nreal.ai/developer/img/corefeature01.gif](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature01.gif&width=300&dpr=4&quality=100&sign=478bb33af5dd3fef519c963cfa870c6af3dc8714633bf8b78ac7241f560a4450)
+<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature01.gif&width=300&dpr=4&quality=100&sign=478bb33af5dd3fef519c963cfa870c6af3dc8714633bf8b78ac7241f560a4450" alt="https://nreal-public.nreal.ai/developer/img/corefeature01.gif"  />
 
 - **Plane Detection** enables Xreal glasses to detect flat surfaces (both horizontal and vertical) in the environment, such as a table or a wall. The transformation of the plane is continuously updated. When the glasses move around, the plane can be extended, and multiple planes can merge into one when they overlap.
 
-![https://nreal-public.nreal.ai/developer/img/corefeature02.gif](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature02.gif&width=300&dpr=4&quality=100&sign=fd54d3c57e53478a3efc13a99869039a3656772999f41ca10b18867514401b6c)
+<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature02.gif&width=300&dpr=4&quality=100&sign=fd54d3c57e53478a3efc13a99869039a3656772999f41ca10b18867514401b6c" alt="https://nreal-public.nreal.ai/developer/img/corefeature02.gif" style="zoom:50%;" />
 
 - **Image Tracking** allows apps to recognize images and build augmented reality experiences around them. By adding additional images to the database, multiple images can be detected in a session, including the customized ones.
 
-![https://nreal-public.nreal.ai/developer/img/corefeature03.gif](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature03.gif&width=300&dpr=4&quality=100&sign=8b194ff3de826873e38da04703f6cae700f11e43e82ba9cc6dc0d3474f9dcb48)
+<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature03.gif&width=300&dpr=4&quality=100&sign=8b194ff3de826873e38da04703f6cae700f11e43e82ba9cc6dc0d3474f9dcb48" alt="https://nreal-public.nreal.ai/developer/img/corefeature03.gif" style="zoom:50%;" />
 
 - **Hand Tracking** recognizes gestures and tracks joint poses of hands in real-time. Sharing the same coordinate systems with the glasses tracking, joint pose data accurately matches actual joint positions and orientations, allowing interactions with virtual objects in a highly immersive manner.
 
