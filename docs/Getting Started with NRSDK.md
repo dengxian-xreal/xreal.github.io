@@ -55,9 +55,10 @@ You could either configure your project automatically via NRSDK **Project Tips**
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FoJrXFOKAo8g4YG8sRM02%2Fimage.png&width=768&dpr=4&quality=100&sign=8326424528a478366f85518af28c09e5d94d3c83c349c600f69385bfa618bad2" alt="Your Image Description" class="center-image"/>
 
 - Click **Accept All** in the popup window
-
+<figure className="my-custom-figure">
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FRaTSzHoHozvQTkC3hc1E%2Fimage.png&width=768&dpr=4&quality=100&sign=305aba886db1774185459ee720f619d8a8b0770de5d43e1efa9f6713a62c5a1a" alt="Your Image Description" class="center-image"/>
-
+<figcaption>Project Tips</figcaption>
+</figure>
 - Wait for Unity to process. The **Project Tips** window should appear as empty when finished.
 
 
@@ -93,12 +94,15 @@ You could either configure your project automatically via NRSDK **Project Tips**
 ### 4. Configure Compatible Devices 
 
 You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the NRSDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
-
+<figure className="my-custom-figure">
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F701VQE4rmKSTNDR9GBWv%2Fimage.png&width=768&dpr=4&quality=100&sign=a7c4fce7fc9c11f1c5a3990bacbedd49fb5a040e5a9e80ca055852048397cbd8" alt="Your Image Description" class="center-image"/>
+  <figcaption>Project</figcaption>
+</figure>
 
-
+<figure className="my-custom-figure">
 <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163825424.png" alt="Your Image Description" class="center-image"/>
-
+<figcaption>NR Project Config</figcaption>
+</figure>
 By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
 
 If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, NRSDK will not try to adapt automatically, and the app will not run on unsupported devices.

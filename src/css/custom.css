@@ -49,11 +49,6 @@
   margin: auto;
 }
 
-.my-custom-figure img {
-  width: 100%;
-  display: block;
-}
-
 .my-custom-figure figcaption {
   text-align: center;
   margin-top: 8px;
