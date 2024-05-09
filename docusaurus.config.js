@@ -65,6 +65,14 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      announcementBar: {
+        id: 'New hackathon',
+        content:
+          'New hackathon is coming! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="https://opensource.facebook.com/support-ukraine"> Have fun with us</a>.',
+        backgroundColor: '#f7e6f7',
+        textColor: '#000',
+        isCloseable: true,
+      },
       navbar: {
         title: 'NRSDK',
         logo: {
