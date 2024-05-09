@@ -68,7 +68,7 @@ const config = {
       navbar: {
         title: 'NRSDK',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'NRSDK Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -79,6 +79,9 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docsVersionDropdown',
+          },
           {
             href: 'https://developer.xreal.com/download',
             label: 'SDK Download',
