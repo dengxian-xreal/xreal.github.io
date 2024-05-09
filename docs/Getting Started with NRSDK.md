@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Getting Started with NRSDK
 
 Start developing your NRSDK Unity apps on Android phone.
