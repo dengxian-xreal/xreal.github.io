@@ -80,6 +80,16 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            href: 'https://developer.xreal.com/download',
+            label: 'SDK Download',
+            position: 'right',
+          },
+          {
+            href: 'https://developer.xreal.com/reference/nrsdk/overview',
+            label: 'API Reference',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
