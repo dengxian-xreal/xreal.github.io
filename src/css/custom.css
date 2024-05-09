@@ -43,3 +43,20 @@
   width: 300px; /* 或任何适合的大小 */
   height: auto; /* 保持图片的宽高比 */
 }
+
+.my-custom-figure {
+  width: 80%; /* 或者其他需要的宽度 */
+  margin: auto;
+}
+
+.my-custom-figure img {
+  width: 100%;
+  display: block;
+}
+
+.my-custom-figure figcaption {
+  text-align: center;
+  margin-top: 8px;
+  color: #757575; /* 灰色字体颜色 */
+  font-size: 0.85em; /* 较小的字体大小 */
+}

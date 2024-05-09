@@ -103,9 +103,11 @@ If you only want the application to run on a specific device (Light/Air), you ma
 
 ### 5. Configure AR Features
 
-- Find and click `Assets/NRSDK/NRKernalSessionConfig` in Unity project folder, make sure the plane tracking, image tracking is configured properly as the following default configuration: <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163552390.png" alt="Your Image Description" class="center-image"/>
-
-NRKernalSessionConfig
+- Find and click `Assets/NRSDK/NRKernalSessionConfig` in Unity project folder, make sure the plane tracking, image tracking is configured properly as the following default configuration: 
+<figure className="my-custom-figure">
+  <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163552390.png" alt="Your Image Description" class="center-image"/>
+  <figcaption>NRKernalSessionConfig</figcaption>
+</figure>
 
 - Force Kill While Glass Switch Mode: Unselect this option to ensure your app will not be killed when users switch the mode between 2D and 3D mode.
 
@@ -121,9 +123,10 @@ Please note that **Plane Finding Mode** and **Image Tracking Mode** will implici
 
 ### 7. Remove Extra Libraries to Downsize Your APK
 
-
+<figure className="my-custom-figure">
 <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/NRSDKLibraryStripConfig.png" class="center-image"/>
-
+  <figcaption>NR Library Strip Config</figcaption>
+</figure>
 Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This mode enables the SDK libraries to be loaded from our server, known as Nebula, which can significantly reduce the APK size. However, developers are required to manually deselect any unnecessary libraries. For instance, if your application only requires the meshing feature, you can remove the other libraries by checking them off in the `**NRLibraryStripConfig**`. This action will help to reduce the size of your APK.
 
 ### 8. Building NRSDK App for Android
