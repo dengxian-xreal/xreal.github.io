@@ -101,7 +101,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/nreal-ai',
             label: 'GitHub',
             position: 'right',
           },
