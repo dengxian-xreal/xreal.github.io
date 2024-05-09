@@ -55,7 +55,7 @@ Learn how to create a virtual pet with plane detection.
     boxSizing: 'border-box',
     top: 0,
     left: 0,
-    width: '100%',
+    width: '750px',
     height: '421.875px',
     border: 0,
     scrollBehavior: 'auto !important'

@@ -153,8 +153,10 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: prismThemes.github,
+        additionalLanguages: ['csharp'],
+        theme: prismThemes.nightOwlLight,
         darkTheme: prismThemes.dracula,
+        defaultLanguage: 'csharp',
       },
     }),
 };

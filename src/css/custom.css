@@ -55,3 +55,15 @@
   color: #757575; /* 灰色字体颜色 */
   font-size: 0.85em; /* 较小的字体大小 */
 }
+
+
+table {
+  display:table;
+  width: 100%;
+  margin: 0 auto;
+  border: #1fa588;
+}
+
+th {
+  background-color: #f4f4f4;
+}
