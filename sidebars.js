@@ -29,14 +29,8 @@ const sidebars = {
 
     'Getting Started with NRSDK',
 
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-
     'Sample Code',
-    // 'Tutorials',
+    'Tutorials',
     {
       type: 'category',
       label: 'Release Note',
