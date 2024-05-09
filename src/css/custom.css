@@ -70,10 +70,22 @@ th {
 
 img[alt="banner"] {
   width: 100vw;   /* 视口宽度的100% */
-  height: 50vh;  /* 视口高度的100% */
+  height: 100vh;  /* 视口高度的100% */
   object-fit: cover; /* 覆盖整个内容区域，可能会裁剪图片 */
   position: fixed; /* 固定定位 */
   top: 0;
   left: 0;
   z-index: -1; /* 将图片放到内容的后面 */
+}
+
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
