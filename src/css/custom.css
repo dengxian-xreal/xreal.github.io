@@ -30,8 +30,16 @@
 }
 
 
-image {
+.center-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* located in src/css/custom.css */
+.scale-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px; /* 或任何适合的大小 */
+  height: auto; /* 保持图片的宽高比 */
 }
