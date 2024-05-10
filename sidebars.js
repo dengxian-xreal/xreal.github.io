@@ -79,6 +79,28 @@ const sidebars = {
         'Input and Camera/NRCameraRig', 
       ],
     },
+    'Hand Tracking',
+    {
+      type: 'category',
+      label: 'Image Tracking',
+      link:{type:'doc',id:'Image Tracking/intro'},
+      items: [
+        'Image Tracking/Marker',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Plane Detection (Tutorial)',
+      link:{type:'doc',id:'Plane Detection/Overview'},
+      items: [
+        'Plane Detection/Import the package',
+        'Plane Detection/Detect planes in the real world',
+        'Plane Detection/Perform a hit test against detected planes',
+        'Plane Detection/Add a car',
+        'Plane Detection/Add gems',
+        'Plane Detection/Wrap up',
+      ],
+    },
     {
       type: 'category',
       label: 'Depth Mesh',
