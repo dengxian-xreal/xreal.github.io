@@ -45,7 +45,7 @@ const config = {
           versions: {
               current: {
                   label: '2.2.0',
-                  path: '/',
+                  path: '2.2.0',
                   badge: true
               }
           },

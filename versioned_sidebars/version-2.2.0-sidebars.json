@@ -1,0 +1,182 @@
+{
+  "tutorialSidebar": [
+    "NRSDKOverview",
+    {
+      "type": "category",
+      "label": "XREAL Devices",
+      "link": {
+        "type": "generated-index",
+        "title": "XREAL Devices"
+      },
+      "items": [
+        "XREALDevices/Compatibility",
+        "XREALDevices/Controller",
+        "XREALDevices/XREAL Glasses"
+      ]
+    },
+    "Getting Started with NRSDK",
+    "Sample Code",
+    "Tutorials",
+    {
+      "type": "category",
+      "label": "Release Note",
+      "link": {
+        "type": "generated-index",
+        "title": "Release Notes"
+      },
+      "items": [
+        "Release Note/NRSDK 2.2.0",
+        "Release Note/NRSDK 2.1.1",
+        "Release Note/NRSDK 2.1.0",
+        "Release Note/NRSDK 1.10.2",
+        "Release Note/NRSDK 1.9.5",
+        "Release Note/NRSDK 1.9.3",
+        "Release Note/NRSDK 1.9.1",
+        "Release Note/NRSDK 1.8.0",
+        "Release Note/NRSDK 1.7.0",
+        "Release Note/NRSDK 1.6.0"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Input and Camera",
+      "link": {
+        "type": "generated-index",
+        "title": "Input and Camera"
+      },
+      "items": [
+        "Input and Camera/NRInput",
+        "Input and Camera/Interact with Unity UI",
+        "Input and Camera/Customize Controller UI",
+        "Input and Camera/NRCameraRig"
+      ]
+    },
+    "Hand Tracking",
+    {
+      "type": "category",
+      "label": "Image Tracking",
+      "link": {
+        "type": "doc",
+        "id": "Image Tracking/intro"
+      },
+      "items": [
+        "Image Tracking/Marker"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Plane Detection (Tutorial)",
+      "link": {
+        "type": "doc",
+        "id": "Plane Detection/Overview"
+      },
+      "items": [
+        "Plane Detection/Import the package",
+        "Plane Detection/Detect planes in the real world",
+        "Plane Detection/Perform a hit test against detected planes",
+        "Plane Detection/Add a car",
+        "Plane Detection/Add gems",
+        "Plane Detection/Wrap up"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Depth Mesh",
+      "link": {
+        "type": "doc",
+        "id": "Depth Mesh/Overview"
+      },
+      "items": [
+        "Depth Mesh/Meshing Manager Overview",
+        "Depth Mesh/Use Meshes in the Editor",
+        "Depth Mesh/Tutorial-Mesh Collision"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Spatial Anchor",
+      "link": {
+        "type": "doc",
+        "id": "Spatial Anchor/intro"
+      },
+      "items": [
+        "Spatial Anchor/MappingExampleScene",
+        {
+          "type": "category",
+          "label": "Tutorial-HalloweenTreasureHunt",
+          "link": {
+            "type": "doc",
+            "id": "Spatial Anchor/Tutorial-HalloweenTreasureHunt/Intro"
+          },
+          "items": [
+            "Spatial Anchor/Tutorial-HalloweenTreasureHunt/HandletheSituationofFailedAnchorSaving"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Tutorial: Sharing Anchors",
+          "link": {
+            "type": "doc",
+            "id": "Spatial Anchor/Tutorial-Sharing Anchors/intro"
+          },
+          "items": [
+            "Spatial Anchor/Tutorial-Sharing Anchors/SettingUpPhoton",
+            "Spatial Anchor/Tutorial-Sharing Anchors/Firebase",
+            "Spatial Anchor/Tutorial-Sharing Anchors/Aliyun",
+            "Spatial Anchor/Tutorial-Sharing Anchors/CloudSaveandLoad",
+            "Spatial Anchor/Tutorial-Sharing Anchors/SharingAnchorswithPhoton"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Tools",
+      "link": {
+        "type": "generated-index",
+        "title": "Tools"
+      },
+      "items": [
+        "Tools/Single Pass Stereo Rendering",
+        "Tools/First Person View",
+        "Tools/Emulator",
+        "Tools/XR Streaming",
+        "Tools/Dual Screen Display"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Miscellaneous",
+      "link": {
+        "type": "generated-index",
+        "title": "Miscellaneous"
+      },
+      "items": [
+        "Miscellaneous/Access RGB Camera",
+        "Miscellaneous/NRSDK Coordinate Systems",
+        "Miscellaneous/MRTK2 Integration",
+        "Miscellaneous/MRTK3 Integration",
+        "Miscellaneous/Notification popup",
+        "Miscellaneous/Reset Camera",
+        "Miscellaneous/Render Metrics",
+        "Miscellaneous/Render MonoMode"
+      ]
+    },
+    "Frequently Asked Questions",
+    {
+      "type": "category",
+      "label": "Design Guide",
+      "link": {
+        "type": "generated-index",
+        "title": "Design Guide",
+        "description": "A quick and simple guide aimed at providing fundamental design knowledge as well as establishing some common standards for user interaction in XREAL mixed-reality apps. The guide is broken down into four principle sections:"
+      },
+      "items": [
+        "Design Guide/Display",
+        "Design Guide/Interacting",
+        "Design Guide/Controlling",
+        "Design Guide/Navigating"
+      ]
+    }
+  ]
+}
