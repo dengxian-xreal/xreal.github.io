@@ -19,7 +19,7 @@ const sidebars = {
   // But you can create a sidebar manually
   
   tutorialSidebar: [
-    'intro',
+    'NRSDKOverview',
     
     {
       type: 'category',
@@ -32,7 +32,7 @@ const sidebars = {
         // keywords: ['guides'],
         // image: '/img/docusaurus.png',
       },
-      items: ['XREAL Devices/Compatibility','XREAL Devices/Controller','XREAL Devices/XREAL Glasses'],
+      items: ['XREALDevices/Compatibility','XREALDevices/Controller','XREALDevices/XREAL Glasses'],
     },
 
     'Getting Started with NRSDK',
@@ -109,6 +109,93 @@ const sidebars = {
         'Depth Mesh/Meshing Manager Overview',
         'Depth Mesh/Use Meshes in the Editor',
         'Depth Mesh/Tutorial-Mesh Collision',
+      ],
+    },
+
+
+    {
+      type: 'category',
+      label: 'Spatial Anchor',
+      link: {type:'doc',id:'Spatial Anchor/intro'}, 
+      items: [
+        'Spatial Anchor/MappingExampleScene',
+        {
+          type: 'category',
+          label: 'Tutorial-HalloweenTreasureHunt',
+          link: {type:'doc',id:'Spatial Anchor/Tutorial-HalloweenTreasureHunt/Intro'},
+          items: [
+            'Spatial Anchor/Tutorial-HalloweenTreasureHunt/HandletheSituationofFailedAnchorSaving',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Tutorial: Sharing Anchors',
+          link: {type:'doc',id:'Spatial Anchor/Tutorial-Sharing Anchors/intro'},
+          items: [
+            'Spatial Anchor/Tutorial-Sharing Anchors/SettingUpPhoton',
+            'Spatial Anchor/Tutorial-Sharing Anchors/Firebase',
+            'Spatial Anchor/Tutorial-Sharing Anchors/Aliyun',
+            'Spatial Anchor/Tutorial-Sharing Anchors/CloudSaveandLoad',
+            'Spatial Anchor/Tutorial-Sharing Anchors/SharingAnchorswithPhoton',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Tools',
+      link: {
+        type: 'generated-index',
+        title: 'Tools',
+        // description: 'Learn about the most important Docusaurus concepts!',
+        // slug: '/category/docusaurus-guides',
+        // keywords: ['guides'],
+        // image: '/img/docusaurus.png',
+      },
+      items: [
+        'Tools/Single Pass Stereo Rendering',
+        'Tools/First Person View',
+        'Tools/Emulator',
+        'Tools/XR Streaming',
+        'Tools/Dual Screen Display',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Miscellaneous',
+      link: {
+        type: 'generated-index',
+        title: 'Miscellaneous',
+        // description: 'Learn about the most important Docusaurus concepts!',
+        // slug: '/category/docusaurus-guides',
+        // keywords: ['guides'],
+        // image: '/img/docusaurus.png',
+      },
+      items: [
+        'Miscellaneous/Access RGB Camera',
+        'Miscellaneous/NRSDK Coordinate Systems',
+        'Miscellaneous/MRTK2 Integration',
+        'Miscellaneous/MRTK3 Integration',
+        'Miscellaneous/Notification popup',
+        'Miscellaneous/Reset Camera',
+        'Miscellaneous/Render Metrics',
+        'Miscellaneous/Render MonoMode(Obsolete)',
+      ],
+    },
+    
+    'Frequently Asked Questions',
+
+    {
+      type: 'category',
+      label: 'Design Guide',
+      link: {type:'doc',id:'Design Guide/intro'},
+      items: [
+        'Design Guide/Display',
+        'Design Guide/Interacting',
+        'Design Guide/Controlling',
+        'Design Guide/Navigating',
       ],
     },
   ],
