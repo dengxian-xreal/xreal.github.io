@@ -1,3 +1,6 @@
+---
+slug: /
+---
 # NRSDK Overview
 
 XREAL uses NRSDK to develop mixed reality experiences. Using a simple development process and a high-level API, NRSDK offers a set of powerful MR features and enables your XREAL glasses to understand the real world.

@@ -41,11 +41,12 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: '/',
           lastVersion: 'current',
           versions: {
               current: {
                   label: '2.2.0',
-                  path: '2.2.0',
+                  path: '/',
                   badge: true
               }
           },
@@ -73,14 +74,14 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      announcementBar: {
-        id: 'New hackathon',
-        content:
-          'New hackathon is coming! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="https://opensource.facebook.com/support-ukraine"> Have fun with us</a>.',
-        backgroundColor: '#f7e6f7',
-        textColor: '#000',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'New hackathon',
+      //   content:
+      //     'New hackathon is coming! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="https://opensource.facebook.com/support-ukraine"> Have fun with us</a>.',
+      //   backgroundColor: '#f7e6f7',
+      //   textColor: '#000',
+      //   isCloseable: true,
+      // },
       navbar: {
         title: 'NRSDK',
         logo: {
@@ -92,7 +93,8 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
+            to:'/docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
