@@ -190,7 +190,15 @@ const sidebars = {
     {
       type: 'category',
       label: 'Design Guide',
-      link: {type:'doc',id:'Design Guide/intro'},
+      link: {
+        type: 'generated-index',
+        title: 'Design Guide',
+        description: 'A quick and simple guide aimed at providing fundamental design knowledge as well as establishing some common standards for user interaction in XREAL mixed-reality apps. The guide is broken down into four principle sections:',
+        // slug: '/category/docusaurus-guides',
+        // keywords: ['guides'],
+        // image: '/img/docusaurus.png',
+      },
+
       items: [
         'Design Guide/Display',
         'Design Guide/Interacting',
