@@ -89,6 +89,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'docsVersionDropdown',
+            
           },
           {
             href: 'https://developer.xreal.com/download',
