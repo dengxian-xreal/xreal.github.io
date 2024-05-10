@@ -4,7 +4,24 @@ NRSDK 1.9.3 & MRTK 2.8.0 Integration with Sample Projects
 
 ## Overview
 
-<iframe src="https://cdn.iframe.ly/Ty1f1Wg" allowfullscreen="" scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *;" style="box-sizing: border-box; outline: currentcolor; top: 0px; left: 0px; width: 750px; height: 421.875px; border: 0px; scroll-behavior: auto !important;"></iframe>
+
+
+
+<iframe 
+  src="https://cdn.iframe.ly/Ty1f1Wg" 
+  allowFullScreen 
+  scrolling="no" 
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
+  style={{
+    boxSizing: 'border-box',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '421.875px',
+    border: 0,
+    scrollBehavior: 'auto !important'
+  }}
+/>
 
 This github repo (https://github.com/nreal-ai/NRSDK-MRTK) contains extension that adds compatibility for NRSDK, including hand tracking and controller support, to Microsoft's open source Mixed Reality Toolkit ([MRTK](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/mrtk-getting-started)) for Unity. 
 

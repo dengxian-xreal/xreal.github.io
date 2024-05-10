@@ -181,7 +181,7 @@ const sidebars = {
         'Miscellaneous/Notification popup',
         'Miscellaneous/Reset Camera',
         'Miscellaneous/Render Metrics',
-        'Miscellaneous/Render MonoMode(Obsolete)',
+        'Miscellaneous/Render MonoMode',
       ],
     },
     
