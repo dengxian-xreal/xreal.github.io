@@ -121,7 +121,7 @@ const sidebars = {
         'Spatial Anchor/MappingExampleScene',
         {
           type: 'category',
-          label: 'Tutorial-HalloweenTreasureHunt',
+          label: 'Tutorial: Halloween Treasure Hunt',
           link: {type:'doc',id:'Spatial Anchor/Tutorial-HalloweenTreasureHunt/Intro'},
           items: [
             'Spatial Anchor/Tutorial-HalloweenTreasureHunt/HandletheSituationofFailedAnchorSaving',
