@@ -6,6 +6,10 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'NRSDK',
@@ -43,6 +47,8 @@ const config = {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
           lastVersion: 'current',
+          remarkPlugins: [require('remark-math')],
+          rehypePlugins: [require('rehype-katex')],
           versions: {
               current: {
                   label: '2.2.0',
@@ -69,6 +75,15 @@ const config = {
     ],
   ],
 
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

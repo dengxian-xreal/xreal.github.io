@@ -46,7 +46,8 @@ public class NRFrame
 }
 ```
 
-- For example, given a vector's coordinate 𝑃𝑑*P**d* in the Device's coordinate frame, and using the extrinsic transformation matrix ℎ𝑇𝑑*h**T**d* obtained as above, we can compute the vector's coordinate 𝑃ℎ*P**h* in the Head coordinate frame, by 𝑃ℎ=ℎ𝑇𝑑∗𝑃𝑑*P**h*=*h**T**d*∗*P**d*
+- For example, given a vector's coordinate $P_d$ in the Device's coordinate frame, and using the extrinsic transformation matrix $^h\mathbf{T}_d$ obtained as above, we can compute the vector's coordinate $P_h$ in the Head coordinate frame, by
+$$P_h = ^h\mathbf{T}_d * P_a$$
 
 #### Example 1: Getting the Extrinsics of RGB Camera From Head
 
@@ -134,11 +135,17 @@ Vector3 pInLCam = cvLcam_T_cvRcam.MultiplyPoint(pInRCam);
 
 ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FyVI6gOwuKJJK6nKVtvnj%2Fimage5.png&width=768&dpr=4&quality=100&sign=c021ff592f96d60f1aa0488f501cdb1e39c9471a658d669524ac10faf681b4ff)
 
-- The camera intrinsic matrix 𝐾*K* is composed of the focal lengths 𝑓𝑥*f**x* and 𝑓𝑦*f**y*, and the principal point 𝑐𝑥*c**x* and 𝑐𝑦*c**y*, expressed in pixel units. 
+- The camera intrinsic matrix $\mathbf{K}$ is composed of the focal lengths $f_x$ and $f_y$, and the principal point $c_x$ and $c_y$, expressed in pixel units.
 
-𝐾=[𝑓𝑥0𝑐𝑥0𝑓𝑦𝑐𝑦001]*K*=*f**x*000*f**y*0*c**x**c**y*1
+$$
+\mathbf{K} = \begin{bmatrix}
+f_x & 0 & c_x \\
+0 & f_y & c_y \\
+0 & 0 & 1
+\end{bmatrix}
+$$
 
-- The distortion parameters contain radial coefficients 𝑘1,𝑘2,𝑘3,𝑘4,𝑘5*k*1,*k*2,*k*3,*k*4,*k*5 and tangential coefficients 𝑝1,𝑝2*p*1,*p*2. The order of NRDistortionParams is (𝑘1,𝑘2,𝑝1,𝑝2,𝑘3,𝑘4,𝑘5)(*k*1,*k*2,*p*1,*p*2,*k*3,*k*4,*k*5).
+- The distortion parameters contain radial coefficients $k_1, k_2, k_3, k_4, k_5$ and tangential coefficients $p_1, p_2$. The order of NRDistortionParams is $(k_1, k_2, p_1, p_2, k_3, k_4, k_5)$.
 
 ### Interface for Camera Image Data
 
