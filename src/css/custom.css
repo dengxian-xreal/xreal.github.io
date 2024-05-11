@@ -89,3 +89,7 @@ img[alt="banner"] {
   display: inline-block;
   font-size: 16px;
 }
+
+.navbar__brand img {
+  height: 30px; /* 调整这个值来改变 logo 的高度 */
+}

@@ -14,7 +14,7 @@ import rehypeKatex from 'rehype-katex';
 const config = {
   title: 'NRSDK',
   tagline: 'NRSDK is cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Glasses.ico',
 
   // Set the production url of your site here
   url: 'https://xreal.github.io',
@@ -82,6 +82,7 @@ const config = {
       integrity:
         'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
+      
     },
   ],
   themeConfig:
@@ -101,7 +102,8 @@ const config = {
         title: 'NRSDK',
         logo: {
           alt: 'NRSDK Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
+          style: { height: '30px' },
         },
         items: [
           {
