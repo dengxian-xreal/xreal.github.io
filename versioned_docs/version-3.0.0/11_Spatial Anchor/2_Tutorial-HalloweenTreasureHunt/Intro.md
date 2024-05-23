@@ -8,13 +8,11 @@ At the end of this tutorial, you will have a fully functional game where players
 
 ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fo6alsA8Wc1HSCUMS4Oy3%2FCleanShot%25202023-07-24%2520at%252016.34.51.gif&width=768&dpr=4&quality=100&sign=608f50d83d395144b333eb9b5102fb2fa0ae56f4a735538d7886d313e380b208)
 
-**Note:** For your convenience, we've provided a Unity package of the final product. You can download it here to see what the finished game looks like.
+:::info
+For your convenience, we've provided a Unity package of the final product. You can download it here to see what the finished game looks like.
 
-
-
-35MB
-
-TreasureHuntGame.unitypackage
+[TreasureHuntGame.unitypackage](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/cMUKbY6rQkCWFQttpMSh/TreasureHuntGame.unitypackage)
+:::
 
 ### What You'll Need
 
