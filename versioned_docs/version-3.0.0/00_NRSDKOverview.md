@@ -1,13 +1,13 @@
 ---
 slug: /
 ---
-# NRSDK Overview
+# XREAL SDK Overview
 
-XREAL uses NRSDK to develop mixed reality experiences. Using a simple development process and a high-level API, NRSDK offers a set of powerful MR features and enables your XREAL glasses to understand the real world.
+By utilizing the XREAL SDK, innovative mixed reality experiences are developed. Using a simple development process and a high-level API, XREAL SDK offers a set of powerful MR features and enables your XREAL glasses to understand the real world.
 
-NRSDK supports the development environment of **Unity 2019.4.X and above**.
+XREAL SDK supports the development environment of **Unity 2019.4.X and above**.
 
-The core features provided by NRSDK are Spatial Computing, Optimized Rendering, and Multi-modal Interactions.
+The core features provided by XREAL SDK are Spatial Computing, Optimized Rendering, and Multi-modal Interactions.
 
 - **Spatial Computing** includes motion tracking, plane detection, image anchoring, and hand tracking, allowing the glasses to track their real-time position and orientation relative to the world and to understand the environment around them.
 
@@ -19,7 +19,7 @@ The core features provided by NRSDK are Spatial Computing, Optimized Rendering, 
 
 ### Spatial Computing
 
-**6DoF Tracking** technology uses the two SLAM cameras located on both sides of the XREAL glasses to identify feature points, tracking how these points move over time. Combining the movement of these points with readings from the glasses’ IMU sensors, NRSDK accurately tracks both the position and orientation of the glasses as it moves through environment. 6DoF tracking also provides developers with real-time mapping constructions and 3D point clouds, giving the applications information on the physical structures of the environment.
+**6DoF Tracking** technology uses the two SLAM cameras located on both sides of the XREAL glasses to identify feature points, tracking how these points move over time. Combining the movement of these points with readings from the glasses’ IMU sensors, XREAL SDK accurately tracks both the position and orientation of the glasses as it moves through environment. 6DoF tracking also provides developers with real-time mapping constructions and 3D point clouds, giving the applications information on the physical structures of the environment.
 
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature01.gif&width=300&dpr=4&quality=100&sign=478bb33af5dd3fef519c963cfa870c6af3dc8714633bf8b78ac7241f560a4450" alt="https://nreal-public.nreal.ai/developer/img/corefeature01.gif" width="500" height = "300" />
 
@@ -39,14 +39,14 @@ The core features provided by NRSDK are Spatial Computing, Optimized Rendering, 
 
 ### Optimized Rendering
 
-NRSDK optimizes the rendering performance in the backend to minimize the latency of the entire system and to reduce judder. It provides a smooth and comfortable user experience devoid of dizziness and sickness. You do not need to enable or tune rendering specifications as they are automatically applied.
+XREAL SDK optimizes the rendering performance in the backend to minimize the latency of the entire system and to reduce judder. It provides a smooth and comfortable user experience devoid of dizziness and sickness. You do not need to enable or tune rendering specifications as they are automatically applied.
 
-**Warping:** Instead of polling tracking data at the very beginning of each frame to render the image, NRSDK uses dynamically predicted poses of the glasses to warp the rendered image, reprojecting the warping frames to the displaybefore every VSync.
+**Warping:** Instead of polling tracking data at the very beginning of each frame to render the image, XREAL SDK uses dynamically predicted poses of the glasses to warp the rendered image, reprojecting the warping frames to the displaybefore every VSync.
 
 ### Multi-modal Interactions
 
 - **XREAL Light Controller (3DoF)**: A light 3DoF controller to interact with the virtual objects in a natural and intuitive way.
 
-- **XREAL Phone Controller (3DoF)**: An Android mobile phone can serve as a 3DoF controller for NRSDK applications. The phone screen supports gestures and various other touchscreen actions to provide interaction options.
+- **XREAL Phone Controller (3DoF)**: An Android mobile phone can serve as a 3DoF controller for XREAL SDK applications. The phone screen supports gestures and various other touchscreen actions to provide interaction options.
 
 For more interaction models, please refer to the [Design Guide](https://xreal.gitbook.io/nrsdk/design-guide/design-guide-overview).

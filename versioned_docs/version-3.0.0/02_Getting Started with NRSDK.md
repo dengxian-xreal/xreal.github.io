@@ -2,17 +2,17 @@
 sidebar_position: 3
 ---
 
-# Getting Started with NRSDK
+# Getting Started with XREAL SDK
 
-Start developing your NRSDK Unity apps on Android phone.
+Start developing your XREAL Unity apps on Android phone.
 
-This quickstart guide will help you set up your development environment and test out the sample app “Hello MR” using NRSDK.
+This quickstart guide will help you set up your development environment and test out the sample app “Hello MR” using XREAL SDK.
 
-### 1. Pre-requisites
+### 1. Prerequisites
 
 **Hardware Checklist**
 
-- A supported Android Phone. Please review the[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) list to ensure your phone model is compatible with the glasses and NRSDK.
+- A supported Android Phone. Please review the[ Device Compatibility](01_XREALDevices/Compatibility.md) list to ensure your phone model is compatible with the glasses and XREAL SDK.
 
 - A pair of **XREAL** glasses.
 
@@ -22,7 +22,7 @@ This quickstart guide will help you set up your development environment and test
 
 - [Unity 2019.4.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
 
-- Latest [NRSDK for Unity](https://developer.xreal.com/download)
+- Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
 
   The SDK is downloaded as `NRSDKForUnity_x.x.x.unitypackage`
 
@@ -32,11 +32,11 @@ This quickstart guide will help you set up your development environment and test
 
 ### 2. Creating a Unity Project
 
-We’re going to create a new Unity project and integrate NRSDK later on. To create a new Unity project:
+We’re going to create a new Unity project and integrate XREAL SDK later on. To create a new Unity project:
 
 - Open Unity Hub and create a new 3D project.
 
-- Import NRSDK for Unity
+- Import XREAL SDK for Unity
 
   - Select `Assets>Import Package>Custom` Package.
 
@@ -46,11 +46,11 @@ We’re going to create a new Unity project and integrate NRSDK later on. To cre
 
 ### 3. Configure Project Settings
 
-You could either configure your project automatically via NRSDK **Project Tips** tool or configure manually. These two ways are equivalent.
+You could either configure your project automatically via XREAL SDK **Project Tips** tool or configure manually. These two ways are equivalent.
 
 #### **Project Tips tool**
 
-- Go to NRSDK -> Project Tips in Unity menu
+- Go to XREAL SDK -> Project Tips in Unity menu
 
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FoJrXFOKAo8g4YG8sRM02%2Fimage.png&width=768&dpr=4&quality=100&sign=8326424528a478366f85518af28c09e5d94d3c83c349c600f69385bfa618bad2" alt="Your Image Description" class="center-image"/>
 
@@ -93,7 +93,7 @@ You could either configure your project automatically via NRSDK **Project Tips**
 
 ### 4. Configure Compatible Devices 
 
-You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the NRSDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
+You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the XREAL SDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
 <figure className="my-custom-figure">
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F701VQE4rmKSTNDR9GBWv%2Fimage.png&width=768&dpr=4&quality=100&sign=a7c4fce7fc9c11f1c5a3990bacbedd49fb5a040e5a9e80ca055852048397cbd8" alt="Your Image Description" class="center-image"/>
   <figcaption>Project</figcaption>
@@ -103,9 +103,9 @@ You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware tha
 <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163825424.png" alt="Your Image Description" class="center-image"/>
 <figcaption>NR Project Config</figcaption>
 </figure>
-By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
+By selecting VISION, XREAL SDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented XREAL SDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
 
-If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, NRSDK will not try to adapt automatically, and the app will not run on unsupported devices.
+If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, XREAL SDK will not try to adapt automatically, and the app will not run on unsupported devices.
 
 - support Multi Resume: This feature allows for different displays on the main screen (phone) and the secondary screen (glasses). When the AR app is sent to the background, the glasses continue to display the AR application, while the phone screen can show any 2D app. Essentially, this is dual-screen display functionality. This option is enabled by default, and after adding this feature, it requires permission on the phone upon first use.
 
@@ -135,18 +135,18 @@ Please note that **Plane Finding Mode** and **Image Tracking Mode** will implici
 <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/NRSDKLibraryStripConfig.png" class="center-image"/>
   <figcaption>NR Library Strip Config</figcaption>
 </figure>
-Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This mode enables the SDK libraries to be loaded from our server, known as Nebula, which can significantly reduce the APK size. However, developers are required to manually deselect any unnecessary libraries. For instance, if your application only requires the meshing feature, you can remove the other libraries by checking them off in the `**NRLibraryStripConfig**`. This action will help to reduce the size of your APK.
+Beginning with XREAL SDK version 2.2.0, we have introduced a new Loader mode. This mode enables the SDK libraries to be loaded from our server, known as Nebula, which can significantly reduce the APK size. However, developers are required to manually deselect any unnecessary libraries. For instance, if your application only requires the meshing feature, you can remove the other libraries by checking them off in the `**NRLibraryStripConfig**`. This action will help to reduce the size of your APK.
 
-### 8. Building NRSDK App for Android
+### 8. Building XREAL SDK App for Android
 1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FMoKBkh4ZItI620SjI3fB%2Fimage.png&width=768&dpr=4&quality=100&sign=d7917b19764c26c320b3e16d5d12fa8500a1a0f38bf3cb4e9075d724fce68853" alt="Your Image Description" class="center-image"/>
 
 
 2. Click **Player Settings**. Customize the **Company Name** and **Product Name.** 
 3. (Optional) Navigate to the **Android**> **Other Settings** panel to specify your build settings. As you have prepared **Step 3. Configure Project Settings,** you may leave the current configuration as it is. It is worth noting some of the other settings:
 
-- **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by NRSDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](https://xreal.gitbook.io/nrsdk/development/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
+- **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by XREAL SDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](https://xreal.gitbook.io/nrsdk/development/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
 
-- **Scripting Backend:** You must choose **IL2CPP** when building for ARM64 architecture. Note that starting from NRSDK 2.2, ARMv7 architecture is no longer supported.<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FijFH00KUpneZptdM1xaj%2Fimage.png&width=768&dpr=4&quality=100&sign=7c427706fce8673b8c60a167e55c1979693416747d46200b2b505fe0980786dd" alt="Your Image Description" class="center-image"/>
+- **Scripting Backend:** You must choose **IL2CPP** when building for ARM64 architecture. Note that starting from XREAL SDK 2.2, ARMv7 architecture is no longer supported.<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FijFH00KUpneZptdM1xaj%2Fimage.png&width=768&dpr=4&quality=100&sign=7c427706fce8673b8c60a167e55c1979693416747d46200b2b505fe0980786dd" alt="Your Image Description" class="center-image"/>
 
 
 
@@ -165,7 +165,7 @@ Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This m
 
 - Launch your app along with the XREAL Light controller. For instructions on how to use the XREAL Light controller, please refer to [Controller](https://nrealsdkdoc2.readthedocs.io/en/dev/Docs/Unity_EN/Develop/Controller.html#controller-guide).
 
-- Move around until NRSDK finds a horizontal plane and the detected plane will be covered with green grid.
+- Move around until XREAL SDK finds a horizontal plane and the detected plane will be covered with green grid.
 
 - Click the Trigger button to put an XREAL logo object on it.
 
