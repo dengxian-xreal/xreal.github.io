@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Start developing your XREAL Unity apps on Android phone.
 
-This quickstart guide will help you set up your development environment and test out the sample app “Hello MR” using XREAL SDK.
+This quickstart guide will help you set up your development environment and test out the sample app “Starter Guide” using XREAL SDK.
 
 ### 1. Prerequisites
 
@@ -24,7 +24,7 @@ This quickstart guide will help you set up your development environment and test
 
 - Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
 
-  The SDK is downloaded as `NRSDKForUnity_x.x.x.unitypackage`
+  The SDK is downloaded as `NRSDKForUnity_x.x.x.unitypackage` ⚠️
 
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
 
@@ -38,35 +38,24 @@ We’re going to create a new Unity project and integrate XREAL SDK later on. To
 
 - Import XREAL SDK for Unity
 
+  ⚠️how to import the latest SDK?
+
   - Select `Assets>Import Package>Custom` Package.
 
   - Select the `NRSDKForUnity_x.x.x.unitypackage` that you downloaded.
-
+  
   - In the **Importing** Package dialog, make sure that all package options are selected and click **Import**.
+  
 
 ### 3. Configure Project Settings
 
-You could either configure your project automatically via XREAL SDK **Project Tips** tool or configure manually. These two ways are equivalent.
+You could either configure your project automatically via XREAL SDK **Project Setup** tool or configure manually. These two ways are equivalent.
 
-#### **Project Tips tool**
+#### **Project Setup Tool**
 
-- Go to XREAL SDK -> Project Tips in Unity menu
+* To enable XREAL XR Plug-in, navigate to the project settings under **Edit > Project Settings > XR Plug-in Management** and open the Android tab. Check the **XREAL** plug-in. ![image-20240528115343943](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528115343943.png)
 
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FoJrXFOKAo8g4YG8sRM02%2Fimage.png&width=768&dpr=4&quality=100&sign=8326424528a478366f85518af28c09e5d94d3c83c349c600f69385bfa618bad2" alt="Your Image Description" class="center-image"/>
-
-- Click **Accept All** in the popup window
-<figure className="my-custom-figure">
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FRaTSzHoHozvQTkC3hc1E%2Fimage.png&width=768&dpr=4&quality=100&sign=305aba886db1774185459ee720f619d8a8b0770de5d43e1efa9f6713a62c5a1a" alt="Your Image Description" class="center-image"/>
-<figcaption>Project Tips</figcaption>
-</figure>
-- Wait for Unity to process. The **Project Tips** window should appear as empty when finished.
-
-
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FwRWKIm8sOvxV4y5aMehL%2Fimage.png&width=768&dpr=4&quality=100&sign=08a5791a2bb4cfa02fd44ad094b2883e0d051c32725c3890aaea9c89bdab4c5d" alt="Your Image Description" class="center-image scale-image"/>
-
-- Close the Project Tips window
-
-- Most of the settings have been completed here, but `OpenGL ES3` and `Write Permission` still need to be manually configured. Please refer to the manual configuration path below for specific settings.
+- Initially, there might be some project settings that have to be updated/fixed. To do so, go to `Project Validation` window. Click on the fix buttons next to the entries to apply the needed project settings. ![image-20240528114854485](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528114854485.png)
 
 #### **Manual Configuration**
 
