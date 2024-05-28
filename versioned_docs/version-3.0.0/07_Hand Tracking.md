@@ -34,3 +34,16 @@ To get started with XRI when using Ultraleap Hand Tracking, continue reading.
 
 ### Setup Guide
 
+1. Install [XR Hands](https://docs.unity3d.com/Packages/com.unity.xr.hands@1.2/manual/index.html), [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) and XR Plugin Management from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html).
+
+   ![image-20240528183600612](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183600612.png)
+
+   ![image-20240528183620602](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183620602.png)
+
+2. And you are ready to build your [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) project! if you want to test out [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) with your hands, we recommend installing the XR Interaction Toolkit samples from the package manager then playing the Hand Interaction Demo.
+
+3. In order to use the Hands Interaction Demo Sample, you will also need to install the Unity Starter Assets Sample
+
+   ![image-20240528183824081](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183824081.png)
+
+   > *Assets > Samples > XR Interaction Toolkit > 3.0.1 > Hands Interaction Demo > Runtime > HandsDemoScene.unity*
