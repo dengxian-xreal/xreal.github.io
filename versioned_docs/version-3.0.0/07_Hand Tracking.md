@@ -1,18 +1,18 @@
 # Hand Tracking
 
-Hand Tracking in NRSDK 3.0.0 is based on XRI (XR Interaction Toolkit) and XR Hands. This allows for more robust and flexible hand tracking capabilities, enabling developers to create immersive and interactive AR experiences.
+Hand Tracking in XREAL SDK 3.0.0 is based on XRI (XR Interaction Toolkit) and XR Hands. This allows for more robust and flexible hand tracking capabilities, enabling developers to create immersive and interactive AR experiences.
 
 ## XRI and XR Hands Integration
 
-XR Interaction Toolkit (XRI), created by Unity and enhanced by Ultraleap, is an ideal starting point for XR projects. Designed for dual hand and controller usage (via Unity's XRHands feature), we strongly recommend leveraging XRI with OpenXR for a seamless experience.
+XR Interaction Toolkit (XRI), created by Unity and enhanced by XREAL, is an ideal starting point for XR projects. 
 
-This page will teach you how to get set up with XRHands using Ultraleap tracking and also get interactions working using XRI. If you haven't already, check out Unity's [documentation here](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html).
+This page will teach you how to get set up with XRHands using XREAL hand tracking and also get interactions working using XRI. If you haven't already, check out Unity's [documentation here](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html).
 
 ## What is XR Hands?
 
 Unity provides an [XRHands API](https://docs.unity3d.com/Packages/com.unity.xr.hands@1.2/manual/index.html) for getting started with XR Hands and how to get Hand Tracking data from various sources.
 
-XREAL provides a custom subsystem for users that can not, or do not wish to use OpenXR for Hand tracking. Continue reading to see how to implement this.
+XREAL provides a custom subsystem for users to use XREAL Hand tracking. Continue reading to see how to implement this.
 
 ## What is XRI?
 
