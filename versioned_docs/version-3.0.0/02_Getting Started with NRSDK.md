@@ -53,7 +53,7 @@ You could either configure your project automatically via XREAL SDK **Project Se
 
 #### **Project Setup Tool**
 
-* To enable XREAL XR Plug-in, navigate to the project settings under **Edit > Project Settings > XR Plug-in Management** and open the Android tab. Check the **XREAL** plug-in. ![image-20240528115343943](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528115343943.png)
+* To enable XREAL XR Plug-in, navigate to the project settings under **Edit > Project Settings > XR Plug-in Management** and open the Android tab. Check the **XREAL** plug-in. ![image-20240528140739045](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528140739045.png)
 
 - Initially, there might be some project settings that have to be updated/fixed. To do so, go to `Project Validation` window. Click on the fix buttons next to the entries to apply the needed project settings. ![image-20240528114854485](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528114854485.png)
 
@@ -75,12 +75,12 @@ You could either configure your project automatically via XREAL SDK **Project Se
 | `Player Settings > Other Settings > Auto Graphics API`       | false                                                        |
 | `Player Settings > Other Settings > Graphics APIs`           | OpenGL ES3                                                   |
 | `Player Settings > Other Settings > Package Name`            | Create a unique app ID using a Java package name format. For example, use **com.xreal.helloMR** |
-| `Player Settings > Other Settings > Minimum API Level`       | Android 8.0 or higher                                        |
+| `Player Settings > Other Settings > Minimum API Level`       | Android 10.0 or higher                                       |
 | `Player Settings > Other Settings > Target API Level`        | Automatic (highest installed)                                |
 | `Player Settings > Other Settings > Write Permission`        | External(SDCard)                                             |
 | `Project Settings > Quality > VSync Count`                   | Don't Sync                                                   |
 
-### 4. Configure Compatible Devices 
+### 4. Configure Compatible Devices ⚠️
 
 You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the XREAL SDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
 <figure className="my-custom-figure">
@@ -98,6 +98,16 @@ If you only want the application to run on a specific device (Light/Air), you ma
 
 - support Multi Resume: This feature allows for different displays on the main screen (phone) and the secondary screen (glasses). When the AR app is sent to the background, the glasses continue to display the AR application, while the phone screen can show any 2D app. Essentially, this is dual-screen display functionality. This option is enabled by default, and after adding this feature, it requires permission on the phone upon first use.
 
+### Project Settings ⚠️
+
+![image-20240528141758417](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528141758417.png)
+
+* Stereo Rendering Mode
+* Tracking Type
+* Virtual Controller
+* Input Source
+* Support Mono Mode
+
 ### 5. Configure AR Features
 
 - Find and click `Assets/NRSDK/NRKernalSessionConfig` in Unity project folder, make sure the plane tracking, image tracking is configured properly as the following default configuration: 
@@ -110,7 +120,7 @@ If you only want the application to run on a specific device (Light/Air), you ma
 
 Please note that **Plane Finding Mode** and **Image Tracking Mode** will implicitly be **Disable** when `Support XREAL Air` is selected in **Step 4:  Configure Compatible Devices,** regardless of your configuration here in the inspector.
 
-### 6. Find Hello MR Sample Scene
+### 6. Find Starter Guide Sample Scene
 
 - Find the **HelloMR** sample scene in the Unity Project window by selecting `Assets > NRSDK > Demos > HelloMR.`
 
