@@ -16,15 +16,15 @@ XREAL provides a custom subsystem for users to use XREAL Hand tracking. Continue
 
 ## What is XRI?
 
-Unity provides a set of interaction systems under the [XR Interaction Toolkit (XRI)](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.3/manual/index.html).
+Unity provides a set of interaction systems under the [XR Interaction Toolkit (XRI)](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html).
 
 XRI provides XR-focussed interactions. It allows you to make one application which works on many platforms, devices and with various input sources (hand tracking, controllers, keyboards, joysticks etc).
 
-Some available Interactors are:
+Some available Interactors are:⚠️
 
-- Direct - For triggering events or grabbing objects
-- Ray - For indirect input, far field UI controls, teleporting, and summoning
-- Poke - For direct UI (3D and 2D) and triggering events
+- Poke: used for interacting with interactables by poking. Pose driven by the index finger's tip.
+- [Near-Far](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/near-far-interactor.html?q=near): utilizes both near and far interaction casters, allowing seamless transitions between different interaction types, replacing the need for using the XR Direct Interactor and the XR Ray Interactor. 
+- Teleport: For indirect input, far field UI controls, teleporting, and summoning⚠️
 
 We recommend exploring the capabilities of the XRI package to determine what is most useful for your project. Unity’s documentation and guides are a great place to get started.
 
