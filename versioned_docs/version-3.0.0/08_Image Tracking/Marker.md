@@ -8,6 +8,12 @@ Introducing XREAL Markers, a novel set of 'interactive' image tracking cards des
 
 ## Requirement
 
+:::warning
+
+Note that Marker functionality is not compatible with XREAL SDK 3.0. You should revert to using NRSDK 2.2.
+
+:::
+
 > To ensure optimal performance and compatibility when using the Spatial Life application, the following hardware and software specifications must be met:
 
 - Android phones listed in[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility)
@@ -29,6 +35,8 @@ Fixed: The problem of not being recognized after switching back from the backgro
 - [NRSDKForUnity_Experimental_Release_2.2.0.unitypackage](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.2.0_Release_20240329/NRSDKForUnityAndroid_Experimental_2.2.0.unitypackage)     
 
 </details>
+
+
 
 ## Developer Guide
 

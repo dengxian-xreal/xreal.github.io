@@ -127,4 +127,4 @@ void OnChanged(ARTrackedImagesChangedEventArgs eventArgs)
 
 Make sure your phone is connected to your PC before clicking Build and Run. Unity builds your project into an Android APK, which will be installed onto your phone. The app can then be launched once you plug XREAL Light glasses into the phone.
 
-As you move your XREAL Light glasses, the app automatically detects and tracks images from the set of reference images.
+As you move your XREAL Light/Air 2 Ultra glasses, the app automatically detects and tracks images from the set of reference images.
