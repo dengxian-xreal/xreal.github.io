@@ -1,8 +1,6 @@
 # Controller
 
-This guide will show you how to use the **XREAL Light controller** and **XREAL phone controller**. The tutorial will demonstrate how to create apps using controllers as an interaction model.
-
-Controllers provide a simple way for users to navigate in mixed reality. In the latest version, NRSDK supports two types of controlling methods: **XREAL Light controller** and **XREAL phone controller**. The XREAL Light controller can be paired with a XREAL Light computing unit or a mobile phone through Bluetooth. The XREAL phone controller is only available when using the phone as XREAL Light's computing unit.
+Controllers provide a simple way for users to navigate in mixed reality. In the latest version, NRSDK supports the **XREAL phone controller**.
 
 ## How to Use Your Phone as a Controller
 
