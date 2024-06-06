@@ -2,8 +2,6 @@
 
 Hand Tracking in XREAL SDK 3.0.0 is based on XRI (XR Interaction Toolkit) and XR Hands. This allows for more robust and flexible hand tracking capabilities, enabling developers to create immersive and interactive AR experiences.
 
-⚠️结构和别的feature可以改成一致的
-
 ## XRI and XR Hands Integration
 
 XR Interaction Toolkit (XRI), created by Unity and enhanced by XREAL, is an ideal starting point for XR projects. 
@@ -36,14 +34,24 @@ To get started with XRI when using Ultraleap Hand Tracking, continue reading.
 
 ### Setup Guide
 
-1. Install [XR Hands](https://docs.unity3d.com/Packages/com.unity.xr.hands@1.2/manual/index.html), [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html) and XR Plugin Management from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html).
+1. Create a new project in Unity.
 
-   ![image-20240528183600612](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183600612.png)
+>  Need help setting up? Try [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) first ⚠️
 
-   ![image-20240528183620602](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183620602.png)
+2. Install [XR Hands](https://docs.unity3d.com/Packages/com.unity.xr.hands@1.2/manual/index.html), [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html) and XR Plugin Management from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html).
 
-2. And you are ready to build your [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) project! To test out the [XR Interaction Toolkit (XRI)](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) with hand interactions, install the XR Interaction Toolkit samples and the Unity Starter Assets Sample from the Package Manager. Then, you can run the Hand Interaction Demo in HandsDemoScene.
+![image-20240528183600612](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183600612.png)
 
-   > *Assets > Samples > XR Interaction Toolkit > 3.0.1 > Hands Interaction Demo > Runtime > HandsDemoScene.unity*
+![image-20240528183620602](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183620602.png)
 
-   ![image-20240528183824081](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183824081.png)
+3. And you are ready to build your [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) project! To test out the [XR Interaction Toolkit (XRI)](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) with hand interactions, install the XR Interaction Toolkit samples and the Unity Starter Assets Sample from the Package Manager. Then, you can run the Hand Interaction Demo in HandsDemoScene.
+
+> *Assets > Samples > XR Interaction Toolkit > 3.0.1 > Hands Interaction Demo > Runtime > HandsDemoScene.unity*
+
+![image-20240528183824081](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183824081.png)
+
+4. Go to **Edit** > **Project Settings** > **XR Plug-in Management** > **XREAL**, Set **Input source** as `Hands`. This is the default input source initially, you can change it through API at runtime.
+
+![image-20240606100601232](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240606100601232.png)
+
+5. Go to **File** > **Build Settings**, package the current scene and run it on the android device to experience the hand tracking effect.
