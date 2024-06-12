@@ -5,7 +5,7 @@ slug: /
 
 By utilizing the XREAL SDK, innovative mixed reality experiences are developed. Using a simple development process and a high-level API, XREAL SDK offers a set of powerful MR features and enables your XREAL glasses to understand the real world.
 
-XREAL SDK supports the development environment of **Unity 2019.4.X and above**.
+XREAL SDK supports the development environment of **Unity 2019.4.X and above**.⚠️
 
 The core features provided by XREAL SDK are Spatial Computing, Optimized Rendering, and Multi-modal Interactions.
 
@@ -15,7 +15,7 @@ The core features provided by XREAL SDK are Spatial Computing, Optimized Renderi
 
 - **Multi-modal Interactions** provide intuitive choices of interactions for various use cases.
 
-![NRSDKArchitecture](./Images/NRSDKArchitecture.png)
+  <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607142536106.png"  height = "500"  />
 
 ### Spatial Computing
 
