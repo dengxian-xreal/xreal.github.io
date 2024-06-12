@@ -60,20 +60,20 @@ One of the great things about the XREAL phone controller is that you can easily 
 
 ![image-20240607170536010](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607170536010.png)
 
-7. Add a Binding to the Action
-   * Click  <No Binding>, go to Path in Binding Properties -> Binding, and choose XR Controller -> XREAL Controller.
+7. **Add a Binding to the Action**
+   * Click  `No Binding`, go to Path in Binding Properties -> Binding, and choose XR Controller -> XREAL Controller.
 
 ![image-20240607171809682](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607171809682.png)
 
 ![image-20240607171837125](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607171837125.png)
 
-8. Select a Button
+8. **Select a Button**
 
 * Choose a button, for example, ButtonId7
 
 ![image-20240607171952662](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607171952662.png)
 
-9. Assign Custom Button
+9. **Assign Custom Button**
 
    - Then, in the Button type of your custom button, choose Custom Button 7.
 

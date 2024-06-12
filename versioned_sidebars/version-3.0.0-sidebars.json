@@ -24,6 +24,7 @@
         "title": "Release Notes"
       },
       "items": [
+        "Release Note/XREAL SDK 3.0.0",
         "Release Note/NRSDK 2.2.0",
         "Release Note/NRSDK 2.1.1",
         "Release Note/NRSDK 2.1.0",
@@ -44,10 +45,11 @@
         "title": "Input and Camera"
       },
       "items": [
-        "Input and Camera/NRInput",
+        
+        "Input and Camera/Input",
         "Input and Camera/Interact with Unity UI",
         "Input and Camera/Customize Controller UI",
-        "Input and Camera/NRCameraRig"
+        "Input and Camera/Camera"
       ]
     },
     "Hand Tracking",
