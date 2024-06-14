@@ -15,6 +15,7 @@
       ]
     },
     "Getting Started with NRSDK",
+    "Migrating from NRSDK to XREAL SDK",
     "Sample Code",
     {
       "type": "category",
@@ -47,7 +48,6 @@
       "items": [
         
         "Input and Camera/Input",
-        "Input and Camera/Interact with Unity UI",
         "Input and Camera/Customize Controller UI",
         "Input and Camera/Camera"
       ]

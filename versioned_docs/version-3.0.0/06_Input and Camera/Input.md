@@ -14,13 +14,13 @@ The XREAL XR Plugin now utilizes [Unity's Input System](https://docs.unity3d.com
    - Under `Other Settings`, find `Active Input Handling` and select `Both` or `Input System Package (New)`.
    - Restart the Unity Editor to apply the changes.
 
-### Creating and Configuring Input Actions
+## Enable input actions used for input
 
 1. **Create Input Actions Asset**
    - Right-click in the Project window and select `Create > Input Actions`.
    - Name the newly created Input Actions asset, for example, `XREALInputActions`.
 2. **Edit Input Actions**
-   - Double-click the `XREALInputActions` asset to open the Input Actions editor. ⚠️我们应该是用的默认的
+   - Double-click the `XRI Default Input Actions` asset to open the Input Actions editor. ⚠️我们应该是用的默认的
    - Add input actions for controllers and headsets. For example, create an `Action Map` called `XRController` and add actions such as `Select`, `Activate`, `UIPress`, etc.
 3. **Generate C# Class**
    - In the Input Actions editor, click `Generate C# Class` and name the class, for example, `XREALInputActions`.
