@@ -137,3 +137,11 @@ For more information about Android Surfaces, refer to:
 
 - [Android Surface](https://developer.android.com/reference/kotlin/android/view/Surface)
 - [XR_KHR_android_surface_swapchain](https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_android_surface_swapchain)
+
+
+
+### XREAL Static Texture Marker
+
+The default configuration for the layer is dynamic. To switch it to a static layer, please integrate the following script.
+
+![image-20240709110723739](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240709110723739.png)
