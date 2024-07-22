@@ -62,7 +62,7 @@ Learn how to use the Coasters Image Tracking feature in your own apps.
 
 - The Marker feature uses a trained data sample. The sample resource address is shown in the figure below. It needs to be specified in the SessionConfig resource.
 
-  ![image-20240722191757730](../../../../Library/Application%20Support/typora-user-images/image-20240722191757730.png)
+  ![XREAL Markers (1)](https://raw.githubusercontent.com/dengxian-xreal/Images/main/XREAL%20Markers%20(1).png)
 
 - Set the ImageTrackingMode to enable.
 
