@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Migrating from NRSDK to XREAL SDK
 
-有很多开发者之前已经使用NRSDK开发了很棒的应用（比如：AR Lab），本教程旨在帮助这些开发者从原有的NRSDK迁移到新版XREAL SDK，以享受XRI和ARFoundation带来的便利，实现更好的兼容性和跨平台性。本教程将在原本的demo HelloMR的基础上做迁移示例。
+Many developers have previously created excellent applications using NRSDK (e.g., [AR Lab](https://www.xreal.com/arlab/)). This tutorial aims to assist these developers in migrating from the original NRSDK to the new XREAL SDK, to enjoy the benefits of XRI and ARFoundation, achieving better compatibility and cross-platform functionality. This tutorial will provide a migration example based on the original demo HelloMR.
 
 ### 1. Prerequisites
 
@@ -28,6 +28,8 @@ sidebar_position: 3
 
 - AR Foundation
 
+- XR Hands(Optional)
+
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that’s fine too)
@@ -48,18 +50,36 @@ sidebar_position: 3
 
 ### 3. Import XREAL SDK for Unity (⚠️待研发完成后补充)
 
-There're several ways you can import XREAL SDK into your current project.
+There're two ways you can import XREAL SDK into your current project.
 
 - Select `Window>Package Manager` .
+
 - Click "➕" 
   1. Add package from disk
-     1. Select the downloaded 
-  2. Add package from tarball
-  3. Add package from git URL
+  
+     Select the downloaded 
+  
+  2. Add package from git URL
+  
+  ![image-20240722105515920](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722105515920.png)
 
-记得换这个图：
+>  For both the **Ultimate** and **Enterprise** editions, only the ‘add from disk’ method is supported. 
+>
+>  For the **Normal** edition of the SDK, both methods are supported.
 
-![image-20240612172215595](../../../../Library/Application%20Support/typora-user-images/image-20240612172215595.png)
+1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
+
+```
+ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/com.xreal.xr#dev
+```
+
+2. Add package from disk
+
+   1.  Download the plugin.
+
+   2.  Unzip folder `com.xreal.xr`
+
+   3.  Select `package.json`，click Open
 
 ### 4. Configure Project Settings
 
@@ -81,8 +101,6 @@ You could either configure your project automatically via XREAL SDK **Project Se
 
 - In the **Inspector** window, configure player settings as follows:
 
-
-
 | **Setting**                                                  | **Value**                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `Player Settings > Resolution and Presentation > Default Orientation` | Portrait                                                     |
@@ -96,21 +114,33 @@ You could either configure your project automatically via XREAL SDK **Project Se
 
 ### Project Settings ⚠️
 
-![image-20240528141758417](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528141758417.png)
+![image-20240722112906375](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722112906375.png)
 
-* Stereo Rendering Mode
-* Tracking Type
-* Virtual Controller
-* Input Source
-* Support Mono Mode
-* Target Device
+* `Stereo Rendering Mode`
+  * **Multi-view**: This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance.
+  * **Multi-pass**: In this mode, the left and right eye views are rendered in separate passes, which can be less efficient but may be necessary for certain effects or compatibility.
+
+* `Tracking Type`
+  * **MODE_6DOF (Six Degrees of Freedom)**: Allows tracking of both position and rotation in 3D space, providing a fully immersive experience.
+  * **MODE_3DOF (Three Degrees of Freedom)**: Tracks only rotational movement, meaning the user can look around but not move within the space.
+  * **MODE_0DOF**: No tracking of movement or rotation.
+  * **MODE_0DOF-STAB**: No tracking but ensures a stable view, using some form of sensor data to reduce drift.
+
+* `Virtual Controller`:  XREAL SDK allows the use of external devices, like BeamPro or Android phones, as virtual controllers. This setting defines the layout and functionality of the on-screen buttons for these controllers.
+* `Input Source`
+  * **Hands**: Uses hand tracking for interaction.
+  * **Controller**: Uses a traditional handheld controller for input.
+
+* `Support Multi Resume`: Enables dual-screen independent display (dual-screen mode), where the AR app continues to display in the glasses while the phone screen can show different 2D apps.
+* `Support Mono Mode`: Enables the use of a single eye view (monocular mode), which might be useful for certain applications or users who cannot use stereo rendering.
+
+* Target Device ⚠️，研发还没添加此选项
 
   * You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the XREAL SDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
   * By selecting VISION, XREAL SDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented XREAL SDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
 
   If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, XREAL SDK will not try to adapt automatically, and the app will not run on unsupported devices.
 
-  - support Multi Resume: This feature allows for different displays on the main screen (phone) and the secondary screen (glasses). When the AR app is sent to the background, the glasses continue to display the AR application, while the phone screen can show any 2D app. Essentially, this is dual-screen display functionality. This option is enabled by default, and after adding this feature, it requires permission on the phone upon first use.
 
 ### 6. Remove Old NRSDK and Import new SDK
 
