@@ -1,14 +1,28 @@
-# XR Streaming
+# CloudXR
 
-Nebula built-in **XR Streaming** enables you to live stream Steam/SteamVR content from PC to XREAL Glasses via your Wi-Fi network. 
+**CloudXR** enables you to live stream Steam/SteamVR content from PC to XREAL Glasses via your Wi-Fi network. 
 
 :::tip
 
-Please note that XR Streaming is no longer built into Nebula. You can download it from [here](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk) or download it later from Google Play.
+Please note that XR Streaming is no longer built into Nebula. 
 
-[XRStreaming.apk](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk)
+As of 2024.06.14, it has been renamed to CloudXR. 
+
+You can download it from here or download it later from Google Play.
 
 :::
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="CloudXR v4.0" label="CloudXR v4.0" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="CloudXR v3.2" label="CloudXR v3.2">
+   [XRStreaming.apk](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk)
+  </TabItem>
+</Tabs>
 
 ### **Environment Requirements**
 

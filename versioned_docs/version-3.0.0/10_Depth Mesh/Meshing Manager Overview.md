@@ -1,51 +1,85 @@
-# Meshing Manager Overview
+# Meshing
 
-This page provides an overview of the meshing manager component and the settings that can be altered by developers.
+## Introduction
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252FgCxbdwuFctxPM9JGgkzf%252Fimage.png%3Falt%3Dmedia%26token%3D13b641a2-13c3-42bb-b6ab-12f6d01aab8f&width=768&dpr=4&quality=100&sign=9c289da4d5fadd3db4fd18b92487a018bcc1095af890a87b03b2aa0cd7838e12)
+Meshing is a crucial feature in AR applications that allows for the creation of 3D meshes of the real-world environment. These meshes enable more advanced interactions and realistic placement of virtual objects. Using Unity's XR Interaction Toolkit and AR Foundation, developers can implement meshing to enhance their AR experiences.
 
--  **Meshing Radius**: The range of meshing, measured in meters. 
+## Capabilities
 
--  **Meshing Submit Rate**: The rate at which meshing data is submitted, measured in submissions per second (n/s).
+Depth mesh expands many AR capabilities.
 
-### Meshing Classification Fracking
+-  **Visualization**: Provide visual feedback as users scan their environment.
 
-Classified Mesh Filter Prefabs: Used to define the available semantic labels and the prefabs that will be used to represent each classified mesh.
+-  **Occlusion**: Effectively hides virtual objects behind real ones, particularly useful indoors.
 
-Available Semantic Labels:
+-  **Physics**: With the help of MeshColliders, virtual objects and characters can interact more realistically with the environment and real objects.
 
+-  **Flexible Object Placement**: Allows for more flexible addition and arrangement of virtual objects compared to plane detection.
 
+-  **Semantics**: Employs advanced capabilities to identify and categorize mesh blocks into specific classes, including BACKGROUND, WALL, BUILDING, FLOOR, CEILING, HIGHWAY, SIDEWALK, GRASS, DOOR, and TABLE. This enhances the overall context awareness of augmented reality experiences.
 
-```
-public enum NRMeshingVertexSemanticLabel : byte
-{
-    Background = 0,
-    Wall = 1,
-    Building = 2,
-    Floor = 4,
-    Ceiling = 5,
-    Highway = 6,
-    Sidewalk = 7,
-    Grass = 8,
-    Door = 10,
-    Table = 11,
-}
-```
+## Requirements
 
-### Mesh Obj Generator 
+To implement meshing, ensure you have the following setup:
 
--  **Use Override Material**: Select whether use a customized mesh.
+- **Unity Editor**: Version 2021.3 or later.
+- Packages:
+  - XR Interaction Toolkit
+  - AR Foundation
+  - AR Subsystems
 
--  **Override Material**: The material of the customized mesh.
+## Developer Guide
 
-## Invisible Mesh
+### 1. Basic Setup
 
-There are two ways to implement a transparent mesh.
+1. Create a new project in Unity.
 
--  **Use a transparent material**: A transparent material is built into the Package. Use this material to replace the existing mesh material so that the mesh will not be displayed in the scene, but the occlusion effect between mesh and virtual object still exists.
+> Need help setting up? Try [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) first ⚠️
 
-  ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FNsZhuUPQUm2oAUWN1jo2%2Fimage.png&width=768&dpr=4&quality=100&sign=ceaf1bde6dfabcc39c027e818ede0303367fcd05703e1cea0452096b9fb186b6)
+2. Install AR Foundation and AR Subsystems from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html).
 
--  **Don't render the mesh**: double click the prefab MeshObj, and you can unselect the Mesh Renderer. In this way, the mesh will not be rendered in the scene, and there will be no occlusion between it and the virtual object. 
+![image-20240529200949957](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240529200949957.png)
 
-  ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FMwTbcuySd6UkB1Vehcbd%2Fimage.png&width=768&dpr=4&quality=100&sign=4e99690f60789f25d910868485e9d84ee4281d6c4af1623c14736afcbf5221d5)
+3. Install XR Interaction Toolkit from the Unity Registry in the Package Manager and import Starter Assets in Samples tab.
+
+   ![image-20240531111307809](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240531111307809.png)
+
+4. Create a new scene 
+
+5. Add an `XR Origin(XR Rig)` GameObject to the scene: 
+
+   In the **Project** window, find Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/XR Origin (XR Rig).prefab, and drag it to **Hierarchy** window. This will add the necessary components for AR interactions.
+
+   ![image-20240531111129519](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240531111129519.png)
+
+6. Add an `AR Session` GameObject to the scene: in the **Hierarchy** window, right-click and select **XR** > **AR Session**. This will add an **AR Session** component necessary for managing the AR lifecycle.
+
+7. Go to **Edit > Project Settings > XR Plug-in Management**, enable the XREAL XR plug-in.
+
+### 2. Set Up Meshing
+
+#### Configure Meshing
+
+1. Select the **XR Origin(XR Rig)** in the **Hierarchy** window.
+
+2. Click **Add Component** in the **Inspector** window.
+
+3. Search for and add the **AR Mesh Manager** component.
+
+4. In the **AR Mesh Manager** component, you can set the **Mesh Prefab** to a custom prefab for visualizing the generated mesh.
+
+5. For a quick test, you can create a simple prefab with a Mesh Renderer and Mesh Filter to visualize the mesh.
+
+   ![image-20240710155954416](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240710155954416.png)
+
+### 3. Testing Meshing
+
+1. Connect your compatible device.
+2. Switch the build target to Android (File > Build Settings).
+3. Build and run the project on your device.
+
+You should now see the generated mesh visualized in your AR application. You can use this mesh to place virtual objects or interact with the real-world environment.
+
+## Conclusion
+
+This guide covers the basics of setting up meshing using the XR Interaction Toolkit and AR Foundation. By following these steps, you can create immersive and interactive AR experiences that utilize real-world 3D meshes.

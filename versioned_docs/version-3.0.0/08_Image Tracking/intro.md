@@ -10,7 +10,7 @@ A set of images can be uploaded to the database as pre-trained references. These
 
 - XREAL SDK can detect and track images that are fixed in place, such as a painting on a wall or a book on the table. It can also track moving images, such as a rotating billboard or a poster held by someone walking around.
 - Upon initiating tracking with XREAL SDK, the system delivers continuous estimations for the position and orientation of the tracked image. It is advisable to configure the size in Unity to match the printed tracked image. The transformation estimates for the image are continually updated, leading to enhanced tracking accuracy, particularly for static images, as XREAL SDK accumulates data from various angles over time.
-- XREAL SDK allows developers to add up to 5 unique images to its reference image library. However, the number of images that can be tracked simultaneously in real-time is limited to 2 for optimal performance. Attempting to track more than 2 images concurrently may result in reduced real-time responsiveness of the application. It is important to note that XREAL SDK will not track multiple instances of the same image, even if they are physically present in the environment.
+- XREAL SDK allows developers to add up to 5 unique images to its reference image library. However, the number of images that can be tracked simultaneously in real-time is limited to 2 for optimal performance. Attempting to track more than 1 image concurrently may result in reduced real-time responsiveness of the application. It is important to note that XREAL SDK will not track multiple instances of the same image, even if they are physically present in the environment.
 
 ### Requirements
 
