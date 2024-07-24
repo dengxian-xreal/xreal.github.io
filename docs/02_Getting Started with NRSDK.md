@@ -155,20 +155,11 @@ Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This m
 
 ### 9. Deploy to XREAL Device
 
-- Connect your Phone / computing unit to your Mac / Windows PC. 
-
+- Connect your Phone / Beam Pro to your Mac / Windows PC. 
 - Install your app through WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) or type-C cable after the build is successful.
-
-- Disconnect the computing unit with your PC, and then connect it to the glasses.
-
-- (Computing Unit only) If it is the first time you run this app, you need to authorize the app by some tools like [scrcpy](https://github.com/Genymobile/scrcpy).
-
-- Launch your app along with the XREAL Light controller. For instructions on how to use the XREAL Light controller, please refer to [Controller](https://nrealsdkdoc2.readthedocs.io/en/dev/Docs/Unity_EN/Develop/Controller.html#controller-guide).
-
+- Disconnect the device with your PC, and then connect it to the glasses.
+- Open Nebula(Android phone) or MyGlasses(Beam Pro), then find your app then click to open it . 
 - Move around until NRSDK finds a horizontal plane and the detected plane will be covered with green grid.
-
 - Click the Trigger button to put an XREAL logo object on it.
-
 - (Optional) Use **Android Logcat** to view logged messages. We recommend using WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) to connect to your PC so that you do not have to be connected through the data cable most of the time.
-
-- Enable developer options and USB debugging on your Phone / Computing unit. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
+- Enable developer options and USB debugging on your Phone / Beam Pro. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
