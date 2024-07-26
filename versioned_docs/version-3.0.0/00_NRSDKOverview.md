@@ -5,7 +5,7 @@ slug: /
 
 By utilizing the XREAL SDK, innovative mixed reality experiences are developed. Using a simple development process and a high-level API, XREAL SDK offers a set of powerful MR features and enables your XREAL glasses to understand the real world.
 
-XREAL SDK supports the development environment of **Unity 2019.4.X and above**.⚠️
+XREAL SDK supports the development environment of **Unity 2021.3.X and above**.
 
 The core features provided by XREAL SDK are Spatial Computing, Optimized Rendering, and Multi-modal Interactions.
 

@@ -20,11 +20,9 @@ This quickstart guide will help you set up your development environment and test
 
 **Software Checklist**
 
-- [Unity 2019.4.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
+- [Unity 2021.3.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
 
 - Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
-
-  The SDK is downloaded as `NRSDKForUnity_x.x.x.unitypackage` ⚠️
 
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
 
