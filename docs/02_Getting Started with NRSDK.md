@@ -12,7 +12,7 @@ This quickstart guide will help you set up your development environment and test
 
 **Hardware Checklist**
 
-- A supported Android Phone. Please review the[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) list to ensure your phone model is compatible with the glasses and NRSDK.
+- A supported Android Phone. Please review the[ Device Compatibility](/XREALDevices/compatibility) list to ensure your phone model is compatible with the glasses and NRSDK.
 
 - A pair of **XREAL** glasses.
 
@@ -111,7 +111,7 @@ You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware tha
 <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163825424.png" alt="Your Image Description" class="center-image"/>
 <figcaption>NR Project Config</figcaption>
 </figure>
-By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
+By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](/XREALDevices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
 
 If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, NRSDK will not try to adapt automatically, and the app will not run on unsupported devices.
 
@@ -152,7 +152,7 @@ Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This m
 2. Click **Player Settings**. Customize the **Company Name** and **Product Name.** 
 3. (Optional) Navigate to the **Android**> **Other Settings** panel to specify your build settings. As you have prepared **Step 3. Configure Project Settings,** you may leave the current configuration as it is. It is worth noting some of the other settings:
 
-- **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by NRSDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](https://xreal.gitbook.io/nrsdk/development/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
+- **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by NRSDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
 
 - **Scripting Backend:** You must choose **IL2CPP** when building for ARM64 architecture. Note that starting from NRSDK 2.2, ARMv7 architecture is no longer supported.<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FijFH00KUpneZptdM1xaj%2Fimage.png&width=768&dpr=4&quality=100&sign=7c427706fce8673b8c60a167e55c1979693416747d46200b2b505fe0980786dd" alt="Your Image Description" class="center-image"/>
 

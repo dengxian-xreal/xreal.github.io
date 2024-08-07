@@ -92,7 +92,7 @@ To ensure optimal algorithm performance, it is recommended to use specific smart
 - **HUAWEI P60 Pro**: HarmonyOS 4.0.0
 - **OPPO Find X6 Pro**: Android 13
 
-Hand tracking can also run on devices besides the above, the stability however is not guaranteed. For the full compatibility list, please refer to[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility).
+Hand tracking can also run on devices besides the above, the stability however is not guaranteed. For the full compatibility list, please refer to[ Device Compatibility](./01_XREALDevices/Compatibility.md).
 
 **Influence of Unity Packaging on APK:**
 

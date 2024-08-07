@@ -24,7 +24,7 @@ This prefab from the starter package provides a wooden floor texture that will b
 
 ### Run the app
 
-1. Build and deploy your app as described in **Step 7** and **8** in [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) to test your changes
+1. Build and deploy your app as described in **Step 7** and **8** in [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.md) to test your changes
 
 2. Point your glasses at a horizontal real-world surface and move your glasses around to improve NRSDK's understanding of the world.
 3. When NRSDK has detected a plane, you should see a wood texture cover real-world surfaces. The `Plane Detector `instantiates the given `Detected Plane Prefab` for each detected plane.

@@ -38,7 +38,7 @@ Learn how to use the Image Tracking feature in your own apps.
 
 Create a new project in Unity.
 
-> Need help setting up? Try [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) first
+> Need help setting up? Try [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.md) first
 
 Before you build the app, make sure you include the tracking image scene located in
 

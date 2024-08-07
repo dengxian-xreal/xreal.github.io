@@ -43,10 +43,8 @@ NRSDK optimizes the rendering performance in the backend to minimize the latency
 
 **Warping:** Instead of polling tracking data at the very beginning of each frame to render the image, NRSDK uses dynamically predicted poses of the glasses to warp the rendered image, reprojecting the warping frames to the displaybefore every VSync.
 
-### Multi-modal Interactions
+### Interactions
 
-- **XREAL Light Controller (3DoF)**: A light 3DoF controller to interact with the virtual objects in a natural and intuitive way.
+**XREAL Phone Controller (3DoF)**: An Android mobile phone can serve as a 3DoF controller for NRSDK applications. The phone screen supports gestures and various other touchscreen actions to provide interaction options.
 
-- **XREAL Phone Controller (3DoF)**: An Android mobile phone can serve as a 3DoF controller for NRSDK applications. The phone screen supports gestures and various other touchscreen actions to provide interaction options.
-
-For more interaction models, please refer to the [Design Guide](https://xreal.gitbook.io/nrsdk/design-guide/design-guide-overview).
+For more interaction models, please refer to the [Design Guide](./15_Design%20Guide/3_Controlling.md).
