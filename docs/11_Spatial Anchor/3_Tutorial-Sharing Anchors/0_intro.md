@@ -21,7 +21,7 @@ The methods for other providers should be similar, and developers are encouraged
 You can find the complete code in this [Git repository](https://github.com/dengxian-xreal/NRSDK_ShareAnchors).
 ### **Prerequisites**
 
-- Unity with NRSDK 2.1 installed.
+- Unity with NRSDK 2.1 or later installed.
 - Photon Unity Networking 2 (PUN 2) package.
 - Firebase Unity SDK.
 
