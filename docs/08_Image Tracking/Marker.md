@@ -12,7 +12,7 @@ Introducing XREAL Markers, a novel set of 'interactive' image tracking cards des
 
 > To ensure optimal performance and compatibility when using the Spatial Life application, the following hardware and software specifications must be met:
 
-- Android phones listed in[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) or Beam Pro
+- Android phones listed in[ Device Compatibility](../01_XREALDevices/Compatibility.md) or Beam Pro
 - XREAL Air 2 Ultra
 - [Nebula 3.8.0](https://play.google.com/store/apps/details?id=ai.nreal.nebula.universal&hl=en_US&gl=US)
 
@@ -43,7 +43,7 @@ Learn how to use the Coasters Image Tracking feature in your own apps.
 
 - Create a new project in Unity. 
 
-> Need help setting up? Try [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) first
+> Need help setting up? Try [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.md) first
 
 - Click NRSDK -> CoastersTrackingModule -> Install
 

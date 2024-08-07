@@ -8,11 +8,9 @@ As of the current version, there is a 3 Degree-of-Freedom hand-held controller a
 
 You can use the phone as a 3 DoF controller that is essentially identical to the previously mentioned disk shaped 3 DoF controller. To make controlling even easier though, the phone utilizes its extra space for a few added swipe gestures.
 
-- **Features**
+#### **Features**
 
 ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252F1DRCWcoFheYW1OO6668i%252Fimage.png%3Falt%3Dmedia%26token%3D1b7cf99a-1ab8-42ed-a13a-b73060539b1e&width=768&dpr=4&quality=100&sign=318abdae2137434abcafaa8685c39fa954ffe54eaecda8ef9d35fd20a3f8fb74)
-
-XREAL Phone Controller
 
 **3 DoF (rotation) hand tracking**
 
@@ -39,7 +37,7 @@ XREAL Phone Controller
 | Swipe from bottom to top                                     | Shuffling menu items to the top [on Hover] Rotating objects to face up [Locked-on] Moving objects further away |
 | Swipe from top to bottom                                     | Shuffling menu items to the bottom [on Hover] Rotating objects to face down [Locked-on] Moving objects closer |
 
-- **Feedbacks**
+#### **Feedbacks**
 
 **Phone vibration**
 
@@ -70,7 +68,7 @@ XREAL Phone Controller
 
 Controlling with the position and direction that the user is facing. It is best to use gaze in coordination with controller methods to enhance user experience. However, on rare occasions where both of the user's hands are occupied, gaze can be used to provide a dependable way for targeting and selecting.
 
-- **Features**
+#### **Features**
 
 **6 DoF Head Tracking**
 
@@ -81,9 +79,7 @@ Controlling with the position and direction that the user is facing. It is best 
 - Suitable for targeting during extremely light interactions
 - Suitable for targeting when both hands are not available
 
-
-
-* **Feedbacks**
+#### **Feedbacks**
 
 **Visual feedback**
 

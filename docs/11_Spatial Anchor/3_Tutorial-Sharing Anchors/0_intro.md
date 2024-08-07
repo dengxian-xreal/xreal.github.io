@@ -28,9 +28,9 @@ The methods for other providers should be similar, and developers are encouraged
 
 :::tip
 
-The following package includes all the necessary scene and the majority of the scripts required for this tutorial. However, it's important to note that developers will still need to complete the steps related to [photon](https://xreal.gitbook.io/nrsdk/development/spatial-anchor/tutorial-sharing-anchors/setting-up-photon) and cloud storage themselves.
+The following package includes all the necessary scene and the majority of the scripts required for this tutorial. However, it's important to note that developers will still need to complete the steps related to [photon](1_SettingUpPhoton.md) and cloud storage themselves.
 
-Additionally, due to the tutorial's involvement with modifications to the built-in scripts of NRSDK, specifically NRWorldAnchor.cs and NRWorldAnchorStore.cs, these changes cannot be included within this package. Please refer to the tutorial's content, specifically in the section on '[Implementing Cloud Save and Load](https://xreal.gitbook.io/nrsdk/development/spatial-anchor/tutorial-sharing-anchors/implementing-cloud-save-and-load),' to make the necessary modifications.
+Additionally, due to the tutorial's involvement with modifications to the built-in scripts of NRSDK, specifically NRWorldAnchor.cs and NRWorldAnchorStore.cs, these changes cannot be included within this package. Please refer to the tutorial's content, specifically in the section on '[Implementing Cloud Save and Load](./4_CloudSaveandLoad.md),' to make the necessary modifications.
 
 
 
