@@ -22,6 +22,14 @@ This quickstart guide will help you set up your development environment and test
 
 - [Unity 2019.4.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
 
+  :::warning
+
+  Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download the appropriate Gradle version in Unity-> Settings-> External tools.
+
+  ![image-20240807174108770](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240807174108770.png) 
+
+  :::
+
 - Latest [NRSDK for Unity](https://developer.xreal.com/download)
 
   The SDK is downloaded as `NRSDKForUnity_x.x.x.unitypackage`
@@ -56,13 +64,13 @@ You could either configure your project automatically via NRSDK **Project Tips**
 
 - Click **Accept All** in the popup window
 <figure className="my-custom-figure">
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FRaTSzHoHozvQTkC3hc1E%2Fimage.png&width=768&dpr=4&quality=100&sign=305aba886db1774185459ee720f619d8a8b0770de5d43e1efa9f6713a62c5a1a" alt="Your Image Description" class="center-image"/>
+<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240729152419937.png" alt="Your Image Description" class="center-image"/>
 <figcaption>Project Tips</figcaption>
 </figure>
+
 - Wait for Unity to process. The **Project Tips** window should appear as empty when finished.
 
-
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FwRWKIm8sOvxV4y5aMehL%2Fimage.png&width=768&dpr=4&quality=100&sign=08a5791a2bb4cfa02fd44ad094b2883e0d051c32725c3890aaea9c89bdab4c5d" alt="Your Image Description" class="center-image scale-image"/>
+<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240729152752977.png" class="center-image scale-image"/>
 
 - Close the Project Tips window
 
@@ -86,7 +94,7 @@ You could either configure your project automatically via NRSDK **Project Tips**
 | `Player Settings > Other Settings > Auto Graphics API`       | false                                                        |
 | `Player Settings > Other Settings > Graphics APIs`           | OpenGL ES3                                                   |
 | `Player Settings > Other Settings > Package Name`            | Create a unique app ID using a Java package name format. For example, use **com.xreal.helloMR** |
-| `Player Settings > Other Settings > Minimum API Level`       | Android 8.0 or higher                                        |
+| `Player Settings > Other Settings > Minimum API Level`       | Android 10.0 or higher                                       |
 | `Player Settings > Other Settings > Target API Level`        | Automatic (highest installed)                                |
 | `Player Settings > Other Settings > Write Permission`        | External(SDCard)                                             |
 | `Project Settings > Quality > VSync Count`                   | Don't Sync                                                   |

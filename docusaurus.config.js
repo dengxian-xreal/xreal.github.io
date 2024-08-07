@@ -51,7 +51,7 @@ const config = {
           rehypePlugins: [require('rehype-katex')],
           versions: {
               current: {
-                  label: '2.2.0',
+                  label: '2.2.1',
                   path: '/',
                   badge: true
               }
@@ -90,14 +90,14 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      // announcementBar: {
-      //   id: 'New hackathon',
-      //   content:
-      //     'New hackathon is coming! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="https://opensource.facebook.com/support-ukraine"> Have fun with us</a>.',
-      //   backgroundColor: '#f7e6f7',
-      //   textColor: '#000',
-      //   isCloseable: true,
-      // },
+      announcementBar: {
+        id: 'New hackathon',
+        content:
+          'NRSDK2.2.1 has been released! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.2.1"> Check the release note</a>.',
+        backgroundColor: '#f7e6f7',
+        textColor: '#000',
+        isCloseable: true,
+      },
       navbar: {
         title: 'NRSDK',
         logo: {
