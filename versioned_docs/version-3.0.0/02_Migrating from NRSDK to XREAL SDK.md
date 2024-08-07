@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Migrating from NRSDK to XREAL SDK
 
-Many developers have previously created excellent applications using NRSDK (e.g., [AR Lab](https://www.xreal.com/arlab/)). This tutorial aims to assist these developers in migrating from the original NRSDK to the new XREAL SDK, to enjoy the benefits of XRI and ARFoundation, achieving better compatibility and cross-platform functionality. This tutorial will provide a migration example based on the original demo HelloMR.
+Many developers have previously created excellent applications using NRSDK (e.g., [AR Lab](https://www.xreal.com/arlab/)). This tutorial aims to assist these developers in migrating from the original NRSDK to the new XREAL SDK, to enjoy the benefits of XRI and ARFoundation, achieving better compatibility and cross-platform functionality. This tutorial will provide a migration example based on the original demo **HelloMR**.
 
 ### 1. Prerequisites
 
@@ -67,7 +67,7 @@ There're two ways you can import XREAL SDK into your current project.
 >
 >  For the **Normal** edition of the SDK, both methods are supported.
 
-1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
+1. Add package from git url: （⚠️目前需要内网环境才可以添加，后续需要修改成github链接）
 
 ```
 ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/com.xreal.xr#dev
@@ -142,7 +142,7 @@ You could either configure your project automatically via XREAL SDK **Project Se
   If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, XREAL SDK will not try to adapt automatically, and the app will not run on unsupported devices.
 
 
-### 6. Remove Old NRSDK and Import new SDK
+### 6. Remove Old NRSDK and Import New XREAL SDK
 
 * Duplicate the assets in NRSDK you need into another folder and delete NRSDK folder in Assets.
 

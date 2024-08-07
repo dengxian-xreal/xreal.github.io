@@ -21,46 +21,68 @@ This quickstart guide will help you set up your development environment and test
 **Software Checklist**
 
 - [Unity 2021.3.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
-
 - Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
+  - Sample `Interaction Basics`
+  - Sample `AR Features` (Optional)
 
+- XR Plugin Management
+- XR Interaction Toolkit
+  - Sample `Starter Assets`
+
+  - Sample `Hands Interaction Demo` (Optional)
+
+- AR Foundation(Optional)
+- XR Hands(Optional)
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
-
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that’s fine too)
 
 ### 2. Creating a Unity Project
 
 We’re going to create a new Unity project and integrate XREAL SDK later on. To create a new Unity project:
 
-- Open Unity Hub and create a new 3D project.
+#### 1. Open Unity Hub and create a new 3D project.
 
-- Import XREAL SDK for Unity
+#### 2. Import XREAL SDK for Unity
 
-  Open Window -> Package Manager, There are two import methods. 
+Open Window -> Package Manager, There are two import methods. 
 
-  * Add package from git url
-  
-  * Add pacakge from disk
-  
-  >  For both the **Ultimate** and **Enterprise** editions, only the ‘add from disk’ method is supported. 
-  >
-  >  For the **Normal** edition of the SDK, both methods are supported.
-  
-  ![image-20240722105515920](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722105515920.png)
-  
-  1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
-  
-  ```
-  ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/com.xreal.xr#dev
-  ```
-  
-  2. Add package from disk
-  
-     1.  Download the plugin.
-  
-     2. Unzip folder `com.xreal.xr`
-  
-     3. Select `package.json`，click Open
+* Add package from git url
+
+* Add pacakge from disk
+
+>  For both the **Ultimate** and **Enterprise** editions, only the ‘add from disk’ method is supported. 
+>
+>  For the **Normal** edition of the SDK, both methods are supported.
+
+![image-20240722105515920](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722105515920.png)
+
+1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
+
+```
+ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/com.xreal.xr#dev
+```
+
+2. Add package from disk
+
+   1.  Download the plugin.
+
+   2. Unzip folder `com.xreal.xr`
+
+   3. Select `package.json`，click Open
+
+#### 3. Import XRI and AR Foundation
+
+1. Install XR Interaction Toolkit from the Unity Registry in the Package Manager and import **Starter Assets** in Samples tab. If you only use controllers for interaction, the Starter Assets will suffice. However, if you want to use hand gestures for interaction, you’ll also need to import the **Hands Interaction Demo**.
+
+   ![image-20240531111307809](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240531111307809.png)
+
+   There will be a warning about new input system, and requires you to restart the editor, just click yes. 
+
+   ![image-20240612181604343](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612181604343.png)
+
+2. (Optional)Install AR Foundation from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) only if you need AR features like plane detection, image tracking, spatial anchors, or depth meshing. If you don’t require these features, there’s no need to install AR Foundation.
+
+![image-20240529200949957](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240529200949957.png)
 
 ### 3. Configure Project Settings
 
