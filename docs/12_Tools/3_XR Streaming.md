@@ -78,24 +78,16 @@ Please see the following for detailed setup instructions:
 
 **Method 1:**
 
-- 
-
-  On the taskbar, select **Wi-Fi network** ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fgyn60eFQ5AQywJmKbmD8%2Fimage.png&width=43&dpr=4&quality=100&sign=09d7ffdd1c83fdeab2d9f15a07756eb8f9f5c09e706481e31c6123a50dc9600d)> the Wi-Fi network you're connected to > **Properties.**
+- On the taskbar, select **Wi-Fi network** ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fgyn60eFQ5AQywJmKbmD8%2Fimage.png&width=43&dpr=4&quality=100&sign=09d7ffdd1c83fdeab2d9f15a07756eb8f9f5c09e706481e31c6123a50dc9600d)> the Wi-Fi network you're connected to > **Properties.**
 
 ​       ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FK4Quce1Op0wjuMGe3zR3%2Fimage.png&width=300&dpr=4&quality=100&sign=86884e35d99029bf7c3a61ba7ba4ab0633debf945d0134569e7c645e06b744f8)
 
-- 
-
-  Under **Properties**, look for your IP address listed next to **IPv4 address**.
+- Under **Properties**, look for your IP address listed next to **IPv4 address**.
 
 **Method 2:**
 
-- 
+- Open the Start menu and type `**cmd**` to open the Command Prompt;
 
-  Open the Start menu and type `**cmd**` to open the Command Prompt;
-
-- 
-
-  Type `**ipconfig**` into the Command Prompt and press `**Enter**`. The tool will return a set of data that includes your IP address. look for your IP address listed next to **IPv4 address;**
+- Type `**ipconfig**` into the Command Prompt and press `**Enter**`. The tool will return a set of data that includes your IP address. look for your IP address listed next to **IPv4 address;**
 
 ​       ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FdvWG1uh104WphiBw6jvl%2Fimage.png&width=300&dpr=4&quality=100&sign=b460543f8eec5c52617a6c369b1c86e4beec3542464ff4132bdd158022b3c73b)
