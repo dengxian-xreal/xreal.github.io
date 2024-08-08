@@ -8,13 +8,17 @@ When working on a depth-mesh-based feature, it can be time-consuming to deploy t
 
 The demo scene mesh contains a UI button Save Mesh which can save the current mesh data into .obj files in the device's file system.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F1nTcfBhJahMmMHZRm4mD%2Fimage.png&width=300&dpr=4&quality=100&sign=7091ef9522b05d47798330ec1fd8ac2c26135c6201569ade365955e70541cba5)
+
+
+
+ <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F1nTcfBhJahMmMHZRm4mD%2Fimage.png&width=300&dpr=4&quality=100&sign=7091ef9522b05d47798330ec1fd8ac2c26135c6201569ade365955e70541cba5" alt="Description" style={{ width: '400px', height: 'auto' }} class="center-image"  />
 
 Every push of the button creates a new folder of mesh obj. It is a good idea to save multiple meshes as you scan around if you want to reproduce mesh updates in the Unity Editor.
 
 You will find the files under `*Android/data/package_name/files/MeshSave/*`*.* Save them into your assets.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FgBn3p4ygIDp2M1V9lVDw%2Fimage.png&width=300&dpr=4&quality=100&sign=31b8902b549c4864b8b3bb0fafafbce4c7bc36b16d78532320be66304e8384c0)
+
+<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FgBn3p4ygIDp2M1V9lVDw%2Fimage.png&width=300&dpr=4&quality=100&sign=31b8902b549c4864b8b3bb0fafafbce4c7bc36b16d78532320be66304e8384c0" alt="Description" style={{ width: '300px', height: 'auto' }} class="center-image"  />
 
 ## Import Meshes into Unity
 
