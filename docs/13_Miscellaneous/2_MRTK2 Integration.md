@@ -73,5 +73,5 @@ Supported Features in MRTK
 - Hand Tracking
 - Hand Meshing
 - Hand Skeleton / Gestures
-- XREAL Phone Controller / Dev Kit Controller
+- XREAL Phone Controller
 - Gaze Input (aka Eye Tracking)

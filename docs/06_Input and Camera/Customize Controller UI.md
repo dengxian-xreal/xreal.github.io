@@ -2,7 +2,7 @@
 
 ### Introduction
 
-When we release the XREAL Light glasses to consumers, this will only include the glasses and not the computing unit that was part of the dev kit. You will be able to plug XREAL Light into your own Android phone and use the phone as a 3DOF controller.
+You will be able to plug XREAL Light into your own Android phone and use the phone as a 3DOF controller.
 
 ![../../../_images/cpc1.jpg](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc1.jpg&width=300&dpr=4&quality=100&sign=f94348e418cf8be11d06aa9fee55d4ab349167d2a2d0a92b513e6e56bc604f54)
 

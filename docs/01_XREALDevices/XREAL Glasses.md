@@ -4,7 +4,6 @@ XREAL’s products include the XREAL Light Developer Kit, XREAL Light Consumer K
 
 - **XREAL Light**: The consumer version of XREAL Light, which is currently selling through XREAL's partnered carriers’ retail stores. XREAL Light operates by tethering to an Android smartphone.
 - **XREAL Air**: Compared to XREAL Light, XREAL Air is a pared down, yet highly fashionable pair of AR glasses, that pushes the envelope with a form factor that’s wearable and inherently more comfortable.
-- **XREAL Light Developer Kit**: The XREAL Light Developer Kit operates by tethering Xreal Light to a proprietary computing pack developed by Xreal.
 - **XREAL Air 2 and XREAL Air 2 Pro**: XREAL Air 2 shares the same technological features as XREAL Air, but focuses much more on ergonomics, making it way more comfortable to wear for general consumers. XREAL Air 2 Pro, in addtion to what XREAL Air 2 has to offer, introduces the world's first electrochromic lens ever put into mass production.
 
 The table below shows detailed technical specifications for XREAL AR glasses:
