@@ -4,8 +4,6 @@
 
 When we release the XREAL glasses to consumers, the product will only include the glasses themselves, without any controllers or computing units. Users can connect the XREAL glasses to their own Android phones or Beam Pro, which can then serve as 3DOF controllers.
 
-![../../../_images/cpc1.jpg](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc1.jpg&width=300&dpr=4&quality=100&sign=f94348e418cf8be11d06aa9fee55d4ab349167d2a2d0a92b513e6e56bc604f54)
-
 So if you want to create unique experiences that stand out from the rest you can fully customize your MR app's controller interface.
 
 ### How to use a phone as controller
@@ -134,4 +132,5 @@ public class CustomButtonActionHandler : MonoBehaviour
 
 
 11. **Build and run**
-    * Unfortunately, you are unable to debug your costom controller in Unity Editor. You can build your app then test it on your android phone or Beam pro.
+    
+    Unfortunately, you are unable to debug your costom controller in Unity Editor. You can build your app then test it on your android phone or Beam pro.

@@ -6,13 +6,13 @@ sidebar_position: 3
 
 Start developing your XREAL Unity apps on Android phone.
 
-This quickstart guide will help you set up your development environment and test out the sample app “Starter Guide” using XREAL SDK.
+This quickstart guide will help you set up your development environment and test out the sample app “Hello MR” using XREAL SDK.
 
 ### 1. Prerequisites
 
 **Hardware Checklist**
 
-- A supported Android Phone. Please review the[ Device Compatibility](01_XREALDevices/Compatibility.md) list to ensure your phone model is compatible with the glasses and XREAL SDK.
+- Beam Pro or a supported Android Phone. Please review the[ Device Compatibility](01_XREALDevices/Compatibility.md) list to ensure your phone model is compatible with the glasses and XREAL SDK. ⚠️可能后面没有兼容性列表了，仅支持S22 23
 
 - A pair of **XREAL** glasses.
 
@@ -21,16 +21,14 @@ This quickstart guide will help you set up your development environment and test
 **Software Checklist**
 
 - [Unity 2021.3.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
+- XR Plugin Management
 - Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
   - Sample `Interaction Basics`
   - Sample `AR Features` (Optional)
-
-- XR Plugin Management
 - XR Interaction Toolkit
   - Sample `Starter Assets`
 
   - Sample `Hands Interaction Demo` (Optional)
-
 - AR Foundation(Optional)
 - XR Hands(Optional)
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
@@ -50,11 +48,11 @@ Open Window -> Package Manager, There are two import methods.
 
 * Add pacakge from disk
 
->  For both the **Ultimate** and **Enterprise** editions, only the ‘add from disk’ method is supported. 
+>  For both the **Enterprise** and **Experimental** editions, only the ‘add package from disk’ method is supported. 
 >
 >  For the **Normal** edition of the SDK, both methods are supported.
 
-![image-20240722105515920](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722105515920.png)
+![image-20240808201609886](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240808201609886.png)
 
 1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
 
@@ -70,6 +68,14 @@ ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/
 
    3. Select `package.json`，click Open
 
+When importing the XREAL SDK into your Unity project, you’ll encounter several key components that facilitate the development of AR applications. Here’s a breakdown of the essential and optional elements:
+
+* **Interaction Basics**: This is an essential component that provides assets to streamline the setup of basic rendering and interactions using controllers and hand gestures, compatible with the XR Interaction Toolkit. It includes prefabs and demo scenes designed to help you get started quickly with the XREAL SDK integration. This component is fundamental as it lays the groundwork for any XR application, ensuring that you have the necessary tools for basic interaction and rendering.
+
+* **AR Features**: This is an optional component, recommended for those who require advanced AR functionalities in their projects. It includes sample scenes and other assets that demonstrate the integration of AR features supported by the XREAL SDK with AR Foundation. This part specifically supports Plane Detection, Image Tracking, Spatial Anchors, and Depth Meshing. Depending on the scope of your project, you can choose to import this component if your application will utilize complex AR features.
+
+When setting up your project, start with the **Interaction Basics** to ensure all fundamental interaction mechanisms are in place. Then, depending on the AR features necessary for your project, consider importing the AR Features module to expand the application’s capabilities with advanced AR technology. This modular approach allows you to keep your project lightweight by only including the components necessary for your specific needs.
+
 #### 3. Import XRI and AR Foundation
 
 1. Install XR Interaction Toolkit from the Unity Registry in the Package Manager and import **Starter Assets** in Samples tab. If you only use controllers for interaction, the Starter Assets will suffice. However, if you want to use hand gestures for interaction, you’ll also need to import the **Hands Interaction Demo**.
@@ -80,19 +86,19 @@ ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/
 
    ![image-20240612181604343](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612181604343.png)
 
-2. (Optional)Install AR Foundation from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) only if you need AR features like plane detection, image tracking, spatial anchors, or depth meshing. If you don’t require these features, there’s no need to install AR Foundation.
+2. (Optional) Install AR Foundation from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) only if you need AR features like plane detection, image tracking, spatial anchors, or depth meshing. If you don’t require these features, there’s no need to install AR Foundation.
 
 ![image-20240529200949957](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240529200949957.png)
 
 ### 3. Configure Project Settings
 
-You could either configure your project automatically via XREAL SDK **Project Setup** tool or configure manually. These two ways are equivalent.
+You could either configure your project automatically via XR Plugin Management **Project Validation** or configure manually. These two ways are equivalent.
 
-#### **Project Setup Tool**
+#### **Project Validation**
 
 * To enable XREAL XR Plug-in, navigate to the project settings under **Edit > Project Settings > XR Plug-in Management** and open the Android tab. Check the **XREAL** plug-in. ![image-20240528140739045](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528140739045.png)
 
-- Initially, there might be some project settings that have to be updated/fixed. To do so, go to `Project Validation` window. Click on the fix buttons next to the entries to apply the needed project settings. ![image-20240528114854485](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528114854485.png)
+- Initially, there might be some project settings that have to be updated/fixed. To do so, go to `Project Validation` window. Click on the `Fix All` buttons next to the entries to apply the needed project settings. ![image-20240528114854485](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528114854485.png)
 
 #### **Manual Configuration**
 
@@ -135,7 +141,7 @@ If you only want the application to run on a specific device (Light/Air), you ma
 
 - support Multi Resume: This feature allows for different displays on the main screen (phone) and the secondary screen (glasses). When the AR app is sent to the background, the glasses continue to display the AR application, while the phone screen can show any 2D app. Essentially, this is dual-screen display functionality. This option is enabled by default, and after adding this feature, it requires permission on the phone upon first use.
 
-### Project Settings ⚠️
+### Project Settings ⚠️可能后面还会添加一些内容
 
 ![image-20240722112906375](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722112906375.png)
 
@@ -152,21 +158,19 @@ If you only want the application to run on a specific device (Light/Air), you ma
 * `Virtual Controller`:  XREAL SDK allows the use of external devices, like BeamPro or Android phones, as virtual controllers. This setting defines the layout and functionality of the on-screen buttons for these controllers.
 * `Input Source`
   * **Hands**: Uses hand tracking for interaction.
-  * **Controller**: Uses a traditional handheld controller for input.
+  * **Controller**: Uses BeamPro or a Android phone as a controller for input.
 
 * `Support Multi Resume`: Enables dual-screen independent display (dual-screen mode), where the AR app continues to display in the glasses while the phone screen can show different 2D apps.
 * `Support Mono Mode`: Enables the use of a single eye view (monocular mode), which might be useful for certain applications or users who cannot use stereo rendering.
 
-### 6. Find Starter Guide Sample Scene
+### 6. Find **HelloMR** Sample Scene
 
-- Find the **HelloMR** sample scene in the Unity Project window by selecting `Packages/com.xreal.xr/Runtime/Demos/HelloMR/HelloMR.unity`
+- After importing the sample **Interaction Basics**  in Unity Package Manager, find the **HelloMR** sample scene in the Unity Project window by selecting `Assets/Samples/XREAL XR Plugin/3.0.0/Interaction Basics/HelloMR.unity`
 
-- Drag the `HelloMR` scene to `Assets/Scene`, then click `HelloMR ` to open the scene
-
-​	![image-20240722110251103](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722110251103.png)
+  ![image-20240808205306592](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240808205306592.png)
 
 ### 8. Building XREAL SDK App for Android
-1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. s
+1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. 
 
    ![image-20240722111318972](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722111318972.png)
 

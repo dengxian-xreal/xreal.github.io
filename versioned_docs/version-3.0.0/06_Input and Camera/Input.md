@@ -67,18 +67,13 @@ public class XREALInputHandler : MonoBehaviour
 
     void Start()
     {
-        // Bind input actions to controllers
-        leftController.selectAction.action = inputActions.XRController.Select;
+        // Bind input actions to controller
         rightController.selectAction.action = inputActions.XRController.Select;
     }
 
     void Update()
     {
         // Example: Handle controller input
-        if (leftController.selectAction.action.ReadValue<float>() > 0.1f)
-        {
-            Debug.Log("Left controller select pressed");
-        }
 
         if (rightController.selectAction.action.ReadValue<float>() > 0.1f)
         {
