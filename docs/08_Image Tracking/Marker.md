@@ -19,7 +19,6 @@ Introducing XREAL Markers, a novel set of 'interactive' image tracking cards des
 > For developers interested in creating applications akin to Spatial Life, with feature coaster image tracking, additional resource is required:
 <details>
 <summary>NRSDKForUnity Experimental</summary>
-
 2024.06.19
 
 Regular updates released with the normal version.
@@ -37,6 +36,17 @@ Fixed: The problem of not being recognized after switching back from the backgro
 - [NRSDKForUnity_Experimental_Release_2.2.0.unitypackage](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.2.0_Release_20240329/NRSDKForUnityAndroid_Experimental_2.2.0.unitypackage)     
 
 </details>
+
+> Developers who don’t have Marker cards can download and print this PDF file for use.
+
+[XREAL Markers Print.pdf](../assets/XREAL%20Markers%20Print.pdf)
+
+Usage Instructions:
+
+* Please print the Marker images on matte A4 paper in color to ensure accurate output size.
+* When printing, do not enlarge the image; print at 100% scale.
+* Cut out the Marker along the black border and attach it to a rigid cardboard.
+* Within the camera’s recognition range, only one card of the same color should appear.
 
 ## Developer Guide
 
