@@ -12,7 +12,7 @@ This quickstart guide will help you set up your development environment and test
 
 **Hardware Checklist**
 
-- A supported Android Phone. Please review the[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) list to ensure your phone model is compatible with the glasses and NRSDK.
+- A supported Android Phone. Please review the[ Device Compatibility](/XREALDevices/compatibility) list to ensure your phone model is compatible with the glasses and NRSDK.
 
 - A pair of **XREAL** glasses.
 
@@ -21,6 +21,14 @@ This quickstart guide will help you set up your development environment and test
 **Software Checklist**
 
 - [Unity 2019.4.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
+
+  :::warning
+
+  Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download the appropriate Gradle version in Unity-> Settings-> External tools.
+
+  ![image-20240807174108770](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240807174108770.png) 
+
+  :::
 
 - Latest [NRSDK for Unity](https://developer.xreal.com/download)
 
@@ -56,13 +64,13 @@ You could either configure your project automatically via NRSDK **Project Tips**
 
 - Click **Accept All** in the popup window
 <figure className="my-custom-figure">
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FRaTSzHoHozvQTkC3hc1E%2Fimage.png&width=768&dpr=4&quality=100&sign=305aba886db1774185459ee720f619d8a8b0770de5d43e1efa9f6713a62c5a1a" alt="Your Image Description" class="center-image"/>
+<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240729152419937.png" alt="Your Image Description" class="center-image"/>
 <figcaption>Project Tips</figcaption>
 </figure>
+
 - Wait for Unity to process. The **Project Tips** window should appear as empty when finished.
 
-
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FwRWKIm8sOvxV4y5aMehL%2Fimage.png&width=768&dpr=4&quality=100&sign=08a5791a2bb4cfa02fd44ad094b2883e0d051c32725c3890aaea9c89bdab4c5d" alt="Your Image Description" class="center-image scale-image"/>
+<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240729152752977.png" class="center-image scale-image"/>
 
 - Close the Project Tips window
 
@@ -86,7 +94,7 @@ You could either configure your project automatically via NRSDK **Project Tips**
 | `Player Settings > Other Settings > Auto Graphics API`       | false                                                        |
 | `Player Settings > Other Settings > Graphics APIs`           | OpenGL ES3                                                   |
 | `Player Settings > Other Settings > Package Name`            | Create a unique app ID using a Java package name format. For example, use **com.xreal.helloMR** |
-| `Player Settings > Other Settings > Minimum API Level`       | Android 8.0 or higher                                        |
+| `Player Settings > Other Settings > Minimum API Level`       | Android 10.0 or higher                                       |
 | `Player Settings > Other Settings > Target API Level`        | Automatic (highest installed)                                |
 | `Player Settings > Other Settings > Write Permission`        | External(SDCard)                                             |
 | `Project Settings > Quality > VSync Count`                   | Don't Sync                                                   |
@@ -103,7 +111,7 @@ You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware tha
 <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163825424.png" alt="Your Image Description" class="center-image"/>
 <figcaption>NR Project Config</figcaption>
 </figure>
-By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
+By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](/XREALDevices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
 
 If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, NRSDK will not try to adapt automatically, and the app will not run on unsupported devices.
 
@@ -144,7 +152,7 @@ Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This m
 2. Click **Player Settings**. Customize the **Company Name** and **Product Name.** 
 3. (Optional) Navigate to the **Android**> **Other Settings** panel to specify your build settings. As you have prepared **Step 3. Configure Project Settings,** you may leave the current configuration as it is. It is worth noting some of the other settings:
 
-- **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by NRSDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](https://xreal.gitbook.io/nrsdk/development/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
+- **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by NRSDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
 
 - **Scripting Backend:** You must choose **IL2CPP** when building for ARM64 architecture. Note that starting from NRSDK 2.2, ARMv7 architecture is no longer supported.<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FijFH00KUpneZptdM1xaj%2Fimage.png&width=768&dpr=4&quality=100&sign=7c427706fce8673b8c60a167e55c1979693416747d46200b2b505fe0980786dd" alt="Your Image Description" class="center-image"/>
 
@@ -155,20 +163,11 @@ Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This m
 
 ### 9. Deploy to XREAL Device
 
-- Connect your Phone / computing unit to your Mac / Windows PC. 
-
+- Connect your Phone / Beam Pro to your Mac / Windows PC. 
 - Install your app through WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) or type-C cable after the build is successful.
-
-- Disconnect the computing unit with your PC, and then connect it to the glasses.
-
-- (Computing Unit only) If it is the first time you run this app, you need to authorize the app by some tools like [scrcpy](https://github.com/Genymobile/scrcpy).
-
-- Launch your app along with the XREAL Light controller. For instructions on how to use the XREAL Light controller, please refer to [Controller](https://nrealsdkdoc2.readthedocs.io/en/dev/Docs/Unity_EN/Develop/Controller.html#controller-guide).
-
+- Disconnect the device with your PC, and then connect it to the glasses.
+- Open Nebula(Android phone) or MyGlasses(Beam Pro), then find your app then click to open it . 
 - Move around until NRSDK finds a horizontal plane and the detected plane will be covered with green grid.
-
 - Click the Trigger button to put an XREAL logo object on it.
-
 - (Optional) Use **Android Logcat** to view logged messages. We recommend using WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) to connect to your PC so that you do not have to be connected through the data cable most of the time.
-
-- Enable developer options and USB debugging on your Phone / Computing unit. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
+- Enable developer options and USB debugging on your Phone / Beam Pro. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.

@@ -4,9 +4,7 @@
 
 Search for Photon Unity Networking in the Unity Asset Store, then download and import it into your project. (Note whether you are downloading PUN1 or PUN2. This tutorial uses PUN2, as there may be some compatibility issues with PUN1. It is recommended to use PUN2).
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FtD8LGIH4z08yUDDpdK3p%2Fimage.png&width=768&dpr=4&quality=100&sign=365a4819fb79b4bd22d84d1208c5121d09d7d1668aea81bf93b71c609315f30a)
-
-
+  <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FtD8LGIH4z08yUDDpdK3p%2Fimage.png&width=768&dpr=4&quality=100&sign=365a4819fb79b4bd22d84d1208c5121d09d7d1668aea81bf93b71c609315f30a" alt="Description" style={{ width: '700px', height: 'auto' }}   />
 
 Pay attention to resolving issues related to **assemblies**.
 

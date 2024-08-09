@@ -41,7 +41,7 @@ Most apps are made up of a series of interactable objects that can be summarized
 | Object Animation              | Vivid and lively especially with organic elements like plant, animal and food. |
 | Colors and Effects on Ray     | Serious scenes where objects should remain static and realistic. |
 
-
+---
 
 | Selectable Effects in 2D      | Exemplar Scenarios                                           |
 | :---------------------------- | :----------------------------------------------------------- |

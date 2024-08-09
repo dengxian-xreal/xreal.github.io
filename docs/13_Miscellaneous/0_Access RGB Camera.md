@@ -13,7 +13,7 @@ The reliability of glasses' RGB Camera has been fully tested on the following An
 - Arrows: NX9 
 - OPPO: Find X2 pro / Find X5 pro
 
-Glasses' RGB camera can also work on Android phones besides the above. However, the compatibility is not guaranteed. For the full list, please refer to[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility).
+Glasses' RGB camera can also work on Android phones besides the above. However, the compatibility is not guaranteed. For the full list, please refer to[ Device Compatibility](../01_XREALDevices/Compatibility.md).
 
 ## Developer Guide
 

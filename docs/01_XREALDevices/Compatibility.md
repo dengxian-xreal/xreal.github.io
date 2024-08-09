@@ -53,9 +53,9 @@ NRSDK runs on multiple Android devices and different types of XREAL glasses (Air
 | Emulator Testing                    | Yes                   | Yes                       | Yes               |
 | Notification Popup                  | Yes                   | Yes                       | Yes               |
 
-It is worth noting that **XREAL Air, Air 2, and Air 2 Pro have no camera, hence no tracking features other than rotations**. By default, NRSDK will attempt to run your application with best compatibility if both XREAL[ Light and XREAL Air support is configured](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android#configure-adapted-devices-optional). Nevertheless, be aware that the actual behavior of the running application may vary in this way and can differ from your initial intent.
+It is worth noting that **XREAL Air, Air 2, and Air 2 Pro have no camera, hence no tracking features other than rotations**. By default, NRSDK will attempt to run your application with best compatibility if both XREAL[ Light and XREAL Air support is configured](../02_Getting%20Started%20with%20NRSDK.md). Nevertheless, be aware that the actual behavior of the running application may vary in this way and can differ from your initial intent.
 
-If you don’t want NRSDK to automatically adapt for XREAL Air, please specify the supported devices in NRSDK’s global configuration file `NRKernalSessionConfig`. See [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) for more details.
+If you don’t want NRSDK to automatically adapt for XREAL Air, please specify the supported devices in NRSDK’s global configuration file `NRKernalSessionConfig`. See [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.md) for more details.
 
 
 

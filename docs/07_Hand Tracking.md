@@ -92,7 +92,7 @@ To ensure optimal algorithm performance, it is recommended to use specific smart
 - **HUAWEI P60 Pro**: HarmonyOS 4.0.0
 - **OPPO Find X6 Pro**: Android 13
 
-Hand tracking can also run on devices besides the above, the stability however is not guaranteed. For the full compatibility list, please refer to[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility).
+Hand tracking can also run on devices besides the above, the stability however is not guaranteed. For the full compatibility list, please refer to[ Device Compatibility](./01_XREALDevices/Compatibility.md).
 
 **Influence of Unity Packaging on APK:**
 
@@ -167,7 +167,7 @@ The current gesture recognition application supports **only Android SDK Target A
 
 #### Enabling Hand Tracking
 
-1. Create a new project in Unity with NRSDK. Refer to [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) for more setting up instructions.
+1. Create a new project in Unity with NRSDK. Refer to [Getting Started with NRSDK](./02_Getting%20Started%20with%20NRSDK.md) for more setting up instructions.
 2. Delete the `Main Camera` from the scene hierarchy.
 3. Find `NRCameraRig` and `NRInput` prefab from `Assets>NRSDK>Prefabs>NRCameraRig`. Drag them to the scene hierarchy.
 
@@ -181,6 +181,6 @@ The current gesture recognition application supports **only Android SDK Target A
 
 ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-7.png&width=768&dpr=4&quality=100&sign=6c08049dc8ff32d440478f4f9cd43c4ab4954da622e3c0b2aa58627e5c393ce9)
 
-6. Now you are ready for hand tracking, refer to [Tutorial: Manipulating an Object](https://xreal.gitbook.io/nrsdk/development/input-and-camera/interact-with-unity-ui-tutorial) for adding more interactions with objects.
+6. Now you are ready for hand tracking, refer to [Tutorial: Manipulating an Object](./06_Input%20and%20Camera/Interact%20with%20Unity%20UI.md) for adding more interactions with objects.
 
 Samples are included in the Unity package. Please refer to `Assets>NRSDK>Demos>HandTracking` for details.

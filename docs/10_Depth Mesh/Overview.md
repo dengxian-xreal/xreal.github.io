@@ -44,4 +44,4 @@ The mesh quality depends on the image texture, related to the scene material, li
 
 ## **Device compatibility**
 
-Depth Mesh has been fully tested on the Android phones listed in[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility).
+Depth Mesh has been fully tested on the Android phones listed in[ Device Compatibility](../01_XREALDevices/Compatibility.md).

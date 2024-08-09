@@ -44,8 +44,12 @@ There are two ways to implement a transparent mesh.
 
 -  **Use a transparent material**: A transparent material is built into the Package. Use this material to replace the existing mesh material so that the mesh will not be displayed in the scene, but the occlusion effect between mesh and virtual object still exists.
 
-  ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FNsZhuUPQUm2oAUWN1jo2%2Fimage.png&width=768&dpr=4&quality=100&sign=ceaf1bde6dfabcc39c027e818ede0303367fcd05703e1cea0452096b9fb186b6)
 
+  <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FNsZhuUPQUm2oAUWN1jo2%2Fimage.png&width=768&dpr=4&quality=100&sign=ceaf1bde6dfabcc39c027e818ede0303367fcd05703e1cea0452096b9fb186b6" alt="Description" style={{ width: '900px', height: 'auto' }} class="center-image"  />
+
+---
 -  **Don't render the mesh**: double click the prefab MeshObj, and you can unselect the Mesh Renderer. In this way, the mesh will not be rendered in the scene, and there will be no occlusion between it and the virtual object. 
 
-  ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FMwTbcuySd6UkB1Vehcbd%2Fimage.png&width=768&dpr=4&quality=100&sign=4e99690f60789f25d910868485e9d84ee4281d6c4af1623c14736afcbf5221d5)
+
+
+  <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FMwTbcuySd6UkB1Vehcbd%2Fimage.png&width=768&dpr=4&quality=100&sign=4e99690f60789f25d910868485e9d84ee4281d6c4af1623c14736afcbf5221d5" alt="Description" style={{ width: '500px', height: 'auto' }} class="center-image"/>

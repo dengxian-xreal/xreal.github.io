@@ -21,4 +21,4 @@ By the end of this tutorial, your game will be able to:
 
 ### What you'll need
 
-Please refer to Step 1 to Step 5 in [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) to get your environment ready for development. 
+Please refer to Step 1 to Step 5 in [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.mdd) to get your environment ready for development. 

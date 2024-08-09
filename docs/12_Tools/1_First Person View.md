@@ -11,7 +11,7 @@ First Person View has been fully tested on the following Android phones:
 - Arrows: NX9 
 - OPPO: Find X2 pro / Find X5 pro
 
-First Person View can also work on Android phones besides the above. However, the compatibility is not guaranteed. For the full list, please refer to[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility).
+First Person View can also work on Android phones besides the above. However, the compatibility is not guaranteed. For the full list, please refer to[ Device Compatibility](../01_XREALDevices/Compatibility.md).
 
 ### Recording 
 
@@ -30,9 +30,9 @@ First Person View can also work on Android phones besides the above. However, th
 
 #### Steps
 
-1. Download [NRSDK_Experimental](https://developer.nreal.ai/download/tryexperimental) and [StreamingReceiver_V1.2.0.zip](https://nreal-public.nreal.ai/plugins/StreammingReceiver_v1.2.0.zip)
+1. Download [NRSDK_Experimental](https://developer.xreal.com/download/tryexperimental) and [StreamingReceiver_V1.2.0.zip](https://nreal-public.nreal.ai/plugins/StreammingReceiver_v1.2.0.zip)
 
-2. Import NRSDKForUnityAndroid_Experimental_v1.9.1.unitypackage
+2. Import NRSDKForUnityAndroid_Experimental.unitypackage
 
 3. Drag “FPSStreamingCast” prefab into your scene
 

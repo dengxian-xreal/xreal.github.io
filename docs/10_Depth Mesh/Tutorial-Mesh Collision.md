@@ -8,7 +8,7 @@ In this tutorial, we will enable meshing and demonstrate how to collide objects 
 
 ### What you'll need
 
-This tutorial assumes you have a working Unity scene with the NRSDK imported. Please refer to the [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) page for more details on how to import the NRSDK package.
+This tutorial assumes you have a working Unity scene with the NRSDK imported. Please refer to the [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.md) page for more details on how to import the NRSDK package.
 
 ## 1. Create a new scene
 
