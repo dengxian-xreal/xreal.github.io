@@ -31,7 +31,7 @@ The XREAL XR Plugin utilizes Unity's XR Interaction Toolkit (XRI) for handling c
      - **Clear Flags**: Choose how the background should be cleared (e.g., Skybox, Solid Color).
 2. **Adding Components for XR Interaction**
    - Add `Tracked Pose Driver (Input System)` to the `Main Camera` to ensure it follows the head movements accurately.
-   - Configure the `Tracked Pose Driver` to use the appropriate pose source (e.g., `CenterEye - HMD`).
+   - Configure the `Tracked Pose Driver` to use the appropriate pose source.
 
 
 

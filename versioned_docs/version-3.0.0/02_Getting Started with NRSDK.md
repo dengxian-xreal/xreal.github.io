@@ -27,7 +27,6 @@ This quickstart guide will help you set up your development environment and test
   - Sample `AR Features` (Optional)
 - XR Interaction Toolkit
   - Sample `Starter Assets`
-
   - Sample `Hands Interaction Demo` (Optional)
 - AR Foundation(Optional)
 - XR Hands(Optional)
