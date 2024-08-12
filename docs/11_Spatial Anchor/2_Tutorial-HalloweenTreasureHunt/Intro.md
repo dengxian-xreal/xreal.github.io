@@ -6,7 +6,7 @@ In this tutorial, we'll guide you through the process of creating a Halloween-th
 
 At the end of this tutorial, you will have a fully functional game where players can hide and seek treasures in a Halloween-themed environment.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fo6alsA8Wc1HSCUMS4Oy3%2FCleanShot%25202023-07-24%2520at%252016.34.51.gif&width=768&dpr=4&quality=100&sign=608f50d83d395144b333eb9b5102fb2fa0ae56f4a735538d7886d313e380b208)
+![halloween](../../../../../Downloads/halloween.gif)
 
 :::info
 For your convenience, we've provided a Unity package of the final product. You can download it here to see what the finished game looks like.
@@ -28,11 +28,11 @@ In addition to the NRSDK, you will also need the following assets and materials:
 
 First, import the assets and materials package into your Unity project. This package includes the 3D models for the treasures and the UI elements for the game interface. Arrange the 3D models in your game world to create a Halloween-themed environment.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FDa83tcVQgeC7mh0hfUns%2Fimage.png&width=768&dpr=4&quality=100&sign=71cf77d04e9b0b6df5bd95c01e04ea1b3b14fccf42b1943ba247639888f34941)
+![image-20240812175324067](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175324067.png)
 
 Environmental material package
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FYxUrfFeQW2aISSoj14GK%2Fimage.png&width=768&dpr=4&quality=100&sign=fd9ff17d0f550f7e67bbe81f0cf4c5498a025a46514e9a58e58983c2a7a98f36)
+![image-20240812175342947](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175342947.png)
 
 The effect after the completion of environmental arrangement.
 
@@ -52,7 +52,7 @@ However, as the player moves around in the physical world and approaches the loc
 
 This mechanism ensures that the score only increases when the player has successfully found a treasure, i.e., when an anchor becomes visible in the scene.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F0KDKxcTKs0j1CJHxGEBu%2Fimage.png&width=768&dpr=4&quality=100&sign=453c31578cee22392bb62eceea07188bca290cc7a038aca9940f3d78a85ff79e)
+![image-20240812175825441](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175825441.png)
 
 
 
@@ -154,11 +154,11 @@ In addition to the functionalities mentioned in the overview section, the LocalM
 
 The game interface will include buttons for the player to choose their role (hider or hunter), to place and find treasures, and to display the score. You'll need to create these buttons using the UI elements from the assets and materials package.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FJuZ58fwyMz2u0FtF8Rxg%2Fimage.png&width=768&dpr=4&quality=100&sign=b33ba81a1ee3411e9a8e6c0cd47d0e92c5037aecd2f706e19402401b985ad7e0)
+![image-20240812175843624](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175843624.png)
 
 To make the game simpler and more engaging, we've also included a feature that allows the 'Hider' to leave clues for the 'Seeker' to aid in their treasure hunt.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FFBrY0NZcwsJGm4AGNxQW%2Fimage.png&width=768&dpr=4&quality=100&sign=7cf35be5f3a82c6fba1c9607df6510b1f72cc9dc5fd39e325419fede8fbe63f0)
+![image-20240812175905432](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175905432.png)
 
 To manage the clicks of various buttons and the visibility switch between interfaces, we use a script named `PanelManager`. This script handles all interface interactions, including button click events and panel display/hide operations.
 
@@ -168,7 +168,7 @@ However, there's a crucial point to note: when the "hider" player saves a treasu
 
 In the `AnchorItems` script, we modified the `Save` method, adding logic to check whether the save was successful. If the save fails, we display a failure panel. If the save is successful, we change the color of the save button to green.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fe7gNiZrnDnQp03LI0NLP%2Fimage.png&width=768&dpr=4&quality=100&sign=b0e6583e4114e05dd459db6c81621e833a7d12c62a3128a427acffcb41a391d7)
+![image-20240812175919391](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175919391.png)
 
 ```
 public void Save()
@@ -266,7 +266,7 @@ With these modifications, we can provide user feedback based on the save status 
 
 Finally, test the game to ensure everything works as expected. You should be able to choose a role, place and find treasures, and see your score update as you find treasures. All these steps can be performed directly in the Unity Editor, so there's no need to package the game after each step. Only a final deployment to your mobile device for testing is necessary.Additionally, you can hold down the Shift key to move the ray, simulating the interaction with the game through a mobile device. The black area on the right side of the Unity Editor represents the screen of your mobile device.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FoDtFDer7l4B1ZBKKzCXw%2FCleanShot%25202023-07-21%2520at%252014.33.56.gif&width=768&dpr=4&quality=100&sign=8e6e0993bd8aca8d6fb2bc264e40a56f4c021d597678ea5e11a311770c2394ca)
+![anchor2](../../../../../Downloads/anchor2.gif)
 
 That's it! You've now created a Halloween-themed treasure hunt game using Unity and the NRSDK. Happy hunting!
 

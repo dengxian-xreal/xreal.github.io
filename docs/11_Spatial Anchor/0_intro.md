@@ -16,8 +16,12 @@ Spatial Anchors are world-locked reference points in the AR environment that can
 Please follow these steps to import the SDK into your Unity project:
 
 1. Download and import the SDK package.
+
 2. Add the `AnchorItem` script to the game object you want to use as an anchor.
-3. Set the properties of `AnchorItem` in the Unity Inspector.![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252Fht321ZyBkB4wWoYWgcIc%252Fimage.png%3Falt%3Dmedia%26token%3D267ba505-9438-44f3-b71d-63e2878447f3&width=768&dpr=4&quality=100&sign=a58187319c3083c2219de41855006a1f5ab1be8cee71a008ed45c8692d8d1c83)
+
+3. Set the properties of `AnchorItem` in the Unity Inspector.
+
+   ![image-20240812175157094](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175157094.png)
 
 4. Inspect Mapping Example scene and LocalMapExample.cs as reference for an implementation of spatial anchor.
 

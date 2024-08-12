@@ -2,7 +2,7 @@
 
 Now that the player can control an entity in the scene, give the player a destination to drive towards.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FNan57JfW0muxKIpN1jJj%2Fimage.png&width=768&dpr=4&quality=100&sign=606db91c37f42d891608f14885a66271adea7d9157820a9b5346b32a9d110312)
+![image-20240812173410063](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173410063.png)
 
 ### Create `GemSpawner`
 

@@ -2,7 +2,7 @@
 
 The player will control a toy car that will drive towards the location of the reticle. A model for this car is provided in the Plane Detection Starter Package.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FrIC3feADc2NIbkxDxDI2%2Fimage.png&width=768&dpr=4&quality=100&sign=3176f7d849f327a8af75d5858c85dc4e9514528c672a0c5313432ad695bd66d7)
+![image-20240812173354012](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173354012.png)
 
 ### Define Car Behaviour
 

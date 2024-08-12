@@ -11,7 +11,7 @@ By the end of this tutorial, your game will be able to:
 - Detect real-world planes and draw a playing field over it.
 - Cast rays from controller and detect intersections with planes.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FiAJr5C5Ov13fEP3bk9wv%2FRecord.gif&width=768&dpr=4&quality=100&sign=ec65a29efc1b5f8dcb1388e3d7b4c17eac97c7c1515c7903d92ebe5c594664b3)
+![plane](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/plane.gif)
 
 ### What you'll learn
 

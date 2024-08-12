@@ -28,7 +28,7 @@ A set of images can be uploaded to the database as pre-trained references. These
 
 **Examples of good images and bad images:**
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc2.readthedocs.io%2Fen%2Fdev%2F_images%2Fimgtrack01.jpg&width=300&dpr=4&quality=100&sign=f7ca458a44d2378dd021cdf1e7715e584a6cbb803c646ba5ad5f47256431d302)
+![image-20240812173249863](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173249863.png)
 
 ### Developer Guide
 
@@ -54,7 +54,7 @@ As you move your XREAL Light glasses, the app automatically detects and tracks i
 
 Select one or more pictures you want to use with the mouse, then right-click and select the `Create > NRSDK > TrackingImageDatabase` menu to create the database file.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc2.readthedocs.io%2Fen%2Fdev%2F_images%2Fimgtrack02.jpg&width=768&dpr=4&quality=100&sign=e95f47f3d550f73139a88a203ab1181090419e091205797dac13dacb31c57816)
+![image-20240812173309162](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173309162.png)
 
 A new image database is created in the same folder as the reference images.
 
@@ -69,9 +69,10 @@ You can click 'x' to delete items.
 #### Set the Database File
 
 - In the Project window, go to `Assets > NRSDK` and open NRKernalSessionConfig.
+
 - In the Inspector window, click the box next to Tracking Image Database and select the database file you created.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc2.readthedocs.io%2Fen%2Fdev%2F_images%2Fimgtrack03.jpg&width=768&dpr=4&quality=100&sign=59d21e338f1757507bc042a681627aa251b417b945552707325fb4591dcffaa2)
+  ![image-20240812173325033](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173325033.png)
 
 #### Get Tracked Image
 
