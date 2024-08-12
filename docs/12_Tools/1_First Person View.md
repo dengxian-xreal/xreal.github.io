@@ -25,7 +25,7 @@ First Person View can also work on Android phones besides the above. However, th
 
  Operating environment
 
-- **Hardware**: PC + Adapted mobile phone or Compute Unit + Xreal Light
+- **Hardware**: PC + Adapted mobile phone or Compute Unit + XREAL Light
 - **Software**: NRSDK v1.6.0Experimental and above, StreamingReceiver_V1.2.0
 
 #### Steps

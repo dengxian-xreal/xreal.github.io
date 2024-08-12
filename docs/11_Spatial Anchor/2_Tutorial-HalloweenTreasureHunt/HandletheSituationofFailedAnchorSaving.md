@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="Anchorltems.cs" label="Anchorltems.cs" default>
       ```
       /****************************************************************************
-      * Copyright 2019 Xreal Techonology Limited. All rights reserved.
+      * Copyright 2019 XREAL Techonology Limited. All rights reserved.
       *                                                                                                                                                          
       * This file is part of NRSDK.                                                                                                          
       *                                                                                                                                                           
@@ -130,7 +130,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="NRWorldAnchor.cs" label="NRWorldAnchor.cs">
     ```
     /****************************************************************************
-    * Copyright 2019 Xreal Techonology Limited. All rights reserved.
+    * Copyright 2019 XREAL Techonology Limited. All rights reserved.
     *                                                                                                                                                          
     * This file is part of NRSDK.                                                                                                          
     *                                                                                                                                                           
@@ -250,7 +250,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="NRWorldAnchorStore.cs" label="NRWorldAnchorStore.cs">
   ```
   /****************************************************************************
-  * Copyright 2019 Xreal Techonology Limited. All rights reserved.
+  * Copyright 2019 XREAL Techonology Limited. All rights reserved.
   *                                                                                                                                                          
   * This file is part of NRSDK.                                                                                                          
   *                                                                                                                                                           
@@ -280,7 +280,7 @@ import TabItem from '@theme/TabItem';
           public static NRWorldAnchorStore Instance;
 
           /// <summary> Pathname of the map folder. </summary>
-          public const string MapFolder = "XrealMaps";
+          public const string MapFolder = "XREALMaps";
           public readonly string MapPath;
           /// <summary> The anchor 2 object file. </summary>
           public const string Anchor2ObjectFile = "anchor2object.json";

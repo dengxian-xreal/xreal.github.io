@@ -2,7 +2,7 @@
 
 ### NRSDK Coordinate Systems
 
-This document describes the coordinate systems of the Xreal Glass used in the NRSDK for Unity. It also describes the corresponding interfaces for getting extrinsics between the glass components, camera image data, and camera intrinsics, as well as conversion to other definition of coordinate systems.Note that this document is applicable to the NRSDK for Unity only, and does not apply to other types of NRSDK.
+This document describes the coordinate systems of the XREAL Glass used in the NRSDK for Unity. It also describes the corresponding interfaces for getting extrinsics between the glass components, camera image data, and camera intrinsics, as well as conversion to other definition of coordinate systems.Note that this document is applicable to the NRSDK for Unity only, and does not apply to other types of NRSDK.
 
 ## Unity-based Coordinate Systems
 
@@ -70,9 +70,9 @@ Vector3 pInHead = Head_T_cam.MultiplyPoint(pInCam);
 
 For computer vision algorithm developers, it is often convenient to handle quantities expressed in the OpenCV coordinate system (right handed). Hereafter, we describe how to convert the aforementioned Unity coordinate systems and their corresponding extrinsics to the OpenCV convention. We also describe the definitions and interfaces for image data and camera intrinsics.
 
-### Xreal Glass Components and Their OpenCV-based Coordinate Systems
+### XREAL Glass Components and Their OpenCV-based Coordinate Systems
 
-- In the OpenCV convention, the Xreal Glass components and their corresponding coordinate systems are as follows
+- In the OpenCV convention, the XREAL Glass components and their corresponding coordinate systems are as follows
 
 ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FPF8O5uN0ngEyOgGQ4AOx%2Fimage3.png&width=768&dpr=4&quality=100&sign=7e0f1afd9d91c079b91a474dc65ee8396778d7a4368269f355d726fc01903708)
 
