@@ -15,7 +15,7 @@ The core features provided by NRSDK are Spatial Computing, Optimized Rendering, 
 
 - **Multi-modal Interactions** provide intuitive choices of interactions for various use cases.
 
-![NRSDKArchitecture](./Images/NRSDKArchitecture.png)
+![image-20240812145642519](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240812145642519.png)
 
 ### Spatial Computing
 
