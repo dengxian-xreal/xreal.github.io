@@ -19,7 +19,7 @@ Controlling the Emulator is very similar to common 3D video games. You can use k
 
 NRSDK > Emulator
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fem1-1.jpg&width=768&dpr=4&quality=100&sign=dfe4aba2af27ba26b04abe5f13e2db24313869952b367c040d4bd88af510cc9f)
+![image-20240813172023796](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172023796.png)
 
 ### Emulator Structure
 
@@ -96,7 +96,7 @@ void UpdateControllerRotateByInput()
 
 #### Phone Controller
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FAfd2DvDkj5YJBY63FGzA%2Fimage.png&width=768&dpr=4&quality=100&sign=732601898b5f4976f0d16d789e7b624c9cc6963c485f1279401884391d18b3d6)
+![image-20240813172034642](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172034642.png)
 
 Selecting **Emulate Virtual Display In Editor** on **NRInput** to enable **Phone Controller** simulation that stays at the lower-right corner of the Game window.
 
@@ -104,7 +104,7 @@ Selecting **Emulate Virtual Display In Editor** on **NRInput** to enable **Phone
 - Mouse left on APP -> App button
 - Mouse left on HOME -> Home Button
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F3JYzMmcckq2WjQCSDpKD%2Fimage.png&width=768&dpr=4&quality=100&sign=ef0eadbd756bad3056bc0f22d8e4b22d8128b7bb99458a1d35b55fdef8ed832c)
+![image-20240813172048620](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172048620.png)
 
 ### Tutorial: Simulating Headpose, Controller & Trackable Object
 
@@ -123,7 +123,7 @@ First , `Assets/NRSDk/Emulator/Scenes/TrackableImageEmulator.unity` and `Assets/
 
 > - `TrackableObserver.cs` is attached to every`NRTrackableImageTarget.prefab` and `NRTrackablePlaneTarget.prefab`. You need to register your own logic of Trackable found and lost into TrackableObserver.
 >
-> ![../../../_images/em1-10.jpg](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fem1-10.jpg&width=300&dpr=4&quality=100&sign=91374592c5ba9ce344c2f395ec48878e10015d0f91ae3b7a98aefcd40b1cf2e1)
+> ![image-20240813172106573](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172106573.png)
 
 3. In `/Assets/NRSDK/Emulator/Scripts/TrackableFoundTest.cs` , you could find the sample for the register event.
 
@@ -159,18 +159,19 @@ First , `Assets/NRSDk/Emulator/Scenes/TrackableImageEmulator.unity` and `Assets/
 
 4. If you want to use your image as a detection target, you could switch the image database in `NRTrackableImageTarget.prefab`
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fem1-11.jpg&width=768&dpr=4&quality=100&sign=47dee51458d9e1a71658627f9db33b7bedc0c3f7478adf71db79dfbda290e72f)
+​	![image-20240813172128015](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172128015.png)
 
 > - In NRSDK, we provided you with three default images for image detection. If you would like to add your own, please find `NRCameraRig.prefab`
 >
 >   - Find`NRKernalSessionConfig.asset` under the `NRSessionBehaviour.cs`
 >
->   ![../../../_images/em1-12.jpg](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fem1-12.jpg&width=300&dpr=4&quality=100&sign=0fb72c3560f74e049a44f32a60f8f9686c3d431ae4ebd4ed0330c4f572fd8e94)
+>   ![image-20240813172146669](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172146669.png)
 >
 >   - Find TrackingImageDatabase in the `NRKernalSessionConfig.asset`, and drag your own database.asset into it.
 >
->   ![../../../_images/em1-13.jpg](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fem1-13.jpg&width=300&dpr=4&quality=100&sign=8da3de3a3103b6b271e59ba22b10eae143b0a566c809c7b20fb86a64f13a58d8)
+>     ![image-20240813172159240](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172159240.png)
 >
 >   - Refer to [Image Tracking](https://nrealsdkdoc.readthedocs.io/en/latest/Docs/Unity_EN/Develop/Image Tracking.html#image-tracking) for more inforamtion
 >
->   ![../../../_images/em1-14.jpg](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fem1-14.jpg&width=300&dpr=4&quality=100&sign=900130501e65a6cd255488ada5ed410f7271cbcaa9d6377b766c91acab2515a3)
+>     ![image-20240813172210793](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172210793.png)
+>   

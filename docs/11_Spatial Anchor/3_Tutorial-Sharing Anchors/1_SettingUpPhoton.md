@@ -10,11 +10,11 @@ Pay attention to resolving issues related to **assemblies**.
 
 - Open the assembly of NRSDK.
 
-  ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fww5PNqqp9U301NOXfTK0%2Foutput.png&width=768&dpr=4&quality=100&sign=8b75734aed5ca28f2cfa229a9f8c1a4cdb48658e647d743c035f0b3f48398c71)
+  ![assembly](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/assembly.png)
 
 - Find the "Assembly Definition References" section and click the "+" button to add a new reference. In the new reference, select the Photon assembly PhotonUnityNetworking and PhotonRealtime. Click the "Apply" button to save your changes.  
 
-  ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FB5svt4wYKvTktFUjfE9r%2F4b1b741e-4b11-4471-87be-117081d07c7b.png&width=768&dpr=4&quality=100&sign=1d3f14bf9e7c36663260c047347aeda7a1ece21ee1511f6a4a1201301072eede)
+  ![image-20240813142059576](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813142059576.png)
 
 ### 2. Set up Photon in Unity
 
@@ -22,11 +22,11 @@ Use Photon Cloud ServerUse Self-hosted Server
 
 1. Register and create a new application on the [official website of Photon](https://dashboard.photonengine.com/publiccloud/overview), then obtain the App ID for your application.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FHSwJu5Y1xZuBKrthFF9Z%2F6839ac72-e8fc-4d9f-98f8-55dde33b18e8.png&width=768&dpr=4&quality=100&sign=9a0aff036b9382ba2aebd2029c3848a190b4f82a6de371b5f8fc9d9f16f8aa32)
+​	![image-20240813142117367](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813142117367.png)
 
 2. In Unity, open PhotonServerSettings (`Window > Photon Unity Networking`), and then enter your App ID.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FBS3tHcFzlU0nxwcjNQlM%2Foutput%2520%281%29.png&width=768&dpr=4&quality=100&sign=ee0a687d3055e7119fd1d796d67dc349877bef778a4bece8a7aa2a88d1aa4740)
+​	![2](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/2.png)
 
 ### 3. Joining a room
 

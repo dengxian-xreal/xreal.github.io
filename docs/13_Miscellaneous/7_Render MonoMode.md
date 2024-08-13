@@ -8,4 +8,4 @@ MonoMode is a specific mode within the AR system that enables a faux 3D viewing 
 
 To enable MonoMode in your AR application, simply toggle "Support Mono Mode" within the NRKernelSessionConfig (disabled by default).
 
-![img](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/U6qbQCCRyxbQSie0HMM1/image.png)
+![image-20240813172350145](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172350145.png)

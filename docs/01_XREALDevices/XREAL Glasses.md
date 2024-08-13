@@ -1,6 +1,6 @@
 # XREAL Glasses
 
-XREAL’s products include the XREAL Light Developer Kit, XREAL Light Consumer Kit, and the Xreal Air series. See below for a brief overview of each headset, its features, and attributes relevant to developers.
+XREAL’s products include the XREAL Light Developer Kit, XREAL Light Consumer Kit, and the XREAL Air series. See below for a brief overview of each headset, its features, and attributes relevant to developers.
 
 - **XREAL Light**: The consumer version of XREAL Light, which is currently selling through XREAL's partnered carriers’ retail stores. XREAL Light operates by tethering to an Android smartphone.
 - **XREAL Air**: Compared to XREAL Light, XREAL Air is a pared down, yet highly fashionable pair of AR glasses, that pushes the envelope with a form factor that’s wearable and inherently more comfortable.

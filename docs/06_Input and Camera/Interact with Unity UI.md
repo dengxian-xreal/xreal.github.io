@@ -6,7 +6,7 @@ Controllers provide a simple way for users to navigate in mixed reality. In the 
 
 ## How to Use Your Phone as a Controller
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcontroller04.png&width=768&dpr=4&quality=100&sign=0d3e08268e1aac95c61b6f8d824df03a08d0827fcb8bbf0e39abf248088f282e)
+![image-20240812170926590](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812170926590.png)
 
 | Controller Features | Description                                                  |
 | :------------------ | :----------------------------------------------------------- |

@@ -4,7 +4,7 @@
 
 You will be able to plug XREAL Light into your own Android phone and use the phone as a 3DOF controller.
 
-![../../../_images/cpc1.jpg](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc1.jpg&width=300&dpr=4&quality=100&sign=f94348e418cf8be11d06aa9fee55d4ab349167d2a2d0a92b513e6e56bc604f54)
+![image-20240812171724008](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171724008.png)
 
 So if you want to create unique experiences that stand out from the rest you can fully customize your MR app's phone controller interface.
 
@@ -30,23 +30,23 @@ One of the great things about the XREAL phone controller is that you could easil
 
 - Find the "NRVirtualDisplayer" prefab, and drag it to your scene.
 
-  ![../../../_images/cpc2.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc2.png&width=300&dpr=4&quality=100&sign=160f28cb751afff50a3f1bf29570f36543507e91ea263c094d11bc8fa96dcd34)
+  ![image-20240812171252248](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171252248.png)
 
 - Break this prefab.
 
-  ![../../../_images/cpc3.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc3.png&width=300&dpr=4&quality=100&sign=ab26e53eff0b9f9a6313eac5f992c3d7fc00e3685092073462502257b876d4c4)
+  ![image-20240812171236486](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171236486.png)
 
 - Set the resolution of Game View in Unity Editor to 1080 x 2340.
 
-  ![../../../_images/cpc4.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc4.png&width=300&dpr=4&quality=100&sign=76917fe81581a91baac6c3d8aaca0da10426d19c87a1d026514de92712505e8d)
+  ![image-20240812171218976](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171218976.png)
 
 - Double click the "NRVirtualDisplayer" object in Hierarchy to find it in Scene View, then you could design buttons or other UI as you like.
 
-  ![../../../_images/cpc5.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc5.png&width=300&dpr=4&quality=100&sign=7965ca437016e708e029970c7b813daaa975ca94ca47cef52be41610326eb32d)
+  ![image-20240812171158821](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171158821.png)
 
 - Make sure three basic NRButton are set. If you don't need them, you could set these objects as false.
 
-  ![../../../_images/cpc6.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc6.png&width=300&dpr=4&quality=100&sign=8afa0c73ebf3bff74e1408d3b8eba23f4d3988e8170804c14414871ce2ad35b3)
+  ![image-20240812171145296](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171145296.png)
 
 - If you want a sample scene, check the "Input-VirtualController" scene in SDK demos.
 
@@ -54,10 +54,10 @@ One of the great things about the XREAL phone controller is that you could easil
 
 - Before clicking play in Unity Editor, the game view resolution should be set to normal, like 1920*1080. Then click Play, find the "NRInput" object in the scene, and enable the "EmulateVirtualDisplayInEditor" checkbox.
 
-  ![../../../_images/cpc7.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc7.png&width=300&dpr=4&quality=100&sign=8c58c43a751809607ac3f90af2a67b8154a5d24bb34acce64ecbac770690c770)
+  ![image-20240812171127216](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171127216.png)
 
 - When the checkbox is ticked, a virtual controller will be shown at the right-bottom corner in the Game View. You can interact with this virtual controller with your mouse.
 
-  ![../../../_images/cpc8.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcpc8.png&width=300&dpr=4&quality=100&sign=2a7be030615d26f4e0dc50ff640f9c4aac26e026b6b159708f5a3bb893ec9edb)
+  ![image-20240812171108176](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812171108176.png)
 
 - Be aware that once the emulator is enabled, all the controller button events will be fired from the virtual controller on the game screen. The original way(mouse button emulate controller button) would not work.

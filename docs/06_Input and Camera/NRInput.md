@@ -2,7 +2,7 @@
 
 To enable input support for XREAL device (Controller and Hand tracking), simply drag **NRInput** prefab into your scene hierarchy. It is used to query virtual or raw controller state, such as buttons,  triggers, and capacitive touch data.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fszbk36JxKfbwZz2iXL32%2Fimage.png&width=768&dpr=4&quality=100&sign=cc03f577c7dbf8c45039e6083ee1d51765309e7de484c5c44873b812401e03bf)
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812170131138.png" alt="img" />
 
 **Raycast Mode:** Choose between Laser / Gaze interaction. **Laser** is the default raycasting mode most apps will be based on. In this mode, the ray will start from the center of the controller.
 
@@ -14,7 +14,7 @@ You may leave other fields unchanged.
 
 The raycaster class inherits from Unity's BaseRaycaster class. A chosen raycaster's farthest raycasting distance can be modified directly from the Inspector window. You can also define which objects are interactable by changing the parameter of their Mask.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcontroller06.jpg&width=768&dpr=4&quality=100&sign=a110a2d99e18fabb5a57238422c37d9d6cc9a8b450dbc848daa57f97f6b5cd27)
+![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812170211149.png)
 
 ### Handle Controller State Change
 
@@ -198,8 +198,9 @@ public class CubeInteractiveTest : MonoBehaviour, IPointerClickHandler, IPointer
 
 Integration with Unity's EventSystem supports user interaction with UI System. Please be aware in order for the Unity UI to respond to raycast and receive unity events, you **must** remove the default **Graphic Raycaster** component and attach **Canvas Raycast Target** component on Canvas.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FimFfQH282wdz1WhSo6vX%2Fimage.png&width=768&dpr=4&quality=100&sign=8a7f2b54a08e9c0d822c833cd613c24a493e819225dd1820765baf3b75ea89f6)
+![image-20240812170626817](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812170626817.png)
 
 In this way, you may add event callbacks on Unity UI elements such as Button, Image, Toggle, Slider, etc. For example, On Click() on button:
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fcbo6iHsuuTMW4sKi66yA%2Fimage.png&width=768&dpr=4&quality=100&sign=9d5e9622079e75d1639b54d67f99221da6a42f65f9f6138ab19b7bfb80758c04)
+![image-20240812170643954](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812170643954.png)
+

@@ -13,7 +13,7 @@ To access the "MappingExample" scene, follow these steps:
 
 ### Experience Flow
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252Fiq8uQ1qw06avP0sMdMqK%252FCleanShot%25202024-03-12%2520at%252011.47.00.gif%3Falt%3Dmedia%26token%3D76c87787-75bf-4227-9b8f-3a17e3f51d37&width=768&dpr=4&quality=100&sign=f5922339d5793b532a1252409444c8e3e928d7ef29087eaefd5bb565009dba33)
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/anchor.gif"/>
 
 **1.Opening the Anchor Panel** 
 

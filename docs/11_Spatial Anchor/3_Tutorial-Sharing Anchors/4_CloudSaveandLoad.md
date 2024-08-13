@@ -248,29 +248,26 @@ We can simply test the upload and download functions in Unity Editor to see if t
 
 1. **Button Attachment**: Attach the `CloudSave` method to a button. For demonstration purposes, we've linked it to a "share" button in our example.
 
-   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FDrKcYeGV9rnokvew6O8a%2Fimage.png&width=768&dpr=4&quality=100&sign=5cbb9e51da08f5aa7cdc067e0aac68f97f3a93e591c66b8018ee01e639aed91e)
+   ![image-20240813170945565](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813170945565.png)
 
-   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FXJhD8b1OJVSkvY2vH09J%2Fimage.png&width=768&dpr=4&quality=100&sign=11c4ae3f3cce3508e8852ede821f3191553cff2c9b5c54555a9f95d5d3c3495a)
-
-   
+   ![image-20240813170957454](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813170957454.png)
 
 2. **Running in Unity Editor**: Before proceeding with the Cloud Save operation, ensure that you've successfully saved the anchor. Launch your application within the Unity Editor to verify this.
 
-   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FHlZAaJXhsVD3xlvuVFvm%2Fimage.png&width=768&dpr=4&quality=100&sign=c32ac79d0763243e841982178d059d0982ba5e0f711eb0dde5a8d21f42d4b459)
+   ![image-20240813171011384](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171011384.png)
 
 3. **Log Verification**: After executing the Cloud Save, check the console for log messages. If you encounter a message similar to the one provided, it's a strong indication that your upload was successful.
 
-   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fj5MaexZE181ghvSfyoBU%2Fimage.png&width=768&dpr=4&quality=100&sign=35486e1692ef48f11b047db6eedb8bd34f1b74371630de2277bc1a45d98d1a36)
+   ![image-20240813171026357](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171026357.png)
 
 4. **Cloud Storage Validation**: For added assurance, navigate to Firebase Storage or Aliyun OSS console to confirm that your data has been uploaded correctly.
 
-   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FQFKvPvEA8XEPgIED3Lwn%2Fimage.png&width=768&dpr=4&quality=100&sign=88d61fc9c2e0b07fce03579049e791e2dfc30627d3f033381bfafc741e27e384)
+   ![image-20240813171043665](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171043665.png)
 
-   Firebase Console
 
 #### CloudLoad
 
-1. **Modifying** `**localmapExample**`: Add a test method and a test UUID within the `localmapExample`. Use the UUID of an anchor that's already stored on the cloud server.
+1. **Modifying** `localmapExample`: Add a test method and a test UUID within the `localmapExample`. Use the UUID of an anchor that's already stored on the cloud server.
 
 ```
  public string testuuid;
@@ -286,6 +283,6 @@ We can simply test the upload and download functions in Unity Editor to see if t
 
 3. **Log Verification**: Monitor the console for log messages. If you see messages indicating a successful download, it means the anchor has been retrieved correctly from the cloud.
 
-   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FuSl1GLn0Vv3OJOPjmoCm%2Foutput%2520%282%29.png&width=768&dpr=4&quality=100&sign=29d60ef579bcd42c2daecac2814fb70bef9c9564e77f94a7408d0f4054b9a55b)
+   ![image-20240813171145187](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171145187.png)
 
 We've successfully completed 90% of the process. Great job on making it this far! In the next section, we'll delve into using Photon to transmit the UUID. This will seamlessly connect all the steps we've covered so far. Stay with us as we approach the finish line!

@@ -14,7 +14,7 @@ The main script is `CameraResetController.cs` which uses a boolean to support re
 
 3. Drag the script CameraSmoothFollow.cs to the inspector of canvas for sticking the menu in your view so you can click your reset button easily. You can adjust the speed of the button moving with your view with `Follow Speed`.                   
 
-   ![img](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/60VSwvijbeEramJ7JPCn/image.png)
+   ![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172422883.png)
 
    
 
@@ -22,18 +22,18 @@ The main script is `CameraResetController.cs` which uses a boolean to support re
 
 5. Set the OnClick() event of your button, drag the canvas to the event;
 
-   ![img](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/exoUzS73l8mY35OyFF43/image.png)
+   ![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172426982.png)
 
    
 
 6. Choose the function `CameraResetController` -> `ResetCameraToOrigin(bool)`
 
-   ![img](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/fi0vFfgujSKGr68PDFGe/image.png)
+   ![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172430624-20240813172435799.png)
 
    
 
 7. That's it. You can build your app and test the recenter effect. If you want to reset the camera with pitch, just repeat the upper steps and choose the check box.  
 
-   ![img](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/iPM2W1Oowzpq73foqUTg/image.png)
+   ![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172441140.png)
 
    

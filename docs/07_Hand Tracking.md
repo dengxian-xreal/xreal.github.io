@@ -168,18 +168,20 @@ The current gesture recognition application supports **only Android SDK Target A
 #### Enabling Hand Tracking
 
 1. Create a new project in Unity with NRSDK. Refer to [Getting Started with NRSDK](./02_Getting%20Started%20with%20NRSDK.md) for more setting up instructions.
+
 2. Delete the `Main Camera` from the scene hierarchy.
+
 3. Find `NRCameraRig` and `NRInput` prefab from `Assets>NRSDK>Prefabs>NRCameraRig`. Drag them to the scene hierarchy.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-5.png&width=768&dpr=4&quality=100&sign=4290b47ae27f4d90b59fc88c535330ea0b6b5d2951eee121afdb7f8d52868a5d)
+   ![image-20240812172438111](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812172438111.png)
 
 4. Select the `NRInput` GameObject in the `Hierarchy` window to open the `Inspector` window, and choose `Hands` as `Input Source Type`.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-6.png&width=768&dpr=4&quality=100&sign=840a099b4456aad1d9244ca19377720e2644adbd6ec994ffb0bdf16df94ec4da)
+   ![image-20240812172454370](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812172454370.png)
 
 5. Find `NRHand_R` and `NRHand_L` from `Assets>NRSDK>Prefabs>Hands`. Add them as child GameObjects of `Left` and `Right` anchor in `NRInput` correspondingly. 
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-7.png&width=768&dpr=4&quality=100&sign=6c08049dc8ff32d440478f4f9cd43c4ab4954da622e3c0b2aa58627e5c393ce9)
+   ![image-20240812172509939](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812172509939.png)
 
 6. Now you are ready for hand tracking, refer to [Tutorial: Manipulating an Object](./06_Input%20and%20Camera/Interact%20with%20Unity%20UI.md) for adding more interactions with objects.
 

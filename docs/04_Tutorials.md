@@ -4,7 +4,7 @@ The following tutorials show how to use some features of NRSDK to make AR applic
 
 ### Phone Controller
 
-Learn how to develop apps that use the Phone Controller function for both Xreal Air and Xreal Light.
+Learn how to develop apps that use the Phone Controller function for both XREAL Air and XREAL Light.
 <iframe 
   src="https://cdn.iframe.ly/cqD9krp" 
   allowFullScreen 

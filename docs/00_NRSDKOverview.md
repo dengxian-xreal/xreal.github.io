@@ -15,7 +15,7 @@ The core features provided by NRSDK are Spatial Computing, Optimized Rendering, 
 
 - **Multi-modal Interactions** provide intuitive choices of interactions for various use cases.
 
-![NRSDKArchitecture](./Images/NRSDKArchitecture.png)
+  ![image-20240812152914697](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/2024/08/19f0b5a021f7334203becaf77e10a8d7.png)
 
 ### Spatial Computing
 
@@ -23,7 +23,7 @@ The core features provided by NRSDK are Spatial Computing, Optimized Rendering, 
 
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature01.gif&width=300&dpr=4&quality=100&sign=478bb33af5dd3fef519c963cfa870c6af3dc8714633bf8b78ac7241f560a4450" alt="https://nreal-public.nreal.ai/developer/img/corefeature01.gif" width="500" height = "300" />
 
-**Plane Detection** enables Xreal glasses to detect flat surfaces (both horizontal and vertical) in the environment, such as a table or a wall. The transformation of the plane is continuously updated. When the glasses move around, the plane can be extended, and multiple planes can merge into one when they overlap.
+**Plane Detection** enables XREAL glasses to detect flat surfaces (both horizontal and vertical) in the environment, such as a table or a wall. The transformation of the plane is continuously updated. When the glasses move around, the plane can be extended, and multiple planes can merge into one when they overlap.
 
 <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnreal-public.nreal.ai%2Fdeveloper%2Fimg%2Fcorefeature02.gif&width=300&dpr=4&quality=100&sign=fd54d3c57e53478a3efc13a99869039a3656772999f41ca10b18867514401b6c" alt="https://nreal-public.nreal.ai/developer/img/corefeature02.gif" width="500" height = "300"  />
 

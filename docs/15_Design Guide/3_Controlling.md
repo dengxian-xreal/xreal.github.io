@@ -10,7 +10,7 @@ You can use the phone as a 3 DoF controller that is essentially identical to the
 
 #### **Features**
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252F1DRCWcoFheYW1OO6668i%252Fimage.png%3Falt%3Dmedia%26token%3D1b7cf99a-1ab8-42ed-a13a-b73060539b1e&width=768&dpr=4&quality=100&sign=318abdae2137434abcafaa8685c39fa954ffe54eaecda8ef9d35fd20a3f8fb74)
+![controller](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/controller.png)
 
 **3 DoF (rotation) hand tracking**
 

@@ -26,7 +26,7 @@ This quickstart guide will help you set up your development environment and test
 
   Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download the appropriate Gradle version in Unity-> Settings-> External tools.
 
-  ![image-20240807174108770](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240807174108770.png) 
+  ![image-20240807174108770](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240807174108770.png) 
 
   :::
 
@@ -60,17 +60,18 @@ You could either configure your project automatically via NRSDK **Project Tips**
 
 - Go to NRSDK -> Project Tips in Unity menu
 
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FoJrXFOKAo8g4YG8sRM02%2Fimage.png&width=768&dpr=4&quality=100&sign=8326424528a478366f85518af28c09e5d94d3c83c349c600f69385bfa618bad2" alt="Your Image Description" class="center-image"/>
+​	![image-20240812153433565](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812153433565.png)
 
 - Click **Accept All** in the popup window
 <figure className="my-custom-figure">
-<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240729152419937.png" alt="Your Image Description" class="center-image"/>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240729152419937.png" alt="Your Image Description" class="center-image"/>
 <figcaption>Project Tips</figcaption>
 </figure>
 
+
 - Wait for Unity to process. The **Project Tips** window should appear as empty when finished.
 
-<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240729152752977.png" class="center-image scale-image"/>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240729152752977.png" class="center-image scale-image"/>
 
 - Close the Project Tips window
 
@@ -102,15 +103,17 @@ You could either configure your project automatically via NRSDK **Project Tips**
 ### 4. Configure Compatible Devices 
 
 You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the NRSDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
+
 <figure className="my-custom-figure">
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F701VQE4rmKSTNDR9GBWv%2Fimage.png&width=768&dpr=4&quality=100&sign=a7c4fce7fc9c11f1c5a3990bacbedd49fb5a040e5a9e80ca055852048397cbd8" alt="Your Image Description" class="center-image"/>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image.png" alt="Your Image Description" class="center-image"/>
   <figcaption>Project</figcaption>
 </figure>
 
 <figure className="my-custom-figure">
-<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163825424.png" alt="Your Image Description" class="center-image"/>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165059951.png" alt="Your Image Description" class="center-image"/>
 <figcaption>NR Project Config</figcaption>
 </figure>
+
 By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](/XREALDevices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
 
 If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, NRSDK will not try to adapt automatically, and the app will not run on unsupported devices.
@@ -121,9 +124,10 @@ If you only want the application to run on a specific device (Light/Air), you ma
 
 - Find and click `Assets/NRSDK/NRKernalSessionConfig` in Unity project folder, make sure the plane tracking, image tracking is configured properly as the following default configuration: 
 <figure className="my-custom-figure">
-  <img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163552390.png" alt="Your Image Description" class="center-image"/>
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165211017.png" alt="Your Image Description" class="center-image"/>
   <figcaption>NRKernalSessionConfig</figcaption>
 </figure>
+
 
 - Force Kill While Glass Switch Mode: Unselect this option to ensure your app will not be killed when users switch the mode between 2D and 3D mode.
 
@@ -133,20 +137,25 @@ Please note that **Plane Finding Mode** and **Image Tracking Mode** will implici
 
 - Find the **HelloMR** sample scene in the Unity Project window by selecting `Assets > NRSDK > Demos > HelloMR.`
 
-- Double click `HelloMR `to open the scene<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FPu3bCER90PloQsBvAshz%2Fimage.png&width=768&dpr=4&quality=100&sign=5d40d77b90af1d845d034a72c3f3916b1d200ca3c8e574e88c5fe66032a88818" alt="Your Image Description" class="center-image"/>
+- Double click `HelloMR `to open the scene
+
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165524197.png" alt="Your Image Description" class="center-image"/>
 
 
 
 ### 7. Remove Extra Libraries to Downsize Your APK
 
 <figure className="my-custom-figure">
-<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/NRSDKLibraryStripConfig.png" class="center-image"/>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165559734.png" class="center-image"/>
   <figcaption>NR Library Strip Config</figcaption>
 </figure>
+
 Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This mode enables the SDK libraries to be loaded from our server, known as Nebula, which can significantly reduce the APK size. However, developers are required to manually deselect any unnecessary libraries. For instance, if your application only requires the meshing feature, you can remove the other libraries by checking them off in the `**NRLibraryStripConfig**`. This action will help to reduce the size of your APK.
 
 ### 8. Building NRSDK App for Android
-1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FMoKBkh4ZItI620SjI3fB%2Fimage.png&width=768&dpr=4&quality=100&sign=d7917b19764c26c320b3e16d5d12fa8500a1a0f38bf3cb4e9075d724fce68853" alt="Your Image Description" class="center-image"/>
+1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. 
+
+   <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165638159.png" alt="Your Image Description" class="center-image"/>
 
 
 2. Click **Player Settings**. Customize the **Company Name** and **Product Name.** 
@@ -154,9 +163,9 @@ Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This m
 
 - **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by NRSDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
 
-- **Scripting Backend:** You must choose **IL2CPP** when building for ARM64 architecture. Note that starting from NRSDK 2.2, ARMv7 architecture is no longer supported.<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FijFH00KUpneZptdM1xaj%2Fimage.png&width=768&dpr=4&quality=100&sign=7c427706fce8673b8c60a167e55c1979693416747d46200b2b505fe0980786dd" alt="Your Image Description" class="center-image"/>
+- **Scripting Backend:** You must choose **IL2CPP** when building for ARM64 architecture. Note that starting from NRSDK 2.2, ARMv7 architecture is no longer supported.
 
-
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165720474.png" alt="Your Image Description" class="center-image"/>
 
 4. In **Build Settings** window, click **Build.**
 5. Select the destination folder and wait until the building is finished.

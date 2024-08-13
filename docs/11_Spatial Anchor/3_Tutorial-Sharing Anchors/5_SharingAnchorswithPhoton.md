@@ -4,7 +4,7 @@
 
 Create a script named `UUIDManager.cs`. Within the `UUIDManager` class, utilize a `PhotonView` to synchronize the UUID. In the `AnchorItem` class, when there's a need to share the UUID, call the relevant method from `UUIDManager`. The `UUIDManager` will then use Photon's RPC mechanism to send the UUID to other clients. Ensure that the `UUIDManager` class is attached to a GameObject in your scene and that this GameObject has a `PhotonView` component added to it.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FIgP3wBh926wAUEzF614s%2F01d40108-592a-45ab-b584-d57ec1dfec7c.png&width=768&dpr=4&quality=100&sign=b7127ce805750824f3232c9383ce34d31e4b22757668a17499479fccc038a62f)
+![image-20240813171201781](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171201781.png)
 
 ```
 using System.Collections;

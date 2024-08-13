@@ -4,7 +4,7 @@ In the previous step, you programmed an application that can detect planes. Thes
 
 The control scheme for this app involves the player pointing their phone at a surface. In order to give clear visual feedback for the designated location, you'll use an aiming reticle.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FEzFELvAUXYfKQ1L40WPo%2Fimage.png&width=768&dpr=4&quality=100&sign=5a517a3ef472dfa6a6a8edad26c517756fde10de8dc9df281bfe4fb57e11770c)
+![image-20240812174048447](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174048447.png)
 
 In order to "stick" this reticle to an AR plane, use a hit test. A hit test is a technique that calculates intersections when casting a ray in a given direction. You will use a hit test to detect an intersection in the direction of your controller.
 
@@ -12,7 +12,7 @@ In order to "stick" this reticle to an AR plane, use a hit test. A hit test is a
 
 1.In `Assets/Script` folder, **right click -> Create -> C# Script,** name the C# script `ReticleBehaviour`
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FOKQru13SweVqHq4WMI2N%2Fimage.png&width=768&dpr=4&quality=100&sign=4b300786ceb65849de1c74af6ff385bdbbec26daa77528348b6bd118d4f8c690)
+![image-20240812174108016](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174108016.png)
 
 Edit `ReticleBehaviour` as following:
 

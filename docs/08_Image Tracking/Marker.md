@@ -4,9 +4,7 @@
 
 Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[Spatial Life](https://nreal-public.nreal.ai/download/Application/spatiallife0619.apk),' thoughtfully crafted by the XREAL design team.
 
-
-
-![XREAL Markers](https://raw.githubusercontent.com/dengxian-xreal/Images/main/XREAL%20Markers.png)
+![image-20240812173022249](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173022249.png)
 
 ## Requirement
 
@@ -59,26 +57,26 @@ Learn how to use the Coasters Image Tracking feature in your own apps.
 
 - Click NRSDK -> CoastersTrackingModule -> Install
 
-  ![image-20240722191708368](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722191708368.png)
+  ![image-20240722191708368](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240722191708368.png)
 
 
 > Note that the coasters image tracking is not compatible with the original image tracking. If you want to use the old version SDK, click uninstall.
 
 - Open scene `CoastersimageTracking`
 
-  ![image-20240722191721186](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722191721186.png)
+  ![image-20240722191721186](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240722191721186.png)
 
 - Modify your application logic as needed. The editor includes a simulator for image tracking, demonstrated in the screenshot below. This simulator provides 11 buttons, each corresponding to one of the 11 images. By clicking these buttons, you can simulate the tracking effect for the respective image.
 
-  ![image-20240722191741243](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722191741243.png)
+  ![image-20240722191741243](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240722191741243.png)
 
 - The Marker feature uses a trained data sample. The sample resource address is shown in the figure below. It needs to be specified in the SessionConfig resource.
 
-  ![XREAL Markers (1)](https://raw.githubusercontent.com/dengxian-xreal/Images/main/XREAL%20Markers%20(1).png)
+  ![XREAL Markers (1)](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/XREAL%20Markers%20(1).png)
 
 - Set the ImageTrackingMode to enable.
 
-  ![image-20240722191836785](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722191836785.png)
+  ![image-20240722191836785](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240722191836785.png)
 
 - Before building an APK, please add the following lines inside the `<application>` element of your `AndroidManifest.xml`
 ```
