@@ -5,11 +5,12 @@
 1. Locate the `NRCameraRig` object in your Unity scene.
 2. Attach the `NRMetrics` script to `NRCameraRig`.
 
-![img](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/eQTdKuDF52FZT2HcNAeA/image.png)
+![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image.png)
 
 ### **Log Examples**
 
-```FrameMetrics: FPS=60, frNum=61, UpdPrd=39198222, prd=30078850, postPrd=28850795, sdkPrd=39802247, FPC=1.081967, EFC=0, early=0, drop=8 frNumA=753, UpdPrdA=41190049, prdA=32105576, postPrdA=30656161, sdkPrdA=41785068, FPCA=1.092961, EFCA=0.1288181, earlyA=70, dropA=76This log is recorded once every second. 
+```c#
+FrameMetrics: FPS=60, frNum=61, UpdPrd=39198222, prd=30078850, postPrd=28850795, sdkPrd=39802247, FPC=1.081967, EFC=0, early=0, drop=8 frNumA=753, UpdPrdA=41190049, prdA=32105576, postPrdA=30656161, sdkPrdA=41785068, FPCA=1.092961, EFCA=0.1288181, earlyA=70, dropA=76This log is recorded once every second.
 ```
 
 

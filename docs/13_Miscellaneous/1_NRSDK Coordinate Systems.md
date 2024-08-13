@@ -19,11 +19,11 @@ In the NRSDK for Unity, in terms of coordinate system's definition and the corre
 
 - The placement of the above components and their corresponding coordinate systems, as defined in NRSDK for Unity, are as follows
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FmoBbnF78Sd4BXJJQ5UQo%2Fimage1.png&width=768&dpr=4&quality=100&sign=712f713acc39ea473652f6cf13b6d913afa35d0b439ea6cc4f5d1a509da36871)
+​	![NRSDK Coordinate Systems](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/NRSDK%20Coordinate%20Systems.png)
 
 - The global coordinate frame of the tracking system is as follows
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FQzGoZ9ahy1U6MmrpZCNc%2Fimage2.png&width=768&dpr=4&quality=100&sign=adcf13ac92f50bf516c535430ff3dbfe0628d400ea5b1982b8155d8faf5d3630)
+​	![NRSDK Coordinate Systems (1)](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/NRSDK%20Coordinate%20Systems%20(1).png)
 
 ### Interface for Head Pose
 
@@ -74,13 +74,13 @@ For computer vision algorithm developers, it is often convenient to handle quant
 
 - In the OpenCV convention, the XREAL Glass components and their corresponding coordinate systems are as follows
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FPF8O5uN0ngEyOgGQ4AOx%2Fimage3.png&width=768&dpr=4&quality=100&sign=7e0f1afd9d91c079b91a474dc65ee8396778d7a4368269f355d726fc01903708)
+​	![NRSDK Coordinate](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/NRSDK%20Coordinate.png)
 
 ### Converting Extrinsics: From Unity to OpenCV
 
 - The definition difference between Unity and OpenCV coordinate systems for a camera is as follows
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FYtgSwmv7tptAW7Wx3QO9%2Fimage4.png&width=768&dpr=4&quality=100&sign=ae6193e40a1669582cdd25ed27ae1316cbec0967bf98123ca96b9fc4bedaef84)
+​	![4](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/4.png)
 
 - Note that only the y-axis needs to be negated between these two conventions. Therefore, given an extrinsic transformation defined under the Unity coordinate systems, we can obtain the equivalent transformation defined under the OpenCV, by using the following utility function
 
@@ -133,7 +133,7 @@ Vector3 pInLCam = cvLcam_T_cvRcam.MultiplyPoint(pInRCam);
 - The definition of the image pixel coordinates and the camera intrinsics in the NRSDK follows the OpenCV convention.
 - The image data is stored row-wise in memory as follows
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FyVI6gOwuKJJK6nKVtvnj%2Fimage5.png&width=768&dpr=4&quality=100&sign=c021ff592f96d60f1aa0488f501cdb1e39c9471a658d669524ac10faf681b4ff)
+​	![NRSDK Coordinate Systems (2)](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/NRSDK%20Coordinate%20Systems%20(2).png)
 
 - The camera intrinsic matrix $\mathbf{K}$ is composed of the focal lengths $f_x$ and $f_y$, and the principal point $c_x$ and $c_y$, expressed in pixel units.
 

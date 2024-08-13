@@ -17,7 +17,7 @@ Install XR Plugin Manager
 - Go to Edit -> Project Settings
 - Install `XR Plugin Manager`
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F5dpVzei7TPJ1fF0OBQVz%2F0.png&width=768&dpr=4&quality=100&sign=daabce755b1ccba8d2c71aaf3c45fd06c20ec9514c4f110725bb0bc7600148da)
+![image-20240813172225899](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172225899.png)
 
 #### 2. Import NRSDK XR Plugin Package
 
@@ -30,19 +30,19 @@ Download [XREAL XR Plugin](https://nreal-public.nreal.ai/download/NRSDKForUnity_
 - Unzip the `com.xreal.xr.zip` file to a local directory; 
 - In the editor, go to the "Windows -> Package Manager" menu bar, click "**+**", select "`Add package from disk`", and add the `package.json` from the local directory.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FlpTkFEgqTosBuiGysnrH%2F1.png&width=768&dpr=4&quality=100&sign=b6cdebf225ef35a6ff54e4544175de021927047049bdad89771f4eda3410b11d)
+​	![image-20240813172242825](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172242825.png)
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FChJKq9RoAX2nTZUvsZl9%2F2.png&width=768&dpr=4&quality=100&sign=65c05b39d5bb8e5ec15691ab2bed2cdd6ca462d427afc15ad19d586e0954a73b)
+![image-20240813172255309](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172255309.png)
 
 #### 3. Configure XREAL XR Plugin
 
 - Go to "Edit -> Project Settings -> XR Plug-in Management" and check the "NRSDK" option;
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FXcUpuK7EPcv2mIOTcOCW%2F3.png&width=768&dpr=4&quality=100&sign=c1b4826c4b3a56f679a7d281332a71ced79d9ff3ff9a920311613f36b04b48a2)
+  ![image-20240813172308266](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172308266.png)
 
 - Go to "Edit -> Project Settings -> XR Plug-in Management -> NRSDK", switch the StereoRenderingMode to `Multiview`, and the XRPlugin configuration is complete.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FtvE18AlByHj5zFdNQ429%2F4.png&width=768&dpr=4&quality=100&sign=6a64d3e073f19528e09233dbe11e047366377ae1b358cb27e0cab915518f3cb9)
+​	![image-20240813172319331](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172319331.png)
 
 ### Additional technical documentation
 
