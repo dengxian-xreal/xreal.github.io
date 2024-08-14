@@ -1,6 +1,6 @@
 {
   "tutorialSidebar": [
-    "NRSDKOverview",
+    "XREALSDKOverview",
     {
       "type": "category",
       "label": "XREAL Devices",
@@ -14,7 +14,7 @@
         "XREALDevices/XREAL Glasses"
       ]
     },
-    "Getting Started with NRSDK",
+    "Getting Started with XREAL SDK",
     "Migrating from NRSDK to XREAL SDK",
     "Sample Code",
     {
@@ -86,7 +86,7 @@
         "id": "Spatial Anchor/intro"
       },
       "items": [
-        "Spatial Anchor/MappingExampleScene",
+        "Spatial Anchor/Anchors",
         {
           "type": "category",
           "label": "Tutorial: Halloween Treasure Hunt",
