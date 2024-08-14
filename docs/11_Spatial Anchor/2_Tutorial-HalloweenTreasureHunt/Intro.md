@@ -6,7 +6,7 @@ In this tutorial, we'll guide you through the process of creating a Halloween-th
 
 At the end of this tutorial, you will have a fully functional game where players can hide and seek treasures in a Halloween-themed environment.
 
-![halloween](../../../../../Downloads/halloween.gif)
+![halloween](../../Images/halloween.gif)
 
 :::info
 For your convenience, we've provided a Unity package of the final product. You can download it here to see what the finished game looks like.
