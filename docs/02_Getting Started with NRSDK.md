@@ -24,7 +24,7 @@ This quickstart guide will help you set up your development environment and test
 
   :::warning
 
-  Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download the appropriate Gradle version in Unity-> Settings-> External tools.
+  Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download and the appropriate Gradle version and set it in Unity-> Settings-> External tools.
 
   ![image-20240807174108770](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240807174108770.png) 
 

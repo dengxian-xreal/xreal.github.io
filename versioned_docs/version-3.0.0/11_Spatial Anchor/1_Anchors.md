@@ -102,5 +102,16 @@ Call the `NRWorldAnchorStore.LoadwithUUID` method to load a saved anchor. The ap
 
 #### Remove a Spatial Anchor
 
-Just remove the anchor.script component from the anchor gameObject.
+功能介绍：将Anchor从场景中移除，可以再次将anchor 加载到场景中。
 
+具体实现：Just remove the anchor.script component from the anchor gameObject.
+
+#### Load a Spatial Anchor
+
+可以将之前保存的anchor，load到场景中。
+
+#### Erase a Spatial Anchor
+
+功能介绍：和Remove不同，Erase是将anchor文件彻底删除。无法再恢复。
+
+具体如何使用？

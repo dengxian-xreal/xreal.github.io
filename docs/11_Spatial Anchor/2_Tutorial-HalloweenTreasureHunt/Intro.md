@@ -266,7 +266,7 @@ With these modifications, we can provide user feedback based on the save status 
 
 Finally, test the game to ensure everything works as expected. You should be able to choose a role, place and find treasures, and see your score update as you find treasures. All these steps can be performed directly in the Unity Editor, so there's no need to package the game after each step. Only a final deployment to your mobile device for testing is necessary.Additionally, you can hold down the Shift key to move the ray, simulating the interaction with the game through a mobile device. The black area on the right side of the Unity Editor represents the screen of your mobile device.
 
-![anchor2](../../../../../Downloads/anchor2.gif)
+![anchor2](../../Images/anchor2.gif)
 
 That's it! You've now created a Halloween-themed treasure hunt game using Unity and the NRSDK. Happy hunting!
 

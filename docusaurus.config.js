@@ -182,6 +182,12 @@ const config = {
         darkTheme: prismThemes.dracula,
         defaultLanguage: 'csharp',
       },
+      scripts: [
+        {
+          src: '@vercel/analytics/client',
+          async: true,
+        },
+      ],
     }),
 };
 
