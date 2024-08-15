@@ -1,35 +1,20 @@
-# Anchors Scene
+# Anchors
 
-## Anchors
-
-The Anchors scene is a part of an SDK that provides an interactive demonstration of working with Spatial Anchors. The experience enables users to create, place, save, and reload anchors within the augmented reality environment.
-
-To access the "MappingExample" scene, follow these steps:
-
-1. After importing the SDK package into your Unity project, navigate to the "Scenes" folder in the Project window.
-2. Locate and open the "MappingExample" scene.
-3. Explore the scene hierarchy and components to understand how the `AnchorItem` script is used.
-4. Run the scene in the Unity Editor or build it for your device to see the Spatial Anchor functionality in action.
-
-
-
-大纲
-
-Overview
-
-​	看完这个教程，你应该会如何create、save、remove、erase、load anchor。以及一些小的应用，比如如何在anchor上绑定虚拟物体。
+The **Anchors** scene within the XREAL SDK offers an interactive demonstration of how to work with Spatial Anchors using AR Foundation. This experience allows users to create, position, save, and reload anchors within an augmented reality environment, providing a practical understanding of anchoring virtual content to real-world positions.
 
 ### Experience Flow
 
 ⚠️等demo制作完成后，录制一个新的gif
 
-为了快速体验anchor的效果，你可以直接下载这个APK。并按照以下步骤来体验anchor的各种操作。如果你想进一步开发，可以查看下一节的Developer Guide。
+⚠️打包一个APK
 
-**2.Create an Anchor** 
+To quickly experience the functionality of anchors, download the provided APK and follow the steps below to explore various anchor operations. For those interested in further development, please refer to the Developer Guide in the next section.
 
-Three anchor options will appear. Users can select any of these anchors using a hand-held controller and then position the anchor in a specific location within the real world.
+**1.Create an Anchor** 
 
-**3.Scanning the Surroundings** 
+When users click the Create button, an anchor will appear. They can then use a phone or Beam Pro as a controller to position the anchor anywhere within the real world.
+
+**2.Scanning the Surroundings** 
 
 Before saving the anchor, users are advised to observe the surroundings by simply looking around while wearing the headset. This step ensures that sufficient feature points are collected, enhancing the stability and accuracy of the anchor. During the process, the quality indicator will distribute some capsules evenly around the anchor. The capsules represent the quality of the feature points in different directions around the anchor.
 
@@ -41,77 +26,137 @@ Before saving the anchor, users are advised to observe the surroundings by simpl
 >
 > When the process is successfully complete, the capsules will all turn to green, which indicates that the anchor is now ready to be used.
 
-**4.Saving the Anchor** 
+**3.Saving the Anchor** 
 
-Once sufficient feature points have been gathered, users can click Save. Successful saving turns the anchor green, signaling that it has been anchored to that location in the real world.
+Once sufficient feature points have been gathered, users can click `Save`. Successful saving turns the anchor green, signaling that it has been anchored to that location in the real world.
 
-**5.Exiting and Reopening the Application** 
+**4.Exiting and Reopening the Application** 
 
-Users may exit the application and reopen it at any time.
-
-**6.Loading the Anchor** 
-
-After reopening the application, clicking Load will reload the previously saved anchor. By returning to the physical location where the anchor was originally placed, users can observe the anchor successfully loading back into the scene.
+Users may exit the application and reopen it at any time. By clicking Load All Anchors, you’ll find that the anchors you previously saved reappear exactly where they were.
 
 ## Developer Guide
 
+This guide will walk you through implementing spatial anchors using the XREAL SDK in combination with AR Foundation. The guide covers project setup, anchor creation, mapping quality estimation, saving, using, loading, removing, and erasing spatial anchors.
+
 ### Project Setup
 
-在使用 Spatial Anchors 之前，请确保你的项目已完成基本设置。你可以参考 Getting Started with XREAL SDK 进行相关配置。如果你已经完成了此设置，可以找到AR Feature这个sample里的Anchors场景，并自己build试试，或者在它的基础上做一些修改。
+Before using Spatial Anchors, ensure your project is properly configured. Refer to the [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide for the necessary setup. If you’ve completed this setup, locate the “AR Feature” sample, specifically the **Anchors** scene, and build it. You can also modify this sample to suit your needs.
 
 ### Implementation
 
 #### Create a Spatial Anchor
 
+To create a spatial anchor:
 
+1. Define the anchor’s position and rotation relative to the camera’s transform.
 
-#### Estimating the mapping quality
-
-如果在创建 Anchor 的过程中环境扫描质量不佳，那么在下次加载时，Anchor 可能会加载失败。因此，建议在创建 Anchor 时使用环境质量评估方法，确保 Anchor 周围的环境已经被充分扫描和建图，再进行保存。
-
-Call the `NRWorldAnchor.SetEstimateRange()` method. This medthod allows you to set the observation angle and distance used for estimating the mapping quality. The observation angle refers to the range of the area around the anchor that needs to be observed. The observation distance refers to the distance between the observer and the anchor.
+2. Instantiate an ARAnchor prefab at the desired location. ⚠️后面这里代码会改，不是在摄像机前一米处，而是用户指定的地方
 
 ```
-    public enum NREstimateDistance
-    {
-        NR_ESTIMATE_DISTANCE_UNKNOWN = 0,
-        NR_ESTIMATE_DISTANCE_NEAR = 1, //0~0.5m
-        NR_ESTIMATE_DISTANCE_MEDIUM = 2, //0.5~1.5m
-        NR_ESTIMATE_DISTANCE_FAR = 3 // 1.5m~2.5m
-    }
+public void OnNewButtonClick()
+{
+    var targetPos = m_Camera.transform.position + m_Camera.transform.forward * 1f;
+    var targetRotation = m_Camera.transform.rotation;
+    var anchor = Instantiate(m_ARAnchorPrefab, targetPos, targetRotation);
+}
 ```
 
-Call the `NRWorldAnchorStore.UpdateMapQuality() `method to estimate the mapping quality of the anchor during creating. This method will return an NREstimateQuality value indicating the current mapping quality.
+#### Estimating the mapping quality(Optional)
+
+When creating an anchor, it’s important to assess the environment’s scanning quality to ensure reliable anchor loading in the future. Use environment quality assessment methods during anchor creation.
+
+```
+public void OnNewButtonClick()
+{
+    //...
+    var anchor = Instantiate(m_ARAnchorPrefab, targetPos, targetRotation);
+    
+    MapQualityIndicator.SetCurrentAnchor(anchor, false);
+    MapQualityIndicator.ShowMappingGuide();
+    
+    Debug.Log($"[Anchors] Created Anchor at {targetPos}");
+}
+    
+```
 
 #### Save a Spatial Anchor
 
-Call the `NRWorldAnchor.SaveAnchor()` method after the anchor is created successfully. This method saves the information and related metadata of the anchor as a file to the device storage.
+After creating an anchor, save it using the SaveAnchor() method to store its information and metadata on the device.
+
+```
+public void AddSavedAnchorEntry(TrackableId trackableId, SerializableGuid persistentGuid)
+{
+    if (m_SavedAnchorEntryDict.TryGetValue(trackableId, out var savedAnchorEntry))
+    {
+        savedAnchorEntry.PersistentGuid = persistentGuid;
+    }
+    else
+    {
+        m_SavedAnchorEntryDict.Add(trackableId, new SavedAnchorEntry
+        {
+            TrackableId = trackableId,
+            PersistentGuid = persistentGuid
+        });
+    }
+}
+```
+
+#### Remap a Spatial Anchor
+
+When environmental conditions change—such as variations in lighting, shifts in object positions, or alterations in the surroundings—the spatial anchor data may no longer accurately correspond to the current environment. In these cases, it is necessary to update the anchor’s associated information by re-scanning and re-mapping the environment. This process can be achieved using the Remap method.
+
+![image-20240815145540092](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240815145540092.png)
+
+```
+    private void OnRemapClick()
+    {
+        Log($"[AnchorInfo] OnRemapClick begin");
+        if (m_AnchorManager.subsystem is XREALAnchorSubsystem subsystem)
+        {
+            bool success = m_AnchorManager.TryRemap(m_Anchor.trackableId);
+            MapQualityIndicator.SetCurrentAnchor(m_Anchor, true);
+            MapQualityIndicator.ShowMappingGuide();
+            Log($"[AnchorInfo] OnRemapClick result={success}");
+        }
+    }
+```
 
 #### Use a Spatial Anchor
 
-这里讲如何将虚拟物体绑定到anchor上
-
-Call the `NRWorldAnchorStore.LoadwithUUID` method to load a saved anchor. The application can use the NRWorldAnchor.UUID to identify and reference a specific anchor. After loading is successful, the application can get the position and rotation of the anchor and use it for AR experiences.
-
-> Things to note:
->
-> - Creating an anchor takes time, and the application should handle the creation result in the OnTrackingChanged event.
-> - The application should save the anchor at the appropriate time, such as before the user leaves the AR experience.
-> - The application should check the CurrentAnchorState of the anchor before using it to make sure the anchor is available.
-> - The mapping quality may change over time as the environment changes, and the application should continuously monitor the quality and update the indicator.
+⚠️待补充
 
 #### Remove a Spatial Anchor
 
-功能介绍：将Anchor从场景中移除，可以再次将anchor 加载到场景中。
+To remove an anchor from the scene without deleting it permanently: 
 
-具体实现：Just remove the anchor.script component from the anchor gameObject.
+Just remove the script `Anchors` from the anchor gameObject.
 
 #### Load a Spatial Anchor
 
-可以将之前保存的anchor，load到场景中。
+Load previously saved anchors into the scene:
+
+```
+public void OnLoadAllButtonClick()
+{
+    LoadAllAnchors();
+}
+```
 
 #### Erase a Spatial Anchor
 
-功能介绍：和Remove不同，Erase是将anchor文件彻底删除。无法再恢复。
+To permanently delete an anchor, ensuring it cannot be restored:
 
-具体如何使用？
+```
+public void OnEraseAllButtonClick()
+{
+    var anchors = FindObjectsByType<ARAnchor>(FindObjectsSortMode.None);
+    foreach (var anchor in anchors)
+    {
+        EraseAnchor(anchor.trackableId);
+    }
+}
+```
+
+### Further Reading
+
+For more detailed information on working with anchors, refer to the official [AR Foundation Anchors Documentation](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.0/manual/features/anchors.html).

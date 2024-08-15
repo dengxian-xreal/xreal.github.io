@@ -4,7 +4,7 @@
 
 Spatial Anchors are fixed reference points in the AR environment that provide a stable position and orientation for virtual objects, allowing them to remain consistent across different sessions.
 
-By creating a spatial anchor at a specific 6DOF pose (position and orientation), virtual content can be placed relative to it. This allows for the resumption of AR sessions and the restoration of content to the exact real-world locations where users left them. This plays a crucial role in providing users with a consistent and reliable AR experience, as they can see the persistently present virtual content at the same location, no matter when they return or restart the application. The NRSDK provides Spatial Anchor functionality for XREAL glasses, enabling developers to easily create and manage spatial anchors in their Unity projects.
+By creating a spatial anchor at a specific 6DoF pose (position and orientation), virtual content can be placed relative to it. This allows for the resumption of AR sessions and the restoration of content to the exact real-world locations where users left them. This plays a crucial role in providing users with a consistent and reliable AR experience, as they can see the persistently present virtual content at the same location, no matter when they return or restart the application. The XREAL SDK provides Spatial Anchor functionality for XREAL glasses, enabling developers to easily create and manage spatial anchors in their Unity projects.
 
 ⚠️等待@杨大龙提供示例图
 
