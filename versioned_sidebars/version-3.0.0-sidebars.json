@@ -70,10 +70,10 @@
       "label": "Depth Mesh",
       "link": {
         "type": "doc",
-        "id": "Depth Mesh/Overview"
+        "id": "Depth Mesh/NormalMesh"
       },
       "items": [
-        "Depth Mesh/Meshing Manager Overview",
+        "Depth Mesh/MeshClassification",
         "Depth Mesh/Use Meshes in the Editor",
         "Depth Mesh/Tutorial-Mesh Collision"
       ]
