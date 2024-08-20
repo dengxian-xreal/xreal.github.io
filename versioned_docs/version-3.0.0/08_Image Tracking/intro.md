@@ -76,7 +76,7 @@ Learn how to implement Image Tracking in your AR applications using AR Foundatio
 
 #### Set the reference image library
 
-Add `ARTrackedImageManager` on XR Origin GameObject, enable the Image Tracking Subsystem included in the XREAL SDK. 
+Add `ARTrackedImageManager` on XR Origin GameObject.
 
 ![image-20240530155508300](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240530155508300.png)
 

@@ -162,13 +162,15 @@ In this section, we outline the key project settings available in the XREAL SDK,
 
 * Duplicate the assets in NRSDK you need into another folder and delete NRSDK folder in Assets.
 
-* NRCameraRig-> XR Origin(XR Rig)
+* Replace the NRCameraRig with either the XR Interaction Setup prefab or the XR Interaction Hands Setup prefab, depending on your input source. You can find these prefabs in Project -> Assets -> Samples -> XREAL XR Plugin -> 3.0.0 -> Interaction Basics -> Prefabs.
 
-  find the XR Origin(XR Rig) prefab in Project->Assets-> Samples->XR Interaction Toolkit-> 2.5.4->Starter Assets->Prefabs->XR Origin(XR Rig)
+  *  Use the XR Interaction Setup prefab if you plan to use controllers only.
 
-  之所以用这个prefab，而不直接在场景中创建一个新的XR Origin，是因为在Unity的官方示例中，这个prefab已经包含了我们将用到的很多配置，包括各种Interactors，所以我们建议直接使用这个prefab.
+  * Use the XR Interaction Hands Setup prefab if you want to support hand gestures (with or without controllers).
 
-  ![image-20240612191039138](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612191039138.png)
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240820141903045.png"/>
+
+  We recommend using these prefabs because they include specific adjustments optimized for XREAL AR environments.
 
 * Remove NRInput in Hierarchy
 
@@ -176,9 +178,11 @@ In this section, we outline the key project settings available in the XREAL SDK,
 
   ![image-20240612191811692](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612191811692.png)
 
-* Click PlaneDetector, remove these 3 scripts, and add component AR Plane Manager.
+* Remove PlaneDetector.
 
-  ![image-20240612191917984](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612191917984.png)
+* Add component AR Plane Manager to XR Origin(XR Rig).
+
+  ![image-20240820164659586](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240820164659586.png)
 
 * Then add a plane prefab, you can still use the previous one
 
