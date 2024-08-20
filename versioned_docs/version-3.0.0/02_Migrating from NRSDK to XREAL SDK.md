@@ -48,26 +48,21 @@ Many developers have previously created excellent applications using NRSDK (e.g.
 
 ![image-20240529200949957](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240529200949957.png)
 
-### 3. Import XREAL SDK for Unity (⚠️待研发完成后补充)
+### 3. Import XREAL SDK for Unity
 
-There're two ways you can import XREAL SDK into your current project.
+Open Window -> Package Manager, There are two import methods. 
 
-- Select `Window>Package Manager` .
+* Add package from git url
 
-- Click "➕" 
-  1. Add package from disk
-  
-     Select the downloaded 
-  
-  2. Add package from git URL
-  
-  ![image-20240722105515920](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722105515920.png)
+* Add pacakge from disk
 
->  For both the **Ultimate** and **Enterprise** editions, only the ‘add from disk’ method is supported. 
+>  For both the **Enterprise** and **Experimental** editions, only the ‘add package from disk’ method is supported. 
 >
 >  For the **Normal** edition of the SDK, both methods are supported.
 
-1. Add package from git url: （⚠️目前需要内网环境才可以添加，后续需要修改成github链接）
+![image-20240808201609886](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240808201609886.png)
+
+1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
 
 ```
 ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/com.xreal.xr#dev
@@ -80,6 +75,14 @@ ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/
    2.  Unzip folder `com.xreal.xr`
 
    3.  Select `package.json`，click Open
+
+When importing the XREAL SDK into your Unity project, you’ll encounter several key components that facilitate the development of AR applications. Here’s a breakdown of the essential and optional elements:
+
+* **Interaction Basics**: This is an essential component that provides assets to streamline the setup of basic rendering and interactions using controllers and hand gestures, compatible with the XR Interaction Toolkit. It includes prefabs and demo scenes designed to help you get started quickly with the XREAL SDK integration. This component is fundamental as it lays the groundwork for any XR application, ensuring that you have the necessary tools for basic interaction and rendering.
+
+* **AR Features**: This is an optional component, recommended for those who require advanced AR functionalities in their projects. It includes sample scenes and other assets that demonstrate the integration of AR features supported by the XREAL SDK with AR Foundation. This part specifically supports Plane Detection, Image Tracking, Spatial Anchors, and Depth Meshing. Depending on the scope of your project, you can choose to import this component if your application will utilize complex AR features.
+
+When setting up your project, start with the **Interaction Basics** to ensure all fundamental interaction mechanisms are in place. Then, depending on the AR features necessary for your project, consider importing the AR Features module to expand the application’s capabilities with advanced AR technology. This modular approach allows you to keep your project lightweight by only including the components necessary for your specific needs.
 
 ### 4. Configure Project Settings
 
@@ -112,29 +115,42 @@ You could either configure your project automatically via XREAL SDK **Project Se
 | `Player Settings > Other Settings > Write Permission`        | External(SDCard)                                             |
 | `Project Settings > Quality > VSync Count`                   | Don't Sync                                                   |
 
-### Project Settings ⚠️
+#### Project Settings 
 
-![image-20240722112906375](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722112906375.png)
+In this section, we outline the key project settings available in the XREAL SDK, which allow developers to configure various aspects of stereo rendering, tracking, input sources, and device compatibility to optimize their AR applications for specific use cases.
+
+![image-20240820144129370](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240820144129370.png)
 
 * `Stereo Rendering Mode`
+  
   * **Multi-view**: This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance.
   * **Multi-pass**: In this mode, the left and right eye views are rendered in separate passes, which can be less efficient but may be necessary for certain effects or compatibility.
-
+  
+* `Controller Type`
+  
 * `Tracking Type`
+  
   * **MODE_6DOF (Six Degrees of Freedom)**: Allows tracking of both position and rotation in 3D space, providing a fully immersive experience.
   * **MODE_3DOF (Three Degrees of Freedom)**: Tracks only rotational movement, meaning the user can look around but not move within the space.
   * **MODE_0DOF**: No tracking of movement or rotation.
   * **MODE_0DOF-STAB**: No tracking but ensures a stable view, using some form of sensor data to reduce drift.
-
+  
 * `Virtual Controller`:  XREAL SDK allows the use of external devices, like BeamPro or Android phones, as virtual controllers. This setting defines the layout and functionality of the on-screen buttons for these controllers.
+
+* `Error Receiver`:
+  
 * `Input Source`
+  
   * **Hands**: Uses hand tracking for interaction.
   * **Controller**: Uses a traditional handheld controller for input.
-
+  
 * `Support Multi Resume`: Enables dual-screen independent display (dual-screen mode), where the AR app continues to display in the glasses while the phone screen can show different 2D apps.
+
 * `Support Mono Mode`: Enables the use of a single eye view (monocular mode), which might be useful for certain applications or users who cannot use stereo rendering.
 
-* Target Device ⚠️，研发还没添加此选项
+* `License Asset`
+
+* Target Device ⚠️，研发还没添加此选项，还需要加吗？还是默认支持所有设备
 
   * You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the XREAL SDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
   * By selecting VISION, XREAL SDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented XREAL SDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
@@ -142,7 +158,7 @@ You could either configure your project automatically via XREAL SDK **Project Se
   If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, XREAL SDK will not try to adapt automatically, and the app will not run on unsupported devices.
 
 
-### 6. Remove Old NRSDK and Import New XREAL SDK
+### 5. Remove Old NRSDK and Import New XREAL SDK
 
 * Duplicate the assets in NRSDK you need into another folder and delete NRSDK folder in Assets.
 
@@ -170,7 +186,7 @@ You could either configure your project automatically via XREAL SDK **Project Se
 
 * That's it! you can now build and test! If you're familiar with the following steps, just ignore the tutorial and run your app on the device.
 
-### 8.Building XREAL SDK App for Android
+### 6. Building XREAL SDK App for Android
 
 1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FMoKBkh4ZItI620SjI3fB%2Fimage.png&width=768&dpr=4&quality=100&sign=d7917b19764c26c320b3e16d5d12fa8500a1a0f38bf3cb4e9075d724fce68853" alt="Your Image Description" class="center-image"/>
 
@@ -187,7 +203,7 @@ You could either configure your project automatically via XREAL SDK **Project Se
 4. In **Build Settings** window, click **Build.**
 5. Select the destination folder and wait until the building is finished.
 
-### 9. Deploy to XREAL Device
+### 7. Deploy to XREAL Device
 
 - Connect your Phone / computing unit to your Mac / Windows PC. 
 
