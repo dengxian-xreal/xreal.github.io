@@ -10,13 +10,29 @@ This guide will walk you through implementing Mesh Classification using the XREA
 
 Before using Mesh Classification, ensure your project is properly configured. Refer to the [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide for the necessary setup. Once set up, locate the “AR Feature” sample, specifically the **Mesh Classification** scene, and build it. You can also modify this sample to suit your needs.
 
+如果是在一个已有的场景中添加mesh classification的话：
+
+如果你已经根据 [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide进行了相应的设置，找到场景中的XR Interaction Setup->XR Origin，在这个Prefab的子级，创建一个空物体，可以命名为MeshingManager，然后添加Component：AR Meshing Manager。
+
+To use meshing with AR Foundation, add the [ARMeshManager](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.0/api/UnityEngine.XR.ARFoundation.ARMeshManager.html) component to a child GameObject of your scene's XR Origin.
+
+![image-20240819115746588](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240819115746588.png)
+
+:::tip
+
+ARMeshManager必须是XROrigin的子级。
+
+:::
+
+然后在这个MeshingManager上，添加component：Mesh Classification Fracking (Script)，这个脚本可以将Mesh分成10个类别（分别是Background，wall，build...），你可以为每个类别添加不同的mesh Prefab，来以此作为区分。
+
+![image-20240815181751732](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240815181751732.png)
+
 ### Implementation
 
 #### Classified Mesh Filter Prefabs
 
 The Classified Mesh Filter Prefabs define the available semantic labels and the prefabs used to represent each classified mesh. These labels help in categorizing different parts of the environment, allowing the system to recognize and interact with various surfaces accurately.
-
-![image-20240815181751732](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240815181751732.png)
 
 **Available Semantic Labels:**
 
@@ -55,35 +71,6 @@ public void StartClassification()
 #### Display Classification Results
 
 Once the meshes are classified, you can display the results to the user. Each classified surface type can be rendered in a different color or material for easy identification.
-
-```csharp
-public void DisplayClassifiedMeshes()
-{
-    foreach (var mesh in m_MeshClassifier.ClassifiedMeshes)
-    {
-        ApplyColorBasedOnClassification(mesh);
-    }
-}
-
-private void ApplyColorBasedOnClassification(ClassifiedMesh mesh)
-{
-    switch (mesh.ClassificationType)
-    {
-        case ClassificationType.Floor:
-            mesh.Renderer.material.color = Color.green;
-            break;
-        case ClassificationType.Wall:
-            mesh.Renderer.material.color = Color.blue;
-            break;
-        case ClassificationType.Ceiling:
-            mesh.Renderer.material.color = Color.yellow;
-            break;
-        // Add more cases as needed
-    }
-}
-```
-
-
 
 #### Reclassify Meshes
 

@@ -20,18 +20,16 @@ Many developers have previously created excellent applications using NRSDK (e.g.
 
 - [Unity 2021.3.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
 
-- Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
-
 - XR Plugin Management
-
+- Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
+  - Sample `Interaction Basics`
+  - Sample `AR Features` (Optional)
 - XR Interaction Toolkit
-
+  - Sample `Starter Assets`
+  - Sample `Hands Interaction Demo` (Optional)
 - AR Foundation
-
 - XR Hands(Optional)
-
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
-
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that’s fine too)
 
 ### 2. Import XRI and AR Foundation
