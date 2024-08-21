@@ -86,8 +86,8 @@ Please see the following for detailed setup instructions:
 
 **Method 2:**
 
-- Open the Start menu and type `**cmd**` to open the Command Prompt;
+- Open the Start menu and type `cmd` to open the Command Prompt;
 
-- Type `**ipconfig**` into the Command Prompt and press `**Enter**`. The tool will return a set of data that includes your IP address. look for your IP address listed next to **IPv4 address;**
+- Type `ipconfig` into the Command Prompt and press `Enter`. The tool will return a set of data that includes your IP address. look for your IP address listed next to **IPv4 address;**
 
 ​       ![image-20240813172001288](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172001288.png)

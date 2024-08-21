@@ -150,7 +150,7 @@ Please note that **Plane Finding Mode** and **Image Tracking Mode** will implici
   <figcaption>NR Library Strip Config</figcaption>
 </figure>
 
-Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This mode enables the SDK libraries to be loaded from our server, known as Nebula, which can significantly reduce the APK size. However, developers are required to manually deselect any unnecessary libraries. For instance, if your application only requires the meshing feature, you can remove the other libraries by checking them off in the `**NRLibraryStripConfig**`. This action will help to reduce the size of your APK.
+Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This mode enables the SDK libraries to be loaded from our server, known as Nebula, which can significantly reduce the APK size. However, developers are required to manually deselect any unnecessary libraries. For instance, if your application only requires the meshing feature, you can remove the other libraries by checking them off in the `NRLibraryStripConfig`. This action will help to reduce the size of your APK.
 
 ### 8. Building NRSDK App for Android
 1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. 
