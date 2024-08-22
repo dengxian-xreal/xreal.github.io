@@ -103,7 +103,7 @@ const config = {
         logo: {
           alt: 'NRSDK Logo',
           src: 'img/logo.png',
-          style: { height: '30px' },
+          style: { height: '25px' },
         },
         items: [
           {
