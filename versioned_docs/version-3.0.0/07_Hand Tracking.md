@@ -40,18 +40,24 @@ To get started with XRI when using Ultraleap Hand Tracking, continue reading.
 
 2. Install [XR Hands](https://docs.unity3d.com/Packages/com.unity.xr.hands@1.2/manual/index.html), [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html) and XR Plugin Management from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html).
 
-![image-20240528183600612](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183600612.png)
+3. In XR Origin->Camera Offset->Left Controller, find the currently used Input Actions, click on the content as shown in the picture, and then find its parent in the project and select it.
 
-![image-20240528183620602](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183620602.png)
+   ![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/(null).)
 
-3. And you are ready to build your [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) project! To test out the [XR Interaction Toolkit (XRI)](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) with hand interactions, install the XR Interaction Toolkit samples and the Unity Starter Assets Sample from the Package Manager. Then, you can run the Hand Interaction Demo in HandsDemoScene.
+   Then click `Setup Hand Tracking` in the menu.
+
+   <figure className="center-image">
+     <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/(null)-20240822194947707.(null)" alt="Your Image Description" class="center-image"style={{ width: '500px', height: 'auto' }} />
+   </figure>
+
+4. And you are ready to build your [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) project! To test out the [XR Interaction Toolkit (XRI)](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) with hand interactions, install the XR Interaction Toolkit samples and the Unity Starter Assets Sample from the Package Manager. Then, you can run the Hand Interaction Demo in HandsDemoScene.
 
 > *Assets > Samples > XR Interaction Toolkit > 3.0.1 > Hands Interaction Demo > Runtime > HandsDemoScene.unity*
 
-![image-20240528183824081](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528183824081.png)
+![image-20240528183824081](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240528183824081.png)
 
 4. Go to **Edit** > **Project Settings** > **XR Plug-in Management** > **XREAL**, Set **Input source** as `Hands`. This is the default input source initially, you can change it through API at runtime.
 
-![image-20240606100601232](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240606100601232.png)
+![image-20240606100601232](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240606100601232.png)
 
 5. Go to **File** > **Build Settings**, package the current scene and run it on the android device to experience the hand tracking effect.
