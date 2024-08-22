@@ -106,7 +106,3 @@ public class PlaneDetection : MonoBehaviour
 3. Build and run the project on your device.
 
 You should now see detected planes visualized in your AR application. You can use these planes to place virtual objects or interact with the real-world environment.
-
-## Conclusion
-
-This guide covers the basics of setting up plane detection using the XR Interaction Toolkit and AR

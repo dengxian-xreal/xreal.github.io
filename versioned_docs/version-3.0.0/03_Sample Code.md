@@ -1,6 +1,6 @@
 # Sample Code
 
-Listed here are the sample code from demo scenes in NRSDK package and code described throughout this documentation.
+Listed here are the sample code from demo scenes in XREAL SDK package and code described throughout this documentation.
 
 | Documentation                                                | Relevant Unity Scene and Sample Code                         |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
