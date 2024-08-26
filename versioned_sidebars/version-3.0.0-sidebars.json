@@ -49,7 +49,9 @@
         
         "Input and Camera/Input",
         "Input and Camera/Customize Controller UI",
-        "Input and Camera/Camera"
+        "Input and Camera/Camera",
+        "Input and Camera/Access RGB Camera",
+        "Input and Camera/Reset Camera"
       ]
     },
     "Hand Tracking",
@@ -138,12 +140,10 @@
         "title": "Miscellaneous"
       },
       "items": [
-        "Miscellaneous/Access RGB Camera",
         "Miscellaneous/NRSDK Coordinate Systems",
         "Miscellaneous/MRTK2 Integration",
         "Miscellaneous/MRTK3 Integration",
         "Miscellaneous/Notification popup",
-        "Miscellaneous/Reset Camera",
         "Miscellaneous/Render Metrics",
         "Miscellaneous/Render MonoMode"
       ]
