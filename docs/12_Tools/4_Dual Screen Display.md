@@ -8,6 +8,6 @@ When the AR app is put into the background, the view inside the glasses still sh
 
 ### Usage
 
-Developers can decide whether to turn on this function through the option `**supportMultiResume**` in `**NRProjectConfig**`, which is turned on by default. After turning on this function, the user needs to turn on a permission to use the application for the first time.
+Developers can decide whether to turn on this function through the option `supportMultiResume` in `NRProjectConfig`, which is turned on by default. After turning on this function, the user needs to turn on a permission to use the application for the first time.
 
 ![image-20240813171240262](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171240262.png)

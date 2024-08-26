@@ -67,7 +67,7 @@ Learn how to create a virtual pet with plane detection.
 Learn how to build the Rock, Paper, Scissors-style game in AR with hand tracking.
 
 <iframe 
-  src="https://www.youtube.com/watch?v=T_oNUBOJ470" 
+  src="https://www.youtube.com/embed/T_oNUBOJ470"
   allowFullScreen 
   scrolling="no" 
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 

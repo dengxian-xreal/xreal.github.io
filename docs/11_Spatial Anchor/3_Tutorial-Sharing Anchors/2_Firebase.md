@@ -20,12 +20,12 @@ For a comprehensive guide on integrating Firebase with Unity, developers are enc
 
 2. Follow the prompts to enter the app's package name and other information.
 
-3. Download and save the configuration file (`**google-services.json**`) and place it in the `**Assets**` folder.
+3. Download and save the configuration file (`google-services.json`) and place it in the `Assets` folder.
 
 ### **Install the SDK**
 
 1. Download [**Firebase Unity SDK**](https://firebase.google.com/download/unity?authuser=0)
-2. Import `**FirebaseStorage.unitypackage**` into Unity.
+2. Import `FirebaseStorage.unitypackage` into Unity.
 
 ### **Add Storage** 
 
@@ -47,11 +47,11 @@ We've developed a dedicated `FirebaseStorageManager` class to facilitate file up
 
 :::tip
 
-It's important to note that whether you're uploading or downloading, the `**storagePath**` should include the specific filename, not just the directory. This specification is also highlighted in the documentation. 
+It's important to note that whether you're uploading or downloading, the `storagePath` should include the specific filename, not just the directory. This specification is also highlighted in the documentation. 
 
 ![1](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/1.png)
 
-Therefore, We set the file path obtained from the previous step as `**storageBasePath**` and later concatenate it with the filename to form the complete path for upload/download.
+Therefore, We set the file path obtained from the previous step as `storageBasePath` and later concatenate it with the filename to form the complete path for upload/download.
 
 :::
 
@@ -187,7 +187,7 @@ public class FirebaseStorageManager : MonoBehaviour
 
 ### **Common Issues**
 
-1. After installing Firebase, building software in Unity may fail. This is a known issue with Android and requires adding `**launcherTemplate.gradle**` in Unity, then adding the following content:
+1. After installing Firebase, building software in Unity may fail. This is a known issue with Android and requires adding `launcherTemplate.gradle` in Unity, then adding the following content:
 
 ```
     packagingOptions 

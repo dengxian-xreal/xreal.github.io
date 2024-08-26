@@ -2,7 +2,7 @@
 
 ### 1. CloudSaveAnchor
 
-Add the CloudSaveAnchor method to `**NRWorldAnchorStore**`.
+Add the CloudSaveAnchor method to `NRWorldAnchorStore`.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -106,7 +106,7 @@ import TabItem from '@theme/TabItem';
 
 
 
-Add the CloudSaveAnchor method in `**NRWorldAnchor**`, remember to add the namespace at the top of the script `using System.Threading.Tasks;`
+Add the CloudSaveAnchor method in `NRWorldAnchor`, remember to add the namespace at the top of the script `using System.Threading.Tasks;`
 
 ```
 public async Task<bool> CloudSaveAnchor()
@@ -144,7 +144,7 @@ public async void CloudSave()
 
 ### 3. CloudLoad
 
-Add CloudLoad() method in `**localMapExample**`: Download the specified file from the cloud server by specifying UUID and load it into the scene with LoadwithUUID.
+Add CloudLoad() method in `localMapExample`: Download the specified file from the cloud server by specifying UUID and load it into the scene with LoadwithUUID.
 
 ```
 public const string CloudAnchor2ObjectFile = "cloud_anchor2object.json";
