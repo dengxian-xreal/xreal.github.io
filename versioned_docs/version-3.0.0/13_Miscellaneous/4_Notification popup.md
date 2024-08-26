@@ -4,8 +4,6 @@
 
 Ordinary prompt window provides information about the status of the devices, such as slam tracking state, glasses temprature level, device battery state.
 
-![img](https://nrealsdkdoc.readthedocs.io/en/latest/_images/n1-0.png)
-
 **Enable Notification**
 
 - Find the NRSessionConfig in your project
