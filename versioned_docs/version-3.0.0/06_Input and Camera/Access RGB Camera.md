@@ -2,28 +2,60 @@
 
 ## Device Compatibility
 
-### Device Compatibility
-
-The reliability of glasses' RGB Camera has been fully tested on the following Android phones:
-
-- Oneplus: 9 / 9pro 
-- Samsung: Galaxy S10+ / Galaxy S21 / Galaxy S21 Ultra 5G / Galaxy S21 5G / Galaxy S21 5G / Galaxy S20 Ultra 5G /  Galaxy S20+ 5G / Galaxy Note20 5G / Galaxy S21 5G / Galaxy Z Fold 3 5G / Galaxy S22 
-- Sony: X1 iii
-- LG: Wing / V50s        
-- Arrows: NX9 
-- OPPO: Find X2 pro / Find X5 pro
-
-Glasses' RGB camera can also work on Android phones besides the above. However, the compatibility is not guaranteed. For the full list, please refer to[ Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility).
+Currently, only the **XREAL Light** glasses are equipped with an RGB Camera.
 
 ## Developer Guide
 
-### Import the NRSDK
+### Import the XREAL SDK and Sample 
 
-Import **NRSDKForUnity_1.9.1.unitypackage** in the package.
+Ensure your environment is configured as per the [Getting Started with XREAL SDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android).
+
+Import the **Camera Features** sample from the Package Manager.
+
+![image-20240826182345288](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240826182345288.png)
 
 ### Open the Sample Scene
 
-In the Unity Project window, you can find the CameraCaptureDemo sample in: `Assets > NRSDK >Demos > RGBCamera-Record.`
+Navigate to the RGBCamera sample in the Unity Project window: `Assets > Samples > XERAL XR Plugin > 3.0.0 >Camera Features > RGBCamera`
+
+### **How to Access **RGB and YUV Camera Images
+
+The RGB camera supports two image formats: **RGB_888** and **YUV_420_888**. You can switch between these formats based on your needs.
+
+**Retrieving RGB_888 Format**
+
+To retrieve the image texture in RGB_888 format, use the following code:
+
+```
+var texture = m_RGBCameraTexture.GetRGBFormatTexture();
+if (texture != null)
+{
+    m_RGBImage.texture = texture;
+}
+```
+
+**Retrieving YUV_420_888 Format**
+
+For the YUV_420_888 format, use the code below to access and display the Y, U, and V textures:
+
+```
+var yuvTextures = m_RGBCameraTexture.GetYUVFormatTextures();
+if (yuvTextures[0] != null)
+{
+    m_YUVImage.material.SetTexture("_MainTex", yuvTextures[0]);
+    m_YUVImage.material.SetTexture("_UTex", yuvTextures[1]);
+    m_YUVImage.material.SetTexture("_VTex", yuvTextures[2]);
+}
+```
+
+
+
+### 如何使用RGB Camera录制视频
+
+```
+```
+
+
 
 ### Inspect the Sample Code
 
@@ -41,151 +73,6 @@ public RawImage CaptureImage;
 ```
 
 - See `VideoCapture2LocalExample.cs`, located in `Assets/NRSDK/Demos/Record/Scripts`for an example on how to implement video capture
-
-```
-// A video Capture Example
-public class VideoCapture2LocalExample : MonoBehaviour
-{
-    /// <summary> The previewer. </summary>
- public NRPreviewer Previewer;
- public VideoRecordConfigPanel m_ConfigPanel;
-
- /// <summary> Save the video to Application.persistentDataPath. </summary>
- /// <value> The full pathname of the video save file. </value>
- public string VideoSavePath
- {
-     get
-     {
-         string timeStamp = Time.time.ToString().Replace(".", "").Replace(":", "");
-         string filename = string.Format("Nreal_Record_{0}.mp4", timeStamp);
-         return Path.Combine(Application.persistentDataPath, filename);
-     }
- }
-
- /// <summary> The video capture. </summary>
- NRVideoCapture m_VideoCapture = null;
-
- /// <summary> Starts this object. </summary>
- void Start()
- {
-     CreateVideoCaptureTest();
- }
-
- /// <summary> Tests create video capture. </summary>
- void CreateVideoCaptureTest()
- {
-     NRVideoCapture.CreateAsync(false, delegate (NRVideoCapture videoCapture)
-     {
-         NRDebugger.Info("Created VideoCapture Instance!");
-         if (videoCapture != null)
-         {
-             m_VideoCapture = videoCapture;
-         }
-         else
-         {
-             NRDebugger.Error("Failed to create VideoCapture Instance!");
-         }
-     });
- }
-
- /// <summary> Starts video capture. </summary>
- public void StartVideoCapture()
- {
-     if (m_VideoCapture != null)
-     {
-         CameraParameters cameraParameters = new CameraParameters();
-         if (m_ConfigPanel == null)
-         {
-             Resolution cameraResolution = NRVideoCapture.SupportedResolutions.OrderByDescending((res) => res.width * res.height).First();
-             cameraParameters.hologramOpacity = 0.0f;
-             cameraParameters.frameRate = cameraResolution.refreshRate;
-             cameraParameters.cameraResolutionWidth = cameraResolution.width;
-             cameraParameters.cameraResolutionHeight = cameraResolution.height;
-             cameraParameters.pixelFormat = CapturePixelFormat.BGRA32;
-             // Set the blend mode.
-             cameraParameters.blendMode = BlendMode.Blend;
-             // Set audio state, audio record needs the permission of "android.permission.RECORD_AUDIO",
-             // Add it to your "AndroidManifest.xml" file in "Assets/Plugin".
-             cameraParameters.audioState = NRVideoCapture.AudioState.MicAudio;
-         }
-         else
-         {
-             cameraParameters = m_ConfigPanel.GetRecordConfigration();
-         }
-
-         m_VideoCapture.StartVideoModeAsync(cameraParameters, OnStartedVideoCaptureMode);
-     }
- }
-
- /// <summary> Stops video capture. </summary>
- public void StopVideoCapture()
- {
-     if (m_VideoCapture == null)
-     {
-         return;
-     }
-
-     NRDebugger.Info("Stop Video Capture!");
-     m_VideoCapture.StopRecordingAsync(OnStoppedRecordingVideo);
-     Previewer.SetData(m_VideoCapture.PreviewTexture, false);
- }
-
- /// <summary> Executes the 'started video capture mode' action. </summary>
- /// <param name="result"> The result.</param>
- void OnStartedVideoCaptureMode(NRVideoCapture.VideoCaptureResult result)
- {
-     if (!result.success)
-     {
-         NRDebugger.Info("Started Video Capture Mode faild!");
-         return;
-     }
-
-     NRDebugger.Info("Started Video Capture Mode!");
-     m_VideoCapture.StartRecordingAsync(VideoSavePath, OnStartedRecordingVideo);
-     // Set preview texture.
-     Previewer.SetData(m_VideoCapture.PreviewTexture, true);
- }
-
- /// <summary> Executes the 'started recording video' action. </summary>
- /// <param name="result"> The result.</param>
- void OnStartedRecordingVideo(NRVideoCapture.VideoCaptureResult result)
- {
-     if (!result.success)
-     {
-         NRDebugger.Info("Started Recording Video Faild!");
-         return;
-     }
-
-     NRDebugger.Info("Started Recording Video!");
-     if (m_ConfigPanel != null && m_ConfigPanel.UseGreenBackground)
-     {
-         // Set green background color.
-         m_VideoCapture.GetContext().GetBehaviour().SetBackGroundColor(Color.green);
-     }
- }
-
- /// <summary> Executes the 'stopped recording video' action. </summary>
- /// <param name="result"> The result.</param>
- void OnStoppedRecordingVideo(NRVideoCapture.VideoCaptureResult result)
- {
-     if (!result.success)
-     {
-         NRDebugger.Info("Stopped Recording Video Faild!");
-         return;
-     }
-
-     NRDebugger.Info("Stopped Recording Video!");
-     m_VideoCapture.StopVideoModeAsync(OnStoppedVideoCaptureMode);
- }
-
- /// <summary> Executes the 'stopped video capture mode' action. </summary>
- /// <param name="result"> The result.</param>
- void OnStoppedVideoCaptureMode(NRVideoCapture.VideoCaptureResult result)
- {
-     NRDebugger.Info("Stopped Video Capture Mode!");
- }
-}
-```
 
 ### Build and Run the Sample App
 
