@@ -48,31 +48,52 @@ if (yuvTextures[0] != null)
 }
 ```
 
+### How to record a video with RGB Camera
 
+You can simply transform the `Video` gameObject to a prefab and use it in your scene.
 
-### 如何使用RGB Camera录制视频
+![image-20240828115852588](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240828115852588.png)
 
-```
-```
+**Blend Mode**
 
+- **Blend:** Records both the RGB camera content and the virtual content together.
+- **RGB Only:** Records only the content from the RGB camera.
+- **Virtual Only:** Records only the virtual elements in the video, excluding real-world content.
 
+**Resolution Level**
 
-### Inspect the Sample Code
+- **Low:** Low resolution, resulting in smaller file sizes and lower quality.
+- **Middle:** Medium resolution, offering a balance between quality and file size.
+- **High:** High resolution, providing the best quality but with larger file sizes.
 
-- See `CameraCaptureController.cs` , located in `Assets/NRSDK/Demos/RGBCamera/Scripts/CameraCaptureController.cs` for an example on how to get the texture of RGB Camera.
+**Culling Mask**
 
-```
-public RawImage CaptureImage;
+- **Everything:** Renders all layers in the scene, including both the real and virtual elements.
+- **Nothing:** Renders no layers, essentially showing a blank screen.
+- **Custom Layers:** Allows you to specify particular layers to include or exclude in the video capture.
 
- private void Start()
- {
-     RGBCamTexture = new NRRGBCamTexture();
-     CaptureImage.texture = RGBCamTexture.GetTexture();
-     RGBCamTexture.Play();
- }
-```
+**Audio State**
 
-- See `VideoCapture2LocalExample.cs`, located in `Assets/NRSDK/Demos/Record/Scripts`for an example on how to implement video capture
+- **Application Audio:** Captures audio solely from the application, excluding microphone input. Useful for recording or streaming in-app sounds and media.
+- **Mic Audio:** Captures audio from the microphone. This setting is typically used for voice recording or picking up ambient sounds from the environment.
+- **Application and Mic Audio:** Captures both the application's audio and microphone input, combining in-app sounds with user or environmental audio.
+- **None:** Disables all audio capture, resulting in a video with no sound.
+
+:::tip
+
+Please note that when you choose **Mic Audio** or **Application and Mic Audio**, you need to add the permission of “android.permission.RECORD_AUDIO” to your “AndroidManifest.xml” file in “Assets/Plugin”.
+
+:::
+
+**Capture Side**
+
+- **Single:** Captures video from a single camera, typically the default camera.
+- **Both:** Captures video from two cameras, often used for stereoscopic effects or dual perspectives.
+
+**Use Green Background**
+
+- **Enabled:** Replaces the background with a green screen, useful for chroma keying in post-production.
+- **Disabled:** Keeps the original background, displaying the scene as is.
 
 ### Build and Run the Sample App
 
