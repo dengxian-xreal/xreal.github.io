@@ -50,8 +50,7 @@
         "Input and Camera/Input",
         "Input and Camera/Customize Controller UI",
         "Input and Camera/Camera",
-        "Input and Camera/Access RGB Camera",
-        "Input and Camera/Reset Camera"
+        "Input and Camera/Access RGB Camera"
       ]
     },
     "Hand Tracking",

@@ -4,36 +4,32 @@
 
 The XREAL XR Plugin utilizes Unity's XR Interaction Toolkit (XRI) for handling camera setups. This toolkit simplifies the process of setting up and configuring the camera for XR experiences, ensuring that the virtual environment is properly aligned with the real world.
 
-### Installation and Configuration
+### Setting Up the XR Origin 
 
-1. **Install XR Interaction Toolkit**
-   - Open the Unity Package Manager (`Window > Package Manager`).
-   - Search for `XR Interaction Toolkit` and click `Install`.
-2. **Enable XR Management**
-   - Go to `Edit > Project Settings > XR Plug-in Management`.
-   - Install and enable the necessary XR plug-in providers for your target platform (e.g., OpenXR, Oculus, etc.).
+If you add the XR Origin using Unity's default method, you may need to configure additional components manually. To simplify this process, we have provided two prefabs, `XR Interaction Setup` and `XR Interaction Hands Setup`, in the **Interaction Basics** sample. These prefabs include XR Origin and all necessary components such as the Event System and Input Action Manager, so you can choose the one that fits your input preferences.
 
-### Setting Up the XR Origin
+You can find these prefabs in Project -> Assets -> Samples -> XREAL XR Plugin -> 3.0.0 -> Interaction Basics -> Prefabs.
 
-1. **Add XR Origin**
-   - In your scene, add an `XR Origin` object (`GameObject > XR > XR Origin`).
-   - The `XR Origin` object will include components for managing the camera and tracking spaces.
-2. **Configuring the Main Camera**
-   - Ensure the `Main Camera` is a child of the `XR Origin` object.
-   - The `Main Camera` should have its `Tag` set to `MainCamera`.
+*  Use the XR Interaction Setup prefab if you plan to use controllers only.
 
-### Adjusting Camera Settings
+*  Use the XR Interaction Hands Setup prefab if you want to support hand gestures (with or without controllers).
 
-1. **Camera Component Settings**
-   - Select the `Main Camera` and configure its parameters:
-     - **Field of View (FOV)**: Set according to the desired perspective.
-     - **Clipping Planes**: Adjust the near and far clipping planes to control the rendering range.
-     - **Clear Flags**: Choose how the background should be cleared (e.g., Skybox, Solid Color).
-2. **Adding Components for XR Interaction**
-   - Add `Tracked Pose Driver (Input System)` to the `Main Camera` to ensure it follows the head movements accurately.
-   - Configure the `Tracked Pose Driver` to use the appropriate pose source.
+![image-20240828172340919](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240828172340919.png)
 
+### **Camera Component Settings**
 
+Compared to default main camera in XR Origin, the one we provide has the following adjustments for more a immersive experience in AR applications:
+
+* Clear Flags: Skybox -> Solid Color
+* Background Color: Black
+* Field of View: 60 -> 25
+* Clipping Planes: 0.3 -> 0.1
+
+![image-20240828173206394](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240828173206394.png)
+
+### Reset Camera
+
+If you're building a seated or standing experience, you can recenter Unity's world origin at the user's current position and orientation by calling the API `XREALUtility.GetInputSubsystem()?.TryRecenter()` . The **HelloMR** sample scene demonstrates how to reset the camera with this API in an app. 
 
 ### Further Reading
 
