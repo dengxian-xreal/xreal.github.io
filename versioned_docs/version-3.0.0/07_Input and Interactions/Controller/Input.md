@@ -1,18 +1,14 @@
-# Input ⚠️添加两个setup的说明，以及input的回调
+# Input Action
 
 ### Introduction
 
-The XREAL XR Plugin now utilizes [Unity's Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.8/manual/index.html) for handling input. This system provides a high-level API, making it simpler and more efficient to manage inputs from controllers and headsets.
+The XREAL XR Plugin now utilizes [Unity's Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.8/manual/index.html) for handling input. This system provides a high-level API, making it simpler and more efficient to manage inputs from controllers and headsets. 
 
-### Installation and Configuration
+只要按照Getting Started里面的指示，安装了XRI，就会自动切换到相应的Input System。
 
-1. **Install Unity Input System**
-   - Open the Unity Package Manager (`Window > Package Manager`).
-   - Search for `Input System` and click `Install`.
-2. **Enable the New Input System**
-   - Go to `Edit > Project Settings > Player`.
-   - Under `Other Settings`, find `Active Input Handling` and select `Both` or `Input System Package (New)`.
-   - Restart the Unity Editor to apply the changes.
+大纲
+
+1. Overview, 我们的Input是通过手机来的
 
 ## Enable input actions used for input
 
@@ -22,9 +18,6 @@ The XREAL XR Plugin now utilizes [Unity's Input System](https://docs.unity3d.com
 2. **Edit Input Actions**
    - Double-click the `XRI Default Input Actions` asset to open the Input Actions editor. ⚠️我们应该是用的默认的
    - Add input actions for controllers and headsets. For example, create an `Action Map` called `XRController` and add actions such as `Select`, `Activate`, `UIPress`, etc.
-3. **Generate C# Class**
-   - In the Input Actions editor, click `Generate C# Class` and name the class, for example, `XREALInputActions`.
-   - The generated C# script will appear in the Project window.
 
 ### Configuring Controller Input
 

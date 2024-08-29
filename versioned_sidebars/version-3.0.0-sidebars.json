@@ -10,7 +10,6 @@
       },
       "items": [
         "XREALDevices/Compatibility",
-        "XREALDevices/Controller",
         "XREALDevices/XREAL Glasses"
       ]
     },
@@ -40,20 +39,38 @@
     },
     {
       "type": "category",
-      "label": "Input and Camera",
+      "label": "Camera",
       "link": {
-        "type": "generated-index",
-        "title": "Input and Camera"
+        "type": "doc",
+        "id": "Camera/Camera"
       },
       "items": [
-        
-        "Input and Camera/Input",
-        "Input and Camera/Customize Controller UI",
-        "Input and Camera/Camera",
-        "Input and Camera/Access RGB Camera"
+        "Camera/Access RGB Camera"
       ]
     },
-    "Hand Tracking",
+    {
+      "type": "category",
+      "label": "Input and Interactions",
+      "link": {
+        "type": "generated-index",
+        "title": "Input and Interactions"
+      },
+      "items": [
+        {
+          "type": "category",
+          "label": "Controller",
+          "link": {
+            "type": "doc",
+            "id": "Input and Interactions/Controller/Controller"
+          },
+          "items": [
+            "Input and Interactions/Controller/Input",
+            "Input and Interactions/Controller/Customize Controller UI"
+          ]
+        },
+        "Input and Interactions/Hand Tracking"
+      ]
+    },
     {
       "type": "category",
       "label": "Image Tracking",
