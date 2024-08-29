@@ -61,15 +61,19 @@ If you don’t want NRSDK to automatically adapt for XREAL Air, please specify t
 
 #### Android Phones
 
- We are continuously working to ensure that the NRSDK is compatible with every model we have verified, ensuring an optimal user experience. 
+We are continuously working to ensure that the NRSDK is compatible with every model we have verified, ensuring an optimal user experience. 
 
 Below is a comprehensive list of phone models that are compatible with Nebula and NRSDK. 
 
 Additionally, we have tested these models for compatibility with our four current eyewear models: **Light, Air, Air 2, Air 2 Pro and Air 2 Ultra**, and they are all found to be compatible. 
 
+:::danger
+
+Note that Light is not compatible with Samsung galaxy S23.
+
+:::
+
 Moreover, compatibility with **Light and Air 2 Ultra** also means that features such as hand tracking, plane detection, meshing, image tracking, and spatial anchor will work seamlessly on these phones.
-
-
 
 | Brand   | Chip                                   | Model Name         | Model Number | Android Version |
 | :------ | :------------------------------------- | :----------------- | :----------- | :-------------- |
