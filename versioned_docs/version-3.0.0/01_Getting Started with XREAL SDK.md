@@ -25,7 +25,7 @@ This quickstart guide will help you set up your development environment and test
 - Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
   - Sample `Interaction Basics`
   - Sample `AR Features` (Optional)
-- XR Interaction Toolkit
+- XR Interaction Toolkit (Both 2.5.x and 3.0.x are supported)
   - Sample `Starter Assets`
   - Sample `Hands Interaction Demo` (Optional)
 - AR Foundation(Optional)

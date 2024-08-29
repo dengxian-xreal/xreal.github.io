@@ -1,21 +1,27 @@
-# Customize Controller UI
+# Controller
 
-### Introduction
+## Introduction
 
 When we release the XREAL glasses to consumers, the product will only include the glasses themselves, without any controllers or computing units. Users can connect the XREAL glasses to their own Android phones or Beam Pro, which can then serve as 3DOF controllers.
 
 So if you want to create unique experiences that stand out from the rest you can fully customize your MR app's controller interface.
 
-### How to use a phone as controller
 
-#### Controller Features Description
+
+Overview, 我们的Input是通过Android手机或者BeamPro来作为一个XR Controller，所以只需要按照
+
+![image-20240829173525097](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240829173525097.png)
+
+### Controller Features Description
+
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcontroller04.png&width=768&dpr=4&quality=100&sign=0d3e08268e1aac95c61b6f8d824df03a08d0827fcb8bbf0e39abf248088f282e)
 
 - **3DoF Tracking**
-- **Touchpad**: Represents the "Trigger" button and is also used as a touchpad. It can detect touching and swiping.
-- **Home Button**: Click to call the "Exit App" menu. Press and hold to recenter your controller. It is advised not to use this button for app-specific functions.
-- **App Button**: Can be freely customized for your app, e.g., click to open an in-app menu or perform a special action.
+- **Touchpad**: Represents the "Trigger" button and is also used as a touchpad. It can detect touching and swiping. Customizable for your app, e.g. scrolling.
+- **Home Button**: Press and hold to recenter your controller. Press can be customized for in-app action, e.g. return to the previous step.
+- **App Button**: Press and hold to recenter your controller. Can be freely customized for your app, e.g., click to open an in-app menu or perform a special action.
 
-#### Two Ways to Use
+### Two Ways to Use
 
 One of the great things about the XREAL phone controller is that you can easily customize its UI interface. Here are two ways to use the XREAL phone controller:
 
@@ -25,15 +31,15 @@ One of the great things about the XREAL phone controller is that you can easily 
 
    You have the option to enhance the Virtual Controller by incorporating two types of buttons:
 
-   ​	1.	**Input Action Buttons**: These are linked to specific actions within Unity’s Input System, enabling you to handle inputs from various devices seamlessly. Utilize these buttons for in-game actions such as movement and interaction.
+   ​	1.**Input Action Buttons**: These are linked to specific actions within Unity’s Input System, enabling you to handle inputs from various devices seamlessly. Utilize these buttons for in-game actions such as movement and interaction.
 
-   ​	2.	**UI Buttons**: These on-screen interactive elements are part of the Unity UI system. Use them for menu navigation and application control to provide users with an intuitive and accessible interface.
+   ​	2.**UI Buttons**: These on-screen interactive elements are part of the Unity UI system. Use them for menu navigation and application control to provide users with an intuitive and accessible interface.
 
    
 
    For detailed instructions on adding and configuring these buttons, please refer to the Developer Guide below. Customize the style and functionality of the controller UI to align with your application’s unique requirements.
 
-### Developer Guide
+## How to Customize Controller UI
 
 #### **1. Add the Prefab to Your Project**
 
@@ -268,3 +274,9 @@ Below is a simple example to illustrate the process:
    * Enter Play mode in the Editor to test the button functionality.
 
      ![CleanShot 2024-08-12 at 11.49.41](https://raw.githubusercontent.com/dengxian-xreal/Images/main/CleanShot%202024-08-12%20at%2011.49.41.gif)
+
+
+
+### Further Reading
+
+- [Unity Input System Documentation](https://docs.unity3d.com/Packages/com.unity.inputsystem@latest)

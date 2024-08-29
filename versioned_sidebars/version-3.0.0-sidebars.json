@@ -56,18 +56,7 @@
         "title": "Input and Interactions"
       },
       "items": [
-        {
-          "type": "category",
-          "label": "Controller",
-          "link": {
-            "type": "doc",
-            "id": "Input and Interactions/Controller/Controller"
-          },
-          "items": [
-            "Input and Interactions/Controller/Input",
-            "Input and Interactions/Controller/Customize Controller UI"
-          ]
-        },
+        "Input and Interactions/Controller",
         "Input and Interactions/Hand Tracking"
       ]
     },
