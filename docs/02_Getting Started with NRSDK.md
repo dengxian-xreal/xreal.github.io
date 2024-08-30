@@ -20,15 +20,17 @@ This quickstart guide will help you set up your development environment and test
 
 **Software Checklist**
 
-- [Unity 2019.4.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
+- [Unity 2019.4.X, 2020.3.X, 2021.3.X, 2022.3.24 or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
 
   :::warning
 
   Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download the appropriate Gradle file and set it in Unity-> Settings-> External tools.
 
+  ![image-20240807174108770](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240807174108770.png) 
+
   Additionally, we have identified that some versions of Unity 2022 may experience crashes due to insufficient TLS. This issue was resolved in version 2022.3.24f1 (Corrected crashes due to excessive use of thread local data slots). Therefore, if you are using Unity 2022, we recommend using version 3.24 or later.
 
-  ![image-20240807174108770](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240807174108770.png) 
+  Starting from Unity 2023, a libc++_shared.so library is included by default. Since our hand tracking library references SNPE, which also includes libc++_shared.so, this can cause a conflict resulting in build failures. If you encounter this issue, we recommend using Unity 2022.3.34 or later.
 
   :::
 
