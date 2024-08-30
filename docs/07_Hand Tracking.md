@@ -16,18 +16,18 @@ NRSDK’s Hand Tracking capability tracks the position of key points of your han
 
 #### General Gesture
 
-![../../../_images/ht1-1.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-1.png&width=300&dpr=4&quality=100&sign=62618d5f173e80dc75b409ce9f523fb3a52ceaf2a49fab14f50532c2e2e2fed1)
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/Hand%20Tracking%20AVIF.png" alt="Description" style={{ width: '600px', height: 'auto' }} class="center-image"  />
 
 #### Select Gesture
 
-![../../../_images/ht1-2.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-2.png&width=300&dpr=4&quality=100&sign=6974a1520deebde1d3b2a0ee9e1b300caf6fa54ada36ed29a98495ce4b019dc7)
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/Hand%20Tracking%20AVIF2.png" alt="Description" style={{ width: '600px', height: 'auto' }} class="center-image"  />
 
 - As long as the index finger and thumb pinch together (regardless of the pose of other fingers), it is considered a pinch pose.
 - Gestures above will all be recognized as pinch/select.
 
 #### System Gesture
 
-![../../../_images/ht1-3.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-3.png&width=300&dpr=4&quality=100&sign=1f995f2f4e4dcd2fed45ae8f2d23cdc4d5c7c41482a9802b3413bcd8db1df6ff)
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/111.png" alt="Description" style={{ width: '600px', height: 'auto' }} class="center-image"  />
 
 - Keep this gesture for 1.2s to evoke the home menu.
 - Both left and right hands will be recognized.
@@ -79,7 +79,7 @@ The NRSDK hand tracking system identifies the position of 23 key points on the h
 
 #### Joint Orientation
 
-![../../../_images/ht1-4.png](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fht1-4.png&width=300&dpr=4&quality=100&sign=165138e8043507741314c73f2cd4746dd0c1d7dcc3357a07b33993d950393cb7)
+![1](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/1.png)
 
 ### Requirements & Limits
 
