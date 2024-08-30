@@ -183,6 +183,6 @@ The current gesture recognition application supports **only Android SDK Target A
 
    ![image-20240812172509939](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812172509939.png)
 
-6. Now you are ready for hand tracking, refer to [Tutorial: Manipulating an Object](./06_Input%20and%20Camera/Interact%20with%20Unity%20UI.md) for adding more interactions with objects.
+6. Now you are ready for hand tracking.
 
 Samples are included in the Unity package. Please refer to `Assets>NRSDK>Demos>HandTracking` for details.
