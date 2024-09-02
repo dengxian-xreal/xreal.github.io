@@ -2,66 +2,66 @@
 
 ## Introduction
 
-When we release the XREAL glasses to consumers, the product will only include the glasses themselves, without any controllers or computing units. Users can connect the XREAL glasses to their own Android phones or Beam Pro, which can then serve as 3DOF controllers.
-
-So if you want to create unique experiences that stand out from the rest you can fully customize your MR app's controller interface.
-
-
-
-Overview, 我们的Input是通过Android手机或者BeamPro来作为一个XR Controller，所以只需要按照
+When releasing XREAL glasses to consumers, the package includes only the glasses, without any controllers or computing units. Users can connect the XREAL glasses to their own Android phones or the Beam Pro, which can function as 3DOF controllers. The integration follows standard XR controller setups, binding specific actions to your desired inputs.
 
 ![image-20240829173525097](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240829173525097.png)
 
-### Controller Features Description
+To create unique experiences that stand out, you can fully customize the controller interface within your MR application.
+
+## Controller Features Description
 
 ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fnrealsdkdoc.readthedocs.io%2Fen%2Flatest%2F_images%2Fcontroller04.png&width=768&dpr=4&quality=100&sign=0d3e08268e1aac95c61b6f8d824df03a08d0827fcb8bbf0e39abf248088f282e)
 
 - **3DoF Tracking**
-- **Touchpad**: Represents the "Trigger" button and is also used as a touchpad. It can detect touching and swiping. Customizable for your app, e.g. scrolling.
-- **Home Button**: Press and hold to recenter your controller. Press can be customized for in-app action, e.g. return to the previous step.
-- **App Button**: Press and hold to recenter your controller. Can be freely customized for your app, e.g., click to open an in-app menu or perform a special action.
+- **Touchpad**: Acts as the “Trigger” button and functions as a touchpad for detecting touch and swipe gestures. This can be customized for various app-specific functions, such as scrolling.
+- **Home Button**: Used to recenter the controller when pressed and held. It can also be customized for other in-app actions, such as navigating back to a previous step.
+- **App Button**: Another customizable button, which can be used to trigger various in-app functions, like opening a menu or performing a special action.
 
-### Two Ways to Use
+## Using the XREAL Phone Controller
 
-One of the great things about the XREAL phone controller is that you can easily customize its UI interface. Here are two ways to use the XREAL phone controller:
+One of the benefits of the XREAL phone controller is the ease with which you can customize its UI interface. There are two main approaches to utilizing the XREAL phone controller:
 
-1. **The Default Method**: When you run the XREAL app on your Android device, a default virtual controller (the "**XREALVirtualController**" prefab) will be automatically loaded without requiring any additional setup. This default controller includes three common buttons: Trigger, Home, and App.
+**1. Default Method**
 
-2. **The Custom Way**: To customize your virtual controller, drag the **XREALVirtualController** prefab into your scene. This prefab serves as a flexible foundation for building your application’s input interface.
+When running the XREAL app on your Android device, a default virtual controller (the “**XREALVirtualController**” prefab) is automatically loaded without additional setup. This controller includes the three standard buttons: Trigger, Home, and App.
 
-   You have the option to enhance the Virtual Controller by incorporating two types of buttons:
+**2. Custom Method**
 
-   ​	1.**Input Action Buttons**: These are linked to specific actions within Unity’s Input System, enabling you to handle inputs from various devices seamlessly. Utilize these buttons for in-game actions such as movement and interaction.
+For those seeking to tailor the controller interface, the **XREALVirtualController** prefab can be manually added to your scene, serving as a foundation for building a customized input interface.
 
-   ​	2.**UI Buttons**: These on-screen interactive elements are part of the Unity UI system. Use them for menu navigation and application control to provide users with an intuitive and accessible interface.
+You can enhance the Virtual Controller by adding two types of buttons:
 
-   
+* **Input Action Buttons**: These buttons are linked to specific actions within Unity’s Input System, allowing you to handle inputs from various devices seamlessly. Use them for core in-game actions such as movement and interaction.
 
-   For detailed instructions on adding and configuring these buttons, please refer to the Developer Guide below. Customize the style and functionality of the controller UI to align with your application’s unique requirements.
+* **UI Buttons**: These on-screen interactive elements are part of the Unity UI system. Use them for menu navigation and application control to provide users with an intuitive and accessible interface.
 
-## How to Customize Controller UI
+For detailed instructions on adding and configuring these buttons, please refer to the Developer Guide below. Customize the style and functionality of the controller UI to align with your application’s unique requirements.
+
+## Customize Controller UI
 
 #### **1. Add the Prefab to Your Project**
 
-* In Project panel, find the "XREALVirtualController" prefab, and drag it to your Assets folder.
+* In the Project panel, locate the "XREALVirtualController" prefab, and drag it to your Assets folder.
 
 ![image-20240607155115460](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607155115460.png)
 
 #### **2. Customize the Controller**
 
-* Double click the "XREALVirtualController" object in Project. You can then design buttons or other UI elements as you like. 
+* Double-click the "XREALVirtualController" object in the Project to open it. From here, you can design buttons and other UI elements to fit your application’s needs.
 
 ![image-20240607155339714](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607155339714.png)
 
 #### 3. **Add a New Input Action Button**
 
-1. To add a new button, add it under the "Buttons" GameObject in the hierarchy. Then in the Inspector panel, click "Add Component", search for "XREAL Button", and add it.
+1. **Create a Button**
+
+   Under the “Buttons” GameObject in the hierarchy, create a new button. In the Inspector panel, click “Add Component,” search for “XREAL Button,” and add it.
 
 ![image-20240607155823946](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607155823946.png)
 
 2. **Set the Button Type**
 
-   In the Inspector panel, set the Button type of your custom button.
+   In the Inspector panel, define the Button type of your custom button.
 
     ![image-20240607155843090](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607155843090.png)
 
@@ -69,19 +69,19 @@ One of the great things about the XREAL phone controller is that you can easily 
 
 3. **Configure Input Actions**
 
-   Find "XRI Default Input Actions" in the Project panel and double-click to open it.
+   Open “XRI Default Input Actions” from the Project panel.
 
 ![image-20240607170320095](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607170320095.png)
 
 4. **Create a New Action Map**
 
- 	Create a new action map by clicking the "+" button.
+   Add a new action map by clicking the “+” button.
 
- ![image-20240607170536010](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607170536010.png)
+![image-20240607170536010](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607170536010.png)
 
 5. **Add a Binding to the Action**
 
-- Click  `No Binding`, go to Path in Binding Properties -> Binding, and choose XR Controller -> XREAL Controller.
+​	Click  `No Binding`, go to Path in Binding Properties -> Binding, and select XR Controller -> XREAL Controller.
 
 ![image-20240607171809682](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607171809682.png)
 
@@ -89,15 +89,15 @@ One of the great things about the XREAL phone controller is that you can easily 
 
 6. **Select a Button**
 
-   Choose a button, for example, ButtonId7
+   Choose the appropriate button, for example, ButtonId7.
 
 ![image-20240607171952662](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607171952662.png)
 
 7. **Assign Custom Button**
 
-​	Then, in the Button type of your custom button, choose Custom Button 7.
+​	In the Button type of your custom button, select Custom Button 7.
 
-  	<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607172941152.png" alt="Description" style={{ width: '400px', height: 'auto' }}   />
+<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240607172941152.png" alt="Description" style={{ width: '400px', height: 'auto' }}   />
 
 ![image-20240612142840005](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612142840005.png)
 
@@ -152,35 +152,26 @@ One of the great things about the XREAL phone controller is that you can easily 
    ```
 
 9. **Build and run**
-   Unfortunately, you are unable to debug your custom controller with input action buttons in Unity Editor. You can build your app then test it on your android phone or Beam pro.
+   Since you cannot debug the custom controller with input action buttons in the Unity Editor, build the app and test it on your Android phone or Beam Pro.
 
 #### 4. **Add a New UI Button**
 
-Adding a UI button to the Virtual Controller is straightforward compared to an Input Action Button. Simply place it under the “Buttons” section of the Virtual Controller and implement the necessary logic.
+Adding a UI button to the Virtual Controller is straightforward:
+
+1. **Add the Button**: Place the new button under the “Buttons” section of the Virtual Controller.
 
 :::tip
 
-**Important:** Pay attention to the order of the buttons. Ensure that any new buttons are added at the end to prevent overlap issues, such as the Trigger button obstructing the new button and rendering it unclickable.
+**Important:** Ensure new buttons are added at the end of the hierarchy to avoid overlap issues, such as the Trigger button obstructing the new button.
 
 ![image-20240812113102174](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240812113102174.png)
 
 :::
 
-Below is a simple example to illustrate the process:
-
-**Objective:** Add a UI button to the Virtual Controller that, when clicked, changes the color of a cube in the scene.
-
-**Step-by-Step Guide:**
-
-1. **Add a Button to the Prefab:**
-
-   * Open the **XREAL Virtual Controller** prefab.
-
-   * Add a new Button component under the “Buttons” section.
-
-2. **Create a Cube with a Color-Switching Script:**
+2. **Set Up Interaction**: for example, create a cube with a color-switching script
 
    * In your scene, add a Cube.
+
 
    * Attach a script to the Cube that will change its color when invoked.
 
@@ -226,42 +217,43 @@ Below is a simple example to illustrate the process:
 
 3. **Manage the Button’s Interaction:**
 
-   * Since the Virtual Controller is not instantiated into the scene at runtime, you’ll need to create a ButtonManager to control the interaction.
+* Since the Virtual Controller is not instantiated into the scene at runtime, you’ll need to create a ButtonManager to control the interaction.
 
-   * This manager should be responsible for finding the Cube in the scene and executing the color change logic.
+* This manager should be responsible for finding the Cube in the scene and executing the color change logic.
 
-     ```
-     using System.Collections;
-     using System.Collections.Generic;
-     using Unity.VisualScripting;
-     using UnityEngine;
-     
-     public class Manager : MonoBehaviour
-     {
-         // Start is called before the first frame update
-         ChangeColorOnClick cube;
-         void Start()
-         {
-             cube = FindObjectOfType<ChangeColorOnClick>();
-         }
-     
-         // Update is called once per frame
-         void Update()
-         {
-             
-         }
-     
-         public void changeColor()
-         {
-             cube.OnMouseDown();
-         }
-     
-     }
-     ```
+  ```
+  using System.Collections;
+  using System.Collections.Generic;
+  using Unity.VisualScripting;
+  using UnityEngine;
+  
+  public class Manager : MonoBehaviour
+  {
+      // Start is called before the first frame update
+      ChangeColorOnClick cube;
+      void Start()
+      {
+          cube = FindObjectOfType<ChangeColorOnClick>();
+      }
+  
+      // Update is called once per frame
+      void Update()
+      {
+          
+      }
+  
+      public void changeColor()
+      {
+          cube.OnMouseDown();
+      }
+  
+  }
+  ```
 
 4. **Set Up the Button’s OnClick() Callback:**
 
    * On the newly added button, set up an OnClick() event.
+
 
    * Connect this event to the method in your ButtonManager that handles the color change of the Cube.
 
@@ -269,14 +261,10 @@ Below is a simple example to illustrate the process:
 
 5. **Test in the Editor:**
 
-   * Drag the **XREAL Virtual Controller** prefab into the scene.
+   Drag the **XREAL Virtual Controller** prefab into the scene and enter Play mode in the Editor to test the button functionality.
 
-   * Enter Play mode in the Editor to test the button functionality.
+   * ![CleanShot 2024-08-12 at 11.49.41](https://raw.githubusercontent.com/dengxian-xreal/Images/main/CleanShot%202024-08-12%20at%2011.49.41.gif)
 
-     ![CleanShot 2024-08-12 at 11.49.41](https://raw.githubusercontent.com/dengxian-xreal/Images/main/CleanShot%202024-08-12%20at%2011.49.41.gif)
-
-
-
-### Further Reading
+## Further Reading
 
 - [Unity Input System Documentation](https://docs.unity3d.com/Packages/com.unity.inputsystem@latest)

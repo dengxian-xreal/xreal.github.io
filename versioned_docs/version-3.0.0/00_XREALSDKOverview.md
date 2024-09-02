@@ -11,13 +11,13 @@ By leveraging the integration with Unity’s XR subsystem, the XREAL SDK has tra
 
 XREAL SDK supports the development environment of **Unity 2021.3.X and above**.
 
-The core features provided by XREAL SDK are Spatial Computing, Optimized Rendering, and Multi-modal Interactions.
+The core features provided by XREAL SDK are Spatial Computing, Optimized Rendering, and Interactions.
 
 - **Spatial Computing** includes motion tracking, plane detection, image anchoring, and hand tracking, allowing the glasses to track their real-time position and orientation relative to the world and to understand the environment around them.
 
 - **Optimized Rendering** is automatically applied to the applications and runs in the bacground to minimize latency and reduce judder, enhancing the overall user experience.
 
-- **Multi-modal Interactions** provide intuitive choices of interactions for various use cases.
+- **Intuitive Interactions** provide intuitive way of interactions.
 
 
 ### Spatial Computing
@@ -46,10 +46,8 @@ XREAL SDK optimizes the rendering performance in the backend to minimize the lat
 
 **Warping:** Instead of polling tracking data at the very beginning of each frame to render the image, XREAL SDK uses dynamically predicted poses of the glasses to warp the rendered image, reprojecting the warping frames to the displaybefore every VSync.
 
-### Multi-modal Interactions
+### Intuitive Interactions
 
-- **XREAL Light Controller (3DoF)**: A light 3DoF controller to interact with the virtual objects in a natural and intuitive way.
-
-- **XREAL Phone Controller (3DoF)**: An Android mobile phone can serve as a 3DoF controller for XREAL SDK applications. The phone screen supports gestures and various other touchscreen actions to provide interaction options.
+**XREAL Phone Controller (3DoF)**: An Android mobile phone can serve as a 3DoF controller for XREAL SDK applications. The phone screen supports gestures and various other touchscreen actions to provide interaction options.
 
 For more interaction models, please refer to the [Design Guide](https://xreal.gitbook.io/nrsdk/design-guide/design-guide-overview).
