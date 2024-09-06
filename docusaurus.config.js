@@ -91,9 +91,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       announcementBar: {
-        id: 'New hackathon',
+        id: 'New SDK',
         content:
-          'NRSDK2.2.1 has been released! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.2.1"> Check the release note</a>.',
+          'NRSDK 2.3.0 has been released! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.3.0"> Check the release note</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
         isCloseable: true,
