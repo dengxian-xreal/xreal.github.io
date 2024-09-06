@@ -51,7 +51,7 @@ const config = {
           rehypePlugins: [require('rehype-katex')],
           versions: {
               current: {
-                  label: '2.2.1',
+                  label: '2.3.0',
                   path: '/',
                   badge: true
               }
