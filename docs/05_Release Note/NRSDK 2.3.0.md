@@ -29,7 +29,7 @@ SDK 2.3.0 is currently only compatible with the **Beam Pro** and the latest vers
 
 ### Known Issues
 
-* Samsung S23 is not compatible with XREAL Light glasses.
+* XREAL Light is not compatible with Samsung S23 and Beam Pro.
 * URP is not compatible with multithreaded rendering.
 
 
