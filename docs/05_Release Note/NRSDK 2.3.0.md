@@ -24,7 +24,7 @@ SDK 2.3.0 is currently only compatible with the **Beam Pro** and the latest vers
 ### Bug Fixes
 - Fixed an issue where videos were not recorded after tapping "Record" and trying to view them in the album.
 - Fixed an issue where hand tracking could be activated unintentionally when switching DoF modes.
-- Fixed flickering issues in Unity’s controller interface when using the URP plugin.
+- Fixed flickering issues in Unity’s controller interface when using the URP.
 - Fixed an issue where controllers became unusable when resizing the Game window in Editor mode.
 
 ### Known Issues
