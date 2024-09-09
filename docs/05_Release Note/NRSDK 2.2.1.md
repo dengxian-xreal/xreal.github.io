@@ -4,7 +4,7 @@
 
 :::info
 
-**Download** [**NRSDKForUnity_Release_2.2.1.unitypackage**](https://developer.xreal.com/download)
+**Download** [**NRSDKForUnity_Release_2.2.1.unitypackage**](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.2.1_Release_20240619/NRSDKForUnityAndroid_2.2.1.unitypackage)
 
 :::
 
@@ -15,4 +15,5 @@
 ### Bug Fixes
 
 - Remove the `android:process=":space"` tag from the `AndroidManifest.xml`.
+
 
