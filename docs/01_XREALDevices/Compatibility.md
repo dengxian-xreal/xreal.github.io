@@ -18,9 +18,14 @@ import TabItem from '@theme/TabItem';
   <TabItem value="Nebula 3.5.0" label="Nebula 3.5.0">
     ![Nebula350](./Images/Nebula350.svg)
   </TabItem>
-
   <TabItem value="Nebula 3.8.0" label="Nebula 3.8.0">
-    ![Drawing](https://content.gitbook.com/content/yXoV7SMVFQhr75lOIoQv/blobs/pBeSztM2jM1f9pZplvCX/file.drawing.svg)
+    ![Nebula380](./Images/Nebula380.svg)
+  </TabItem>
+
+  <TabItem value="Nebula 3.9.0" label="Nebula 3.9.0 & MyGlasses 1.4.0">
+
+![image-20240911163154617](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240911163154617.png)
+
   </TabItem>
 
 </Tabs>
