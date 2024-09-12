@@ -52,7 +52,7 @@ NRSDK runs on multiple Android devices and different types of XREAL glasses (Air
 | Hand Tracking                       | Yes                   | No                        | Yes               |
 | Depth Mesh                          | Yes                   | No                        | Yes               |
 | Spatial anchor                      | Yes                   | No                        | Yes               |
-| First Person View (with RGB Camera) | Application & Reality | Application               | Application       |
+| First Person View | Application & Reality | Application               | Application       |
 | Controller                          | 3DoF                  | 3DoF                      | 3DoF              |
 | Customize Phone Controller UI       | Yes                   | Yes                       | Yes               |
 | Emulator Testing                    | Yes                   | Yes                       | Yes               |
