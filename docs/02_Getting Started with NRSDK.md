@@ -109,11 +109,6 @@ You could either configure your project automatically via NRSDK **Project Tips**
 You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the NRSDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
 
 <figure className="my-custom-figure">
-<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image.png" alt="Your Image Description" class="center-image"/>
-  <figcaption>Project</figcaption>
-</figure>
-
-<figure className="my-custom-figure">
 <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165059951.png" alt="Your Image Description" class="center-image"/>
 <figcaption>NR Project Config</figcaption>
 </figure>
