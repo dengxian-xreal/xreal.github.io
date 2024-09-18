@@ -6,7 +6,7 @@ toc_max_heading_level: 5
 
 #### 1 Which Unity version is supported by NRSDK?
 
-Please refer to [Getting Started with NRSDK](./02_Getting Started with NRSDK.md)
+Please refer to [Getting Started with NRSDK](02_Getting%20Started%20with%20NRSDK.md).
 
 #### 2 What are supported Android phones for hand tracking?
 
