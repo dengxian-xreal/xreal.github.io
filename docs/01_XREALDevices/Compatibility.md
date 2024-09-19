@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
     ![Nebula380](./Images/Nebula380.svg)
   </TabItem>
 
-  <TabItem value="Nebula 3.9.0" label="Nebula 3.9.0 & MyGlasses 1.4.0">
+  <TabItem value="Nebula 3.8.1" label="Nebula 3.8.1 & MyGlasses 1.4.0">
 
 ![image-20240911203326726](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240911203326726.png)
 
@@ -81,3 +81,4 @@ Moreover, compatibility with **Light and Air 2 Ultra** also means that features 
 Note that Light is not compatible with Samsung galaxy S23.
 
 :::
+
