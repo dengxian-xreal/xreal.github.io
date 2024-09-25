@@ -51,7 +51,7 @@ const config = {
           rehypePlugins: [require('rehype-katex')],
           versions: {
               current: {
-                  label: '2.3.0',
+                  label: '2.3.1',
                   path: '/',
                   badge: true
               }
@@ -93,7 +93,7 @@ const config = {
       announcementBar: {
         id: 'New SDK',
         content:
-          'NRSDK 2.3.0 has been released! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.3.0"> Check the release note</a>.',
+          'NRSDK 2.3.1 has been released! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.3.1"> Check the release note</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
         isCloseable: true,

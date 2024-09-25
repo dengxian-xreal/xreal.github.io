@@ -61,6 +61,12 @@ Call the `NRWorldAnchor.CreateAnchor()` method. This method takes the current po
 
 **3. Estimating the mapping quality**
 
+> **Note:**
+>
+> The `NRWorldAnchor.SetEstimateRange()` method is deprecated since NRSDK 2.3.1. Now, you can directly call the `NRWorldAnchorStore.UpdateMapQuality()` method to estimate the mapping quality of the anchor during creation. If you want to guide users to observe the anchor within a specified range, you can set the `angle range` in the `Map Quality Indicator` component.
+
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240925200344421.png"/>
+
 Call the `NRWorldAnchor.SetEstimateRange()` method. This medthod allows you to set the observation angle and distance used for estimating the mapping quality. The observation angle refers to the range of the area around the anchor that needs to be observed. The observation distance refers to the distance between the observer and the anchor.
 
 ```
@@ -107,7 +113,7 @@ The `LocalMapExample` class is responsible for handling world anchors in the loc
 #### Methods
 
 ```
-**Start()**
+Start()
 ```
 
 - Initializes the anchor items and the NR world anchor store.
@@ -115,61 +121,61 @@ The `LocalMapExample` class is responsible for handling world anchors in the loc
 - Disables the anchor panel initially and sets trackable anchor enabled for native configurations.
 
 ```
-**Update()**
+Update()
 ```
 
 - Listens for the trigger button press on the controller and calls the `AddAnchor` method if a target is set.
 
 ```
-**OnApplicationPause(bool pause)**
+OnApplicationPause(bool pause)
 ```
 
 - Restarts anchor tracking coroutine when the application resumes.
 
 ```
-**SwitchAnchorPanel()**
+SwitchAnchorPanel()
 ```
 
 - Toggles the visibility of the anchor panel.
 
 ```
-**OnAnchorItemClick(string key, GameObject anchorItem)**
+OnAnchorItemClick(string key, GameObject anchorItem)
 ```
 
 - Handles anchor item clicks and configures the target according to the clicked anchor item.
 
 ```
-**OnAnchorStateChanged(NRWorldAnchor anchor, MappingState state)**
+OnAnchorStateChanged(NRWorldAnchor anchor, MappingState state)
 ```
 
 - Handles changes in the state of an anchor and updates the MapQualityIndicator accordingly.
 
 ```
-**Load()**
+Load()
 ```
 
 - Loads all anchors from the `NRWorldAnchorStore`, reinstantiating them in the scene.
 
 ```
-**Save()**
+Save()
 ```
 
 - Saves all anchors to the `NRWorldAnchorStore`.
 
 ```
-**Destroy()**
+Destroy()
 ```
 
 - Destroys the `NRWorldAnchorStore`, removing all anchors from memory.
 
 ```
-**Erase()**
+Erase()
 ```
 
 - Erases all saved anchors from the persistent storage.
 
 ```
-**AddAnchor()**
+AddAnchor()
 ```
 
 - Instantiates a new anchor based on the current target.
@@ -189,44 +195,41 @@ The `AnchorItem` class represents individual anchor items. It provides functiona
 - `canvas`: Associated canvas object for display.
 - `anchorUUID`: The UUID text associated with the anchor.
 - `m_NRWorldAnchor`: The associated NR world anchor.
-- `m_Material`: The material for visual representation of tracking state.
 - `anchorState`: The AnchorState text associated with the anchor. 
-- `m_ObserveRange`: The ObserveRange associated with the anchor, including angle and distance.
 
-#### Methods
 
 ```
-**Start()**
+Start()
 ```
 
 Initializes the NR world anchor and sets up tracking state color indicators.
 
 ```
-**Save()**
+Save()
 ```
 
 Saves the anchor to the NR world anchor store.
 
 ```
-**Erase()**
+Erase()
 ```
 
 Erases the anchor from the NR world anchor store.
 
 ```
-**Destroy()**
+Destroy()
 ```
 
 Destroys the NR world anchor object.
 
 ```
-**OnPointerClick(PointerEventData eventData)**
+OnPointerClick(PointerEventData eventData)
 ```
 
 Handles pointer clicks on the anchor item and invokes the `OnAnchorItemClick` action.
 
 ```
-**Remap()**
+Remap()
 ```
 
 Restart mapping the NR world anchor.
@@ -254,97 +257,105 @@ The class is highly tailored to work with the underlying native mapping system a
 #### Methods
 
 ```
-**NRWorldAnchorStore()**
+NRWorldAnchorStore()
 ```
 
 Initializes the NRWorldAnchorStore. It sets up the mapping path and reads existing anchors if any.
 
 ```
-**Dispose()**
+Dispose()
 ```
 
 Cleans up the WorldAnchorStore and releases memory.
 
 ```
-**OnUpdate()**
+OnUpdate()
 ```
 
 Executes the 'update' action for native mapping and tracking of anchors.
 
 ```
-**CreateAnchor(NRWorldAnchor anchor): bool**
+CreateAnchor(NRWorldAnchor anchor): bool
 ```
 
 Creates an NRWorldAnchor and returns true if successful.
 
 ```
-**BindAnchor(NRWorldAnchor anchor, UInt64 handle)**
+BindAnchor(NRWorldAnchor anchor, UInt64 handle)
 ```
 
 Binds a specified anchor with a given handle.
 
 ```
-**UpdateMapQuality(NRWorldAnchor anchor, Pose pose): NREstimateQuality**
+UpdateMapQuality(NRWorldAnchor anchor, Pose pose): NREstimateQuality
 ```
 
 Update the mapping quality of an anchor by observer pose.
 
 ```
-**Remap(NRWorldAnchor anchor): bool**
+Remap(NRWorldAnchor anchor): bool
 ```
 
 Rebuild the feature map of the anchor.
 
+> **Note:**
+>
+> The `SetEstimateRange()` method is deprecated since NRSDK 2.3.1. 
+
 ```
-**SetEstimateRange(UInt64 anchor_handle, float angle, NREstimateDistance distance): bool**
+SetEstimateRange(UInt64 anchor_handle, float angle, NREstimateDistance distance): bool
 ```
 
 Set the estimate range of the anchor.
 
+> **Note:**
+>
+> The `GetEstimateRange()` method is deprecated since NRSDK 2.3.1. 
+
 ```
-**GetEstimateRange(UInt64 anchor_handle, ref float angle, ref NREstimateDistance distance): bool**
+GetEstimateRange(UInt64 anchor_handle, ref float angle, ref NREstimateDistance distance): bool
 ```
 
 Get the estimate range of the anchor.
 
 ```
-**SaveAnchor(NRWorldAnchor anchor): bool**
+SaveAnchor(NRWorldAnchor anchor): bool
 ```
 
 Saves the provided NRWorldAnchor with the UserDefinedKey. Returns true if successful.
 
 ```
-**SaveAllAnchors(): bool**
+SaveAllAnchors(): bool
 ```
 
 Saves all NRWorldAnchor and returns true.
 
 ```
-**DestroyAnchor(NRWorldAnchor anchor): bool**
+DestroyAnchor(NRWorldAnchor anchor): bool
 ```
 
 Destroys a specified NRWorldAnchor from the store and returns true if successful.
 
 ```
-**Destroy()**
+Destroy()
 ```
 
 Clears all NRWorldAnchors.
 
 ```
-**EraseAnchor(NRWorldAnchor anchor): bool**
+EraseAnchor(NRWorldAnchor anchor): bool
 ```
 
 Erases a specified NRWorldAnchor from disk and returns true if successful.
 
 ```
-**LoadwithUUID(string uuid, Action<UInt64> action)**
+LoadwithUUID(string uuid, Action<UInt64> action)
 ```
 
 Loads a NRWorldAnchor from disk for the given identifier and executes the provided action if successful.
 
 ```
-**GetLoadableAnchorUUID(): Dictionary<string, string>**
+GetLoadableAnchorUUID(): Dictionary<string, string>
 ```
 
 Returns a dictionary of UUIDs and user-defined keys that can be loaded.
