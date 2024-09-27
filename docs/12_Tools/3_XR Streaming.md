@@ -1,12 +1,15 @@
-# XR Streaming
+# CloudXR
 
-Nebula built-in **XR Streaming** enables you to live stream Steam/SteamVR content from PC to XREAL Glasses via your Wi-Fi network. 
+Nebula built-in **CloudXR** enables you to live stream Steam/SteamVR content from PC to XREAL Glasses via your Wi-Fi network. 
+
+![img_v3_029e_e1b779cd-8a6d-41fb-8e4f-2128253e8a9g](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/img_v3_029e_e1b779cd-8a6d-41fb-8e4f-2128253e8a9g.jpg)
 
 :::tip
 
-Please note that XR Streaming is no longer built into Nebula. You can download it from [here](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk) or download it later from Google Play.
+Please note that CloudXR is no longer built into Nebula. You can download it from [here](https://nreal-public.nreal.ai/download/Application/cloudxr_2024-09-26_172640.11-2.3.0-release.apk) or download it later from BeamPro XREAL Store.
 
-[XRStreaming.apk](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk)
+[CloudXR.apk](https://nreal-public.nreal.ai/download/Application/cloudxr_2024-09-26_172640.11-2.3.0-release.apk)
+
 
 :::
 
@@ -16,7 +19,7 @@ Please note that XR Streaming is no longer built into Nebula. You can download i
 
 - PC (Windows 10 or later) with VR-ready graphic card (NVIDIA GPU, including Quadro GPUs)
 - XREAL Light / XREAL X / XREAL Air Series
-- Nebula-compatible Android Phones
+- Nebula-compatible Android Phones / Beam Pro
 - WLAN network
 - Bluetooth game controller (Optional)
 
@@ -39,14 +42,15 @@ Please see the following for detailed setup instructions:
 
 1. Install both [Steam](https://store.steampowered.com/about/) and [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) on your PC;
 
-2. Download [CloudXR-Setup-v3.2.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe) (NVIDIA CloudXR SDK server, for Nebula v3.0.0);
+2. Download [CloudXR-Setup-v4.0.zip](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe) (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.5.0);
 
    :::tip
 
-   [CouldXR-Setup-v3.1.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.1.exe), for Nebula v2.3.4
+   [CouldXR-Setup-v3.1.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.1.exe), for Nebula v2.3.4;   
+   [CloudXR-Setup-v3.2.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe), for Nebula v3.0.0;
    :::
 
-3. Launch downloaded **CloudXR-Setup-v3.2.exe,** choose CloudXR Server as following and install CloudXR Server on your PC 
+3. Unzip downloaded **CloudXR-Setup-v4.0.zip,** choose CloudXR Server as following and install CloudXR Server on your PC 
    ![image-20240813171323638](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171323638.png)
 
 4. Install the latest Nebula on your Android phone
@@ -59,7 +63,7 @@ Please see the following for detailed setup instructions:
 
 6. Launch Steam and SteamVR you've just installed. Make sure your Steam account is logged in.
 7. Plug in your XREAL glasses to your Android phone;
-8. Launch Nebula app. On Nebula home page, click **XR Streaming** icon.
+8. Launch Nebula app. On Nebula home page, click **CloudXR** icon. If you use Beam Pro, launch MyGlasses app, click **CloudXR** icon.
 
 ![image-20240813171342741](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171342741.png)
 
