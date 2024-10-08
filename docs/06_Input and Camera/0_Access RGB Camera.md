@@ -1,4 +1,4 @@
-# Access RGB Camera
+# Access RGB Camera and Record Video
 
 ## Device Compatibility
 
