@@ -42,7 +42,7 @@ Please see the following for detailed setup instructions:
 
 1. Install both [Steam](https://store.steampowered.com/about/) and [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) on your PC;
 
-2. Download [CloudXR-Setup-v4.0.zip](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe) (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.5.0);
+2. Download [CloudXR-Setup-v4.0.zip](https://nreal-public.nreal.ai/download/CloudXR-Setup/CloudXR-Setup-v4.0.zip) (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.5.0);
 
    :::tip
 
