@@ -79,7 +79,10 @@ const sidebars = {
         'Input and Camera/NRInput',
         'Input and Camera/Interact with Unity UI',
         'Input and Camera/Customize Controller UI',
+        'Input and Camera/Notification popup',
         'Input and Camera/NRCameraRig', 
+        'Input and Camera/Reset Camera', 
+        'Input and Camera/Access RGB Camera',
       ],
     },
     'Hand Tracking',
@@ -157,11 +160,29 @@ const sidebars = {
         // image: '/img/docusaurus.png',
       },
       items: [
-        'Tools/Single Pass Stereo Rendering',
         'Tools/First Person View',
         'Tools/Emulator',
         'Tools/XR Streaming',
         'Tools/Dual Screen Display',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Rendering',
+      link: {
+        type: 'generated-index',
+        title: 'Rendering',
+        // description: 'Learn about the most important Docusaurus concepts!',
+        // slug: '/category/docusaurus-guides',
+        // keywords: ['guides'],
+        // image: '/img/docusaurus.png',
+      },
+      items: [
+        'Rendering/Warping',
+        'Rendering/Single Pass Stereo Rendering',
+        'Rendering/Render MonoMode',
+        'Rendering/Render Metrics',
       ],
     },
 
@@ -177,14 +198,10 @@ const sidebars = {
         // image: '/img/docusaurus.png',
       },
       items: [
-        'Miscellaneous/Access RGB Camera',
         'Miscellaneous/NRSDK Coordinate Systems',
         'Miscellaneous/MRTK2 Integration',
         'Miscellaneous/MRTK3 Integration',
-        'Miscellaneous/Notification popup',
-        'Miscellaneous/Reset Camera',
-        'Miscellaneous/Render Metrics',
-        'Miscellaneous/Render MonoMode',
+
       ],
     },
     
