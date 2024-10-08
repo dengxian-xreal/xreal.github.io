@@ -65,7 +65,7 @@ Please see the following for detailed setup instructions:
 7. Plug in your XREAL glasses to your Android phone;
 8. Launch Nebula app. On Nebula home page, click **CloudXR** icon. If you use Beam Pro, launch MyGlasses app, click **CloudXR** icon.
 
-![image-20240813171342741](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171342741.png)
+![image-20241008164259210](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241008164259210.png)
 
 **The final step:**
 
