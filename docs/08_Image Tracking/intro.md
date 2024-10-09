@@ -80,7 +80,7 @@ You can click 'x' to delete items.
 
 To display different virtual objects based on the tracked images, you can modify the `TrackingImageExampleController.cs` script and `TrackingImageVisualizer.cs` script. Here's an example of how you can achieve this:
 
-```c#
+```
 namespace NRKernal.NRExamples
 {
     using System.Collections.Generic;
@@ -144,7 +144,7 @@ namespace NRKernal.NRExamples
 }
 ```
 
-```c#
+```
 namespace NRKernal.NRExamples
 {
     using UnityEngine;
