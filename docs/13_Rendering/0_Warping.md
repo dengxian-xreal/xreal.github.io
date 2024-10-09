@@ -1,48 +1,96 @@
-# Render Metrics
+In rendering, we may encounter various display stability issues, including visual artifacts and motion-related problems. These can manifest as tearing, swim, judder, and drift. This document primarily introduces common display stability challenges and how to address them in NRSDK.
 
-### **Setup**
+## Display artifacts
 
-1. Locate the `NRCameraRig` object in your Unity scene.
-2. Attach the `NRMetrics` script to `NRCameraRig`.
+* Tearing
+  Tearing refers to the discontinuity in the display during the rendering process, usually manifesting as one or more lines in the image, often black, making it appear as if the screen has been torn. This phenomenon is mainly caused by high CPU or GPU usage. If developers encounter this issue, they can use the Render metrics tool to analyze CPU and GPU usage specifically, and then perform further performance optimization.
+  ![image-20241009181917438](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009181917438.png)
 
-![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image.png)
+* Swim
+  Swim refers to the phenomenon where virtual objects appear to sway with the user's head movement. This situation usually occurs when the application hasn't fully implemented reprojection. To solve this problem, developers can update the stabilization plane to further enhance stability.
 
-### **Log Examples**
+* Judder
+  Judder is a display artifact characterized by uneven motion and double images of virtual contents, particularly noticeable in moving virtual objects. It typically occurs when the rendering frequency is low, resulting in inconsistent frame delivery. 
+  ![image-20241009181845872](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009181845872.png)
 
-```c#
-FrameMetrics: FPS=60, frNum=61, UpdPrd=39198222, prd=30078850, postPrd=28850795, sdkPrd=39802247, FPC=1.081967, EFC=0, early=0, drop=8 frNumA=753, UpdPrdA=41190049, prdA=32105576, postPrdA=30656161, sdkPrdA=41785068, FPCA=1.092961, EFCA=0.1288181, earlyA=70, dropA=76This log is recorded once every second.
-```
+* Drift
+  Drift refers to the slow offset of virtual objects or environments relative to their real-world positions. This phenomenon is usually caused by accumulated sensor errors or inaccuracies in the tracking system. In AR applications, drift causes virtual objects to appear to "drift" away from their intended real-world positions.
 
+## Solutions
 
+### Frame rate
 
-The log is divided into two parts. The first half,
+Improving and stabilizing frame rate is key to solving various jittering problems. NRSDK recommends developers to:
 
-> FrameMetrics: FPS=60, frNum=61, UpdPrd=39198222, prd=30078850, postPrd=28850795, sdkPrd=39802247, FPC=1.081967, EFC=0, early=0, drop=8"represents the records within the past 1 second.
+- Maintain a stable 60fps or higher frame rate whenever possible
+- Optimize scenes and resources to reduce per-frame computational load
+- Refer to some suggestions given by Unity: Optimizing your VR/AR experiences
 
-Meanwhile,
+### Render distance
 
-> "frNumA=753, UpdPrdA=41190049, prdA=32105576, postPrdA=30656161, sdkPrdA=41785068, FPCA=1.092961, EFCA=0.1288181, earlyA=70, dropA=76
+Render distance refers to the distance from the camera (or user's viewpoint) to the rendered object in a 3D scene. In AR/VR applications, setting appropriate render distances is crucial for improving display stability and performance optimization.
+Generally, render distances should be set according to the following principles:
 
-refers to the cumulative records from the start to the current time. Below are the meanings of each metric:
+- Short distance (0.5m - 1m): Suitable for handheld or close-interaction objects.
+- Medium distance (1m - 5m): Suitable for most objects in indoor scenes or close environments.
+- Long distance (over 5m): Suitable for background objects in outdoor scenes or large environments.
+For most AR applications, setting the render distance of main interactive objects between 1.4m to 3m usually achieves good results. This range ensures object clarity without putting too much rendering burden on the system.
 
-**FPS**: Actual frame rate
+### Reprojection
 
-**frNum/frNumA:** Number of frames counted/Total accumulated number of frames counted.
+Reprojection is a technique used to reduce latency and improve display stability. Its basic principle is to adjust the image based on the latest head position information after rendering and before display. This technique can alleviate jittering problems to some extent because it considers changes in motion and viewpoint (HeadPose) during scene animation and user head movement. Reprojection can compensate for latency generated during the rendering process, making the displayed image more consistent with the user's current head position and orientation.
+Planar Reprojection is a commonly used reprojection technique. Its core idea is to define a stable plane in 3D space, where the content on this plane will become the most stable part of the scene. The further virtual content is from this plane, the worse its stability. This method allows applications to precisely control the stability of different parts of the scene.
+In NRSDK, there are several ways to use planar reprojection:
 
-**Prediction time:**Prediction time is the absolute time between when the app queries the pose before rendering, and the time the frame is displayed on the screen. This should almost always be a fixed number between 40 and 50 ms, depending on your engine and display refresh rate. i.e. GetPredictedDisplayTime - CurrentTime
+* Default Planar Reprojection:
+  If the application doesn't do any processing, the system will use planar reprojection by default, fixing the stable plane at 1.4 meters in the direction of the user's head. While this default setting provides a starting point, it may not always yield optimal results for all scenarios.
 
-**Prd/PrdA (Prediction time during Unity's Prerender):**Prediction time calculated during Unity's PreRender phase.
+* Manual Planar Reprojection:
+  Developers can use the API NRFrame.SetFocusPlane to manually set the information of the stable plane. This method gives developers maximum control and allows optimization of stability based on specific scene requirements.
 
-**updPrd/updPrdA (Prediction time during Unity's Update):**Prediction time calculated during Unity's Update phase
+* Automatic Planar Reprojection:
+  Developers can use the FocusManager component to implement automatic planar reprojection. The specific principle is:
 
-**postPrd/postPrdA:** Prediction time calculated during Unity's PostRender Phase
+- FocusManager performs the following operations in each frame:
+    - Executes Physics.Raycast from the head center along the forward direction to obtain the hit target.
+    - Provides plane information to the NRSDK runtime based on the hit target.
+      To ensure Automatic Planar Reprojection works correctly, make sure that the Physics.Raycast can hit the visual object in the scene. Which means:
+      - You must attach an appropriate collider to the visual gameobject;
+      - In the current NRSDK implementation, FocusManager performs a raycast with a max distance of 100 meters. If your visual gameobject is placed beyond this distance, you can modify the maxDistance to fit your needs.
+        Choosing the appropriate reprojection method is crucial for improving the display stability of AR applications. Developers should decide which method to use based on the specific needs of the application and scene characteristics, and optimize accordingly.
+## Practice: Display Stability Optimization 
 
-***Timewarp:\***In Augmented Reality (AR) technology, the screen's display refresh rate is not directly tied to the frame rendering speed of the application. This is because there's an intermediate step known as "TimeWarp." The primary role of TimeWarp is to adjust the orientation of the last frame rendered by the application to match the user's head movement and then present it on the physical display. This ensures that even if the application hasn't rendered a new frame in real-time, the user still sees an image that aligns with their head movement.
+Developers can experiment with and optimize planar reprojection and frame rate effects on display stability in the RenderForFocusPlane scene:
 
-**drop/dropA**: When TimeWarp expects to present the latest frame rendered by the application at a specific time, but that frame isn't ready yet, TimeWarp has to resort to the previous frame. Since this previous frame might be relatively outdated and no longer matches the current head movement of the user, this situation is referred to as "dropping a frame" or simply "drop."
+![image-20241009182043837](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009182043837.png)
 
-**early/earlyA**: If the application renders frames at a very fast pace, it might complete the rendering of a frame before it's actually needed. Such frames are termed "early frames." Occasional early frames are acceptable, but if there's a consistent occurrence of a large number of early frames, it might indicate that the settings for the CPU or GPU are set higher than necessary, leading to potential resource wastage.
+1. Real-time Data Monitoring:
 
-**FPC:** single frame display count
+     - The panel displays the current render distance, focal plane normal, and space type in real-time.
+     - This data is crucial for in-depth understanding and precise debugging of render distances.
+2. Render Distance Adjustment:
 
-Number of times a single frame is displayed on the screen, i.e, Number of frames on the glasses/Number of frames rendered by Unity. This value is always greater than 1. 
+     - Directly set the render distance through the slider to implement manual planar reprojection.
+     - Enable AutoFocusDist, and the system will automatically adjust the render distance, implementing automatic planar reprojection. When enabled, the indicator sphere in the scene will automatically move to the current focus distance position.
+3. Normal Direction Adjustment:
+
+     - AutoFocusNorm: When enabled, the system will automatically adjust the normal direction of the plane.
+     - When disabled, the plane normal direction is fixed at (0,0,-1).
+     - Recommendation: For scenes dominated by planes, enable this option; for scenes with many irregular objects, it's recommended to disable it.
+4. Reference Plane Setting:
+     - Use the Dist button to set the reference plane, which may affect the behavior of the auto-focus system.
+5. Coordinate System Selection:
+
+     - Switch FocusInViewSpace to change the calculation method of focus distance.
+     - ViewSpace (head coordinate system) is used by default.
+     - WorldSpace (world coordinate system) can be selected.
+6. Frame Rate Test:
+     - Use the FPS button to cycle between 10, 15, 30, and 60 FPS to evaluate display stability at different frame rates.
+
+By systematically adjusting these parameters, developers can comprehensively evaluate and optimize the display stability of AR applications, thereby providing a smoother and more immersive user experience.
+
+## References
+
+- Hologram stability
+- Asynchronous Timewarp Examined
+- Why Virtual Reality Is Hard (and where it might be going)
