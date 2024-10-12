@@ -179,7 +179,7 @@ const sidebars = {
         // image: '/img/docusaurus.png',
       },
       items: [
-        // 'Rendering/Warping',
+        'Rendering/Warping',
         'Rendering/Single Pass Stereo Rendering',
         'Rendering/Render MonoMode',
         'Rendering/Render Metrics',
