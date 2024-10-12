@@ -1,3 +1,4 @@
+# Display Stability
 In rendering, we may encounter various display stability issues, including visual artifacts and motion-related problems. These can manifest as tearing, swim, judder, and drift. This document primarily introduces common display stability challenges and how to address them in NRSDK.
 
 ## Display artifacts
@@ -7,14 +8,24 @@ In rendering, we may encounter various display stability issues, including visua
   ![image-20241009181917438](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009181917438.png)
 
 * Swim
-  Swim refers to the phenomenon where virtual objects appear to sway with the user's head movement. This situation usually occurs when the application hasn't fully implemented reprojection. To solve this problem, developers can update the stabilization plane to further enhance stability.
-
+  Swim refers to the phenomenon where virtual objects appear to sway with the user's head movement. This situation is mainly caused by calibration issues. 
+  
 * Judder
-  Judder is a display artifact characterized by uneven motion and double images of virtual contents, particularly noticeable in moving virtual objects. It typically occurs when the rendering frequency is low, resulting in inconsistent frame delivery. 
+  Judder is a display artifact characterized by uneven motion and double images of virtual contents, particularly noticeable in moving virtual objects. It mainly occurs due to low frame rate and improper reprojection, resulting in inconsistent frame delivery.
+
   ![image-20241009181845872](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009181845872.png)
 
 * Drift
-  Drift refers to the slow offset of virtual objects or environments relative to their real-world positions. This phenomenon is usually caused by accumulated sensor errors or inaccuracies in the tracking system. In AR applications, drift causes virtual objects to appear to "drift" away from their intended real-world positions.
+  Drift refers to the slow offset of virtual objects or environments relative to their real-world positions. This phenomenon is primarily a head tracking issue, which can be caused by several factors:
+  - Lack of environmental textures: Environments with plain, featureless surfaces can make it difficult for the tracking system to maintain accurate positioning.
+  - Poor lighting conditions: Extremely bright, dark, or rapidly changing lighting can interfere with the tracking system's ability to detect and track features.
+  - High dynamic environments: Rapidly moving objects or people in the scene can confuse the tracking system, leading to drift.
+  
+  To achieve good tracking performance and minimize drift, consider the following:
+  
+  - Ensure the environment has sufficient visual features or textures for the tracking system to latch onto.
+  - Maintain consistent and adequate lighting conditions.
+  - Avoid extremely dynamic environments when possible.
 
 ## Solutions
 
@@ -91,6 +102,6 @@ By systematically adjusting these parameters, developers can comprehensively eva
 
 ## References
 
-- Hologram stability
-- Asynchronous Timewarp Examined
-- Why Virtual Reality Is Hard (and where it might be going)
+- [Hologram stability](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/hologram-stability)
+- [Asynchronous Timewarp Examined](https://developers.meta.com/horizon/blog/asynchronous-timewarp-examined/)
+- [Why Virtual Reality Is Hard (and where it might be going)](https://media.steampowered.com/apps/valve/2013/MAbrashGDC2013.pdf)
