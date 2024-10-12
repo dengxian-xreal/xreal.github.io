@@ -3,20 +3,16 @@ In rendering, we may encounter various display stability issues, including visua
 
 ## Display artifacts
 
-* Tearing
-  Tearing refers to the discontinuity in the display during the rendering process, usually manifesting as one or more lines in the image, often black, making it appear as if the screen has been torn. This phenomenon is mainly caused by high CPU or GPU usage. If developers encounter this issue, they can use the Render metrics tool to analyze CPU and GPU usage specifically, and then perform further performance optimization.
+* **Tearing** refers to the discontinuity in the display during the rendering process, usually manifesting as one or more lines in the image, often black, making it appear as if the screen has been torn. This phenomenon is mainly caused by high CPU or GPU usage. If developers encounter this issue, they can use the Render metrics tool to analyze CPU and GPU usage specifically, and then perform further performance optimization.
   ![image-20241009181917438](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009181917438.png)
 
-* Swim
-  Swim refers to the phenomenon where virtual objects appear to sway with the user's head movement. This situation is mainly caused by calibration issues. 
+* **Swim** refers to the phenomenon where virtual objects appear to sway with the user's head movement. This situation is mainly caused by calibration issues. 
   
-* Judder
-  Judder is a display artifact characterized by uneven motion and double images of virtual contents, particularly noticeable in moving virtual objects. It mainly occurs due to low frame rate and improper reprojection, resulting in inconsistent frame delivery.
+* **Judder** is a display artifact characterized by uneven motion and double images of virtual contents, particularly noticeable in moving virtual objects. It mainly occurs due to low frame rate and improper reprojection, resulting in inconsistent frame delivery.
 
   ![image-20241009181845872](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009181845872.png)
 
-* Drift
-  Drift refers to the slow offset of virtual objects or environments relative to their real-world positions. This phenomenon is primarily a head tracking issue, which can be caused by several factors:
+* **Drift** refers to the slow offset of virtual objects or environments relative to their real-world positions. This phenomenon is primarily a head tracking issue, which can be caused by several factors:
   - Lack of environmental textures: Environments with plain, featureless surfaces can make it difficult for the tracking system to maintain accurate positioning.
   - Poor lighting conditions: Extremely bright, dark, or rapidly changing lighting can interfere with the tracking system's ability to detect and track features.
   - High dynamic environments: Rapidly moving objects or people in the scene can confuse the tracking system, leading to drift.
@@ -61,8 +57,8 @@ In NRSDK, there are several ways to use planar reprojection:
 
 * Automatic Planar Reprojection:
   Developers can use the FocusManager component to implement automatic planar reprojection. The specific principle is:
-
-- FocusManager performs the following operations in each frame:
+  
+  FocusManager performs the following operations in each frame:
     - Executes Physics.Raycast from the head center along the forward direction to obtain the hit target.
     - Provides plane information to the NRSDK runtime based on the hit target.
       To ensure Automatic Planar Reprojection works correctly, make sure that the Physics.Raycast can hit the visual object in the scene. Which means:
