@@ -3,7 +3,7 @@ In rendering, we may encounter various display stability issues, including visua
 
 ## Display artifacts
 
-* **Tearing** refers to the discontinuity in the display during the rendering process, usually manifesting as one or more lines in the image, often black, making it appear as if the screen has been torn. This phenomenon is mainly caused by high CPU or GPU usage. If developers encounter this issue, they can use the Render metrics tool to analyze CPU and GPU usage specifically, and then perform further performance optimization.
+* **Tearing** refers to the discontinuity in the display during the rendering process, usually manifesting as one or more lines in the image, often black, making it appear as if the screen has been torn. This phenomenon is mainly caused by high CPU or GPU usage. If developers encounter this issue, they can use the [Render metrics](https://docs.xreal.com/Rendering/Render%20Metrics) tool to analyze CPU and GPU usage specifically, and then perform further performance optimization.
   ![image-20241009181917438](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009181917438.png)
 
 * **Swim** refers to the phenomenon where virtual objects appear to sway with the user's head movement. This situation is mainly caused by calibration issues. 
@@ -31,7 +31,7 @@ Improving and stabilizing frame rate is key to solving various jittering problem
 
 - Maintain a stable 60fps or higher frame rate whenever possible
 - Optimize scenes and resources to reduce per-frame computational load
-- Refer to some suggestions given by Unity: Optimizing your VR/AR experiences
+- Refer to some suggestions given by Unity: [Optimizing your VR/AR experiences](https://learn.unity.com/tutorial/optimizing-your-vr-ar-experiences#5fe2ad02edbc2a08ce47222b)
 
 ### Render distance
 
