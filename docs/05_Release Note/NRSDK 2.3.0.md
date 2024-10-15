@@ -10,7 +10,6 @@ SDK 2.3.0 is currently only compatible with the **Beam Pro** and the latest vers
 
 ### What's New
 
-- **License Support:**  Enterprise partners can now apply for access to the Enterprise SDK, which includes APIs for gray camera data, IMU data, and other glasses control functionalities. If your company is interested in business collaboration, please contact us through the [official website](https://www.xreal.com/contact-us/) to request access.
 - **RGBCamera API:** Added Projection and UnProjection interfaces.
 - **NRMetrics:** Introduced the enableTearCollecting option (note: time-consuming operation), which allows the collection of tear data and outputs results in the Metrics log.
 - **Debounce Mode for Controller Tracker:** Added a new anti-shake mode for mobile ray tracking. The debounceMode option has been added to ControllerTracker, with the default set to false.
