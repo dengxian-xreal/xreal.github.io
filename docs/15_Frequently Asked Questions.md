@@ -27,23 +27,14 @@ Hand tracking can also run on devices besides the above, the stability however i
 
 The current gesture recognition application supports **only Android SDK Target API 29**. Higher versions of the API may activate enhanced security restrictions, which can affect access to SNPE resources.
 
-#### **3 How many different versions does NRSDK have? What are they?**
 
-NRSDK has three different versions for each release. In most cases, you would get the normal version with the package name "NRSDKForUnityAndroid_x.x.x" from the [official website](https://developer.xreal.com/download). Apart from that, NRSDK also has **Experimental** and **Enterprise** versions. 
-
-**Experimental** version includes features under experimental phases as introduced under *EXPERIMENTAL* section in this documentation.
-
-For the **Enterprise** version, it is possible to access glasses raw data(grayscale camera & IMU) through its APIs. 
-
-If interested, please contact us through the [official website](https://www.xreal.com/contact-us/) to get access.
-
-#### 4 Through which API can I get the user's device (XREAL Light/Air) my apk is running on?
+#### 3 Through which API can I get the user's device (XREAL Light/Air) my apk is running on?
 
 ```
 NRDeviceType NRKernal.NRDeviceSubsystem.GetDeviceType()
 ```
 
-#### 5 Error occurs when building an apk
+#### 4 Error occurs when building an apk
 
 ```
 UnityException: Error
