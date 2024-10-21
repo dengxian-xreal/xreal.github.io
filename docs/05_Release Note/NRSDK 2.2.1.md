@@ -4,7 +4,7 @@
 
 :::info
 
-**Download** [**NRSDKForUnity_Release_2.2.1.unitypackage**](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.2.1_Release_20240619/NRSDKForUnityAndroid_2.2.1.unitypackage)
+**Download** [**NRSDKForUnity_Release_2.2.1.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.2.1_Release_20240619/NRSDKForUnityAndroid_2.2.1.unitypackage)
 
 :::
 

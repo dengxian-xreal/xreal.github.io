@@ -6,9 +6,9 @@ Nebula built-in **CloudXR** enables you to live stream Steam/SteamVR content fro
 
 :::tip
 
-Please note that CloudXR is no longer built into Nebula. You can download it from [here](https://nreal-public.nreal.ai/download/Application/cloudxr_2024-09-26_172640.11-2.3.0-release.apk) or download it later from BeamPro XREAL Store.
+Please note that CloudXR is no longer built into Nebula. You can download it from [here](https://public-resource.xreal.com/download/Application/cloudxr_2024-09-26_172640.11-2.3.0-release.apk) or download it later from BeamPro XREAL Store.
 
-[CloudXR.apk](https://nreal-public.nreal.ai/download/Application/cloudxr_2024-09-26_172640.11-2.3.0-release.apk)
+[CloudXR.apk](https://public-resource.xreal.com/download/Application/cloudxr_2024-09-26_172640.11-2.3.0-release.apk)
 
 
 :::
@@ -42,7 +42,7 @@ Please see the following for detailed setup instructions:
 
 1. Install both [Steam](https://store.steampowered.com/about/) and [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) on your PC;
 
-2. Download [CloudXR-Setup-v4.0.zip](https://nreal-public.nreal.ai/download/CloudXR-Setup/CloudXR-Setup-v4.0.zip) (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.5.0);
+2. Download [CloudXR-Setup-v4.0.zip](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v4.0.zip) (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.5.0);
 
    :::tip
 

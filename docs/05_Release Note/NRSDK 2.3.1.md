@@ -4,7 +4,7 @@
 
 SDK 2.3.1 is currently only compatible with the **Beam Pro** and My Glasses 1.4.0. For developers using Android phones, please wait for the Nebula 3.8.1 release in late September.
 
-**Download** [**NRSDKForUnity_Release_2.3.1.unitypackage**](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.3.1_Release_20240926/NRSDKForUnityAndroid_2.3.1.unitypackage)
+**Download** [**NRSDKForUnity_Release_2.3.1.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.3.1_Release_20240926/NRSDKForUnityAndroid_2.3.1.unitypackage)
 
 :::
 

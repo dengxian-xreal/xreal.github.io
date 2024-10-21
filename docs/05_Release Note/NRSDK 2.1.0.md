@@ -2,7 +2,7 @@
 
 :::info
 
-**Download** [**NRSDKForUnity_Release_2.1.0.unitypackage**](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.1.0_Release_20231019/NRSDKForUnity_Release_2.1.0.unitypackage)
+**Download** [**NRSDKForUnity_Release_2.1.0.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.1.0_Release_20231019/NRSDKForUnity_Release_2.1.0.unitypackage)
 
 :::
 
