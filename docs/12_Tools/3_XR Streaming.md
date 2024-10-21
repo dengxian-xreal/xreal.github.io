@@ -46,8 +46,8 @@ Please see the following for detailed setup instructions:
 
    :::tip
 
-   [CouldXR-Setup-v3.1.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.1.exe), for Nebula v2.3.4;   
-   [CloudXR-Setup-v3.2.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe), for Nebula v3.0.0;
+   [CouldXR-Setup-v3.1.exe](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v3.1.exe), for Nebula v2.3.4;   
+   [CloudXR-Setup-v3.2.exe](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe), for Nebula v3.0.0;
    :::
 
 3. Unzip downloaded **CloudXR-Setup-v4.0.zip,** choose CloudXR Server as following and install CloudXR Server on your PC 

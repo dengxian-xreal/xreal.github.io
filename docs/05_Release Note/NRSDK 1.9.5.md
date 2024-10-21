@@ -2,7 +2,7 @@
 
 :::info
 
-**Download** [**NRSDKForUnity_Release_1.9.5.unitypackage**](https://nreal-public.oss-us-west-1.aliyuncs.com/download/NRSDKForUnity_Release_1.9.5/NRSDKForUnity_Release_1.9.5.unitypackage)
+**Download** [**NRSDKForUnity_Release_1.9.5.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_Release_1.9.5/NRSDKForUnity_Release_1.9.5.unitypackage)
 
 :::
 
