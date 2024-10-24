@@ -80,5 +80,7 @@ Moreover, compatibility with **Light and Air 2 Ultra** also means that features 
 
 Note that Light is not compatible with Samsung galaxy S23.
 
+We have found that the S23 has some issues with URP projects, including abnormal usage of CPU and GPU resources. Please be aware of this when developing your project.
+
 :::
 
