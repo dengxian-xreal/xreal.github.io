@@ -1,14 +1,13 @@
 # NRSDK 2.1.0
 ![Release Date](https://img.shields.io/badge/Release_Date-November_13,_2023-0080FF?style=flat&logoWidth=1)
-:::info
+:::warning
+
+Starting with this version (2.1.0), NRSDK will no longer support the Dev Kit. We recommend using the latest hardware devices for optimal performance and experience. For users still utilizing the Dev Kit, we advise upgrading to supported hardware or continuing with an older version of the SDK. We appreciate your ongoing support for NRSDK and look forward to bringing more innovations and improvements in future releases.
 
 **Download** [**NRSDKForUnity_Release_2.1.0.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.1.0_Release_20231019/NRSDKForUnity_Release_2.1.0.unitypackage)
 
 :::
 
-### Important Notice
-
-Starting with this version (2.1.0), NRSDK will no longer support the Dev Kit. We recommend using the latest hardware devices for optimal performance and experience. For users still utilizing the Dev Kit, we advise upgrading to supported hardware or continuing with an older version of the SDK. We appreciate your ongoing support for NRSDK and look forward to bringing more innovations and improvements in future releases.
 
 ### What's New
 

@@ -1,8 +1,8 @@
 # NRSDK 2.3.0
 ![Release Date](https://img.shields.io/badge/Release_Date-September_9,_2024-0080FF?style=flat&logoWidth=1)
-:::warning
+:::info
 
-SDK 2.3.0 is currently only compatible with the **Beam Pro** and the latest version of My Glasses, which was released alongside SDK 2.3.0. For developers using Android phones, please wait for the Nebula 3.8.1 release in late September.
+SDK 2.3.0 is compatible with **Beam Pro** and **My Glasses 1.4.0**. For developers using Android phones, SDK 2.3.0 is compatible with **Nebula 3.8.1**.
 
 **Download** [**NRSDKForUnity_Release_2.3.0.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.3.0_Release_20240909/NRSDKForUnityAndroid_2.3.0.unitypackage)
 
