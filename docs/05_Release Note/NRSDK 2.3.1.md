@@ -1,4 +1,5 @@
 # NRSDK 2.3.1
+![Release Date](https://img.shields.io/badge/Release_Date-September_26,_2024-0080FF?style=flat&logoWidth=1)
 
 :::warning
 

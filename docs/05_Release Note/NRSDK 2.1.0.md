@@ -1,5 +1,5 @@
 # NRSDK 2.1.0
-
+![Release Date](https://img.shields.io/badge/Release_Date-November_13,_2023-0080FF?style=flat&logoWidth=1)
 :::info
 
 **Download** [**NRSDKForUnity_Release_2.1.0.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.1.0_Release_20231019/NRSDKForUnity_Release_2.1.0.unitypackage)
