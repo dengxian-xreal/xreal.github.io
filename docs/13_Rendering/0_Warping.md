@@ -41,6 +41,7 @@ Generally, render distances should be set according to the following principles:
 - Short distance (0.5m - 1m): Suitable for handheld or close-interaction objects.
 - Medium distance (1m - 5m): Suitable for most objects in indoor scenes or close environments.
 - Long distance (over 5m): Suitable for background objects in outdoor scenes or large environments.
+
 For most AR applications, setting the render distance of main interactive objects between 1.4m to 3m usually achieves good results. This range ensures object clarity without putting too much rendering burden on the system.
 
 ### Reprojection
@@ -64,7 +65,8 @@ In NRSDK, there are several ways to use planar reprojection:
       To ensure Automatic Planar Reprojection works correctly, make sure that the Physics.Raycast can hit the visual object in the scene. Which means:
       - You must attach an appropriate collider to the visual gameobject;
       - In the current NRSDK implementation, FocusManager performs a raycast with a max distance of 100 meters. If your visual gameobject is placed beyond this distance, you can modify the maxDistance to fit your needs.
-        Choosing the appropriate reprojection method is crucial for improving the display stability of AR applications. Developers should decide which method to use based on the specific needs of the application and scene characteristics, and optimize accordingly.
+  
+Choosing the appropriate reprojection method is crucial for improving the display stability of AR applications. Developers should decide which method to use based on the specific needs of the application and scene characteristics, and optimize accordingly.
 ## Practice: Display Stability Optimization 
 
 Developers can experiment with and optimize planar reprojection and frame rate effects on display stability in the RenderForFocusPlane scene:
