@@ -78,3 +78,21 @@ aaptOptions {
         noCompress = ['.unity3d', '.ress', '.resource','unityStreamingAssets', '.obb'**STREAMING_ASSETS**]
     }**SIGN**
 ```
+
+
+### Todo
+
+* 最低版本
+    * AR Foundation 5.1.0
+    * 2021.3.43 LTS,具体的小版本号需要测试
+    
+* 在sample中添加action button绑定到app/home按键的actions。
+
+* ToDo 整理特殊接口
+    * 配置API reference的自动生成工具
+
+* development build，添加native的log。
+
+* Migration：做成一个表格
+    * 接口的迁移
+    * 类名的改变
