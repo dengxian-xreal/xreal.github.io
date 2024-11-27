@@ -1,29 +1,36 @@
-# Access RGB Camera
+# Access RGB Camera and Record Video
 
 ## Device Compatibility
 
-### Device Compatibility
+Currently, the RGB Camera is only supported on the following devices:
 
-The reliability of glasses' RGB Camera has been fully tested on the following Android phones:
+- XREAL Light
 
-- Oneplus: 9 / 9pro 
-- Samsung: Galaxy S10+ / Galaxy S21 / Galaxy S21 Ultra 5G / Galaxy S21 5G / Galaxy S21 5G / Galaxy S20 Ultra 5G /  Galaxy S20+ 5G / Galaxy Note20 5G / Galaxy S21 5G / Galaxy Z Fold 3 5G / Galaxy S22 
-- Sony: X1 iii
-- LG: Wing / V50s        
-- Arrows: NX9 
-- OPPO: Find X2 pro / Find X5 pro
-
-Glasses' RGB camera can also work on Android phones besides the above. However, the compatibility is not guaranteed. For the full list, please refer to[ Device Compatibility](../01_XREALDevices/Compatibility.md).
+For those devices that do not support the RGB Camera, you can record the virtual content in the scene.
 
 ## Developer Guide
 
 ### Import the NRSDK
 
-Import **NRSDKForUnity_1.9.1.unitypackage** in the package.
+Import **NRSDKForUnity.unitypackage**.
 
 ### Open the Sample Scene
 
-In the Unity Project window, you can find the CameraCaptureDemo sample in: `Assets > NRSDK >Demos > RGBCamera-Record.`
+Navigate to the Unity Project window and locate the CameraCaptureDemo sample in the following directory: `Assets > NRSDK > Demos > RGBCamera-Record`.
+
+To integrate this functionality into your scene, instantiate the "VideoCaptureExample" GameObject as a prefab and add it to your scene hierarchy.
+
+![image-20241008170833720](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241008170833720.png)
+
+Configure the `Blend Mode` parameter according to your specific requirements:
+
+* Blend: Captures both the RGB Camera feed and the real-world environment.
+* RGB Only: Records only the RGB Camera content.
+* Virtual Only: Captures exclusively the virtual content within the scene.
+
+![image-20241008170801451](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241008170801451.png)
+
+
 
 ### Inspect the Sample Code
 

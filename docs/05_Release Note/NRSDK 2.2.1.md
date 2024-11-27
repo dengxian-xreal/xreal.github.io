@@ -1,10 +1,9 @@
 # NRSDK 2.2.1
-
-
+![Release Date](https://img.shields.io/badge/Release_Date-June_19,_2024-0080FF?style=flat&logoWidth=1)
 
 :::info
 
-**Download** [**NRSDKForUnity_Release_2.2.1.unitypackage**](https://developer.xreal.com/download)
+**Download** [**NRSDKForUnity_Release_2.2.1.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.2.1_Release_20240619/NRSDKForUnityAndroid_2.2.1.unitypackage)
 
 :::
 
@@ -15,4 +14,5 @@
 ### Bug Fixes
 
 - Remove the `android:process=":space"` tag from the `AndroidManifest.xml`.
+
 

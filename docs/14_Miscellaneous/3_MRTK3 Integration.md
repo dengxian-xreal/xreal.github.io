@@ -1,6 +1,6 @@
 # MRTK3 Integration
 
-NRSDK 2.2.0 & MRTK3 Integration with Sample Projects
+NRSDK & MRTK3 Integration with Sample Projects
 
 ## Overview
 
@@ -10,7 +10,9 @@ This github repo (https://github.com/nreal-ai/MixedRealityToolkit-Unity) contain
 
 - Unity 2021.3.21 or higher
 - MRTK3
-- NRSDK 2.2.0
+- NRSDK 2.3.0
+- Beam Pro
+- MyGlasses 1.4.0
 
 ## Examples and Scene Settings
 

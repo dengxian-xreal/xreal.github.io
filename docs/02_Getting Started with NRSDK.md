@@ -20,13 +20,17 @@ This quickstart guide will help you set up your development environment and test
 
 **Software Checklist**
 
-- [Unity 2019.4.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
+- [Unity 2019.4.X, 2020.3.X, 2021.3.X, 2022.3.X](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
 
   :::warning
 
-  Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download and the appropriate Gradle version and set it in Unity-> Settings-> External tools.
+  Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download the appropriate Gradle file and set it in Unity-> Settings-> External tools.
 
   ![image-20240807174108770](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240807174108770.png) 
+
+  Additionally, we have identified that some versions of Unity 2022 may experience crashes due to insufficient TLS. This issue was resolved in version 2022.3.24f1 (Corrected crashes due to excessive use of thread local data slots). Therefore, if you are using Unity 2022, we recommend using version 3.24 or later.
+
+  Starting from Unity 2023, a libc++_shared.so library is included by default. Since our hand tracking library references SNPE, which also includes libc++_shared.so, this can cause a conflict resulting in build failures. To avoid this issue, we recommend using Unity 2022.3.34 or any later 2022.3.xx versions, but do not use Unity 2023.
 
   :::
 
@@ -103,11 +107,6 @@ You could either configure your project automatically via NRSDK **Project Tips**
 ### 4. Configure Compatible Devices 
 
 You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the NRSDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
-
-<figure className="my-custom-figure">
-<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image.png" alt="Your Image Description" class="center-image"/>
-  <figcaption>Project</figcaption>
-</figure>
 
 <figure className="my-custom-figure">
 <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165059951.png" alt="Your Image Description" class="center-image"/>

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[Spatial Life](https://nreal-public.nreal.ai/download/Application/spatiallife0619.apk),' thoughtfully crafted by the XREAL design team.
+Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[Spatial Life](https://public-resource.xreal.com/download/Application/spatiallife0619.apk),' thoughtfully crafted by the XREAL design team.
 
 ![image-20240812173022249](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173022249.png)
 
@@ -18,21 +18,27 @@ Introducing XREAL Markers, a novel set of 'interactive' image tracking cards des
 <details>
 <summary>NRSDKForUnity Experimental</summary>
 
+2024.09.26
+
+Regular updates released with the normal version.
+
+- [NRSDKForUnity_Experimental_Release_2.3.1.unitypackage](https://public-resource.xreal.com/download/NRSDKForUnity_2.3.1_Release_20240926/NRSDKForUnityAndroid_Experimental_2.3.1.unitypackage) 
+
 2024.06.19
 
 Regular updates released with the normal version.
 
-- [NRSDKForUnity_Experimental_Release_2.2.1.unitypackage](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.2.1_Release_20240619/NRSDKForUnityAndroid_Experimental_2.2.1.unitypackage) 
+- [NRSDKForUnity_Experimental_Release_2.2.1.unitypackage](https://public-resource.xreal.com/download/NRSDKForUnity_2.2.1_Release_20240619/NRSDKForUnityAndroid_Experimental_2.2.1.unitypackage) 
 
 2024.04.18 
 
 Fixed: The problem of not being recognized after switching back from the background.
 
-- [NRSDKForUnity_Experimental_Release_2.2.1.unitypackage](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.2.0_Release_20240418/NRSDKForUnityAndroid_Experimental_2.2.1.unitypackage)     
+- [NRSDKForUnity_Experimental_Release_2.2.1.unitypackage](https://public-resource.xreal.com/download/NRSDKForUnity_2.2.0_Release_20240418/NRSDKForUnityAndroid_Experimental_2.2.1.unitypackage)     
 
 2024.03.29 
 
-- [NRSDKForUnity_Experimental_Release_2.2.0.unitypackage](https://nreal-public.nreal.ai/download/NRSDKForUnity_2.2.0_Release_20240329/NRSDKForUnityAndroid_Experimental_2.2.0.unitypackage)     
+- [NRSDKForUnity_Experimental_Release_2.2.0.unitypackage](https://public-resource.xreal.com/download/NRSDKForUnity_2.2.0_Release_20240329/NRSDKForUnityAndroid_Experimental_2.2.0.unitypackage)     
 
 </details>
 

@@ -23,7 +23,7 @@ Install XR Plugin Manager
 
 :::tip
 
-Download [XREAL XR Plugin](../xrplugin/com.nreal.xr.zip)
+Download [XREAL XR Plugin](https://public-resource.xreal.com/download/NRSDKForUnity_2.3.0_Release_20240909/com.nreal.xr.zip)
 
 :::
 

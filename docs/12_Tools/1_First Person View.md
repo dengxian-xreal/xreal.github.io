@@ -30,7 +30,7 @@ First Person View can also work on Android phones besides the above. However, th
 
 #### Steps
 
-1. Download [NRSDK_Experimental](https://developer.xreal.com/download/tryexperimental) and [StreamingReceiver_V1.2.0.zip](https://nreal-public.nreal.ai/plugins/StreammingReceiver_v1.2.0.zip)
+1. Download [NRSDK_Experimental](https://developer.xreal.com/download/tryexperimental) and [StreamingReceiver_V1.2.0.zip](https://public-resource.xreal.com/plugins/StreammingReceiver_v1.2.0.zip)
 
 2. Import NRSDKForUnityAndroid_Experimental.unitypackage
 

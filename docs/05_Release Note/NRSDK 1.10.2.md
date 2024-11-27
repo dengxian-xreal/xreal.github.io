@@ -2,7 +2,7 @@
 
 :::info
 
-**Download**  [**NRSDKForUnity_Release_1.10.2.unitypackage**](https://nreal-public.oss-us-west-1.aliyuncs.com/download/NRSDKForUnityAndroid_1.10.2.20230324/NRSDKForUnity_Release_1.10.2.unitypackage)
+**Download**  [**NRSDKForUnity_Release_1.10.2.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnityAndroid_1.10.2.20230324/NRSDKForUnity_Release_1.10.2.unitypackage)
 
 :::
 

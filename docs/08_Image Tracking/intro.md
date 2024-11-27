@@ -68,30 +68,128 @@ You can click 'x' to delete items.
 
 #### Set the Database File
 
-- In the Project window, go to `Assets > NRSDK` and open NRKernalSessionConfig.
+- Find the session config file in your scene and open it.
+
+  ![image-20241009163800997](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009163800997.png)
 
 - In the Inspector window, click the box next to Tracking Image Database and select the database file you created.
 
-  ![image-20240812173325033](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173325033.png)
+  ![image-20241009163903922](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241009163903922.png)
 
-#### Get Tracked Image
+#### Get Tracked Image  
 
-See `MarkerDetecter.cs` , located in `Assets > NRSDK > Demos > TrackingImage > Scripts` for an example on how to get the trackables：
+To display different virtual objects based on the tracked images, you can modify the `TrackingImageExampleController.cs` script and `TrackingImageVisualizer.cs` script. Here's an example of how you can achieve this:
 
 ```
-// Get a new NRTrackableImage
-NRFrame.GetTrackables<NRTrackableImage>(m_NewTrackableImages, TrackableQueryFilter.New);
+namespace NRKernal.NRExamples
+{
+    using System.Collections.Generic;
+    using UnityEngine;
 
-// Get the trackable's position
-NRTrackableImage image = m_NewTrackableImages[i];
-image.GetCenterPose()
+    public class TrackingImageExampleController : MonoBehaviour
+{
+    public TrackingImageVisualizer TrackingImageVisualizerPrefab;
+    public GameObject FitToScanOverlay;
 
-// Get the trackable's size
-image.Size;
+    private Dictionary<int, TrackingImageVisualizer> m_Visualizers
+        = new Dictionary<int, TrackingImageVisualizer>();
+    private List<NRTrackableImage> m_TempTrackingImages = new List<NRTrackableImage>();
 
-// Get the trackable's statec
-image.GetTrackingState();     //Tracking,Paused,Stopped
+    public void Update()
+    {
+#if !UNITY_EDITOR
+        if (NRFrame.SessionStatus != SessionState.Running)
+        {
+            return;
+        }
+#endif
+        NRFrame.GetTrackables<NRTrackableImage>(m_TempTrackingImages, NRTrackableQueryFilter.New);
 
-// Get all NRTrackableImage
-NRFrame.GetTrackables<NRTrackableImage>(m_AllTrackableImages, TrackableQueryFilter.All
+        foreach (var image in m_TempTrackingImages)
+        {
+            TrackingImageVisualizer visualizer = null;
+            m_Visualizers.TryGetValue(image.GetDataBaseIndex(), out visualizer);
+
+            if (image.GetTrackingState() != TrackingState.Stopped && visualizer == null)
+            {
+                visualizer = Instantiate(TrackingImageVisualizerPrefab, image.GetCenterPose().position, image.GetCenterPose().rotation);
+                visualizer.Image = image;
+                visualizer.transform.parent = transform;
+                m_Visualizers.Add(image.GetDataBaseIndex(), visualizer);
+            }
+            else if (image.GetTrackingState() == TrackingState.Stopped && visualizer != null)
+            {
+                m_Visualizers.Remove(image.GetDataBaseIndex());
+                Destroy(visualizer.gameObject);
+            }
+
+            FitToScanOverlay.SetActive(false);
+        }
+    }
+
+        public void EnableImageTracking()
+        {
+            var config = NRSessionManager.Instance.NRSessionBehaviour.SessionConfig;
+            config.ImageTrackingMode = TrackableImageFindingMode.ENABLE;
+            NRSessionManager.Instance.SetConfiguration(config);
+        }
+
+        public void DisableImageTracking()
+        {
+            var config = NRSessionManager.Instance.NRSessionBehaviour.SessionConfig;
+            config.ImageTrackingMode = TrackableImageFindingMode.DISABLE;
+            NRSessionManager.Instance.SetConfiguration(config);
+        }
+}
+}
+```
+
+```
+namespace NRKernal.NRExamples
+{
+    using UnityEngine;
+
+    public class TrackingImageVisualizer : MonoBehaviour
+    {
+        public NRTrackableImage Image;
+
+        // Configure virtual objects for different images
+        public GameObject VirtualObjectForImageA;
+        public GameObject VirtualObjectForImageB;
+
+        private GameObject instantiatedObject;
+
+        public void Update()
+        {
+            if (Image == null || Image.GetTrackingState() != TrackingState.Tracking)
+            {
+                if (instantiatedObject != null)
+                {
+                    instantiatedObject.SetActive(false);
+                }
+                return;
+            }
+
+            if (instantiatedObject == null)
+            {
+                // Select the virtual object to instantiate based on the image
+                if (Image.GetDataBaseIndex() == 0)  // Assuming index 0 is for ImageA
+                {
+                    instantiatedObject = Instantiate(VirtualObjectForImageA, transform);
+                }
+                else if (Image.GetDataBaseIndex() == 1)  // Assuming index 1 is for ImageB
+                {
+                    instantiatedObject = Instantiate(VirtualObjectForImageB, transform);
+                }
+            }
+
+            if (instantiatedObject != null)
+            {
+                instantiatedObject.transform.position = Image.GetCenterPose().position;
+                instantiatedObject.transform.rotation = Image.GetCenterPose().rotation;
+                instantiatedObject.SetActive(true);
+            }
+        }
+    }
+}
 ```
