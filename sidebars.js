@@ -51,6 +51,7 @@ const sidebars = {
         // image: '/img/docusaurus.png',
       },
       items: [
+        'Release Note/NRSDK 2.4.0',
         'Release Note/NRSDK 2.3.1',
         'Release Note/NRSDK 2.3.0',
         'Release Note/NRSDK 2.2.1',
