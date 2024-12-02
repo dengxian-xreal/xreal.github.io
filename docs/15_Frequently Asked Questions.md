@@ -50,3 +50,8 @@ aaptOptions {
     }**SIGN**
 ```
 
+#### Control Glasses 
+
+If the glasses' firmware is in an abnormal state, the SDK will consistently fail to start successfully. If you previously skipped the OTA reminder, please remember to manually check the OTA version and update it.
+
+![image-20241202155925772](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241202155925772.png)
