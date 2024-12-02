@@ -263,7 +263,22 @@ Adding a UI button to the Virtual Controller is straightforward:
 
    Drag the **XREAL Virtual Controller** prefab into the scene and enter Play mode in the Editor to test the button functionality.
 
-   * ![CleanShot 2024-08-12 at 11.49.41](https://raw.githubusercontent.com/dengxian-xreal/Images/main/CleanShot%202024-08-12%20at%2011.49.41.gif)
+   ![CleanShot 2024-08-12 at 11.49.41](https://raw.githubusercontent.com/dengxian-xreal/Images/main/CleanShot%202024-08-12%20at%2011.49.41.gif)
+
+## Enable Vibration Permission
+
+To enable vibration functionality for the Controller, include an `AndroidManifest.xml` file in the Assets/Plugins/Android/ folder to request the necessary vibration permission and ensure it includes the following content:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.DefaultCompany.xrealsdktest">
+
+    <!-- Request vibration permission -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+</manifest>
+```
 
 ## Further Reading
 

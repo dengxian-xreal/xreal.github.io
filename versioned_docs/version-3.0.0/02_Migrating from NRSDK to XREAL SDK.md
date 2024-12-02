@@ -224,3 +224,63 @@ In this section, we outline the key project settings available in the XREAL SDK,
 - (Optional) Use **Android Logcat** to view logged messages. We recommend using WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) to connect to your PC so that you do not have to be connected through the data cable most of the time.
 
 - Enable developer options and USB debugging on your Phone / Computing unit. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
+### 8. API Migration Reference
+
+To help developers migrate their existing NRSDK applications to XREAL SDK, here's a comprehensive reference table of API changes. This table lists all the important changes in class names, APIs, callbacks, and configurations.
+
+#### 8.1 Namespace/Class Name Renaming
+
+| Old Name                          | New Name                          |
+|:----------------------------------|:----------------------------------|
+| NRVideoCapture                    | XREALVideoCapture                 |
+| NRDeviceType                      | XREALDeviceType                   |
+| NRPhotoCapture                    | XREALPhotoCapture                 |
+| NRCaptureBehaviour                | XREALCaptureBehaviour             |
+| NRCameraInitializer                | XREALCameraInitializer            |
+| NativeDevice                      | XREALComponent                    |
+| ControllerButton                  | XREALControllerButton             |
+| NRAndroidPermissionsManager       | XREALAndroidPermissionsManager    |
+| NRPointerRaycaster                | UnityEngine.EventSystems.PointerEventData or UnityEngine.XR.Interaction.Toolkit.XRRayInteractor |
+| CanvasRaycastTarget               | TrackedDeviceGraphicRaycaster     |
+
+#### 8.2 API Changes
+
+| Old Interface | New Interface |
+|--------|--------|
+| MainThreadDispather.QueueOnMainThread | XREALMainThreadDispather.QueueOnMainThread |
+| NRSessionManager.Instance.NRHMDPoseTracker.ChangeTo3Dof | XREALPlugin.SwitchTrackingTypeAsync() |
+| NRDevice.Subsystem.GetDeviceType() | XREALPlugin.GetDeviceType() |
+| NRDevice.Subsystem.AddEventListener | XREALPlugin.RegisterKeyEventCallback |
+| NRDevice.Subsystem.GetElectrochromicLevel | XREALPlugin.GetElectrochromicLevel |
+| NRFrame.targetFrameRate | XREALPlugin.SetTargetFrameRate |
+| NRFrame.MonoMode | XREALPlugin.Get2D3DMode |
+| NRSessionManager.Instance.IsRunning | XREALUtility.GetLoadedSubsystem&lt;XRSessionSubsystem&gt;().running |
+
+#### 8.3 Callback System Changes
+
+| Old Callback                     | New Callback                     |
+|--------|--------|
+| NRSessionManager.OnGlassesStateChanged | XREALPlugin.RegisterGlassesWearingCallback, XREALCallbackHandler.OnXREALGlassesWearingState |
+| NRDevice.OnSessionSpecialEvent | XREALXRLoader.OnStartDisplaySubsystem, OnStartInputSubsystem |
+| NRSessionManager.OnKernalError | XREALNativeCallbackHandler.NativeErrorCallback |
+| NRGlassesInitErrorTip.OnPreComfirm | XREALErrorReceiver.OnXREALSDKFailPreComfirm |
+
+#### 8.4 Configuration Changes
+
+| Old Configuration | New Configuration |
+|-------------------|-------------------|
+| NRSessionManager.Instance.NRSessionBehaviour.SessionConfig.SupportMultiResume | XREALSettings.GetSettings().SupportMultiResume |
+| NROverlay related components | Use Composition Layers from the XREAL XR Plugin Samples |
+| IPoseProvider | Unity.XR.XREAL.Examples.IDataSource |
+
+#### 8.5 Special Handling Instructions
+
+* Singleton Pattern Changes:
+  * For singletons that do not inherit from MonoBehaviour, use Unity.XR.XREAL.Singleton.
+  * For singletons that inherit from MonoBehaviour, use Unity.XR.XREAL.SingletonMonoBehaviour.
+* Performance Optimization:
+  * QualitySettings.antiAliasing should be set before NRSwapChainManager::CreateTexture.
+  * This can be set in the XREALXRLoader.OnStartInputSubsystem or XREALXRLoader.OnXRLoaderStart callbacks.
+* Editor Related:
+  * Import the XR Device Simulator from the XR Interaction Toolkit.
+  * The GraphicRaycaster on the Canvas may affect event handling in editor mode.
