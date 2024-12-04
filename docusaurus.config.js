@@ -105,7 +105,7 @@ const config = {
       announcementBar: {
         id: 'New SDK',
         content:
-          'NRSDK 2.4.0 is now compatible with Unity 6! 🥳 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4."> Check the release note for more new features</a>.',
+          'NRSDK 2.4.0 is now compatible with XREAL One Series and Unity 6 🥳 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4.0"> Check the release note</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
         isCloseable: false,
