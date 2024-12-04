@@ -93,10 +93,10 @@ const config = {
       announcementBar: {
         id: 'New SDK',
         content:
-          'NRSDK 2.3.1 has been released! 👩‍💻 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.3.1"> Check the release note</a>.',
+          'NRSDK 2.4.0 is now compatible with Unity 6! 🥳 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4."> Check the release note for more new features</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
-        isCloseable: true,
+        isCloseable: false,
       },
       navbar: {
         title: 'NRSDK',

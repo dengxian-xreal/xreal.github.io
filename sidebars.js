@@ -78,7 +78,7 @@ const sidebars = {
       },
       items: [
         'Input and Camera/NRInput',
-        'Input and Camera/Interact with Unity UI',
+        'Input and Camera/Controller',
         'Input and Camera/Customize Controller UI',
         'Input and Camera/Notification popup',
         'Input and Camera/NRCameraRig', 
