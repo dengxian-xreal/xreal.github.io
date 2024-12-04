@@ -74,6 +74,18 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true, // 是否对索引使用哈希
+        language: ['en', 'zh'], // 支持的语言，可以自定义
+        indexBlog: false, // 是否索引博客内容
+        indexDocs: true, // 是否索引文档内容
+        docsRouteBasePath: '/', // 文档的基础路径
+      },
+    ],
+  ],
 
   stylesheets: [
     {
@@ -119,17 +131,17 @@ const config = {
             
           },
           {
-            href: 'https://developer.xreal.com/download',
+            to: 'https://developer.xreal.com/download',
             label: 'SDK Download',
             position: 'right',
           },
           {
-            href: 'https://developer.xreal.com/reference/nrsdk/overview',
+            to: 'https://developer.xreal.com/reference/nrsdk/overview',
             label: 'API Reference',
             position: 'right',
           },
           {
-            href: 'https://github.com/nreal-ai',
+            to: 'https://github.com/nreal-ai',
             label: 'GitHub',
             position: 'right',
           },
@@ -138,25 +150,25 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'XREAL Hardware Tutorials',
+                to: 'https://tutorial.xreal.com',
+              },
+            ],
+          },
           {
             title: 'Community',
             items: [
               {
                 label: 'Forum',
-                href: 'https://community.xreal.com/',
+                to: 'https://community.xreal.com/',
               },
               {
                 label: 'Discord',
-                href: 'https://discord.com/invite/jZ5MqFe9t4',
+                to: 'https://discord.com/invite/jZ5MqFe9t4',
               },
             ],
           },
@@ -169,7 +181,7 @@ const config = {
               // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/nreal-ai',
+                to: 'https://github.com/nreal-ai',
               },
             ],
           },
