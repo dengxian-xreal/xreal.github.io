@@ -8,6 +8,11 @@ Start developing your NRSDK Unity apps on Android phone.
 
 This quickstart guide will help you set up your development environment and test out the sample app “Hello MR” using NRSDK.
 
+:::info
+If you want to skip all these environment setup steps and get a ready-to-use project, you can refer to **[this repository](https://github.com/dengxian-xreal/NRSDKTemplate)**.
+Simply clone it and you're good to go.
+:::
+
 ### 1. Pre-requisites
 
 **Hardware Checklist**

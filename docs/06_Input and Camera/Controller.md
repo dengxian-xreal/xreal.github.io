@@ -12,6 +12,6 @@ Controllers provide a simple way for users to navigate in mixed reality. In the 
 | :------------------ | :----------------------------------------------------------- |
 | 3DoF Tracking       | 3 degrees of freedom                                         |
 | Touchpad            | **Press** = Trigger Button. Can detect touching and clicking. Customizable for your app, e.g. scrolling. |
-| App Button          | **Press and hold** to recenter your controller. **Press** can be customized for your app, e.g. opening an in-app menu or performing a special action. |
-| Home Button         | **Press and hold** to open Exit App Window. **Press** can be customized for in-app action, e.g. return to the previous step. |
+| App Button          | Fully customizable button with no default behavior. Can be programmed for any functionality in your app. |
+| Home Button         | **Press** to open Exit App Window. **Press and hold** to recenter your controller. |
 
