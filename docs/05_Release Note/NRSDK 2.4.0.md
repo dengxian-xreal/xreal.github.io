@@ -5,17 +5,24 @@
 
 Please note that Nebula will no longer be maintained. For developers who wish to continue developing with Android phones, we provide Control Glasses as a server to perform OTA updates and launch 3D applications on XREAL glasses. For Android phone compatibility, we will limit our testing to Samsung flagship models only. Currently, SDK 2.4.0 is compatible with Samsung S24.
 
-**Download** [**NRSDKForUnity_Release_2.4.0.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.0_Release_20241113/NRSDKForUnityAndroid_2.4.0.unitypackage)
+**Download** [**NRSDKForUnity_Release_2.4.0.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.0_Release_20241206/NRSDKForUnityAndroid_2.4.0.unitypackage)
 
-**Download [Control Glasses 1.0.0](https://public-resource.xreal.com/download/ControlGlasses_1.0.0_Release_20241113/ControlGlasses_1.0.0.unitypackage)**
+**Download [Control Glasses 1.0.0](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.0_Release_20241206/ControlGlasses-1.0.0.apk)**
 
 :::
+
+:::warning
+
+This upgrade removes certain scripts from NRSDK 2.3.1. Please ensure that you completely uninstall NRSDK 2.3.1 before importing NRSDK 2.4.0 to avoid build errors.
+
+:::
+
 
 ### What's New
 
 * Compatibility with XREAL One Series
 * Compatibility with Unity 6
-* Added MSAA support when using [XREAL XR Plugin](../13_Rendering/1_Single%20Pass%20Stereo%20Rendering/#2-import-nrsdk-xr-plugin-package)
+* Added MSAA support when using [XREAL XR Plugin](../13_Rendering/1_Single%20Pass%20Stereo%20Rendering.md)
 * Added gesture support in controller mode
 
 ### Changes
@@ -35,11 +42,4 @@ Please note that Nebula will no longer be maintained. For developers who wish to
 * Fixed capture position issues when HMD coordinate system differs from world coordinate system
 * Fixed YUV data memory layout order in RGB Camera
 * Fixed an issue where the RGB camera would shut down after one minute of use, preventing photo and video capture
-
-
-
-
-
-
-
 

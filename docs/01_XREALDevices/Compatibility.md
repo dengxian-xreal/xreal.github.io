@@ -73,7 +73,7 @@ Moreover, compatibility with **Light and Air 2 Ultra** also means that features 
 | Brand   | Chip                                   | Model Name         | Model Number | Android Version |
 | :------ | :------------------------------------- | :----------------- | :----------- | :-------------- |
 | Samsung | Qualcomm Snapdragon 8 Gen 1            | galaxy S22         | SM-S9010     | Android 14      |
-| Samsung | Qualcomm Snapdragon 8 Gen 2 （SM8550） | galaxy S23         | SM-S9110     | Android 14      |
+| Samsung | Qualcomm Snapdragon 8 Gen 3            | galaxy S24         | SM-S9210     | Android 14      |
 
 --- 
 :::danger
