@@ -40,11 +40,29 @@ We’re going to create a new Unity project and integrate XREAL SDK later on. To
 
 #### 1. Open Unity Hub and create a new 3D project.
 
-#### 2. Import XREAL SDK for Unity
+Switch to the Android platform. After switching, some version of Unity may require you to restart the project.
+
+![image-20241226180545435](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226180545435.png)
+
+#### 2. Import XRI and AR Foundation
+
+1. Install XR Interaction Toolkit from the Unity Registry in the Package Manager and import **Starter Assets** in Samples tab. If you only use controllers for interaction, the Starter Assets will suffice. However, if you want to use hand gestures for interaction, you’ll also need to import the **Hands Interaction Demo**.
+
+   ![image-20240531111307809](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240531111307809.png)
+
+   There will be a warning about new input system, and requires you to restart the editor, just click yes. 
+
+   ![image-20240612181604343](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612181604343.png)
+
+2. (Optional) Install AR Foundation from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) only if you need AR features like plane detection, image tracking, spatial anchors, or depth meshing. If you don’t require these features, there’s no need to install AR Foundation.
+
+![image-20240529200949957](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240529200949957.png)
+
+#### 3. Import XREAL SDK for Unity
 
 Open Window -> Package Manager, There are two import methods. 
 
-* Add package from git url
+* Add package from git url (改成from tarball)
 
 * Add pacakge from disk
 
@@ -76,19 +94,7 @@ When importing the XREAL SDK into your Unity project, you’ll encounter several
 
 When setting up your project, start with the **Interaction Basics** to ensure all fundamental interaction mechanisms are in place. Then, depending on the AR features necessary for your project, consider importing the AR Features module to expand the application’s capabilities with advanced AR technology. This modular approach allows you to keep your project lightweight by only including the components necessary for your specific needs.
 
-#### 3. Import XRI and AR Foundation
 
-1. Install XR Interaction Toolkit from the Unity Registry in the Package Manager and import **Starter Assets** in Samples tab. If you only use controllers for interaction, the Starter Assets will suffice. However, if you want to use hand gestures for interaction, you’ll also need to import the **Hands Interaction Demo**.
-
-   ![image-20240531111307809](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240531111307809.png)
-
-   There will be a warning about new input system, and requires you to restart the editor, just click yes. 
-
-   ![image-20240612181604343](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612181604343.png)
-
-2. (Optional) Install AR Foundation from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) only if you need AR features like plane detection, image tracking, spatial anchors, or depth meshing. If you don’t require these features, there’s no need to install AR Foundation.
-
-![image-20240529200949957](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240529200949957.png)
 
 ### 3. Configure Project Settings
 
@@ -141,27 +147,40 @@ If you only want the application to run on a specific device (Light/Air), you ma
 
 - support Multi Resume: This feature allows for different displays on the main screen (phone) and the secondary screen (glasses). When the AR app is sent to the background, the glasses continue to display the AR application, while the phone screen can show any 2D app. Essentially, this is dual-screen display functionality. This option is enabled by default, and after adding this feature, it requires permission on the phone upon first use.
 
-### Project Settings ⚠️可能后面还会添加一些内容
+### Project Settings 
 
-![image-20240722112906375](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722112906375.png)
+![image-20241226190639916](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226190639916.png)
 
 * `Stereo Rendering Mode`
   * **Multi-view**: This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance.
   * **Multi-pass**: In this mode, the left and right eye views are rendered in separate passes, which can be less efficient but may be necessary for certain effects or compatibility.
 
-* `Tracking Type`
+* `Initial Tracking Type`
   * **MODE_6DOF (Six Degrees of Freedom)**: Allows tracking of both position and rotation in 3D space, providing a fully immersive experience.
   * **MODE_3DOF (Three Degrees of Freedom)**: Tracks only rotational movement, meaning the user can look around but not move within the space.
   * **MODE_0DOF**: No tracking of movement or rotation.
   * **MODE_0DOF-STAB**: No tracking but ensures a stable view, using some form of sensor data to reduce drift.
 
+* `Initial Input Source`
+  * **Hands**: Uses hand tracking for input.
+  * **Controller**: Uses BeamPro or an Android phone as a controller for input.
+  * **None**: No input source is used.
+  * **Controller And Hands**: Uses both hand tracking and controller for input.
+
+* `Initial Controller Type`
+  * **Unity**: Uses Unity's default controller.
+  * **Android Default**: Uses Android's default controller, which is more efficient. 
+  * **Android Custom**: Uses Android's custom controller.
+
 * `Virtual Controller`:  XREAL SDK allows the use of external devices, like BeamPro or Android phones, as virtual controllers. This setting defines the layout and functionality of the on-screen buttons for these controllers.
-* `Input Source`
-  * **Hands**: Uses hand tracking for interaction.
-  * **Controller**: Uses BeamPro or a Android phone as a controller for input.
 
 * `Support Multi Resume`: Enables dual-screen independent display (dual-screen mode), where the AR app continues to display in the glasses while the phone screen can show different 2D apps.
-* `Support Mono Mode`: Enables the use of a single eye view (monocular mode), which might be useful for certain applications or users who cannot use stereo rendering.
+
+* `Support Devices`: 
+  * **XREAL_DEVICE_CATEGORY_REALITY**: Glasses with 6DoF tracking capabilities, such as the XREAL Air 2 Ultra.
+  * **XREAL_DEVICE_CATEGORY_VISION**: Glasses with 3DoF tracking capabilities, such as the XREAL Air 2 and XREAL One Series.
+
+
 
 ### 6. Find **HelloMR** Sample Scene
 
@@ -192,3 +211,36 @@ If you only want the application to run on a specific device (Light/Air), you ma
 - Disconnect the device with your PC, and then connect it to the glasses.
 - (Optional) Use **Android Logcat** to view logged messages. We recommend using WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) to connect to your PC so that you do not have to be connected through the data cable most of the time.
 - Enable developer options and USB debugging on your Phone / Beam Pro. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
+
+
+### 10. Troubleshooting
+
+#### 1. How to obtain key events, gesture events, etc.
+  Controller events, gesture events, controller position information, gesture position information, and HMD position information can all be obtained through Unity's Input System. For detailed information, please refer to the official Unity manual at
+  https://docs.unity3d.com/Packages/com.unity.inputsystem@1.7/manual/index.html
+
+#### 2. XREAL Logo Not Visible in URP Project
+  The default material is not a URP material; you need to manually change the material.
+
+#### 3. Adding Android Permissions
+  Android permissions can be incorporated either by modifying the general Android Manifest.xml file or by utilizing the XREAL Settings interface for a more streamlined approach.
+  ![image-20241230152824094](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241230152824094.png)
+
+#### 4. How to activate Device Simulator
+  Firstly, import the XR Device Simulator from the XR Interaction Toolkit samples.
+
+  ![image-20241230153527317](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241230153527317.png)
+
+  After importing, ensure that the simulator is enabled.
+
+  ![image-20241230153829887](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241230153829887.png)
+
+#### 5. How to disable the Unity logo splash screen in your app.
+
+To disable the splash screen, you must have a Unity Pro license. Once you have the license, navigate to **Edit -> Project Settings -> Player**, and under the **Splash Image** section, uncheck the option for displaying the Unity logo. This will remove the splash screen when your app starts.
+
+![image-20241230160531803](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241230160531803.png)
+
+#### 6. Composition Layers with Layer Order Less Than 0 Not Visible in URP
+
+  In URP, HDR must be disabled. The reason for this is that when HDR is enabled, Unity uses R11G11B10 textures instead of R8G8B8A8_UNorm. Consequently, the Alpha Blend of the Composition Layer does not function correctly, although the Layer Order feature remains operational.

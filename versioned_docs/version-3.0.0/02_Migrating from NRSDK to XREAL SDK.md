@@ -162,11 +162,15 @@ In this section, we outline the key project settings available in the XREAL SDK,
 
 * Replace the NRCameraRig with either the XR Interaction Setup prefab or the XR Interaction Hands Setup prefab, depending on your input source. You can find these prefabs in Project -> Assets -> Samples -> XREAL XR Plugin -> 3.0.0 -> Interaction Basics -> Prefabs.
 
-  *  Use the XR Interaction Setup prefab if you plan to use controllers only.
+  *  Use the **XR Interaction Setup** prefab if you plan to use controllers only.
 
-  * Use the XR Interaction Hands Setup prefab if you want to support hand gestures (with or without controllers).
+  *  Use the **XR Interaction Hands Setup** prefab if you want to support hand gestures (with or without controllers).
 
-  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240820141903045.png"/>
+  *  Use the **XR Interaction Hands Mesh Setup** prefab if you want to switch between controllers and hand gestures with suitable hand models.
+
+  * Use the **XR Interaction ControllerAndHand Setup** prefab if you want to use both hand gestures and controllers simultaneously.
+
+  ![image-20241226120012761](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226120012761.png)
 
   We recommend using these prefabs because they include specific adjustments optimized for XREAL AR environments.
 
@@ -284,3 +288,32 @@ To help developers migrate their existing NRSDK applications to XREAL SDK, here'
 * Editor Related:
   * Import the XR Device Simulator from the XR Interaction Toolkit.
   * The GraphicRaycaster on the Canvas may affect event handling in editor mode.
+
+
+
+## 9 Important Components 
+
+* XREAL Session Manager
+                                              ![image-20241226114952060](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226114952060.png)
+
+  * **Menu Action**: Input action reference for the XREAL Controller's Home button. When pressed, it can trigger system functions like exiting the application.
+
+  * **Recenter Action**: Input action reference for recentering the controller. Activated by holding the designated button.
+
+  * **Menu Prefab**: The system menu GameObject prefab that appears when pressing the Home button.
+
+  * **Recenter Vibration Enabled**: Toggle to enable/disable haptic feedback when recentering the controller.
+
+  * **Vibration Amplitude**: The strength of the haptic feedback when recentering (0-1 range). Default: 0.25
+
+  * **Vibration Duration**: The duration of the haptic feedback in seconds when recentering. Default: 0.15
+
+  * **Camera State Persistence Options**
+    * These settings determine which camera transform properties should persist across application pause and resume cycles:
+      * X Rotation Persistence: Preserves the camera's pitch angle
+      * Y Rotation Persistence: Preserves the camera's yaw angle
+      * Position Persistence: Preserves the camera's world position
+    * When enabled, these options maintain the camera's last known state instead of resetting to default values upon application resume.
+
+* XREALTrackingModeChangeListener
+  * A component that provides smooth visual transitions when switching between different tracking modes (e.g., 3DoF to 6DoF) on XREAL devices.
