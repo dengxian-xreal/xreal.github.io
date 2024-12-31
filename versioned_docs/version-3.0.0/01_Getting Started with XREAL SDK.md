@@ -129,25 +129,7 @@ You could either configure your project automatically via XR Plugin Management *
 | `Player Settings > Other Settings > Write Permission`        | External(SDCard)                                             |
 | `Project Settings > Quality > VSync Count`                   | Don't Sync                                                   |
 
-### 4. Configure Compatible Devices ⚠️（目前尚未添加，可忽略）
-
-You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the XREAL SDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
-<figure className="my-custom-figure">
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F701VQE4rmKSTNDR9GBWv%2Fimage.png&width=768&dpr=4&quality=100&sign=a7c4fce7fc9c11f1c5a3990bacbedd49fb5a040e5a9e80ca055852048397cbd8" alt="Your Image Description" class="center-image"/>
-  <figcaption>Project</figcaption>
-</figure>
-
-<figure className="my-custom-figure">
-<img src="https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240509163825424.png" alt="Your Image Description" class="center-image"/>
-<figcaption>NR Project Config</figcaption>
-</figure>
-By selecting VISION, XREAL SDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented XREAL SDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
-
-If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, XREAL SDK will not try to adapt automatically, and the app will not run on unsupported devices.
-
-- support Multi Resume: This feature allows for different displays on the main screen (phone) and the secondary screen (glasses). When the AR app is sent to the background, the glasses continue to display the AR application, while the phone screen can show any 2D app. Essentially, this is dual-screen display functionality. This option is enabled by default, and after adding this feature, it requires permission on the phone upon first use.
-
-### Project Settings 
+### 4.XREAL Settings
 
 ![image-20241226190639916](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226190639916.png)
 
@@ -167,28 +149,38 @@ If you only want the application to run on a specific device (Light/Air), you ma
   * **None**: No input source is used.
   * **Controller And Hands**: Uses both hand tracking and controller for input.
 
-* `Initial Controller Type`
-  * **Unity**: Uses Unity's default controller.
-  * **Android Default**: Uses Android's default controller, which is more efficient. 
-  * **Android Custom**: Uses Android's custom controller.
-
 * `Virtual Controller`:  XREAL SDK allows the use of external devices, like BeamPro or Android phones, as virtual controllers. This setting defines the layout and functionality of the on-screen buttons for these controllers.
 
-* `Support Multi Resume`: Enables dual-screen independent display (dual-screen mode), where the AR app continues to display in the glasses while the phone screen can show different 2D apps.
+* `Support Multi Resume`: Enables dual-screen independent display mode, allowing the AR app to continue displaying in the glasses while the phone screen can switch to other 2D apps. When enabled:
+  * The AR view remains active in the glasses even when the app is in background
+  * Users can freely use other apps on their phone screen
+  * Requires user permission on first launch
+  * Enabled by default in XREAL Settings
+
+  ![Dual Screen Display](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252FURzr2zc46xi9SY7CjA7z%252FCleanShot%25202024-03-12%2520at%252011.07.45.gif%3Falt%3Dmedia%26token%3Dfae8be23-1475-4633-9f12-6871c42388a1&width=768&dpr=4&quality=100&sign=58fec834f79e26dc2c1bdbf91f1b67a3efa81afca32b46d529c0107107e6f72a)
+
+  For more detailed information about dual-screen display, see [Dual Screen Display](../Tools/DualScreenDisplay).
 
 * `Support Devices`: 
   * **XREAL_DEVICE_CATEGORY_REALITY**: Glasses with 6DoF tracking capabilities, such as the XREAL Air 2 Ultra.
   * **XREAL_DEVICE_CATEGORY_VISION**: Glasses with 3DoF tracking capabilities, such as the XREAL Air 2 and XREAL One Series.
 
+* `Android Permissions`: 
+  Android permissions can be incorporated either by modifying the general Android Manifest.xml file or by utilizing the XREAL Settings interface for a more streamlined approach.
+  * **CAMERA**: Allows the app to access the camera.
+  * **VIBRATION**: Allows the app to access the vibration. .
+  * **AUDIO**: Allows the app to access the audio.
+ 
+* `License Assets`: 
+  By configuring the License, you can unlock advanced features of the SDK.
 
-
-### 6. Find **HelloMR** Sample Scene
+### 5. Find **HelloMR** Sample Scene
 
 - After importing the sample **Interaction Basics**  in Unity Package Manager, find the **HelloMR** sample scene in the Unity Project window by selecting `Assets/Samples/XREAL XR Plugin/3.0.0/Interaction Basics/HelloMR.unity`
 
   ![image-20240808205306592](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240808205306592.png)
 
-### 8. Building XREAL SDK App for Android
+### 6. Building XREAL SDK App for Android
 1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. 
 
    ![image-20240722111318972](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722111318972.png)
@@ -204,7 +196,7 @@ If you only want the application to run on a specific device (Light/Air), you ma
 4. In **Build Settings** window, click **Build.**
 5. Select the destination folder and wait until the building is finished.
 
-### 9. Deploy to XREAL Device
+### 7. Deploy to XREAL Device
 
 - Connect your Phone / Beam Pro to your Mac / Windows PC. 
 - Install your app through WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) or type-C cable after the build is successful.
@@ -213,7 +205,7 @@ If you only want the application to run on a specific device (Light/Air), you ma
 - Enable developer options and USB debugging on your Phone / Beam Pro. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
 
 
-### 10. Troubleshooting
+### 8. Troubleshooting
 
 #### 1. How to obtain key events, gesture events, etc.
   Controller events, gesture events, controller position information, gesture position information, and HMD position information can all be obtained through Unity's Input System. For detailed information, please refer to the official Unity manual at
