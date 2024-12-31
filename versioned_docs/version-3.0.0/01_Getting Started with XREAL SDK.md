@@ -12,7 +12,7 @@ This quickstart guide will help you set up your development environment and test
 
 **Hardware Checklist**
 
-- Beam Pro or a supported Android Phone. Please review the[ Device Compatibility](01_XREALDevices/Compatibility.md) list to ensure your phone model is compatible with the glasses and XREAL SDK. ⚠️可能后面没有兼容性列表了，仅支持S22 23
+- Beam Pro or a supported Android Phone. Currently, only the Samsung S22, S24, and subsequent flagship series are supported.
 
 - A pair of **XREAL** glasses.
 
