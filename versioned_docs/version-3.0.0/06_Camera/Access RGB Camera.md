@@ -18,21 +18,9 @@ Import the **Camera Features** sample from the Package Manager.
 
 Navigate to the RGBCamera sample in the Unity Project window: `Assets > Samples > XERAL XR Plugin > 3.0.0 >Camera Features > RGBCamera`
 
-### How to Access RGB and YUV Camera Images
+### How to Access RGB Camera Images
 
-The RGB camera supports two image formats: **RGB_888** and **YUV_420_888**. You can switch between these formats based on your needs.
-
-**Retrieving RGB_888 Format**
-
-To retrieve the image texture in RGB_888 format, use the following code:
-
-```
-var texture = m_RGBCameraTexture.GetRGBFormatTexture();
-if (texture != null)
-{
-    m_RGBImage.texture = texture;
-}
-```
+The RGB camera supports YUV_420_888 format.
 
 **Retrieving YUV_420_888 Format**
 
