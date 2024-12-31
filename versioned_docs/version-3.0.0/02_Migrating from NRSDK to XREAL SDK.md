@@ -113,47 +113,50 @@ You could either configure your project automatically via XREAL SDK **Project Se
 | `Player Settings > Other Settings > Write Permission`        | External(SDCard)                                             |
 | `Project Settings > Quality > VSync Count`                   | Don't Sync                                                   |
 
-#### Project Settings 
+#### XREAL Specific Settings
 
 In this section, we outline the key project settings available in the XREAL SDK, which allow developers to configure various aspects of stereo rendering, tracking, input sources, and device compatibility to optimize their AR applications for specific use cases.
+Access these settings via `Edit > Project Settings > XR Plug-in Management > XREAL`:
 
-![image-20240820144129370](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240820144129370.png)
+![image-20241226190639916](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226190639916.png)
 
 * `Stereo Rendering Mode`
-  
-  * **Multi-view**: This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance.
+  * **Multi-view** (Recommended): This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance.
   * **Multi-pass**: In this mode, the left and right eye views are rendered in separate passes, which can be less efficient but may be necessary for certain effects or compatibility.
-  
-* `Controller Type`
-  
-* `Tracking Type`
-  
-  * **MODE_6DOF (Six Degrees of Freedom)**: Allows tracking of both position and rotation in 3D space, providing a fully immersive experience.
-  * **MODE_3DOF (Three Degrees of Freedom)**: Tracks only rotational movement, meaning the user can look around but not move within the space.
+
+* `Initial Tracking Type`
+  * **MODE_6DOF** (Recommended for XREAL Air 2 Ultra): Allows tracking of both position and rotation in 3D space, providing a fully immersive experience.
+  * **MODE_3DOF** (Recommended for XREAL Air/Air 2): Tracks only rotational movement, meaning the user can look around but not move within the space.
   * **MODE_0DOF**: No tracking of movement or rotation.
   * **MODE_0DOF-STAB**: No tracking but ensures a stable view, using some form of sensor data to reduce drift.
-  
+
+* `Initial Input Source`
+  * **Hands**: Uses hand tracking for input.
+  * **Controller**: Uses BeamPro or an Android phone as a controller for input.
+  * **None**: No input source is used.
+
 * `Virtual Controller`:  XREAL SDK allows the use of external devices, like BeamPro or Android phones, as virtual controllers. This setting defines the layout and functionality of the on-screen buttons for these controllers.
 
-* `Error Receiver`:
-  
-* `Input Source`
-  
-  * **Hands**: Uses hand tracking for interaction.
-  * **Controller**: Uses a traditional handheld controller for input.
-  
-* `Support Multi Resume`: Enables dual-screen independent display (dual-screen mode), where the AR app continues to display in the glasses while the phone screen can show different 2D apps.
+* `Support Multi Resume` (Recommended: Enabled)
+  Enables dual-screen independent display mode, allowing the AR app to continue displaying in the glasses while the phone screen can switch to other 2D apps. When enabled:
+  * The AR view remains active in the glasses even when the app is in background
+  * Users can freely use other apps on their phone screen
+  * Requires user permission on first launch
+  * Enabled by default in XREAL Settings
 
-* `Support Mono Mode`: Enables the use of a single eye view (monocular mode), which might be useful for certain applications or users who cannot use stereo rendering.
+  ![Dual Screen Display](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252FURzr2zc46xi9SY7CjA7z%252FCleanShot%25202024-03-12%2520at%252011.07.45.gif%3Falt%3Dmedia%26token%3Dfae8be23-1475-4633-9f12-6871c42388a1&width=768&dpr=4&quality=100&sign=58fec834f79e26dc2c1bdbf91f1b67a3efa81afca32b46d529c0107107e6f72a)
 
-* `License Asset`
+  For more detailed information about dual-screen display, see [Dual Screen Display](../Tools/DualScreenDisplay).
 
-* Target Device ⚠️，研发还没添加此选项，还需要加吗？还是默认支持所有设备
+* `Support Devices` (Recommended: Enable both categories for maximum compatibility)
+  * **XREAL_DEVICE_CATEGORY_REALITY**: Glasses with 6DoF tracking capabilities, such as the XREAL Air 2 Ultra.
+  * **XREAL_DEVICE_CATEGORY_VISION**: Glasses with 3DoF tracking capabilities, such as the XREAL Air 2 and XREAL One Series.
 
-  * You could specify Target Devices in `Assets/NRSDK/NRProjectConfig.` Be aware that **all the XREAL SDK features supported by XREAL Air are supported by XREAL Light** . By default, both `Support XREAL Light`(VISION) and `Support XREAL Air`(REALITY) are selected.
-  * By selecting VISION, XREAL SDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented XREAL SDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See [Device Compatibility](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/xreal-devices/compatibility) for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.
-
-  If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, XREAL SDK will not try to adapt automatically, and the app will not run on unsupported devices.
+* `Android Permissions` (Enable as needed for your app's functionality)
+  Android permissions can be incorporated either by modifying the general Android Manifest.xml file or by utilizing the XREAL Settings interface for a more streamlined approach.
+  * **VIBRATION**: Required for haptic feedback.
+  * **CAMERA**: Required for RGB camera access and recording.
+  * **AUDIO**: Required for audio recording features.
 
 
 ### 5. Remove Old NRSDK and Import New XREAL SDK
@@ -167,8 +170,6 @@ In this section, we outline the key project settings available in the XREAL SDK,
   *  Use the **XR Interaction Hands Setup** prefab if you want to support hand gestures (with or without controllers).
 
   *  Use the **XR Interaction Hands Mesh Setup** prefab if you want to switch between controllers and hand gestures with suitable hand models.
-
-  * Use the **XR Interaction ControllerAndHand Setup** prefab if you want to use both hand gestures and controllers simultaneously.
 
   ![image-20241226120012761](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226120012761.png)
 

@@ -100,7 +100,7 @@ When setting up your project, start with the **Interaction Basics** to ensure al
 
 You could either configure your project automatically via XR Plugin Management **Project Validation** or configure manually. These two ways are equivalent.
 
-#### **Project Validation**
+#### **Project Validation (Recommended)**
 
 * To enable XREAL XR Plug-in, navigate to the project settings under **Edit > Project Settings > XR Plug-in Management** and open the Android tab. Check the **XREAL** plug-in. ![image-20240528140739045](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240528140739045.png)
 
@@ -129,7 +129,9 @@ You could either configure your project automatically via XR Plugin Management *
 | `Player Settings > Other Settings > Write Permission`        | External(SDCard)                                             |
 | `Project Settings > Quality > VSync Count`                   | Don't Sync                                                   |
 
-### 4.XREAL Settings
+### 4.XREAL Specific Settings
+
+Access these settings via `Edit > Project Settings > XR Plug-in Management > XREAL`:
 
 ![image-20241226190639916](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226190639916.png)
 
