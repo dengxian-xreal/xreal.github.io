@@ -18,6 +18,12 @@ Introducing XREAL Markers, a novel set of 'interactive' image tracking cards des
 <details>
 <summary>NRSDKForUnity Experimental</summary>
 
+2025.01.02
+
+* Updated the image tracking library to resolve the issue of markers not being recognized.
+
+- [NRSDKForUnity_Experimental_2.4.1.unitypackage](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.1_Release_20250102/NRSDKForUnityAndroid_Experimental_2.4.1.unitypackage)
+
 2024.12.06
 
 Regular updates released with the normal version.
