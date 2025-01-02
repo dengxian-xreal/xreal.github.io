@@ -51,7 +51,7 @@ const config = {
           rehypePlugins: [require('rehype-katex')],
           versions: {
               current: {
-                  label: '2.4.0',
+                  label: '2.4.1',
                   path: '/',
                   badge: true
               }
@@ -105,7 +105,7 @@ const config = {
       announcementBar: {
         id: 'New SDK',
         content:
-          'NRSDK 2.4.0 is now compatible with XREAL One Series and Unity 6 🥳 <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4.0"> Check the release note</a>.',
+          'NRSDK 2.4.1 released! <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4.1"> Check the release note</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
         isCloseable: false,
