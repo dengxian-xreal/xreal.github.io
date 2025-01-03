@@ -7,7 +7,7 @@ Please note that Nebula will no longer be maintained. For developers who wish to
 
 **Download** [**NRSDKForUnity_Release_2.4.1.unitypackage**](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.1_Release_20250102/NRSDKForUnityAndroid_2.4.1.unitypackage)
 
-**Download [Control Glasses 1.0.0](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.1_Release_20250102/ControlGlasses-1.0.1.apk)**
+**Download [Control Glasses 1.0.1](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.1_Release_20250102/ControlGlasses-1.0.1.apk)**
 
 :::
 
