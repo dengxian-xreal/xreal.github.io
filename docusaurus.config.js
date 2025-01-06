@@ -105,7 +105,7 @@ const config = {
       announcementBar: {
         id: 'New SDK',
         content:
-          'NRSDK 2.4.1 released! <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4.1"> Check the release note</a>.',
+          'NRSDK 2.4.1 released! <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4.1">📃Check the release note</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
         isCloseable: false,

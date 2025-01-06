@@ -5,8 +5,6 @@ slug: /
 
 XREAL uses NRSDK to develop mixed reality experiences. Using a simple development process and a high-level API, NRSDK offers a set of powerful MR features and enables your XREAL glasses to understand the real world.
 
-NRSDK supports the development environment of **Unity 2019.4.X and above**.
-
 The core features provided by NRSDK are Spatial Computing, Optimized Rendering, and Multi-modal Interactions.
 
 - **Spatial Computing** includes motion tracking, plane detection, image anchoring, and hand tracking, allowing the glasses to track their real-time position and orientation relative to the world and to understand the environment around them.
