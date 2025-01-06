@@ -169,8 +169,6 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
 
   *  Use the **XR Interaction Hands Setup** prefab if you want to support hand gestures (with or without controllers).
 
-  *  Use the **XR Interaction Hands Mesh Setup** prefab if you want to switch between controllers and hand gestures with suitable hand models.
-
   ![image-20241226120012761](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226120012761.png)
 
   We recommend using these prefabs because they include specific adjustments optimized for XREAL AR environments.
