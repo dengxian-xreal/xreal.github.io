@@ -1,5 +1,5 @@
 # NRSDK 2.4.1
-![Release Date](https://img.shields.io/badge/Release_Date-January_07,_2025-0080FF?style=flat&logoWidth=1)
+![Release Date](https://img.shields.io/badge/Release_Date-January_13,_2025-0080FF?style=flat&logoWidth=1)
 
 :::info
 
