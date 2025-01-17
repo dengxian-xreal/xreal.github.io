@@ -288,6 +288,108 @@ To help developers migrate their existing NRSDK applications to XREAL SDK, here'
   * Import the XR Device Simulator from the XR Interaction Toolkit.
   * The GraphicRaycaster on the Canvas may affect event handling in editor mode.
 
+#### 8.6 NRInput Migration
+
+When migrating from NRInput, you have two options:
+
+##### Option 1: Migrate to XR Interaction Toolkit Input Actions (Recommended)
+
+This approach aligns with modern XR development practices and provides better compatibility with other XR platforms. Here's how to migrate:
+
+1. Replace NRInput button checks with Input Actions:
+
+```csharp
+// Old NRInput code
+if (NRInput.GetButtonDown(ControllerButton.TRIGGER)) {
+    // Handle trigger press
+}
+
+// New Input Action code
+[SerializeField]
+private InputActionProperty m_TriggerAction;
+
+private void OnEnable() {
+    m_TriggerAction.action.performed += OnTriggerPressed;
+}
+
+private void OnTriggerPressed(InputAction.CallbackContext context) {
+    // Handle trigger press
+}
+```
+
+2. Replace controller state queries:
+
+```csharp
+// Old NRInput code
+Vector3 position = NRInput.GetPosition();
+Quaternion rotation = NRInput.GetRotation();
+
+// New Input System code
+public XRController controller;
+
+void Update() {
+    if (controller.inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 position)) {
+        // Use position
+    }
+    if (controller.inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation)) {
+        // Use rotation
+    }
+}
+```
+
+3. Replace haptic feedback:
+
+```csharp
+// Old NRInput code
+NRInput.TriggerHapticVibration(duration, amplitude);
+
+// New Input System code
+public XRController controller;
+
+void TriggerHaptic() {
+    controller.SendHapticImpulse(0, amplitude, duration);
+}
+```
+
+##### Option 2: Use XREALInput Compatibility Layer
+
+If you prefer to maintain code similarity with your existing NRInput implementation, you can use the XREALInput class which provides a similar API:
+
+1. Add the XREALInput script to your project and update your namespace references:
+
+```csharp
+// Old code
+using NRInput;
+
+// New code
+using Unity.XR.XREAL.Samples;
+```
+
+2. Replace NRInput calls with XREALInput:
+
+```csharp
+// Old code
+if (NRInput.GetButtonDown(ControllerButton.TRIGGER)) { }
+Vector3 position = NRInput.GetPosition();
+NRInput.TriggerHapticVibration(duration, amplitude);
+
+// New code
+if (XREALInput.GetButtonDown(ControllerButton.TRIGGER)) { }
+Vector3 position = XREALInput.GetPosition();
+XREALInput.TriggerHapticVibration(duration, amplitude);
+```
+
+The XREALInput class maintains similar method signatures and functionality to NRInput while using the new input system internally. This can be a good intermediate step if you want to gradually transition to the new input system.
+
+Key differences to note:
+- The XREALInput class uses Unity's new Input System internally
+- Some advanced features may have slightly different implementations
+- The class is provided in the Samples namespace as a migration aid
+
+Choose the migration approach that best fits your project's needs:
+- Option 1 if you're starting a new project or want to fully embrace the new input system
+- Option 2 if you want to minimize code changes while still upgrading to the new SDK
+
 
 
 ## 9 Important Components 
