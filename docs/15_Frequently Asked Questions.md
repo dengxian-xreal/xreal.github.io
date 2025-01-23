@@ -50,6 +50,16 @@ aaptOptions {
     }**SIGN**
 ```
 
+#### 5 Flickering occurs when using URP Project
+
+You can try the following steps to resolve this issue:
+1. Disable multi-threaded rendering
+   ![image-20241212114352030](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241212114352030.png)
+2. Use [Single Pass Rendering](./13_Rendering/1_Single%20Pass%20Stereo%20Rendering.md)
+3. Set Quality as Performant
+
+![image-20241212114245632](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241212114245632.png)
+
 #### Control Glasses 
 
 If the glasses' firmware is in an abnormal state, the SDK will consistently fail to start successfully. If you previously skipped the OTA reminder, please remember to manually check the OTA version and update it.

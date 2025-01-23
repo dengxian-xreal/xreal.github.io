@@ -51,6 +51,7 @@ const sidebars = {
         // image: '/img/docusaurus.png',
       },
       items: [
+        'Release Note/NRSDK 2.4.1',
         'Release Note/NRSDK 2.4.0',
         'Release Note/NRSDK 2.3.1',
         'Release Note/NRSDK 2.3.0',
@@ -78,7 +79,7 @@ const sidebars = {
       },
       items: [
         'Input and Camera/NRInput',
-        'Input and Camera/Interact with Unity UI',
+        'Input and Camera/Controller',
         'Input and Camera/Customize Controller UI',
         'Input and Camera/Notification popup',
         'Input and Camera/NRCameraRig', 

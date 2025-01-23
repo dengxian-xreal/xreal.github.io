@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[Spatial Life](https://public-resource.xreal.com/download/Application/spatiallife0619.apk),' thoughtfully crafted by the XREAL design team.
+Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[SpatialLife_20241216](https://public-resource.xreal.com/download/Application/spatiallife20241216.apk),' thoughtfully crafted by the XREAL design team.
 
 ![image-20240812173022249](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173022249.png)
 
@@ -17,6 +17,17 @@ Introducing XREAL Markers, a novel set of 'interactive' image tracking cards des
 > For developers interested in creating applications akin to Spatial Life, with feature coaster image tracking, additional resource is required:
 <details>
 <summary>NRSDKForUnity Experimental</summary>
+
+2025.01.13
+
+* Updated the image tracking library to resolve the issue of markers not being recognized.
+
+- [NRSDKForUnity_Experimental_2.4.1.unitypackage](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.1_Release_20250102/NRSDKForUnityAndroid_Experimental_2.4.1.unitypackage)
+
+2024.12.06
+
+Regular updates released with the normal version.
+- [NRSDKForUnity_Experimental_2.4.0.unitypackage](https://public-resource.xreal.com/download/NRSDKForUnity_2.4.0_Release_20241206/NRSDKForUnityAndroid_Experimental_2.4.0.unitypackage)
 
 2024.09.26
 
