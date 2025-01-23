@@ -48,31 +48,12 @@ Many developers have previously created excellent applications using NRSDK (e.g.
 
 ## 3. Import XREAL SDK for Unity
 
-Open Window -> Package Manager, There are two import methods. 
+Open Window -> Package Manager, 
 
-* Add package from git url
-
-* Add pacakge from disk
-
->  For both the **Enterprise** and **Experimental** editions, only the 'add package from disk' method is supported. 
->
->  For the **Normal** edition of the SDK, both methods are supported.
+* Add pacakge from tarball
 
 ![image-20240808201609886](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240808201609886.png)
 
-1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
-
-```
-ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/com.xreal.xr#dev
-```
-
-2. Add package from disk
-
-   1.  Download the plugin.
-
-   2.  Unzip folder `com.xreal.xr`
-
-   3.  Select `package.json`，click Open
 
 When importing the XREAL SDK into your Unity project, you'll encounter several key components that facilitate the development of AR applications. Here's a breakdown of the essential and optional elements:
 
