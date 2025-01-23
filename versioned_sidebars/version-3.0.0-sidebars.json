@@ -14,7 +14,20 @@
       ]
     },
     "Getting Started with XREAL SDK",
-    "Migrating from NRSDK to XREAL SDK",
+    {
+      "type": "category",
+      "label": "Migrating from NRSDK to XREAL SDK",
+      "link": {
+        "type": "doc",
+        "id": "MigratingFromNRSDKToXREALSDK/intro"
+      },
+      "items": [
+        "MigratingFromNRSDKToXREALSDK/Migration_PlaneDetection",
+        "MigratingFromNRSDKToXREALSDK/Migration_ImageTracking",
+        "MigratingFromNRSDKToXREALSDK/Migration_Anchors",
+        "MigratingFromNRSDKToXREALSDK/Migration_Meshing"
+      ]
+    },
     "Sample Code",
     {
       "type": "category",

@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # Migrating from NRSDK to XREAL SDK
 
-Many developers have previously created excellent applications using NRSDK (e.g., [AR Lab](https://www.xreal.com/arlab/)). This tutorial aims to assist these developers in migrating from the original NRSDK to the new XREAL SDK, to enjoy the benefits of XRI and ARFoundation, achieving better compatibility and cross-platform functionality. This tutorial will provide a migration example based on the original demo **HelloMR**.
+Many developers have previously created excellent applications using NRSDK (e.g., [AR Lab](https://www.xreal.com/arlab/)). This guide aims to assist these developers in migrating from the original NRSDK to the new XREAL SDK, to enjoy the benefits of XRI and ARFoundation, achieving better compatibility and cross-platform functionality.
 
-### 1. Prerequisites
+## 1. Prerequisites
 
 **Hardware Checklist**
 
@@ -30,9 +30,9 @@ Many developers have previously created excellent applications using NRSDK (e.g.
 - AR Foundation
 - XR Hands(Optional)
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that’s fine too)
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that's fine too)
 
-### 2. Import XRI and AR Foundation
+## 2. Import XRI and AR Foundation
 
 1. Install XR Interaction Toolkit from the Unity Registry in the Package Manager and import **Starter Assets** in Samples tab.
 
@@ -46,7 +46,7 @@ Many developers have previously created excellent applications using NRSDK (e.g.
 
 ![image-20240529200949957](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240529200949957.png)
 
-### 3. Import XREAL SDK for Unity
+## 3. Import XREAL SDK for Unity
 
 Open Window -> Package Manager, There are two import methods. 
 
@@ -54,7 +54,7 @@ Open Window -> Package Manager, There are two import methods.
 
 * Add pacakge from disk
 
->  For both the **Enterprise** and **Experimental** editions, only the ‘add package from disk’ method is supported. 
+>  For both the **Enterprise** and **Experimental** editions, only the 'add package from disk' method is supported. 
 >
 >  For the **Normal** edition of the SDK, both methods are supported.
 
@@ -74,15 +74,15 @@ ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/
 
    3.  Select `package.json`，click Open
 
-When importing the XREAL SDK into your Unity project, you’ll encounter several key components that facilitate the development of AR applications. Here’s a breakdown of the essential and optional elements:
+When importing the XREAL SDK into your Unity project, you'll encounter several key components that facilitate the development of AR applications. Here's a breakdown of the essential and optional elements:
 
 * **Interaction Basics**: This is an essential component that provides assets to streamline the setup of basic rendering and interactions using controllers and hand gestures, compatible with the XR Interaction Toolkit. It includes prefabs and demo scenes designed to help you get started quickly with the XREAL SDK integration. This component is fundamental as it lays the groundwork for any XR application, ensuring that you have the necessary tools for basic interaction and rendering.
 
 * **AR Features**: This is an optional component, recommended for those who require advanced AR functionalities in their projects. It includes sample scenes and other assets that demonstrate the integration of AR features supported by the XREAL SDK with AR Foundation. This part specifically supports Plane Detection, Image Tracking, Spatial Anchors, and Depth Meshing. Depending on the scope of your project, you can choose to import this component if your application will utilize complex AR features.
 
-When setting up your project, start with the **Interaction Basics** to ensure all fundamental interaction mechanisms are in place. Then, depending on the AR features necessary for your project, consider importing the AR Features module to expand the application’s capabilities with advanced AR technology. This modular approach allows you to keep your project lightweight by only including the components necessary for your specific needs.
+When setting up your project, start with the **Interaction Basics** to ensure all fundamental interaction mechanisms are in place. Then, depending on the AR features necessary for your project, consider importing the AR Features module to expand the application's capabilities with advanced AR technology. This modular approach allows you to keep your project lightweight by only including the components necessary for your specific needs.
 
-### 4. Configure Project Settings
+## 4. Configure Project Settings
 
 You could either configure your project automatically via XREAL SDK **Project Setup** tool or configure manually. These two ways are equivalent.
 
@@ -158,43 +158,17 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
   * **CAMERA**: Required for RGB camera access and recording.
   * **AUDIO**: Required for audio recording features.
 
+## 5. Basic Migration Steps
 
-### 5. Remove Old NRSDK and Import New XREAL SDK
+### 5.1 Remove NRSDK Components
+1. Duplicate any custom assets from NRSDK you need into another folder
+2. Delete the NRSDK folder from Assets
+3. Replace NRCameraRig with XR Interaction Setup prefab or XR Interaction Hands Setup prefab
+4. Remove NRInput from Hierarchy
+5. Add AR Session to Hierarchy
 
-* Duplicate the assets in NRSDK you need into another folder and delete NRSDK folder in Assets.
-
-* Replace the NRCameraRig with either the XR Interaction Setup prefab or the XR Interaction Hands Setup prefab, depending on your input source. You can find these prefabs in Project -> Assets -> Samples -> XREAL XR Plugin -> 3.0.0 -> Interaction Basics -> Prefabs.
-
-  *  Use the **XR Interaction Setup** prefab if you plan to use controllers only.
-
-  *  Use the **XR Interaction Hands Setup** prefab if you want to support hand gestures (with or without controllers).
-
-  ![image-20241226120012761](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226120012761.png)
-
-  We recommend using these prefabs because they include specific adjustments optimized for XREAL AR environments.
-
-* Remove NRInput in Hierarchy
-
-* Add AR Session in Hierarchy by right click -> XR -> AR Session
-
-  ![image-20240612191811692](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612191811692.png)
-
-* Remove PlaneDetector.
-
-* Add component AR Plane Manager to XR Origin(XR Rig).
-
-  ![image-20240820164659586](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240820164659586.png)
-
-* Then add a plane prefab, you can still use the previous one
-
-  ![image-20240612192155293](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240612192155293.png)
-
-* That's it! you can now build and test! If you're familiar with the following steps, just ignore the tutorial and run your app on the device.
-
-### 6. Building XREAL SDK App for Android
-
+### 5.2 Building and Deployment
 1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked. <img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FMoKBkh4ZItI620SjI3fB%2Fimage.png&width=768&dpr=4&quality=100&sign=d7917b19764c26c320b3e16d5d12fa8500a1a0f38bf3cb4e9075d724fce68853" alt="Your Image Description" class="center-image"/>
-
 
 2. Click **Player Settings**. Customize the **Company Name** and **Product Name.** 
 3. (Optional) Navigate to the **Android**> **Other Settings** panel to specify your build settings. As you have prepared **Step 3. Configure Project Settings,** you may leave the current configuration as it is. It is worth noting some of the other settings:
@@ -203,35 +177,32 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
 
 - **Scripting Backend:** You must choose **IL2CPP** when building for ARM64 architecture. Note that starting from XREAL SDK 2.2, ARMv7 architecture is no longer supported.<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FijFH00KUpneZptdM1xaj%2Fimage.png&width=768&dpr=4&quality=100&sign=7c427706fce8673b8c60a167e55c1979693416747d46200b2b505fe0980786dd" alt="Your Image Description" class="center-image"/>
 
-
-
 4. In **Build Settings** window, click **Build.**
 5. Select the destination folder and wait until the building is finished.
 
-### 7. Deploy to XREAL Device
+6. Connect your Phone / computing unit to your Mac / Windows PC. 
 
-- Connect your Phone / computing unit to your Mac / Windows PC. 
+7. Install your app through WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) or type-C cable after the build is successful.
 
-- Install your app through WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) or type-C cable after the build is successful.
+8. Disconnect the computing unit with your PC, and then connect it to the glasses.
 
-- Disconnect the computing unit with your PC, and then connect it to the glasses.
+9. (Computing Unit only) If it is the first time you run this app, you need to authorize the app by some tools like [scrcpy](https://github.com/Genymobile/scrcpy).
 
-- (Computing Unit only) If it is the first time you run this app, you need to authorize the app by some tools like [scrcpy](https://github.com/Genymobile/scrcpy).
+10. Launch your app along with the XREAL Light controller. For instructions on how to use the XREAL Light controller, please refer to [Controller](https://nrealsdkdoc2.readthedocs.io/en/dev/Docs/Unity_EN/Develop/Controller.html#controller-guide).
 
-- Launch your app along with the XREAL Light controller. For instructions on how to use the XREAL Light controller, please refer to [Controller](https://nrealsdkdoc2.readthedocs.io/en/dev/Docs/Unity_EN/Develop/Controller.html#controller-guide).
+11. Move around until XREAL SDK finds a horizontal plane and the detected plane will be covered with green grid.
 
-- Move around until XREAL SDK finds a horizontal plane and the detected plane will be covered with green grid.
+12. Click the Trigger button to put an XREAL logo object on it.
 
-- Click the Trigger button to put an XREAL logo object on it.
+13. (Optional) Use **Android Logcat** to view logged messages. We recommend using WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) to connect to your PC so that you do not have to be connected through the data cable most of the time.
 
-- (Optional) Use **Android Logcat** to view logged messages. We recommend using WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) to connect to your PC so that you do not have to be connected through the data cable most of the time.
+14. Enable developer options and USB debugging on your Phone / Computing unit. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
 
-- Enable developer options and USB debugging on your Phone / Computing unit. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
-### 8. API Migration Reference
+## 6. API Migration Reference
 
 To help developers migrate their existing NRSDK applications to XREAL SDK, here's a comprehensive reference table of API changes. This table lists all the important changes in class names, APIs, callbacks, and configurations.
 
-#### 8.1 Namespace/Class Name Renaming
+#### 6.1 Namespace/Class Name Renaming
 
 | Old Name                          | New Name                          |
 |:----------------------------------|:----------------------------------|
@@ -246,7 +217,7 @@ To help developers migrate their existing NRSDK applications to XREAL SDK, here'
 | NRPointerRaycaster                | UnityEngine.EventSystems.PointerEventData or UnityEngine.XR.Interaction.Toolkit.XRRayInteractor |
 | CanvasRaycastTarget               | TrackedDeviceGraphicRaycaster     |
 
-#### 8.2 API Changes
+#### 6.2 API Changes
 
 | Old Interface | New Interface |
 |--------|--------|
@@ -259,7 +230,7 @@ To help developers migrate their existing NRSDK applications to XREAL SDK, here'
 | NRFrame.MonoMode | XREALPlugin.Get2D3DMode |
 | NRSessionManager.Instance.IsRunning | XREALUtility.GetLoadedSubsystem&lt;XRSessionSubsystem&gt;().running |
 
-#### 8.3 Callback System Changes
+#### 6.3 Callback System Changes
 
 | Old Callback                     | New Callback                     |
 |--------|--------|
@@ -268,7 +239,7 @@ To help developers migrate their existing NRSDK applications to XREAL SDK, here'
 | NRSessionManager.OnKernalError | XREALNativeCallbackHandler.NativeErrorCallback |
 | NRGlassesInitErrorTip.OnPreComfirm | XREALErrorReceiver.OnXREALSDKFailPreComfirm |
 
-#### 8.4 Configuration Changes
+#### 6.4 Configuration Changes
 
 | Old Configuration | New Configuration |
 |-------------------|-------------------|
@@ -276,7 +247,7 @@ To help developers migrate their existing NRSDK applications to XREAL SDK, here'
 | NROverlay related components | Use Composition Layers from the XREAL XR Plugin Samples |
 | IPoseProvider | Unity.XR.XREAL.Examples.IDataSource |
 
-#### 8.5 Special Handling Instructions
+#### 6.5 Special Handling Instructions
 
 * Singleton Pattern Changes:
   * For singletons that do not inherit from MonoBehaviour, use Unity.XR.XREAL.Singleton.
@@ -288,7 +259,7 @@ To help developers migrate their existing NRSDK applications to XREAL SDK, here'
   * Import the XR Device Simulator from the XR Interaction Toolkit.
   * The GraphicRaycaster on the Canvas may affect event handling in editor mode.
 
-#### 8.6 NRInput Migration
+#### 6.6 NRInput Migration
 
 When migrating from NRInput, you have two options:
 
@@ -390,31 +361,11 @@ Choose the migration approach that best fits your project's needs:
 - Option 1 if you're starting a new project or want to fully embrace the new input system
 - Option 2 if you want to minimize code changes while still upgrading to the new SDK
 
+## 7. Feature-Specific Migration Guides
 
+For detailed migration instructions for specific AR features, please refer to:
 
-## 9 Important Components 
-
-* XREAL Session Manager
-                                              ![image-20241226114952060](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226114952060.png)
-
-  * **Menu Action**: Input action reference for the XREAL Controller's Home button. When pressed, it can trigger system functions like exiting the application.
-
-  * **Recenter Action**: Input action reference for recentering the controller. Activated by holding the designated button.
-
-  * **Menu Prefab**: The system menu GameObject prefab that appears when pressing the Home button.
-
-  * **Recenter Vibration Enabled**: Toggle to enable/disable haptic feedback when recentering the controller.
-
-  * **Vibration Amplitude**: The strength of the haptic feedback when recentering (0-1 range). Default: 0.25
-
-  * **Vibration Duration**: The duration of the haptic feedback in seconds when recentering. Default: 0.15
-
-  * **Camera State Persistence Options**
-    * These settings determine which camera transform properties should persist across application pause and resume cycles:
-      * X Rotation Persistence: Preserves the camera's pitch angle
-      * Y Rotation Persistence: Preserves the camera's yaw angle
-      * Position Persistence: Preserves the camera's world position
-    * When enabled, these options maintain the camera's last known state instead of resetting to default values upon application resume.
-
-* XREALTrackingModeChangeListener
-  * A component that provides smooth visual transitions when switching between different tracking modes (e.g., 3DoF to 6DoF) on XREAL devices.
+- [Migrating Plane Detection](./Migration_PlaneDetection.md)
+- [Migrating Image Tracking](./Migration_ImageTracking.md)
+- [Migrating Spatial Anchors](./Migration_Anchors.md)
+- [Migrating Depth Meshing](./Migration_Meshing.md)
