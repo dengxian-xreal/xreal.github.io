@@ -1,5 +1,3 @@
-
-
 # Migrating Plane Detection
 
 This guide focuses on migrating plane detection functionality from NRSDK to XREAL SDK.
@@ -12,72 +10,74 @@ This guide focuses on migrating plane detection functionality from NRSDK to XREA
 
 ### 1. Remove NRSDK Plane Components
 - Remove the PlaneDetector component from your scene
+- Remove any NRSDK plane detection related scripts
 - Keep any custom plane visualization prefabs you want to reuse
 
 ### 2. Add AR Foundation Components
-1. Add AR Plane Manager to XR Origin (XR Rig)
-   ```csharp
-   // Add component through Inspector or programmatically:
-   var planeManager = xrOrigin.gameObject.AddComponent<ARPlaneManager>();
-   ```
+1. Add AR Plane Manager to XR Origin
+   - Select your XR Origin in the scene
+   - Add ARPlaneManager component through Inspector
 
 2. Configure Plane Prefab
    - You can reuse your existing plane visualization prefab
+     - Ensure it has an ARPlane component
    - Or use AR Foundation's default plane prefab
-   - Assign the prefab to the AR Plane Manager's "Plane Prefab" field
+   - Assign the prefab to the AR Plane Manager's "Plane Prefab" field in Inspector
 
 ### 3. Code Migration
 
 #### Old NRSDK Code
 ```csharp
-private NRPlaneDetector m_PlaneDetector;
-
-void Start()
+public class PlaneDetector : MonoBehaviour
 {
-    m_PlaneDetector = FindObjectOfType<NRPlaneDetector>();
-    m_PlaneDetector.OnPlaneAdded += OnPlaneDetected;
-}
+    public GameObject DetectedPlanePrefab;
+    private List<NRTrackablePlane> m_NewPlanes = new List<NRTrackablePlane>();
 
-private void OnPlaneDetected(NRTrackablePlane plane)
-{
-    // Handle new plane
+    public void Update()
+    {
+        NRFrame.GetTrackables<NRTrackablePlane>(m_NewPlanes, NRTrackableQueryFilter.New);
+        for (int i = 0; i < m_NewPlanes.Count; i++)
+        {
+            GameObject planeObject = Instantiate(DetectedPlanePrefab, Vector3.zero, Quaternion.identity, transform);
+            planeObject.GetComponent<NRTrackableBehaviour>().Initialize(m_NewPlanes[i]);
+        }
+    }
 }
 ```
 
-#### New AR Foundation Code
+#### Migration to AR Foundation
+When using AR Foundation, plane detection and visualization are handled automatically by the ARPlaneManager component. If you need to respond to plane detection events, you can add the following code:
+
 ```csharp
-using UnityEngine.XR.ARFoundation;
-
-private ARPlaneManager m_PlaneManager;
-
-void Start()
+private void SubscribePlaneEvents()
 {
-    m_PlaneManager = FindObjectOfType<ARPlaneManager>();
-    m_PlaneManager.planesChanged += OnPlanesChanged;
+    var planeManager = GetComponent<ARPlaneManager>();
+    planeManager.planesChanged += OnPlanesChanged;
 }
 
 private void OnPlanesChanged(ARPlanesChangedEventArgs args)
 {
-    // Handle added planes
     foreach (var plane in args.added)
     {
-        // Handle new plane
+        // Handle newly detected planes
     }
-    
-    // Handle updated and removed planes if needed
-    foreach (var plane in args.updated) { }
-    foreach (var plane in args.removed) { }
 }
 ```
 
+Key Differences:
+- NRSDK requires custom scripts to manage plane detection and instantiation.
+- AR Foundation automatically handles all plane detection and visualization through the ARPlaneManager component.
+- There is no need to manually instantiate plane prefabs; the ARPlaneManager takes care of this automatically.
+
 ### 4. Plane Properties Migration
 
-| NRSDK Property | AR Foundation Equivalent |
-|----------------|-------------------------|
-| plane.GetCenter() | plane.center |
-| plane.GetExtents() | plane.size |
-| plane.GetRotation() | plane.transform.rotation |
-| plane.GetTrackingState() | plane.trackingState |
+| NRSDK Property/Method | AR Foundation Equivalent | Description |
+|----------------------|-------------------------|-------------|
+| plane.GetCenterPose() | plane.transform.position/rotation | Position and orientation of the plane center |
+| plane.ExtentX | plane.size.x | Plane X axis size |
+| plane.ExtentZ | plane.size.y | Plane Z axis size |
+| plane.GetPlaneType() | plane.alignment | Plane type |
+| plane.GetBoundaryPolygon(List\<Vector3\>) | plane.boundary | Plane boundary points |
 
 ## Common Issues and Solutions
 
@@ -93,4 +93,3 @@ private void OnPlanesChanged(ARPlanesChangedEventArgs args)
 
 ## Additional Resources
 - [AR Foundation Plane Detection Documentation](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.0/manual/features/plane-detection.html)
-- [XREAL SDK Samples](https://developer.xreal.com/develop/unity/samples)
