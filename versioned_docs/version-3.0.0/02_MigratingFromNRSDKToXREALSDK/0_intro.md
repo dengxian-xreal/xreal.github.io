@@ -52,8 +52,6 @@ Open Window -> Package Manager,
 
 * Add pacakge from tarball
 
-![image-20240808201609886](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240808201609886.png)
-
 
 When importing the XREAL SDK into your Unity project, you'll encounter several key components that facilitate the development of AR applications. Here's a breakdown of the essential and optional elements:
 
