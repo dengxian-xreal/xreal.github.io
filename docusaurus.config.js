@@ -150,21 +150,21 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'XREAL Hardware Tutorials',
-                to: 'https://tutorial.xreal.com',
-              },
-            ],
-          },
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'XREAL Hardware Tutorials',
+          //       to: 'https://tutorial.xreal.com',
+          //     },
+          //   ],
+          // },
           {
             title: 'Community',
             items: [
               {
-                label: 'Forum',
-                to: 'https://community.xreal.com/',
+                label: 'Reddit',
+                to: 'https://www.reddit.com/r/XREAL/',
               },
               {
                 label: 'Discord',
