@@ -20,18 +20,30 @@ This quickstart guide will help you set up your development environment and test
 
 **Software Checklist**
 
-- [Unity 2021.3.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
-  - If you are using Unity 2021.3.X, please use AR Foundation 5.1.0 or later when you need AR Features.
+- Unity LTS (Long Term Support) versions:
+  - Unity 2021.3.X LTS
+  - Unity 2022.3.X LTS
+  - Unity 2023.3.X LTS
+    with Android Build Support
+  
+  >  If you are using Unity 2021.3.X, please use AR Foundation 5.1.0 or later when you need AR Features.
+  
 - XR Plugin Management
+
 - Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
   - Sample `Interaction Basics`
   - Sample `AR Features` (Optional)
+  
 - XR Interaction Toolkit (Both 2.5.x and 3.0.x are supported)
   - Sample `Starter Assets`
   - Sample `Hands Interaction Demo` (Optional)
+  
 - AR Foundation(Optional)
+
 - XR Hands(Optional)
+
 - Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
+
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that’s fine too)
 
 ### 2. Creating a Unity Project
@@ -60,41 +72,19 @@ Switch to the Android platform. After switching, some version of Unity may requi
 
 #### 3. Import XREAL SDK for Unity
 
-Open Window -> Package Manager, There are two import methods. 
+Open Window -> Package Manager -> Add package from tarball -> select `com.xreal.xr.tar.gz` and open.
 
-* Add package from git url (改成from tarball)
+![image-20250224180731563](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250224180731563.png)
 
-* Add pacakge from disk
+After importing the SDK, you may encounter some errors, but don't worry; please continue reading. 
 
->  For both the **Enterprise** and **Experimental** editions, only the ‘add package from disk’ method is supported. 
->
->  For the **Normal** edition of the SDK, both methods are supported.
-
-![image-20240808201609886](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240808201609886.png)
-
-1. Add package from git url: （目前需要内网环境才可以添加，后续需要修改成github链接）
-
-```
-ssh://git@gitlab.xreal.work:9022/SDKForUnity/xrsdkforunity.git?path=/XRProvider/com.xreal.xr#dev
-```
-
-2. Add package from disk
-
-   1.  Download the plugin.
-
-   2. Unzip folder `com.xreal.xr`
-
-   3. Select `package.json`，click Open
-
-When importing the XREAL SDK into your Unity project, you’ll encounter several key components that facilitate the development of AR applications. Here’s a breakdown of the essential and optional elements:
+You will find several key components that facilitate the development of AR applications within the XREAL SDK. Here’s a breakdown of the essential and optional elements:
 
 * **Interaction Basics**: This is an essential component that provides assets to streamline the setup of basic rendering and interactions using controllers and hand gestures, compatible with the XR Interaction Toolkit. It includes prefabs and demo scenes designed to help you get started quickly with the XREAL SDK integration. This component is fundamental as it lays the groundwork for any XR application, ensuring that you have the necessary tools for basic interaction and rendering.
 
 * **AR Features**: This is an optional component, recommended for those who require advanced AR functionalities in their projects. It includes sample scenes and other assets that demonstrate the integration of AR features supported by the XREAL SDK with AR Foundation. This part specifically supports Plane Detection, Image Tracking, Spatial Anchors, and Depth Meshing. Depending on the scope of your project, you can choose to import this component if your application will utilize complex AR features.
 
 When setting up your project, start with the **Interaction Basics** to ensure all fundamental interaction mechanisms are in place. Then, depending on the AR features necessary for your project, consider importing the AR Features module to expand the application’s capabilities with advanced AR technology. This modular approach allows you to keep your project lightweight by only including the components necessary for your specific needs.
-
-
 
 ### 3. Configure Project Settings
 
@@ -172,7 +162,7 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
   * **CAMERA**: Allows the app to access the camera.
   * **VIBRATION**: Allows the app to access the vibration. .
   * **AUDIO**: Allows the app to access the audio.
- 
+
 * `License Assets`: 
   By configuring the License, you can unlock advanced features of the SDK.
 

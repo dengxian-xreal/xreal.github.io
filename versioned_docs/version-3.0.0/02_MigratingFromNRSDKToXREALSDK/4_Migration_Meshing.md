@@ -127,7 +127,10 @@ Scene
     └── Mesh Prefab
 ```
 
+![image-20250224171056986](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250224171056986.png)
+
 ### Error Handling
+
 If you place the ARMeshManager directly on the XROrigin, Unity will display an error dialog and automatically remove the component:
 ```csharp
 void OnValidate()

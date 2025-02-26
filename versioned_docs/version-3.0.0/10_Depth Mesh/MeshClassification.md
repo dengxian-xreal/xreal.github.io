@@ -10,9 +10,9 @@ This guide will walk you through implementing Mesh Classification using the XREA
 
 Before using Mesh Classification, ensure your project is properly configured. Refer to the [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide for the necessary setup. Once set up, locate the “AR Feature” sample, specifically the **Mesh Classification** scene, and build it. You can also modify this sample to suit your needs.
 
-如果是在一个已有的场景中添加mesh classification的话：
+If you want to add mesh classification to an existing scene:
 
-如果你已经根据 [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide进行了相应的设置，找到场景中的XR Interaction Setup->XR Origin，在这个Prefab的子级，创建一个空物体，可以命名为MeshingManager，然后添加Component：AR Meshing Manager。
+After following the setup instructions in the [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide, locate the XR Interaction Setup->XR Origin in your scene. Create an empty GameObject as a child of this Prefab, which you can name MeshingManager, and add the AR Meshing Manager Component.
 
 To use meshing with AR Foundation, add the [ARMeshManager](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.0/api/UnityEngine.XR.ARFoundation.ARMeshManager.html) component to a child GameObject of your scene's XR Origin.
 
@@ -20,11 +20,11 @@ To use meshing with AR Foundation, add the [ARMeshManager](https://docs.unity3d.
 
 :::tip
 
-ARMeshManager必须是XROrigin的子级。
+The ARMeshManager must be a child of the XROrigin.
 
 :::
 
-然后在这个MeshingManager上，添加component：Mesh Classification Fracking (Script)，这个脚本可以将Mesh分成10个类别（分别是Background，wall，build...），你可以为每个类别添加不同的mesh Prefab，来以此作为区分。
+Then, add the Mesh Classification Tracking (Script) component to this MeshingManager. This script can classify Meshes into 10 categories (Background, Wall, Build, etc.). You can add different mesh Prefabs for each category to distinguish between them.
 
 ![image-20240815181751732](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240815181751732.png)
 
