@@ -18,8 +18,11 @@ Many developers have previously created excellent applications using NRSDK (e.g.
 
 **Software Checklist**
 
-- [Unity 2021.3.X or later](https://unity3d.com/get-unity/download) with Android Build Support Unity LTS (Long Term Support) version is recommended
-
+- Unity LTS (Long Term Support) versions with Android Build Support: 
+  - [Unity 2021.3.X](https://unity3d.com/get-unity/download)
+  - [Unity 2022.3.X](https://unity3d.com/get-unity/download)
+  - [Unity 6000.0.X](https://unity3d.com/get-unity/download)
+  >  If you are using Unity 2021.3.X, please use AR Foundation 5.1.0 when you need AR Features.
 - XR Plugin Management
 - Latest [XREAL SDK for Unity](https://developer.xreal.com/download)
   - Sample `Interaction Basics`

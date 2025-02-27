@@ -20,13 +20,13 @@ This quickstart guide will help you set up your development environment and test
 
 **Software Checklist**
 
-- Unity LTS (Long Term Support) versions:
+- Unity LTS (Long Term Support) versions with Android Build Support:
   - Unity 2021.3.X LTS
   - Unity 2022.3.X LTS
-  - Unity 2023.3.X LTS
-    with Android Build Support
+  - Unity 6000.0.X LTS
+    
   
-  >  If you are using Unity 2021.3.X, please use AR Foundation 5.1.0 or later when you need AR Features.
+  >  If you are using Unity 2021.3.X, please use AR Foundation 5.1.0 when you need AR Features.
   
 - XR Plugin Management
 
