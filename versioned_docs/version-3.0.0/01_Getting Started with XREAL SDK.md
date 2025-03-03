@@ -12,7 +12,7 @@ This quickstart guide will help you set up your development environment and test
 
 **Hardware Checklist**
 
-- Beam Pro or a supported Android Phone. Currently, only the Samsung S22, S24, and subsequent flagship series are supported.
+- Beam Pro or a supported Android Phone. Currently, only the Samsung S24, and subsequent flagship series are supported.
 
 - A pair of **XREAL** glasses.
 
@@ -42,7 +42,7 @@ This quickstart guide will help you set up your development environment and test
 
 - XR Hands(Optional)
 
-- Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
+- Android SDK 12.0 (API Level 31) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that’s fine too)
 

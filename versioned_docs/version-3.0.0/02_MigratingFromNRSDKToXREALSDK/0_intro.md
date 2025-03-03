@@ -32,7 +32,7 @@ Many developers have previously created excellent applications using NRSDK (e.g.
   - Sample `Hands Interaction Demo` (Optional)
 - AR Foundation
 - XR Hands(Optional)
-- Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
+- Android SDK 12.0 (API Level 31) or later, installed using the SDK Manager in [Android Studio](https://developer.android.com/studio)
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if you prefer other development environments that's fine too)
 
 ## 2. Import XRI and AR Foundation

@@ -2,19 +2,19 @@
 
 ### Version Compatibility
 
-Please refer to the following diagram for software compatibility among different versions of Nebula, NRSDK, and Android. Any combination along a vertical line (for example, Nebula 2.3.4, NRSDK 1.8.0, Android 12 and below with target API 31) remains a compatible combination.
+Please refer to the following diagram for software compatibility among different versions of server app (MyGlasses or ControlGlasses), XREAL SDK, and Android. Any combination along a vertical line (for example, MyGlasses 1.7.0, XREAL SDK 3.0.0, Android 12 and below with target API 31) remains a compatible combination.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-  <TabItem value="MyGlasses 1.7.0 & ControlGlasses 1.2.0" label="MyGlasses 1.7.0 & ControlGlasses 1.2.0">
-    ![nebula234](./Images/nebula234.svg)
+  <TabItem value="MyGlasses 1.7.0 & ControlGlasses 1.1.0" label="MyGlasses 1.7.0 & ControlGlasses 1.1.0">
+  ![image-20250303161933651](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250303161933651.png)
   </TabItem>
-  
 
- 
+
+
 
 </Tabs>
 
@@ -62,4 +62,4 @@ Moreover, compatibility with **Air 2 Ultra** also means that features such as ha
 | :------ | :------------------------------------- | :----------------- | :----------- | :-------------- |
 | Samsung | Qualcomm Snapdragon 8 Gen 3            | galaxy S24         | SM-S9210     | Android 14      |
 
---- 
+---
