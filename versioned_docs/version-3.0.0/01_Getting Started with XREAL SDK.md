@@ -193,6 +193,8 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
 - Connect your Phone / Beam Pro to your Mac / Windows PC. 
 - Install your app through WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) or type-C cable after the build is successful.
 - Disconnect the device with your PC, and then connect it to the glasses.
+- Open ControlGlasses(Android phone) or MyGlasses(Beam Pro), then find your app then click to open it.
+- Grant the necessary permissions if prompted, especially ensure that "Allow to display over other apps" is checked.
 - (Optional) Use **Android Logcat** to view logged messages. We recommend using WiFi **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) to connect to your PC so that you do not have to be connected through the data cable most of the time.
 - Enable developer options and USB debugging on your Phone / Beam Pro. **Android Debug Bridge** [(adb)](https://developer.android.com/studio/command-line/adb) is enabled as default and does not require manual setting.
 
