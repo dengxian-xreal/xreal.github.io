@@ -126,7 +126,7 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
 ![image-20241226190639916](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226190639916.png)
 
 * `Stereo Rendering Mode`
-  * **Multi-view**: This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance.
+  * **Multi-view**: This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance. To understand Single Pass Stereo rendering in detail, go to [Single Pass Stereo Rendering](https://docs.unity3d.com/Manual/SinglePassStereoRendering.html) topics in Unity’s documentation.
   * **Multi-pass**: In this mode, the left and right eye views are rendered in separate passes, which can be less efficient but may be necessary for certain effects or compatibility.
 
 * `Initial Tracking Type`
