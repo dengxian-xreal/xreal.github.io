@@ -17,7 +17,9 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="CloudXR v4.0" label="CloudXR v4.0" default>
-    This is an apple 🍎
+    
+[CloudXR_20241216.apk](https://public-resource.xreal.com/download/Application/cloudxr_2024-12-16_155919-2.4.0.13-release.apk)
+Compatible with MyGlasses 1.5.0.
   </TabItem>
   <TabItem value="CloudXR v3.2" label="CloudXR v3.2">
    [XRStreaming.apk](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk)
@@ -30,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 - PC (Windows 10 or later) with VR-ready graphic card (NVIDIA GPU, including Quadro GPUs)
 - XREAL Light / XREAL X / XREAL Air Series
-- Nebula-compatible Android Phones
+- Nebula-compatible Android Phones / Beam Pro
 - WLAN network
 - Bluetooth game controller (Optional)
 
@@ -53,15 +55,16 @@ Please see the following for detailed setup instructions:
 
 1. Install both [Steam](https://store.steampowered.com/about/) and [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) on your PC;
 
-2. Download [CloudXR-Setup-v3.2.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe) (NVIDIA CloudXR SDK server, for Nebula v3.0.0);
+2. Download [CloudXR-Setup-v4.0.zip](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v4.0.zip) (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.5.0);
 
    :::tip
 
-   [CouldXR-Setup-v3.1.exe](https://nreal-public.oss-us-west-1.aliyuncs.com/download/CloudXR-Setup/CloudXR-Setup-v3.1.exe), for Nebula v2.3.4
+   [CouldXR-Setup-v3.1.exe](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v3.1.exe), for Nebula v2.3.4;   
+   [CloudXR-Setup-v3.2.exe](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe), for Nebula v3.0.0;
    :::
 
-3. Launch downloaded **CloudXR-Setup-v3.2.exe,** choose CloudXR Server as following and install CloudXR Server on your PC 
-   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F9ZjLqmbeu90254tpTk8d%2Forigin_img_v2_032336e4-1eaa-4e4d-869b-5ceffdffd00g.jpg&width=768&dpr=4&quality=100&sign=b1ab30eef8ca5bbb9349510dcca8d589b0d727b6a94ae143b418d03c445f826f)
+3. Unzip downloaded **CloudXR-Setup-v4.0.zip,** choose CloudXR Server as following and install CloudXR Server on your PC 
+   ![image-20240813171323638](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171323638.png)
 
 4. Install the latest Nebula on your Android phone
 
@@ -73,15 +76,15 @@ Please see the following for detailed setup instructions:
 
 6. Launch Steam and SteamVR you've just installed. Make sure your Steam account is logged in.
 7. Plug in your XREAL glasses to your Android phone;
-8. Launch Nebula app. On Nebula home page, click **XR Streaming** icon.
+8. Launch Nebula app. On Nebula home page, click **CloudXR** icon. If you use Beam Pro, launch MyGlasses app, click **CloudXR** icon.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FCorgrAp4bG7kVya96E4I%2FNreal_Shot_1659698092233.png&width=768&dpr=4&quality=100&sign=d432698c88b200c28b2309a33fcd590f7247b02028ef6ad244dbbdeb022792e9)
+![image-20241008164259210](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241008164259210.png)
 
 **The final step:**
 
 9. On the popup screen on your Android phone, enter your PC's IP address. You should be able to find your PC name listed in the **Local Devices** if connected to the same WiFi. Click on it, and the IP address will be automatically filled in the input box.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F6pB7FLXmfTsFHWMgLnFl%2Fimage.png&width=300&dpr=4&quality=100&sign=f9a53694a10e63f97be9e56ed2da94e9d2f06489503fa6e54b7a8913fcafa8e9)
+![image-20240813171352631](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171352631.png)
 
 10. Enter your initial HMD height (1 - 2m), depending on your posture - sitting or standing and your height.
 11. Hit `Go.` Enjoy!
@@ -92,24 +95,17 @@ Please see the following for detailed setup instructions:
 
 **Method 1:**
 
-- 
+- On the taskbar, select **Wi-Fi network** ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fgyn60eFQ5AQywJmKbmD8%2Fimage.png&width=43&dpr=4&quality=100&sign=09d7ffdd1c83fdeab2d9f15a07756eb8f9f5c09e706481e31c6123a50dc9600d)> the Wi-Fi network you're connected to > **Properties.**
 
-  On the taskbar, select **Wi-Fi network** ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fgyn60eFQ5AQywJmKbmD8%2Fimage.png&width=43&dpr=4&quality=100&sign=09d7ffdd1c83fdeab2d9f15a07756eb8f9f5c09e706481e31c6123a50dc9600d)> the Wi-Fi network you're connected to > **Properties.**
+​       ![image-20240813171404479](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813171404479.png)
 
-​       ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FK4Quce1Op0wjuMGe3zR3%2Fimage.png&width=300&dpr=4&quality=100&sign=86884e35d99029bf7c3a61ba7ba4ab0633debf945d0134569e7c645e06b744f8)
-
-- 
-
-  Under **Properties**, look for your IP address listed next to **IPv4 address**.
+- Under **Properties**, look for your IP address listed next to **IPv4 address**.
 
 **Method 2:**
 
-- 
+- Open the Start menu and type `cmd` to open the Command Prompt;
 
-  Open the Start menu and type `**cmd**` to open the Command Prompt;
+- Type `ipconfig` into the Command Prompt and press `Enter`. The tool will return a set of data that includes your IP address. look for your IP address listed next to **IPv4 address;**
 
-- 
+​       ![image-20240813172001288](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172001288.png)
 
-  Type `**ipconfig**` into the Command Prompt and press `**Enter**`. The tool will return a set of data that includes your IP address. look for your IP address listed next to **IPv4 address;**
-
-​       ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FdvWG1uh104WphiBw6jvl%2Fimage.png&width=300&dpr=4&quality=100&sign=b460543f8eec5c52617a6c369b1c86e4beec3542464ff4132bdd158022b3c73b)
