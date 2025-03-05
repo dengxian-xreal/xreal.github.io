@@ -60,7 +60,10 @@
       },
       "items": [
         "Input and Interactions/Controller",
-        "Input and Interactions/Hand Tracking"
+        "Input and Interactions/Hand Tracking",
+        "Input and Interactions/Gaze",
+        "Input and Interactions/Notification popup"
+        
       ]
     },
     {
@@ -133,7 +136,7 @@
         "title": "Tools"
       },
       "items": [
-        "Tools/Single Pass Stereo Rendering",
+       
         "Tools/First Person View",
         "Tools/Emulator",
         "Tools/XR Streaming",
@@ -142,20 +145,19 @@
     },
     {
       "type": "category",
-      "label": "Miscellaneous",
+      "label": "Rendering",
       "link": {
         "type": "generated-index",
-        "title": "Miscellaneous"
+        "title": "Rendering"
       },
       "items": [
-        "Miscellaneous/NRSDK Coordinate Systems",
-        "Miscellaneous/MRTK2 Integration",
-        "Miscellaneous/MRTK3 Integration",
-        "Miscellaneous/Notification popup",
-        "Miscellaneous/Render Metrics",
-        "Miscellaneous/Render MonoMode"
+        "Rendering/Warping",
+        "Rendering/Single Pass Stereo Rendering",
+        "Rendering/Render Metrics"
       ]
     },
+
+
     "Frequently Asked Questions",
     {
       "type": "category",
