@@ -1,5 +1,5 @@
 # XREAL SDK 3.0.0
-![Release Date](https://img.shields.io/badge/Release_Date-January_15,_2025-0080FF?style=flat&logoWidth=1)
+![Release Date](https://img.shields.io/badge/Release_Date-March_14,_2025-0080FF?style=flat&logoWidth=1)
 
 :::info
 
@@ -19,35 +19,21 @@ XREAL SDK 3.0.0 represents a major architectural upgrade from NRSDK, now fully i
 
 * **Development Framework Improvements**
   * Standardized development workflow aligned with Unity's XR ecosystem
-  * Simplified API structure for better development efficiency
   * Enhanced compatibility with Unity's built-in XR tools and features
-  * Improved integration with Unity's rendering pipeline
 
 * **Feature Enhancements**
-  * Upgraded Spatial Computing capabilities
-  * Enhanced Hand Tracking precision
-  * Improved Depth Mesh generation
+  * Updated from 23 joint points to 26 joint points to align with OpenXR standards
   * Optimized Image Tracking performance
+    * Completely revamped image tracking system with significantly improved detection rates
+    * Enhanced tracking stability
+  * Added support for XREAL Eye, an RGB camera accessory
 
-### Improvements
 
-* Streamlined development workflow through Unity XR Plugin integration
-* Enhanced performance optimization through Unity's native XR systems
-* Improved stability and reliability in tracking features
-* Better memory management and resource utilization
+### Compatibility Notes
 
-### Breaking Changes
-
-* Previous NRSDK APIs are not compatible with XREAL SDK 3.0.0
-* Projects using NRSDK will need to be migrated to the new XR Plugin architecture
-* Updated minimum Unity version requirement to 2021.3.X
-* New initialization and setup process aligned with Unity XR Plugin standards
-
-### Known Issues
-
-* Some legacy NRSDK features may require additional configuration in the new architecture
-* Initial setup may require additional steps compared to NRSDK
-* Performance optimization might be needed for projects migrated from NRSDK
+**MyGlasses Hardware Compatibility:**
+* Developers who do not utilize Hand Tracking or Image Tracking features can continue using previous SDK versions with the new MyGlasses
+* To leverage the enhanced Hand Tracking (26 joint points) and improved Image Tracking capabilities with MyGlasses, upgrading to SDK 3.0.0 is required
 
 ### Migration Guide
 
