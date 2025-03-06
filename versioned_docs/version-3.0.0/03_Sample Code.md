@@ -1,25 +1,75 @@
 # Sample Code
+The XREAL SDK includes numerous sample scenes and code examples to help you understand and implement AR features in your applications. These samples demonstrate the capabilities of the SDK and provide reference implementations for various functionalities.
+## Sample Code Organization
 
-Listed here are the sample code from demo scenes in XREAL SDK package and code described throughout this documentation.
+In the XREAL SDK plugin, sample code is provided in two forms:
 
-| Documentation                                                | Relevant Unity Scene and Sample Code                         |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
-|                                                              | **HelloMR** `NRKernal.NRExamples.HelloMRController NRKernal.NRExamples.DemoScenesMenu` |
-| [Controller Basics](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/input-and-camera/nrinput) | **Input-ControllerInfo** `NRKernal.NRExamples.ControllerInfoDisplayUI` |
-| [Customize Controller UI](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/input-and-camera/customize-phone-controller) | **Input-VirtualController** `NRKernal.NRExamples.CustomVirtualControlerUI` |
-| [Object Manipulation (Tutorial)](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/input-and-camera/interact-with-unity-ui-tutorial) | **Input-Interaction** `NRKernal.NRExamples.CubeInteractiveTest` |
-| [Hand Tracking](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/hand-tracking) | **HandTracking** `NRKernal.NRExamples.HandTrackingExample`   |
-| [Image Tracking](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/image-tracking) | **ImageTracking** `NRKernal.NRExamples.TrackingImageExampleController` |
-| [Plane Detection (Tutorial) ](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/plane-detection-tutorial) | Project code can be downloaded [here](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/plane-detection-tutorial/wrap-up) |
-| [Depth Mesh](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/depth-mesh/tutorial-mesh-collision) | **Meshing** `NRKernal.NRExamples.NRMeshingManager`           |
-| [Spatial Anchor](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/spatial-anchor) | **MappingExample** `NRKernal.NRExamples.LocalMapExample NRKernal.Persistence.AnchorItem NRKernal.Persistence.NRWorldAnchor NRKernal.Persistence.NRWorldAnchorStore` |
-|                                                              | **HelloMRSwitchConfig (Experimental)** `NRKernal.NRExamples.PlaneDetector` |
-|                                                              | **RGBCamera** `NRKernal.NRExamples.CameraCaptureController`  |
-| [Access RGB Camera](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/miscellaneous/recording) | **RGBCamera-Record** `NRKernal.NRExamples.VideoCapture2LocalExample` |
-|                                                              | **RGBCamera-Capture** `NRKernal.NRExamples.PhotoCaptureExample` |
-| [First Person View](https://app.gitbook.com/o/n9Gz0qLyZFcBAT9F8hDM/s/yXoV7SMVFQhr75lOIoQv/development/tools/first-person-view) | **FirstPersonViewStreamingCast** (Experimental) `NRKernal.Experimental.StreammingCast.FirstPersonStreammingCast` (Experimental) |
-|                                                              | **HelloMR-ChangeMode** (Experimental) `NRKernal.NRExamples.ChangeModeController` |
-|                                                              | **PupilDistanceAdjustment** (Experimental) `NRKernal.Experimental.NRExamples.PupilDistanceAdjustment `(Experimental) |
-|                                                              | **RenderForDistance** (Experimental)                         |
-|                                                              | **Overlay-VideoPlayer** (Experimental)                       |
-|                                                              | **AudioStreamming** (Experimental) `NRKernal.Experimental.NRExamples.AudioCaptureExample` (Experimental) |
+* Demo Unity scenes that you can run directly
+* C# script implementations that you can reference in your own code
+
+The samples are organized into several categories in the plugin structure:
+
+## Interaction Basics
+Examples for input handling and interaction with virtual objects.
+| Feature | Unity Scene | Sample Code |
+| :------ | :---------- | :---------- |
+| [Controller Basics](01_Getting%20Started%20with%20XREAL%20SDK.md) | HelloMR | HelloMR |
+| [Display Stability Optimization](13_Rendering/0_Warping.md) | FocusPlane | FocusPlanePanel |
+| [Render Metrics](13_Rendering/3_Render%20Metrics.md) | Metrics | MetricsPanel |
+| RayLaser | XREALLaser | XREALLaserReticle<br />XREALLaserVisual |
+| StereoVideo| StereoVideo | StereoVideoDemo |
+
+## AR Features
+Examples demonstrating core AR capabilities such as tracking, detection, and meshing.
+| Feature | Unity Scene | Sample Code |
+| :------ | :---------- | :---------- |
+| [Image Tracking](08_Image%20Tracking/intro.md) | BasicImageTracking | NRKernal.NRExamples.TrackingImageExampleController |
+| [Plane Detection](09_Plane%20Detection.md) | PlaneDetection | NRKernal.NRExamples.PlaneDetector |
+| [Mesh Classification](10_Depth%20Mesh/MeshClassification.md) | MeshClassification | MeshClassificationFracking |
+| [Basic Meshing](10_Depth%20Mesh/NormalMesh.md) | NormalMesh | MeshSaver<br />MeshSaveUtility<br />MeshBlockInfo<br />MeshChangeStateInfo |
+| [Spatial Anchor](11_Spatial%20Anchor/0_intro.md) | Anchors | Anchors.5(For ARF 5.0)<br />Anchors.6(For ARF 6.0)<br />AnchorInfo<br />ConfirmDialog<br />MapQualityBar<br />MapQualityIndicator |
+| [RGBCamera](06_Camera/Access%20RGB%20Camera.md) | RGBCamera | ARFoundationCameraSample |
+## Camera Features
+Examples for accessing and utilizing the RGB camera.
+| Feature | Unity Scene | Sample Code |
+| :------ | :---------- | :---------- |
+| [Video Recording & Photo Capture](06_Camera/Access%20RGB%20Camera.md)  | RGBCameraAndCapture | CaptureExample |
+| [Accessing RGB Camera Data](06_Camera/Access%20RGB%20Camera.md) | RGBCameraAndCapture | RGBCameraExample |
+| [First Person View](12_Tools/1_First%20Person%20View.md) | FirstPersonViewStreamingCast | FirstPersonStreammingCast |
+
+## Other Examples
+Additional demos and experimental features.
+| Feature | Unity Scene | Sample Code |
+| :------ | :---------- | :---------- |
+| [MarkerTracking](08_Image%20Tracking/Marker.md) | HelloMR | NRKernal.NRExamples.HelloMRController<br />NRKernal.NRExamples.DemoScenesMenu |
+
+
+## Accessing the Sample Code
+
+To access these sample projects in your Unity environment:
+
+1. Open your Unity project
+
+2. Go to Window > Package Manager
+
+3. Find and select XREAL XR Plugin from the package list
+
+4. Navigate to the Samples tab
+
+5. Click the Import button next to any sample you want to use in your project
+
+![image-20250305165653216](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250305165653216.png)
+
+You can import individual samples based on the specific feature you want to implement, or import all samples to explore the full range of XREAL SDK capabilities.
+
+
+
+## Using the Sample Code
+
+To use these samples:
+- Open the XREAL SDK in Unity
+- Navigate to the relevant scene in the project panel
+- Run the scene to see the feature in action
+- Review the attached scripts to understand the implementation
+Each sample demonstrates a specific feature or capability of the XREAL SDK and can serve as a starting point for implementing similar functionality in your own applications.
+For detailed information on specific features, refer to the corresponding documentation sections linked in the table above.
