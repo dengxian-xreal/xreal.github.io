@@ -23,8 +23,8 @@ Examples for input handling and interaction with virtual objects.
 Examples demonstrating core AR capabilities such as tracking, detection, and meshing.
 | Feature | Unity Scene | Sample Code |
 | :------ | :---------- | :---------- |
-| [Image Tracking](08_Image%20Tracking/intro.md) | BasicImageTracking | NRKernal.NRExamples.TrackingImageExampleController |
-| [Plane Detection](09_Plane%20Detection.md) | PlaneDetection | NRKernal.NRExamples.PlaneDetector |
+| [Image Tracking](08_Image%20Tracking/intro.md) | BasicImageTracking | TrackedImageInfoManager |
+| [Plane Detection](09_Plane%20Detection.md) | PlaneDetection | ARFeatheredPlaneMeshVisualizer |
 | [Mesh Classification](10_Depth%20Mesh/MeshClassification.md) | MeshClassification | MeshClassificationFracking |
 | [Basic Meshing](10_Depth%20Mesh/NormalMesh.md) | NormalMesh | MeshSaver<br />MeshSaveUtility<br />MeshBlockInfo<br />MeshChangeStateInfo |
 | [Spatial Anchor](11_Spatial%20Anchor/0_intro.md) | Anchors | Anchors.5(For ARF 5.0)<br />Anchors.6(For ARF 6.0)<br />AnchorInfo<br />ConfirmDialog<br />MapQualityBar<br />MapQualityIndicator |
@@ -41,7 +41,7 @@ Examples for accessing and utilizing the RGB camera.
 Additional demos and experimental features.
 | Feature | Unity Scene | Sample Code |
 | :------ | :---------- | :---------- |
-| [MarkerTracking](08_Image%20Tracking/Marker.md) | HelloMR | NRKernal.NRExamples.HelloMRController<br />NRKernal.NRExamples.DemoScenesMenu |
+| [XREAL Marker](08_Image%20Tracking/Marker.md) | MarkerTracking | MarkerImageExampleController |
 
 
 ## Accessing the Sample Code

@@ -1,4 +1,4 @@
-# Migrating Anchors ⚠️ To be improved: share anchor section
+# Migrating Anchors
 
 This guide focuses on migrating anchor functionality from NRSDK to XREAL SDK.
 
