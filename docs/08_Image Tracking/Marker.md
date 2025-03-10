@@ -4,7 +4,17 @@
 
 Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[SpatialLife_20241216](https://public-resource.xreal.com/download/Application/spatiallife20241216.apk),' thoughtfully crafted by the XREAL design team.
 
-![image-20240812173022249](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173022249.png)
+XREAL Markers have been recognized for their innovative design, winning the prestigious [iF Design Award 2025](https://ifdesign.com/en/winner-ranking/project/xreal-markers/711126) in the User Experience (UX) category. The award acknowledges how XREAL Markers bridge physical interaction and virtual displays, offering an intuitive way to control AR content through tactile input and gestures.
+
+
+
+
+<div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px'}}>
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/20250227-140646.jpeg" alt="XREAL Markers" style={{maxWidth: '45%'}} />
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/markersgaid___2.jpg" alt="XREAL Markers Guide" style={{maxWidth: '45%'}} />
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/02.jpg" alt="XREAL Markers Usage" style={{maxWidth: '45%'}} />
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/spacial-life.jpg" alt="Spatial Life Application" style={{maxWidth: '45%'}} />
+</div>
 
 ## Requirement
 
@@ -53,7 +63,7 @@ Fixed: The problem of not being recognized after switching back from the backgro
 
 </details>
 
-> Developers who don’t have Marker cards can download and print this PDF file for use.
+> Developers who don't have Marker cards can download and print this PDF file for use.
 
 [XREAL Markers Print.pdf](../assets/XREAL%20Markers%20Print.pdf)
 
@@ -62,7 +72,7 @@ Usage Instructions:
 * Please print the Marker images on matte A4 paper in color to ensure accurate output size.
 * When printing, do not enlarge the image; print at 100% scale.
 * Cut out the Marker along the black border and attach it to a rigid cardboard.
-* Within the camera’s recognition range, only one card of the same color should appear.
+* Within the camera's recognition range, only one card of the same color should appear.
 
 ## Developer Guide
 
@@ -177,3 +187,4 @@ public void DisableImageTracking()
     NRSessionManager.Instance.SetConfiguration(config);
 }
 ```
+
