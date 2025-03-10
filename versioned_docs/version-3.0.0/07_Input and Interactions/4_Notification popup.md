@@ -4,8 +4,12 @@
 
 The XREAL notification popup system provides a simple framework for displaying various notifications and warnings to users through the `NotificationListener` prefab.
 
+> Note: The NotificationListener prefab is already included in the `XREAL Interaction Setup` and `XREAL Hands Interaction Setup`. For custom scenes, you can find this prefab in the Package and drag it into your scene.
 
-**Notification types**
+![image-20250310173331922](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250310173331922.png)
+
+
+## Notification Types
 
 The `XREALNotificationType` enum defines the following notification types:
 - Battery Notifications: Displays warnings when device battery is low
