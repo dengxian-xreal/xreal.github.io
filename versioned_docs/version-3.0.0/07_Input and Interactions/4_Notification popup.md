@@ -1,37 +1,45 @@
 # Notification Popup
 
-### Ordinary prompt window
+## Overview
 
-Ordinary prompt window provides information about the status of the devices, such as slam tracking state, glasses temprature level, device battery state.
-
-**Enable Notification**
-
-- Find the NRSessionConfig in your project
-
-- Check the “Enable Notifiction” box
+The XREAL notification popup system provides a simple framework for displaying various notifications and warnings to users through the `NotificationListener` prefab.
 
 
 **Notification types**
 
-- Currently provided notifiction windows:
-
-  - Slam tracking lost
-  - Glasses Temperature Warm
-  - Glasses Temperature Hot
-  - Phone Battery 30% Notification
-  - Phone Battery 15% Notification
-
-- Please refer to *NRNotificationListener* prefab under *NRSDK>Resources* and its *NRNotificationListener.cs* script to customize your notification message.
+The `XREALNotificationType` enum defines the following notification types:
+- Battery Notifications: Displays warnings when device battery is low
+- Temperature Notifications: Alerts when device temperature is high
+- SLAM State Notifications: Provides information about SLAM tracking status
+- Native Error Notifications: Shows errors from the XREAL system
 
 
-### Error prompt window
+## Enabling/Disabling Notifications
 
-Error prompt window provides information for sever error. It usually pops up when the devices has been unable to run properly.
+Each notification type can be independently enabled or disabled through the Inspector or via code:
 
-**Customize error tips**
+![image-20250310171120417](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250310171120417.png)
 
-- Find the ***NRGlassesErrorTip\*** prefab under *NRSDK>Resources*, copy it to your project.
+```csharp
+// Get a reference to the listener
+XREALNotificationListener listener = GetComponent<XREALNotificationListener>();
 
-- Modify and save it as a new prefab, and drag it to your SessionConfig.
+// Enable or disable specific notification types
+listener.EnableLowPowerTips = true;      // Control battery notifications
+listener.EnableHighTempTips = false;     // Control temperature notifications
+listener.EnableSlamStateTips = true;     // Control SLAM state notifications
+listener.EnableNativeErrorTips = true;   // Control native error notifications
+```
 
-- Modify prompt text
+## Customizing Notification Text
+
+To modify notification text, you can use the provided `LocalizationTool` for customization. This allows you to adjust notification content for different languages or specific requirements.
+
+![image-20250310171204764](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250310171204764.png)
+
+
+## Use Cases
+- Battery Management: Alert users when device battery is low
+- Temperature Monitoring: Notify users when the device is overheating
+- Tracking Quality Indicators: Help users understand current SLAM tracking status
+- System Issue Alerts: Inform users about system-level problems that may affect application performance

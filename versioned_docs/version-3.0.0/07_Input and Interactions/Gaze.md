@@ -1,18 +1,34 @@
 # Gaze
 
-Gaze其实是Unity的 XR Interaction Toolkit提供的标准功能，本节仅作简单介绍。XRI的demoScene中就支持Gaze交互方式，可以直接打包出来进行测试。
+Gaze interaction is a standard feature provided by Unity's XR Interaction Toolkit (XRI). This section provides a comprehensive overview of implementing gaze-based interactions in your XR applications. Unity's XRI demo scenes already support gaze interaction out of the box for testing purposes.
 
-本节简单介绍下如何在HelloMR中也实现此功能。
+This guide will explain how to implement gaze functionality in the HelloMR.
 
-要实现交互，需要有Interactor和Interactable, Gaze比较特殊。
-XR Gaze Interactor 与其他可交互组件（如 XR Simple Interactable 和 XR Grab Interactable）协同工作，实现凝视交互。这些可交互组件并不需要添加额外的“Gaze Interactable”组件，而是通过启用其上的“Allow Gaze Interaction”选项来支持凝视交互。
+## Understanding Gaze Interaction
 
-Gaze Interactor比较简单，只需要把Camera Offset中的两个预制体勾选上即可。
+To implement any XR interaction, two core components are required: Interactors and Interactables. Gaze interactions have some unique characteristics compared to other interaction methods.
 
-这个面板就可以用gaze交互了。
+The XR Gaze Interactor works in conjunction with standard interactable components (such as XR Simple Interactable and XR Grab Interactable). Unlike other interaction types, these interactables don't require a specific "Gaze Interactable" component. Instead, they support gaze interaction by enabling the "Allow Gaze Interaction" option on the interactable components.
 
+## Implementation Steps
 
+Setting up a Gaze Interactor is straightforward:
+1. Locate your Camera Offset object in the hierarchy
+2. Enable the preconfigured gaze interaction prefabs
 
+   ![image-20250310161257805](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250310161257805.png)
+3. Ensure your interactables have "Allow Gaze Interaction" enabled
 
-## Further reading
-https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.3/manual/xr-gaze-interactor.html
+   ![image-20250310160943833](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250310160943833.png)
+
+Once properly configured, your UI panels and other interactable objects will be responsive to gaze input.
+
+## Usage Considerations
+
+- Gaze interactions are particularly useful for accessibility features
+- They work well in combination with other interaction methods like controllers
+- Consider appropriate visual feedback to indicate when an object is being gazed at
+- Set appropriate timeout values for gaze activation to prevent accidental interactions
+
+## Further Reading
+- [Unity XR Interaction Toolkit - Gaze Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.3/manual/xr-gaze-interactor.html)
