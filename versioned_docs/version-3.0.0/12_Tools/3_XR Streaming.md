@@ -17,9 +17,14 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="CloudXR v4.0" label="CloudXR v4.0" default>
-    
+
+ [CloudXR_20250314.apk](https://public-resource.xreal.com/download/Application/cloudxr_2025-03-04_103403-3.0.0.14-release.apk)
+ Compatible with MyGlasses 1.7.0.
+
 [CloudXR_20241216.apk](https://public-resource.xreal.com/download/Application/cloudxr_2024-12-16_155919-2.4.0.13-release.apk)
 Compatible with MyGlasses 1.5.0.
+
+
   </TabItem>
   <TabItem value="CloudXR v3.2" label="CloudXR v3.2">
    [XRStreaming.apk](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk)
@@ -31,7 +36,7 @@ Compatible with MyGlasses 1.5.0.
 **Hardware:**
 
 - PC (Windows 10 or later) with VR-ready graphic card (NVIDIA GPU, including Quadro GPUs)
-- XREAL Light / XREAL X / XREAL Air Series
+- XREAL Light / XREAL X / XREAL Air Series / XREAL One Series
 - Nebula-compatible Android Phones / Beam Pro
 - WLAN network
 - Bluetooth game controller (Optional)

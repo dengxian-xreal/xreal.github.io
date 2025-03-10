@@ -4,10 +4,6 @@ The **Anchors** scene within the XREAL SDK offers an interactive demonstration o
 
 ### Experience Flow
 
-⚠️等demo制作完成后，录制一个新的gif
-
-⚠️打包一个APK
-
 To quickly experience the functionality of anchors, download the provided APK and follow the steps below to explore various anchor operations. For those interested in further development, please refer to the Developer Guide in the next section.
 
 **1.Create an Anchor** 
@@ -120,10 +116,6 @@ When environmental conditions change—such as variations in lighting, shifts in
         }
     }
 ```
-
-#### Use a Spatial Anchor
-
-⚠️待补充
 
 #### Remove a Spatial Anchor
 

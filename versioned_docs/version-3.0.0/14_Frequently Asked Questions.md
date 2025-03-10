@@ -4,21 +4,18 @@ toc_max_heading_level: 5
 ---
 # Frequently Asked Questions
 
-#### **1 Which Unity version is supported by NRSDK?**
+#### **1 Which Unity version is supported by XREAL SDK?**
 
-Unity 2019.4.x and above. The LTS(long term support) Unity version is recommended.
-
-
+Unity 2021.3.x and above. The LTS(long term support) Unity version is recommended.
 
 
-#### **2 Through which API can I get the user's device (XREAL Light/Air) my apk is running on?**
 
+
+#### **2 The app is not being able to be opened through MyGlasses, showing "Currently, your app is not supported on this device"**
+Please add the following permission in the **AndroidManifest.xml**:
 ```
-NRDeviceType NRKernal.NRDeviceSubsystem.GetDeviceType()
+<meta-data android:name="com.nreal.supportDevices" android:value="1|NrealLight|2|NrealAir" />
 ```
-
-
-
 #### **3 Error occurs when building an apk**
 
 ```
