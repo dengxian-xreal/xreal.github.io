@@ -87,8 +87,7 @@
       },
       "items": [
         "Depth Mesh/MeshClassification",
-        "Depth Mesh/Use Meshes in the Editor",
-        "Depth Mesh/Tutorial-Mesh Collision"
+        "Depth Mesh/Use Meshes in the Editor"
       ]
     },
     {
@@ -99,33 +98,8 @@
         "id": "Spatial Anchor/intro"
       },
       "items": [
-        "Spatial Anchor/Anchors",
-        {
-          "type": "category",
-          "label": "Tutorial: Halloween Treasure Hunt",
-          "link": {
-            "type": "doc",
-            "id": "Spatial Anchor/Tutorial-HalloweenTreasureHunt/Intro"
-          },
-          "items": [
-            "Spatial Anchor/Tutorial-HalloweenTreasureHunt/HandletheSituationofFailedAnchorSaving"
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Tutorial: Sharing Anchors",
-          "link": {
-            "type": "doc",
-            "id": "Spatial Anchor/Tutorial-Sharing Anchors/intro"
-          },
-          "items": [
-            "Spatial Anchor/Tutorial-Sharing Anchors/SettingUpPhoton",
-            "Spatial Anchor/Tutorial-Sharing Anchors/Firebase",
-            "Spatial Anchor/Tutorial-Sharing Anchors/Aliyun",
-            "Spatial Anchor/Tutorial-Sharing Anchors/CloudSaveandLoad",
-            "Spatial Anchor/Tutorial-Sharing Anchors/SharingAnchorswithPhoton"
-          ]
-        }
+        "Spatial Anchor/Anchors"
+        
       ]
     },
     {

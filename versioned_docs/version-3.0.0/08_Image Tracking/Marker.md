@@ -2,9 +2,20 @@
 
 ## Introduction
 
-Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[Spatial Life](https://public-resource.xreal.com/download/Application/spatiallife0619.apk),' thoughtfully crafted by the XREAL design team.
+Introducing XREAL Markers, a novel set of 'interactive' image tracking cards designed to facilitate virtual and real-world interaction. By manipulating the magnetic sliders on the cards, users can engage in dynamic gameplay experiences. The cards are available in three distinct colors: green for bidirectional functionality, blue for tridirectional, and orange for six-directional capabilities. Developers are encouraged to leverage the cards' interactive features to innovate and enhance both new and existing applications. Additionally, we invite you to explore the sample application '[SpatialLife_20241216](https://public-resource.xreal.com/download/Application/spatiallife20241216.apk),' thoughtfully crafted by the XREAL design team.
 
-![image-20240812173022249](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812173022249.png)
+XREAL Markers have been recognized for their innovative design, winning the prestigious [iF Design Award 2025](https://ifdesign.com/en/winner-ranking/project/xreal-markers/711126) in the User Experience (UX) category. The award acknowledges how XREAL Markers bridge physical interaction and virtual displays, offering an intuitive way to control AR content through tactile input and gestures.
+
+
+
+
+<div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px'}}>
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/20250227-140646.jpeg" alt="XREAL Markers" style={{maxWidth: '45%'}} />
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/markersgaid___2.jpg" alt="XREAL Markers Guide" style={{maxWidth: '45%'}} />
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/02.jpg" alt="XREAL Markers Usage" style={{maxWidth: '45%'}} />
+  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/spacial-life.jpg" alt="Spatial Life Application" style={{maxWidth: '45%'}} />
+</div>
+
 
 ## Requirement
 
@@ -28,15 +39,15 @@ Usage Instructions:
 
 ## Developer Guide
 
-Learn how to use the Coasters Image Tracking feature in your own apps.
+Learn how to use the Marker Tracking feature in your own apps.
 
 - Create a new project in Unity. 
 
-> Need help setting up? Try [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.md) first
+> Need help setting up? Try [Getting Started with XREAL SDK](../01_Getting%20Started%20with%20XREAL%20SDK.md) first
 
 - Import marker tracking module in XREAL SDK samples.
 
-<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250102193205196.png"/>
+![image-20250310174559809](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250310174559809.png)
 
 - Click XREAL -> MarkerTracking -> Install
 
@@ -52,19 +63,8 @@ Learn how to use the Coasters Image Tracking feature in your own apps.
 
   ![image-20240722191741243](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240722191741243.png)
 
-- The Marker feature uses a trained data sample. The sample resource address is shown in the figure below. It needs to be specified in the SessionConfig resource.
+  
 
-  ![XREAL Markers (1)](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/XREAL%20Markers%20(1).png)
-
-- Set the ImageTrackingMode to enable.
-
-  ![image-20240722191836785](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240722191836785.png)
-
-- Before building an APK, please add the following lines inside the `<application>` element of your `AndroidManifest.xml`
-```
-<uses-library android:name="libOpenCL.so" android:required="false"/>
-<uses-library android:name="libcdsprpc.so" android:required="false"/>
-```
 
 ## Usage
 
