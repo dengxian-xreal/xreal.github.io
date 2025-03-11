@@ -64,80 +64,46 @@ Learn how to use the Marker Tracking feature in your own apps.
   ![image-20240722191741243](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240722191741243.png)
 
   
-
-
 ## Usage
 
-### Get the current tracked Image list.
+### Registering the trackedImagesChanged Event for ARTrackedImageManager
+You can register the trackedImagesChanged event of ARTrackedImageManager as follows:
+```csharp
+m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
 
-```c#
-NRFrame.GetTrackables<NRTrackableImage>(m_TempTrackingImages, NRTrackableQueryFilter.All);
-```
-
-### Get the tracking status of Image
-
-> In Marker, the `GetTrackingState` method will only return two states: **Tracking** and **Paused**.
-
-
-```
-NRTrackableImage.GetTrackingState() 
-
-    /// <summary> Device Tracking State. </summary>
-    public enum TrackingState
+//...
+private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs args)
+{
+    foreach (var removed in args.removed)
     {
-        /// <summary>
-        /// TRACKING means the object is being tracked and its state is valid.
-        /// </summary>
-        Tracking = 0,
-
-        /// <summary>
-        /// PAUSED indicates that NRSDK has paused tracking, 
-        /// and the related data is not accurate.  
-        /// </summary>
-        Paused = 1,
-
-        /// <summary>
-        /// STOPPED means that NRSDK has stopped tracking, and will never resume tracking. 
-        /// </summary>
-        Stopped = 2
+        OnImageLost?.Invoke(removed);
     }
-```
 
-### Get the ID of the Image
+    foreach (var added in args.added)
+    {
+        OnImageLoaded?.Invoke(added);
+    }
 
-> In Marker, the value range of ID is [0,10], corresponding to different states of Marker cards.
-
-```
-NRTrackableImage.GetCoastersDataBaseIndex()
-```
-
-### Get image pose and size information
-
-```
-// The length in the X direction of the image
-NRTrackableImage.ExtentX
-// The length in the Z direction of the image
-NRTrackableImage.ExtentZ
-// Get the pose of the center of the image
-NRTrackableImage.GetCenterPose
-```
-
-### Enable and disable ImageTracking functionality
-
-```
-/// <summary> Enables the image tracking. </summary>
-public void EnableImageTracking()
-{
-    var config = NRSessionManager.Instance.NRSessionBehaviour.SessionConfig;
-    config.ImageTrackingMode = TrackableImageFindingMode.ENABLE;
-    NRSessionManager.Instance.SetConfiguration(config);
-}
-
-/// <summary> Disables the image tracking. </summary>
-public void DisableImageTracking()
-{
-    var config = NRSessionManager.Instance.NRSessionBehaviour.SessionConfig;
-    config.ImageTrackingMode = TrackableImageFindingMode.DISABLE;
-    NRSessionManager.Instance.SetConfiguration(config);
 }
 ```
+The ARTrackedImagesChangedEventArgs parameter contains information about added and removed ARTrackedImage objects.
+
+### Retrieving the ID of the Image
+
+> In the case of a marker system, the ID value ranges from [0,10], corresponding to different marker card states. You can retrieve the ID using:
+
+```
+int index = (int)image.trackableId.subId2 & 0xFF;
+```
+
+### Retrieving Marker Information from ARTrackedImage
+You can obtain various marker-related details directly from an ARTrackedImage object:
+```csharp
+trackedImage.referenceImage.name;  // Reference image name
+trackedImage.trackingState;        // Tracking state
+trackedImage.referenceImage.size;  // Size of the reference image
+trackedImage.size;                 // Actual tracked image size
+```
+
+### Enabling and Disabling Image Tracking
+You can enable or disable image tracking by toggling the ARTrackedImageManager script component.
