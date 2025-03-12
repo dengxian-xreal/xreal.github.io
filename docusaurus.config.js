@@ -12,7 +12,7 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'NRSDK',
+  title: 'XREAL SDK',
   tagline: 'NRSDK is cool',
   favicon: 'img/Glasses.ico',
 
@@ -111,7 +111,7 @@ const config = {
         isCloseable: false,
       },
       navbar: {
-        title: 'NRSDK',
+        title: 'XREAL SDK',
         logo: {
           alt: 'NRSDK Logo',
           src: 'img/logo.png',
