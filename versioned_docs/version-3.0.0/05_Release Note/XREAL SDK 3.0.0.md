@@ -1,11 +1,11 @@
 # XREAL SDK 3.0.0
-![Release Date](https://img.shields.io/badge/Release_Date-March_14,_2025-0080FF?style=flat&logoWidth=1)
+![Release Date](https://img.shields.io/badge/Release_Date-March_20,_2025-0080FF?style=flat&logoWidth=1)
 
 :::info
 
 XREAL SDK 3.0.0 represents a major architectural upgrade from NRSDK, now fully integrated with Unity's XR ecosystem. This release marks a significant milestone in our development framework, offering enhanced compatibility, standardization, and development efficiency.
 
-**Download** [**XREAL SDK 3.0.0 for Unity**](https://public-resource.xreal.com/download/XREALSDKForUnity_3.0.0)
+**Download** [**XREAL SDK 3.0.0 for Unity**](https://public-resource.xreal.com/download/XREALSDK_Release_3.0.0.20250314/com.xreal.xr.tar.gz)
 
 :::
 
