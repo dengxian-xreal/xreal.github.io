@@ -105,7 +105,7 @@ const config = {
       announcementBar: {
         id: 'New SDK',
         content:
-          'NRSDK 2.4.1 released! <a target="_blank" rel="noopener noreferrer" href="/Release Note/NRSDK 2.4.1">📃Check the release note</a>.',
+          'XREAL SDK 3.0.0 released!🥳Now with support for Unity XRI and AR Foundation. <a target="_blank" rel="noopener noreferrer" href="/Release Note/XREAL SDK 3.0.0">📃Check the release notes</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
         isCloseable: false,

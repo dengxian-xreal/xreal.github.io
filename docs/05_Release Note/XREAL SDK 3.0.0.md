@@ -7,6 +7,16 @@ XREAL SDK 3.0.0 represents a major architectural upgrade from NRSDK, now fully i
 
 **Download** [**XREAL SDK 3.0.0 for Unity**](https://public-resource.xreal.com/download/XREALSDK_Release_3.0.0.20250314/com.xreal.xr.tar.gz)
 
+Please note: Nebula will no longer be maintained.
+
+For developers who want to continue working with Android phones instead of using BeamPro, the ControlGlasses app is required to perform OTA updates and launch 3D applications on XREAL glasses.
+
+* If you are using BeamPro, you can ignore this notice.
+* Users must install the ControlGlasses app on their Android device to run AR applications.
+* Currently, we only test compatibility with Samsung flagship models, and XREAL SDK 3.0.0 is compatible with the Samsung S24.
+
+**Download** [**Control Glasses 1.1.0**](https://public-resource.xreal.com/download/XREALSDK_Release_3.0.0.20250314/ControlGlasses-1.1.0.20250307172552-release.apk)
+
 :::
 
 ### What's New
@@ -22,9 +32,9 @@ XREAL SDK 3.0.0 represents a major architectural upgrade from NRSDK, now fully i
   * Enhanced compatibility with Unity's built-in XR tools and features
 
 * **Feature Enhancements**
-  * Updated from 23 joint points to 26 joint points to align with OpenXR standards
-  * Optimized Image Tracking performance
-    * Completely revamped image tracking system with significantly improved detection rates
+  * Hand Tracking: Updated from 23 joint points to 26 joint points to align with OpenXR standards
+  * Image Tracking: 
+    * Completely revamped image tracking system with improved detection rates
     * Enhanced tracking stability
   * Added support for XREAL Eye, an RGB camera accessory
 
@@ -37,6 +47,6 @@ XREAL SDK 3.0.0 represents a major architectural upgrade from NRSDK, now fully i
 
 ### Migration Guide
 
-For developers migrating from NRSDK to XREAL SDK 3.0.0, please refer to our comprehensive [Migration Guide](../04_Migration%20Guide/Migration%20from%20NRSDK.md) for detailed instructions and best practices.
+For developers migrating from NRSDK to XREAL SDK 3.0.0, please refer to our comprehensive [Migration Guide](../02_MigratingFromNRSDKToXREALSDK/0_intro.md) for detailed instructions and best practices.
 
 

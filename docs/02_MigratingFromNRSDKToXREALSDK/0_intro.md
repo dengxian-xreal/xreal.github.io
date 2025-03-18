@@ -153,7 +153,7 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
 1. Access the **Build Settings** in **Menu -> File ->** **Build Settings**. Click the button "`Add Open Scene`" and make sure the current scene is checked.    ![image-20240722111318972](https://raw.githubusercontent.com/dengxian-xreal/Images/main/image-20240722111318972.png)
 
 2. Click **Player Settings**. Customize the **Company Name** and **Product Name.** 
-3. (Optional) Navigate to the **Android**> **Other Settings** panel to specify your build settings. As you have prepared **Step 3. Configure Project Settings,** you may leave the current configuration as it is. It is worth noting some of the other settings:
+3. (Optional) Navigate to the **Android**> **Other Settings** panel to specify your build settings. As you have prepared. You may leave the current configuration as it is. It is worth noting some of the other settings:
 
 - **Multithreaded Rendering**: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by XREAL SDK. However, for the scenes that contains **Overlay** content, you should disable multithreaded rendering. And When developing URP projects, if [single pass rendering](https://xreal.gitbook.io/nrsdk/development/tools/single-pass-stereo-rendering) is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.
 
