@@ -7,9 +7,23 @@ XREAL SDK 3.0.0 represents a major architectural upgrade from NRSDK, now fully i
 
 **Download** [**XREAL SDK 3.0.0 for Unity**](https://public-resource.xreal.com/download/XREALSDK_Release_3.0.0.20250314/com.xreal.xr.tar.gz)
 
+
+Please note: Nebula will no longer be maintained.
+
+For developers who want to continue working with Android phones instead of using BeamPro, the ControlGlasses app is required to perform OTA updates and launch 3D applications on XREAL glasses.
+
+* If you are using BeamPro, you can ignore this notice.
+* Users must install the ControlGlasses app on their Android device to run AR applications.
+* Currently, we only test compatibility with Samsung flagship models.
+* XREAL SDK 3.0.0 is compatible with the Samsung S24.
+
+Download Control Glasses 1.1.0（https://public-resource.xreal.com/download/XREALSDK_Release_3.0.0.20250314/ControlGlasses-1.1.0.20250307172552-release.apk）
+
 :::
 
 ### What's New
+
+
 
 * **Unity XR Plugin Integration**
   * Complete transition from proprietary NRSDK APIs to Unity's XR Plugin architecture

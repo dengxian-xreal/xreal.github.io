@@ -1,24 +1,42 @@
 # CloudXR
 
-Nebula built-in **CloudXR** enables you to live stream Steam/SteamVR content from PC to XREAL Glasses via your Wi-Fi network. 
-
-![img_v3_029e_e1b779cd-8a6d-41fb-8e4f-2128253e8a9g](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/img_v3_029e_e1b779cd-8a6d-41fb-8e4f-2128253e8a9g.jpg)
+**CloudXR** enables you to live stream Steam/SteamVR content from PC to XREAL Glasses via your Wi-Fi network. 
 
 :::tip
 
-Please note that CloudXR is no longer built into Nebula. You can download it from [here](https://public-resource.xreal.com/download/Application/cloudxr_2024-12-16_155919-2.4.0.13-release.apk) or download it later from BeamPro XREAL Store.
+Please note that XR Streaming is no longer built into Nebula. 
 
-[CloudXR_20241216.apk](https://public-resource.xreal.com/download/Application/cloudxr_2024-12-16_155919-2.4.0.13-release.apk)
+As of 2024.06.14, it has been renamed to CloudXR. 
 
+You can download it from here or download it later from Google Play.
 
 :::
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="CloudXR v4.0" label="CloudXR v4.0" default>
+
+ [CloudXR_20250314.apk](https://public-resource.xreal.com/download/Application/cloudxr_2025-03-04_103403-3.0.0.14-release.apk)
+ Compatible with MyGlasses 1.7.0.
+
+[CloudXR_20241216.apk](https://public-resource.xreal.com/download/Application/cloudxr_2024-12-16_155919-2.4.0.13-release.apk)
+Compatible with MyGlasses 1.5.0.
+
+
+  </TabItem>
+  <TabItem value="CloudXR v3.2" label="CloudXR v3.2">
+   [XRStreaming.apk](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk)
+  </TabItem>
+</Tabs>
 
 ### **Environment Requirements**
 
 **Hardware:**
 
 - PC (Windows 10 or later) with VR-ready graphic card (NVIDIA GPU, including Quadro GPUs)
-- XREAL Light / XREAL X / XREAL Air Series
+- XREAL Light / XREAL X / XREAL Air Series / XREAL One Series
 - Nebula-compatible Android Phones / Beam Pro
 - WLAN network
 - Bluetooth game controller (Optional)
@@ -95,3 +113,4 @@ Please see the following for detailed setup instructions:
 - Type `ipconfig` into the Command Prompt and press `Enter`. The tool will return a set of data that includes your IP address. look for your IP address listed next to **IPv4 address;**
 
 ​       ![image-20240813172001288](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813172001288.png)
+

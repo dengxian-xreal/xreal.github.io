@@ -2,7 +2,11 @@
 
 ### Introduction
 
-Spatial Anchors are world-locked reference points in the AR environment that can be used to position and persist content across multiple sessions. By creating a spatial anchor at a specific 6DOF pose (position and orientation), virtual content can be placed relative to it. This allows for the resumption of AR sessions and the restoration of content to the exact real-world locations where users left them. This plays a crucial role in providing users with a consistent and reliable AR experience, as they can see the persistently present virtual content at the same location, no matter when they return or restart the application. The NRSDK provides Spatial Anchor functionality for XREAL glasses, enabling developers to easily create and manage spatial anchors in their Unity projects.
+Spatial Anchors are fixed reference points in the AR environment that provide a stable position and orientation for virtual objects, allowing them to remain consistent across different sessions.
+
+By creating a spatial anchor at a specific 6DoF pose (position and orientation), virtual content can be placed relative to it. This allows for the resumption of AR sessions and the restoration of content to the exact real-world locations where users left them. This plays a crucial role in providing users with a consistent and reliable AR experience, as they can see the persistently present virtual content at the same location, no matter when they return or restart the application. The XREAL SDK provides Spatial Anchor functionality for XREAL glasses, enabling developers to easily create and manage spatial anchors in their Unity projects.
+
+![img_v3_02du_0e56d7a1-01e6-4ba9-bb06-7a19b9f7cbfg](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/img_v3_02du_0e56d7a1-01e6-4ba9-bb06-7a19b9f7cbfg.jpg)
 
 ### Main Features
 
@@ -10,20 +14,6 @@ Spatial Anchors are world-locked reference points in the AR environment that can
 - Save and load spatial anchors
 - Support user interactions, such as clicking on spatial anchors
 - Show mapping quality during spatial anchor creation.
-
-### Installation and Configuration
-
-Please follow these steps to import the SDK into your Unity project:
-
-1. Download and import the SDK package.
-
-2. Add the `AnchorItem` script to the game object you want to use as an anchor.
-
-3. Set the properties of `AnchorItem` in the Unity Inspector.
-
-   ![image-20240812175157094](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812175157094.png)
-
-4. Inspect Mapping Example scene and LocalMapExample.cs as reference for an implementation of spatial anchor.
 
 ### Best Practice
 

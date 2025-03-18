@@ -1,6 +1,6 @@
 # Handle the Situation of Failed Anchor Saving
 
-The following three scripts are included in the NRSDK. However, to implement the  ["Halloween Treasure Hunt" tutorial](../2_Tutorial-HalloweenTreasureHunt/Intro.md), we need to make some modifications. Specifically, to handle the potential confusion caused by the possible failure of anchor saving, we will obtain callbacks for both successful and failed saves, and provide users with appropriate prompts. The modifications made to these scripts to achieve this are provided below. Please copy them directly and replace the original script content.
+The following three scripts are included in the NRSDK. However, to implement the  ["Halloween Treasure Hunt" tutorial](https://xreal.gitbook.io/nrsdk/development/spatial-anchor/tutorial-halloween-treasure-hunt), we need to make some modifications. Specifically, to handle the potential confusion caused by the possible failure of anchor saving, we will obtain callbacks for both successful and failed saves, and provide users with appropriate prompts. The modifications made to these scripts to achieve this are provided below. Please copy them directly and replace the original script content.
 
 
 
@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="Anchorltems.cs" label="Anchorltems.cs" default>
       ```
       /****************************************************************************
-      * Copyright 2019 XREAL Techonology Limited. All rights reserved.
+      * Copyright 2019 Xreal Techonology Limited. All rights reserved.
       *                                                                                                                                                          
       * This file is part of NRSDK.                                                                                                          
       *                                                                                                                                                           
@@ -130,7 +130,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="NRWorldAnchor.cs" label="NRWorldAnchor.cs">
     ```
     /****************************************************************************
-    * Copyright 2019 XREAL Techonology Limited. All rights reserved.
+    * Copyright 2019 Xreal Techonology Limited. All rights reserved.
     *                                                                                                                                                          
     * This file is part of NRSDK.                                                                                                          
     *                                                                                                                                                           
@@ -250,7 +250,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="NRWorldAnchorStore.cs" label="NRWorldAnchorStore.cs">
   ```
   /****************************************************************************
-  * Copyright 2019 XREAL Techonology Limited. All rights reserved.
+  * Copyright 2019 Xreal Techonology Limited. All rights reserved.
   *                                                                                                                                                          
   * This file is part of NRSDK.                                                                                                          
   *                                                                                                                                                           
@@ -280,7 +280,7 @@ import TabItem from '@theme/TabItem';
           public static NRWorldAnchorStore Instance;
 
           /// <summary> Pathname of the map folder. </summary>
-          public const string MapFolder = "XREALMaps";
+          public const string MapFolder = "XrealMaps";
           public readonly string MapPath;
           /// <summary> The anchor 2 object file. </summary>
           public const string Anchor2ObjectFile = "anchor2object.json";

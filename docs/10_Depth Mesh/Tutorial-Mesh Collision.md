@@ -4,27 +4,27 @@
 
 In this tutorial, we will enable meshing and demonstrate how to collide objects with the generated mesh.
 
-<img src="https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F8znbHygJkkYzqP5WJnxC%2FshootBalls.gif&width=768&dpr=4&quality=100&sign=0ef65a02d4e53d39ea0e3350068cfd55b6d9dc862dbe4630e9b040857f49c328" alt="img" />
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F8znbHygJkkYzqP5WJnxC%2FshootBalls.gif&width=768&dpr=4&quality=100&sign=0ef65a02d4e53d39ea0e3350068cfd55b6d9dc862dbe4630e9b040857f49c328)
 
 ### What you'll need
 
-This tutorial assumes you have a working Unity scene with the NRSDK imported. Please refer to the [Getting Started with NRSDK](../02_Getting%20Started%20with%20NRSDK.md) page for more details on how to import the NRSDK package.
+This tutorial assumes you have a working Unity scene with the NRSDK imported. Please refer to the [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) page for more details on how to import the NRSDK package.
 
 ## 1. Create a new scene
 
 create a new folder named `MeshCollsion`, and another folder named `Scene`, and then create a new scene named `MeshCollsion`.
 
-![image-20240812174432287](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174432287.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FaqDdKVjIsE5OV50yHvP7%2Fimage.png&width=768&dpr=4&quality=100&sign=cab588982790a5a88d6661822c9339a5d8fc496ac391eae854ed99675497bbb7)
 
 Add the `NRCameraRig` and `NRInput` prefab into the hierarchy.
 
-![image-20240812174448835](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174448835.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FCNt41cfEiDzcMyI3rU53%2Fimage.png&width=768&dpr=4&quality=100&sign=77117e5b32d947ec4972723ef1228f178c344c6514e242fb3385fd2a62c2ad74)
 
 ## 2. Add the MeshingManager
 
 Create an empty GameObject called MeshingManager.
 
-![image-20240812174604706](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174604706.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F2uR3GoBsoliMcpGSqW6d%2Fimage.png&width=768&dpr=4&quality=100&sign=4e55c7909f8d0b524c760f17d90c3b016f35b56ad027d8e222c124b7ecde852c)
 
 Add the following scripts to Meshing Manager:
 
@@ -32,15 +32,17 @@ Add the following scripts to Meshing Manager:
 
 2. MeshObjGenerator.cs
 
+
+
 If you want to save the mesh for tests, you can add the `MeshSaver.cs`too.
 
-![image-20240812174649912](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174649912.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FWpuxUgKX3QY5MC5PWyur%2Fimage.png&width=768&dpr=4&quality=100&sign=33b6fa13b71bfd64544928f82dc0927386f1d878e3aa3f6d962795361da4eeed)
 
 ## 3. Add a sphere
 
 Right-click on the scene hierarchy and click **Game Object**> **3D Object**> **Sphere**.
 
-![image-20240812174702136](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174702136.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FllJy8cS9p027MaJx9s5P%2Fimage.png&width=768&dpr=4&quality=100&sign=de04b5dcee6aa4c0938c6e181694cbc9fa59dd7b7f1ba033a2b76378411a85c4)
 
 Click on the sphere and set its size to 0.05. 
 
@@ -48,11 +50,11 @@ Then add a rigid body component to the sphere. This tells Unity to give the sphe
 
 Add a material to the sphere to make it more obvious.
 
-![image-20240812174719495](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174719495.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FZ0c9FhZyO5HaUbBsVLvl%2Fimage.png&width=768&dpr=4&quality=100&sign=f9e54b1751397f55783513f8fc4677a6707c124e42b0e334fa81dcf7810e8f50)
 
 Create a folder called Prefabs, and drag the sphere to the folder.
 
-![image-20240812174733292](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174733292.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FwcyCVkRr3zcAEuiKpuGC%2Fimage.png&width=768&dpr=4&quality=100&sign=1488c8b025ed4aa01d32e2ec20c7900855f7e62a4cf8de8efe19bbda6683649d)
 
 ## 4. Add code to shoot the sphere
 
@@ -62,9 +64,9 @@ By attaching the following script to **NRCameraRig**, you can customize the shoo
 
 Set the prefab Sphere you just made as the `Ball Prefab`.
 
-![image-20240812174745612](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174745612.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FzHR6cx6UgqmVYJHk8eaT%2Fimage.png&width=768&dpr=4&quality=100&sign=73e08897d726ded33ac7abf76d08a7bf88a9aeedfe1b43d04f197343b89b002c)
 
-![image-20240812174802459](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174802459.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fju5B8UqOzN4ByLIM2EAc%2Fimage.png&width=768&dpr=4&quality=100&sign=8bbae81532e1fc3e35e8aebf091abe33833d72a1ca5d7bd6e27177457a25a101)
 
 ```
 using System.Collections;

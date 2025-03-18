@@ -4,7 +4,7 @@
 2. Navigate to the OSS console and create a new storage bucket. Ensure the permissions for this bucket are set to '**Public Read/Write**'.
 3. Generate an AccessKey for OSS Access. Take note of the AccessKey ID and AccessKey Secret as these will be used to connect your SDK to the OSS service.
 
-:::tip
+
 
 **Steps to Create an Alibaba Cloud AccessKey:**
 
@@ -15,21 +15,21 @@
 5. Click the "Confirm" button, and your new AccessKey will be generated.
 6. Upon successful creation, you'll be presented with your AccessKey ID and AccessKey Secret. It's crucial to note down these values as they'll be required to configure your SDK. For security reasons, the AccessKey Secret is only visible during its creation, so ensure you record it at this time.
 
-![11](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/11.png)
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FNWVwp5YDf0eZDMMnvnn3%2Fimage%2520%281%29.png&width=300&dpr=4&quality=100&sign=5d6efbdf6ebe26ff88c28c12cafc069ea3f8d09647b47da78689006c446ba968)
 
-:::
+1. Download and Import the Alibaba Cloud OSS .NET SDK. You can find the download link and import instructions for the SDK in Alibaba Cloud's official documentation.
 
-4. Download and Import the Alibaba Cloud OSS .NET SDK. You can find the download link and import instructions for the SDK in Alibaba Cloud's official documentation.
+   
 
-![33](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/33.png)
+   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2Fyz8TTCuUq4wTIEtKH39T%2Fimage%2520%282%29.png&width=768&dpr=4&quality=100&sign=6e88e44b256419d0f2babbc1cc7dc8bfa6b66f03ed95feef167fb52cae6520ae)
 
-For more detailed information, you might find the [official Alibaba Cloud documentation](https://github.com/aliyun/aliyun-oss-csharp-sdk?file=aliyun-oss-csharp-sdk.git) on GitHub clearer and more concise. This tutorial adopts the following installation method.
+   For more detailed information, you might find the [official Alibaba Cloud documentation](https://github.com/aliyun/aliyun-oss-csharp-sdk?file=aliyun-oss-csharp-sdk.git) on GitHub clearer and more concise. This tutorial adopts the following installation method.
 
-![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FuU3ih2r8FqCFI7WDV80f%2Fimage.png&width=768&dpr=4&quality=100&sign=f0385d747bb1970dc99358875524acfdd7135c446259f002d08647d6967e5cba)
+   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FuU3ih2r8FqCFI7WDV80f%2Fimage.png&width=768&dpr=4&quality=100&sign=f0385d747bb1970dc99358875524acfdd7135c446259f002d08647d6967e5cba)
 
-Ensure that the generated `Aliyun.OSS.dll` file is placed in `Assets > Plugins`.
+   Ensure that the generated `Aliyun.OSS.dll` file is placed in `Assets > Plugins`.
 
-1. Utilize the SDK's API in Your Unity Script. To upload and download files using the SDK, you'll need to provide your AccessKey ID, AccessKey Secret, Bucket name, and filename.
+2. Utilize the SDK's API in Your Unity Script. To upload and download files using the SDK, you'll need to provide your AccessKey ID, AccessKey Secret, Bucket name, and filename.
 
 ```
 using Aliyun.OSS;

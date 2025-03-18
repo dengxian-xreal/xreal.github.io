@@ -8,14 +8,13 @@ When working on a depth-mesh-based feature, it can be time-consuming to deploy t
 
 The demo scene mesh contains a UI button Save Mesh which can save the current mesh data into .obj files in the device's file system.
 
-
- <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174328493.png" alt="Description" style={{ width: '400px', height: 'auto' }} class="center-image"  />
+![image-20250224161158699](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250224161158699.png)
 
 Every push of the button creates a new folder of mesh obj. It is a good idea to save multiple meshes as you scan around if you want to reproduce mesh updates in the Unity Editor.
 
 You will find the files under `*Android/data/package_name/files/MeshSave/*`*.* Save them into your assets.
 
-  <img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174215393.png" alt="Description" style={{ width: '500px', height: 'auto' }} class="center-image"  />
+![image-20250224170904217](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250224170904217.png)
 
 ## Import Meshes into Unity
 
@@ -25,5 +24,4 @@ Then copy/paste the mesh files to a folder in the scene’s file hierarchy.
 
 Drag the mesh obj to the Meshes directory
 
-![image-20240812174136695](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812174136695.png)
-
+![image-20250224171626765](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250224171626765.png)

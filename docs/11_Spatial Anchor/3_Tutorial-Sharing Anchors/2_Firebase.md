@@ -8,7 +8,7 @@ For a comprehensive guide on integrating Firebase with Unity, developers are enc
 
 2. Click on "Add Project" and follow the prompts to fill in the project information.
 
-   ![image-20240813142301094](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813142301094.png)
+   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F8vvjPJ90A2imPfRs1Qe6%2Fimage.png&width=768&dpr=4&quality=100&sign=e0059c201c1588d11009c6300d3bdbeed706eab6f64e34b6fedbad8a9460b09b)
 
 3. Click "Create Project".
 
@@ -16,44 +16,40 @@ For a comprehensive guide on integrating Firebase with Unity, developers are enc
 
 1. On the project overview page, click "Add App" and select the appropriate platform (e.g., Android).
 
-   ![image-20240813142312246](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813142312246.png)
+   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FczGhUaXjMhWweUbXAu45%2Fimage.png&width=768&dpr=4&quality=100&sign=d8d69e2a3c1bffe68e7a617b2f0d40e5d08c9bd1283489bf4cf8fa414d3c31fd)
 
 2. Follow the prompts to enter the app's package name and other information.
 
-3. Download and save the configuration file (`google-services.json`) and place it in the `Assets` folder.
+3. Download and save the configuration file (`**google-services.json**`) and place it in the `**Assets**` folder.
 
 ### **Install the SDK**
 
 1. Download [**Firebase Unity SDK**](https://firebase.google.com/download/unity?authuser=0)
-2. Import `FirebaseStorage.unitypackage` into Unity.
+2. Import `**FirebaseStorage.unitypackage**` into Unity.
 
 ### **Add Storage** 
 
-1. Go to **Build > Storage**
+1. Go to `**Build > Storage**`
 
-   ![image-20240813142324239](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813142324239.png)
+   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FGTkZ5hPjkM7yqiavCYkG%2Fimage.png&width=768&dpr=4&quality=100&sign=9d34c3912b558cb1088b8b27208e68bac988f68d08eb564d11f3c8cedd577748)
 
 2. Click **Get Started** and set up cloud storage
 
-   ![image-20240813142346874](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240813142346874.png)
+   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2F2Vr0ZtMf8csypf5h5CUp%2Fimage.png&width=768&dpr=4&quality=100&sign=c506dfe5d0a3ec42c5405f0c7e68cb94c7dba52d8c044d1a6d1fa87e2ba3004d)
 
 3. The highlighted part in the following image is the folder location where we will upload the anchor file.
 
-   ![3](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/3.png)
+   ![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FYd6VfrdvrFIA2QQELI78%2Fimage.png&width=768&dpr=4&quality=100&sign=7123aed866a1af2adaa94d22645ded917f279494e2f09ccd63ce56183a68e7a6)
 
 ### **Upload/download files** 
 
 We've developed a dedicated `FirebaseStorageManager` class to facilitate file upload and download functionalities. For detailed implementation, you can refer to the official  [documentation](https://firebase.google.com/docs/storage/unity/upload-files).
 
-:::tip
+It's important to note that whether you're uploading or downloading, the `**storagePath**` should include the specific filename, not just the directory. This specification is also highlighted in the documentation. 
 
-It's important to note that whether you're uploading or downloading, the `storagePath` should include the specific filename, not just the directory. This specification is also highlighted in the documentation. 
+![img](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FyXoV7SMVFQhr75lOIoQv%2Fblobs%2FC9h5NLtbN9NaMOPC3OeY%2Fimage.png&width=300&dpr=4&quality=100&sign=07729c80d78aa1b825e0c04fca1a749323e57de1b78b979d269be90a5b0a7e20)
 
-![1](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/1.png)
-
-Therefore, We set the file path obtained from the previous step as `storageBasePath` and later concatenate it with the filename to form the complete path for upload/download.
-
-:::
+Therefore, We set the file path obtained from the previous step as `**storageBasePath**` and later concatenate it with the filename to form the complete path for upload/download.
 
 ```
 using Firebase;
@@ -187,7 +183,7 @@ public class FirebaseStorageManager : MonoBehaviour
 
 ### **Common Issues**
 
-1. After installing Firebase, building software in Unity may fail. This is a known issue with Android and requires adding `launcherTemplate.gradle` in Unity, then adding the following content:
+1. After installing Firebase, building software in Unity may fail. This is a known issue with Android and requires adding `**launcherTemplate.gradle**` in Unity, then adding the following content:
 
 ```
     packagingOptions 
