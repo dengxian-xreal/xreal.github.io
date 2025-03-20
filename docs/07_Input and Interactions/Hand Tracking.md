@@ -20,23 +20,23 @@ Unity provides a set of interaction systems under the [XR Interaction Toolkit (X
 
 XRI provides XR-focussed interactions. It allows you to make one application which works on many platforms, devices and with various input sources (hand tracking, controllers, keyboards, joysticks etc).
 
-Some available Interactors are:⚠️
+Some available Interactors are:
 
 - Poke: used for interacting with interactables by poking. Pose driven by the index finger's tip.
 - [Near-Far](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/near-far-interactor.html?q=near): utilizes both near and far interaction casters, allowing seamless transitions between different interaction types, replacing the need for using the XR Direct Interactor and the XR Ray Interactor. 
-- Teleport: For indirect input, far field UI controls, teleporting, and summoning⚠️
+- Teleport: For indirect input, far field UI controls, teleporting, and summoning.
 
 We recommend exploring the capabilities of the XRI package to determine what is most useful for your project. Unity’s documentation and guides are a great place to get started.
 
 XRI is usually controlled by the **Input System**. The hands-focussed examples Unity provide come with some specific Input Actions which are driven by **XR Hands**.
 
-To get started with XRI when using Ultraleap Hand Tracking, continue reading.
+To get started with XRI when using Hand Tracking, continue reading.
 
 ### Setup Guide
 
 1. Create a new project in Unity.
 
->  Need help setting up? Try [Getting Started with NRSDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) first ⚠️
+>  Need help setting up? Try [Getting Started with XREAL SDK](../01_Getting%20Started%20with%20XREAL%20SDK.md) first ⚠️
 
 2. Install [XR Hands](https://docs.unity3d.com/Packages/com.unity.xr.hands@1.2/manual/index.html), [XRI](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html) and XR Plugin Management from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html).
 
