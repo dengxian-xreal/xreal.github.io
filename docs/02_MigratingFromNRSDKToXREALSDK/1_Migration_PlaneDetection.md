@@ -3,7 +3,7 @@
 This guide focuses on migrating plane detection functionality from NRSDK to XREAL SDK.
 
 ## Prerequisites
-- Completed basic XREAL SDK setup from the [main migration guide](./MigratingFromNRSDK.md)
+- Completed basic XREAL SDK setup from the [main migration guide](0_intro.md)
 - AR Foundation package installed
 
 ## Migration Steps
