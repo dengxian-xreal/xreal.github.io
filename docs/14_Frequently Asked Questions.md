@@ -14,7 +14,7 @@ Unity 2021.3.x and above. The LTS(long term support) Unity version is recommende
 #### **2 The app is not being able to be opened through MyGlasses, showing "Currently, your app is not supported on this device"**
 Please add the following permission in the **AndroidManifest.xml**:
 ```
-<meta-data android:name="com.nreal.supportDevices" android:value="1|NrealLight|2|NrealAir" />
+<meta-data android:name="com.nreal.supportDevices" android:value="1|XrealLight|2|XrealAir" />
 ```
 #### **3 Error occurs when building an apk**
 
