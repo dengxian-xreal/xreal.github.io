@@ -337,7 +337,7 @@ Choose the migration approach that best fits your project's needs:
 
 For detailed migration instructions for specific AR features, please refer to:
 
-- [Migrating Plane Detection](./Migration_PlaneDetection.md)
-- [Migrating Image Tracking](./Migration_ImageTracking.md)
-- [Migrating Spatial Anchors](./Migration_Anchors.md)
-- [Migrating Depth Meshing](./Migration_Meshing.md)
+- [Migrating Plane Detection](1_Migration_PlaneDetection.md)
+- [Migrating Image Tracking](2_Migration_ImageTracking.md)
+- [Migrating Spatial Anchors](3_Migration_Anchors.md)
+- [Migrating Depth Meshing](4_Migration_Meshing.md)
