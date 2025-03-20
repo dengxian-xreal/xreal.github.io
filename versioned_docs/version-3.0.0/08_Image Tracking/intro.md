@@ -20,7 +20,7 @@ A set of images can be uploaded to the database as pre-trained references. These
 - **Feature Points**: To enable better tracking, it is important to use images with well-distributed feature points and low degrees of self-similarity. NRSDK can evaluate the tracking quality of the reference images when you add them to the database. Images with low tracking quality cannot be added to the database.
 - **Image Creation**: For those who design original reference images, we suggest to export the image using Adobe Illustrator rather than Adobe Photoshop. This is because Photoshop has looser export standards and NRSDK can sometimes fail to read information on pixel density.
 
-**Image Tracking Condition Requirement**⚠️
+**Image Tracking Condition Requirement**
 
 - **Surface**: Images printed with dull surfaces perform better than glossy ones due to reduced light reflections.
 - **Initialization**: The quickest way to initialize image tracking is to view the image at a slight angle while keeping the image flat and undistorted.

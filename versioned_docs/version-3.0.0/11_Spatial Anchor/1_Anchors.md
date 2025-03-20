@@ -46,7 +46,7 @@ To create a spatial anchor:
 
 1. Define the anchor’s position and rotation relative to the camera’s transform.
 
-2. Instantiate an ARAnchor prefab at the desired location. ⚠️后面这里代码会改，不是在摄像机前一米处，而是用户指定的地方
+2. Instantiate an ARAnchor prefab at the desired location. 
 
 ```
 public void OnNewButtonClick()
