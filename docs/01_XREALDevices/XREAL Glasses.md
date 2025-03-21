@@ -6,7 +6,7 @@ XREAL's products include the XREAL Light Developer Kit, XREAL Light Consumer Kit
 - **XREAL Air**: Compared to XREAL Light, XREAL Air is a pared down, yet highly fashionable pair of AR glasses, that pushes the envelope with a form factor that's wearable and inherently more comfortable.
 - **XREAL Air 2 and XREAL Air 2 Pro**: XREAL Air 2 shares the same technological features as XREAL Air, but focuses much more on ergonomics, making it way more comfortable to wear for general consumers. XREAL Air 2 Pro, in addtion to what XREAL Air 2 has to offer, introduces the world's first electrochromic lens ever put into mass production.
 - **XREAL Air 2 Ultra**: Building upon the Air 2 series, the Air 2 Ultra adds spatial computing capabilities with integrated 6DoF tracking through dual grayscale cameras. It features a wider 52-degree FOV and is designed for developers and enthusiasts looking to create immersive AR experiences.
-- **XREAL One and XREAL One Pro**: The XREAL One series feature XREAL's self-developed X1 chip, enabling direct connection with various devices while providing 3DoF tracking capabilities. It offers an expanded 57-degree FOV for more immersive viewing and includes detachable RGB camera accessories for enhanced mixed reality experiences. 
+- **XREAL One and XREAL One Pro**: The XREAL One series features XREAL's self-developed X1 chip, enabling direct connection with various devices while providing 3DoF tracking capabilities. The XREAL One has a FOV of 50 degrees, while the XREAL One Pro offers a wider 57-degree FOV for a more immersive viewing experience. Both models include detachable RGB camera accessories for enhanced mixed reality experiences.
 
 The table below shows detailed technical specifications for XREAL AR glasses:
 
