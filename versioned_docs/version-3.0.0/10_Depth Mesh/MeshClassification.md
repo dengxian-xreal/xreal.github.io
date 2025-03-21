@@ -8,11 +8,11 @@ This guide will walk you through implementing Mesh Classification using the XREA
 
 ### Project Setup
 
-Before using Mesh Classification, ensure your project is properly configured. Refer to the [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide for the necessary setup. Once set up, locate the “AR Feature” sample, specifically the **Mesh Classification** scene, and build it. You can also modify this sample to suit your needs.
+Before using Mesh Classification, ensure your project is properly configured. Refer to the [**Getting Started with XREAL SDK**](../01_Getting%20Started%20with%20XREAL%20SDK.md) guide for the necessary setup. Once set up, locate the “AR Feature” sample, specifically the **Mesh Classification** scene, and build it. You can also modify this sample to suit your needs.
 
 If you want to add mesh classification to an existing scene:
 
-After following the setup instructions in the [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide, locate the XR Interaction Setup->XR Origin in your scene. Create an empty GameObject as a child of this Prefab, which you can name MeshingManager, and add the AR Meshing Manager Component.
+After following the setup instructions in the [**Getting Started with XREAL SDK**](../01_Getting%20Started%20with%20XREAL%20SDK.md) guide, locate the XR Interaction Setup->XR Origin in your scene. Create an empty GameObject as a child of this Prefab, which you can name MeshingManager, and add the AR Meshing Manager Component.
 
 To use meshing with AR Foundation, add the [ARMeshManager](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.0/api/UnityEngine.XR.ARFoundation.ARMeshManager.html) component to a child GameObject of your scene's XR Origin.
 

@@ -36,7 +36,7 @@ This guide will walk you through implementing spatial anchors using the XREAL SD
 
 ### Project Setup
 
-Before using Spatial Anchors, ensure your project is properly configured. Refer to the [**Getting Started with XREAL SDK**](../02_Getting%20Started%20with%20XREAL%20SDK.md) guide for the necessary setup. If you’ve completed this setup, locate the “AR Feature” sample, specifically the **Anchors** scene, and build it. You can also modify this sample to suit your needs.
+Before using Spatial Anchors, ensure your project is properly configured. Refer to the [**Getting Started with XREAL SDK**](../01_Getting%20Started%20with%20XREAL%20SDK.md) guide for the necessary setup. If you’ve completed this setup, locate the “AR Feature” sample, specifically the **Anchors** scene, and build it. You can also modify this sample to suit your needs.
 
 ### Implementation
 
