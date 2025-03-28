@@ -109,6 +109,7 @@ const sidebars = {
         
       ]
     },
+    "MRTK3_Integration",
     {
       "type": "category",
       "label": "Tools",
