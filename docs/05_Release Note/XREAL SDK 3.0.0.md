@@ -5,7 +5,7 @@
 
 XREAL SDK 3.0.0 represents a major architectural upgrade from NRSDK, now fully integrated with Unity's XR ecosystem. This release marks a significant milestone in our development framework, offering enhanced compatibility, standardization, and development efficiency.
 
-**Download** [**XREAL SDK 3.0.0 for Unity**](https://public-resource.xreal.com/download/XREALSDK_Release_3.0.0.20250314/com.xreal.xr.tar.gz)
+**Download** [**XREAL SDK 3.0.0 for Unity**](https://public-resource.xreal.com/download/XREALSDK_Release_3.0.0.20250401/com.xreal.xr.tar.gz)
 
 Please note: Nebula will no longer be maintained.
 
