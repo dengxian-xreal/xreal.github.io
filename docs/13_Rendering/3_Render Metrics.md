@@ -2,10 +2,9 @@
 
 ### **Setup**
 
-1. Locate the `NRCameraRig` object in your Unity scene.
-2. Attach the `NRMetrics` script to `NRCameraRig`.
+We provide a sample scene, `Metrics`, to demonstrate how to effectively use the Render Metrics tool.
 
-![img](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image.png)
+![image-20250407180132791](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250407180132791.png)
 
 ### **Log Examples**
 

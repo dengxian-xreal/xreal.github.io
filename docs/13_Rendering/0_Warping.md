@@ -1,5 +1,5 @@
 # Display Stability
-In rendering, we may encounter various display stability issues, including visual artifacts and motion-related problems. These can manifest as tearing, swim, judder, and drift. This document primarily introduces common display stability challenges and how to address them in NRSDK.
+In rendering, we may encounter various display stability issues, including visual artifacts and motion-related problems. These can manifest as tearing, swim, judder, and drift. This document primarily introduces common display stability challenges and how to address them in XREAL SDK.
 
 ## Display artifacts
 
@@ -27,7 +27,7 @@ In rendering, we may encounter various display stability issues, including visua
 
 ### Frame rate
 
-Improving and stabilizing frame rate is key to solving various jittering problems. NRSDK recommends developers to:
+Improving and stabilizing frame rate is key to solving various jittering problems. XREAL SDK recommends developers to:
 
 - Maintain a stable 60fps or higher frame rate whenever possible
 - Optimize scenes and resources to reduce per-frame computational load
@@ -48,7 +48,7 @@ For most AR applications, setting the render distance of main interactive object
 
 Reprojection is a technique used to reduce latency and improve display stability. Its basic principle is to adjust the image based on the latest head position information after rendering and before display. This technique can alleviate jittering problems to some extent because it considers changes in motion and viewpoint (HeadPose) during scene animation and user head movement. Reprojection can compensate for latency generated during the rendering process, making the displayed image more consistent with the user's current head position and orientation.
 Planar Reprojection is a commonly used reprojection technique. Its core idea is to define a stable plane in 3D space, where the content on this plane will become the most stable part of the scene. The further virtual content is from this plane, the worse its stability. This method allows applications to precisely control the stability of different parts of the scene.
-In NRSDK, there are several ways to use planar reprojection:
+In XREAL SDK, there are several ways to use planar reprojection:
 
 * Default Planar Reprojection:
   If the application doesn't do any processing, the system will use planar reprojection by default, fixing the stable plane at 1.4 meters in the direction of the user's head. While this default setting provides a starting point, it may not always yield optimal results for all scenarios.
@@ -61,10 +61,10 @@ In NRSDK, there are several ways to use planar reprojection:
   
   FocusManager performs the following operations in each frame:
     - Executes Physics.Raycast from the head center along the forward direction to obtain the hit target.
-    - Provides plane information to the NRSDK runtime based on the hit target.
+    - Provides plane information to the XREAL SDK runtime based on the hit target.
       To ensure Automatic Planar Reprojection works correctly, make sure that the Physics.Raycast can hit the visual object in the scene. Which means:
       - You must attach an appropriate collider to the visual gameobject;
-      - In the current NRSDK implementation, FocusManager performs a raycast with a max distance of 100 meters. If your visual gameobject is placed beyond this distance, you can modify the maxDistance to fit your needs.
+      - In the current XREAL SDK implementation, FocusManager performs a raycast with a max distance of 100 meters. If your visual gameobject is placed beyond this distance, you can modify the maxDistance to fit your needs.
   
 
 Choosing the appropriate reprojection method is crucial for improving the display stability of AR applications. Developers should decide which method to use based on the specific needs of the application and scene characteristics, and optimize accordingly.
@@ -76,26 +76,16 @@ Developers can experiment with and optimize planar reprojection and frame rate e
 
 1. Real-time Data Monitoring:
 
-     - The panel displays the current render distance, focal plane normal, and space type in real-time.
+     - The panel displays the current render distance, focal plane normal in real-time.
      - This data is crucial for in-depth understanding and precise debugging of render distances.
 2. Render Distance Adjustment:
-
-     - Directly set the render distance through the slider to implement manual planar reprojection.
      - Enable AutoFocusDist, and the system will automatically adjust the render distance, implementing automatic planar reprojection. When enabled, the indicator sphere in the scene will automatically move to the current focus distance position.
 3. Normal Direction Adjustment:
-
      - AutoFocusNorm: When enabled, the system will automatically adjust the normal direction of the plane.
      - When disabled, the plane normal direction is fixed at (0,0,-1).
      - Recommendation: For scenes dominated by planes, enable this option; for scenes with many irregular objects, it's recommended to disable it.
 4. Reference Plane Setting:
      - Use the Dist button to set the reference plane, which may affect the behavior of the auto-focus system.
-5. Coordinate System Selection:
-
-     - Switch FocusInViewSpace to change the calculation method of focus distance.
-     - ViewSpace (head coordinate system) is used by default.
-     - WorldSpace (world coordinate system) can be selected.
-6. Frame Rate Test:
-     - Use the FPS button to cycle between 10, 15, 30, and 60 FPS to evaluate display stability at different frame rates.
 
 By systematically adjusting these parameters, developers can comprehensively evaluate and optimize the display stability of AR applications, thereby providing a smoother and more immersive user experience.
 
