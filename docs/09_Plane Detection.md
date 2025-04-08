@@ -29,7 +29,7 @@ To implement plane detection, ensure you have the following setup:
 
 1. Create a new project in Unity.
 
-> Need help setting up? Try [Getting Started with XREAL SDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android) first 
+> Need help setting up? Try [Getting Started with XREAL SDK](./01_Getting%20Started%20with%20XREAL%20SDK.md) first 
 
 2. Install AR Foundation from the Unity Registry in the [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html).
 

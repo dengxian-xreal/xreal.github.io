@@ -8,7 +8,7 @@ Currently, only the **XREAL Light** glasses are equipped with an RGB Camera.
 
 ### Import the XREAL SDK and Sample 
 
-Ensure your environment is configured as per the [Getting Started with XREAL SDK](https://xreal.gitbook.io/nrsdk/nrsdk-fundamentals/quickstart-for-android).
+Ensure your environment is configured as per the [Getting Started with XREAL SDK](./01_Getting%20Started%20with%20XREAL%20SDK.md).
 
 Import the **Camera Features** sample from the Package Manager.
 

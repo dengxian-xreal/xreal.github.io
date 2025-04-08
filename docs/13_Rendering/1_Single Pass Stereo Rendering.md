@@ -4,7 +4,7 @@
 
 Single Pass Stereo Rendering is an advanced rendering technique that allows a scene to be rendered in one pass for both the left and right eye views. This method is highly efficient and significantly enhances performance, particularly in scenarios such as Virtual Reality (VR) or Augmented Reality (AR) applications.
 
-Implementing Single Pass Stereo Rendering in NRSDK primarily reduces CPU usage, while GPU performance remains largely unchanged. Using Single Pass Stereo Rendering can lead to lower battery usage and lower hardware temperatures, further enhancing the user experience and device performance.
+Implementing Single Pass Stereo Rendering in XREAL SDK primarily reduces CPU usage, while GPU performance remains largely unchanged. Using Single Pass Stereo Rendering can lead to lower battery usage and lower hardware temperatures, further enhancing the user experience and device performance.
 
 This is especially beneficial for applications that are CPU-bound or draw call bound. We strongly recommend using Single Pass Stereo Rendering to improve performance in such cases.
 

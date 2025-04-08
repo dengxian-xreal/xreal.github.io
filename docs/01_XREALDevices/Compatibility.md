@@ -28,7 +28,7 @@ You could find settings for Target API level in **Project Settings -> Player -> 
 
 #### XREAL Glasses
 
-NRSDK runs on multiple Android devices and different types of XREAL glasses (Air / Light). The following tables list the NRSDK features that are supported by XREAL Light / Air, and the Android phone models that support XREAL Light / Air.
+XREAL SDK runs on multiple Android devices and different types of XREAL glasses (Air / Light). The following tables list the XREAL SDK features that are supported by XREAL Light / Air, and the Android phone models that support XREAL Light / Air.
 
 
 

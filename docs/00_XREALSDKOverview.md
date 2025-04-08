@@ -50,4 +50,4 @@ XREAL SDK optimizes the rendering performance in the backend to minimize the lat
 
 **XREAL Phone Controller (3DoF)**: An Android mobile phone can serve as a 3DoF controller for XREAL SDK applications. The phone screen supports gestures and various other touchscreen actions to provide interaction options.
 
-For more interaction models, please refer to the [Design Guide](https://xreal.gitbook.io/nrsdk/design-guide/design-guide-overview).
+For more interaction models, please refer to the [Design Guide](https://docs.xreal.com/category/design-guide).
