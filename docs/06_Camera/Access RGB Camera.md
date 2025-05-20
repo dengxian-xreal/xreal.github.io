@@ -2,7 +2,7 @@
 
 ## Device Compatibility
 
-Currently, only the **XREAL Light** glasses are equipped with an RGB Camera.
+Currently, only the RGB camera accessory **Eye** for the **XREAL One series** glasses supports this feature.
 
 ## Developer Guide
 

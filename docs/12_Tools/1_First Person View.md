@@ -16,7 +16,7 @@ The First Person View can only record virtual content on glasses without an RGB 
 
  Operating environment
 
-- **Hardware**: PC + Adapted mobile phone or Compute Unit + Xreal Light
+- **Hardware**: PC + Adapted mobile phone or Beam Pro + XREAL Glasses
 - **Software**: 
    - XREAL SDK 3.0.0 and above
    - Camera Features sample
