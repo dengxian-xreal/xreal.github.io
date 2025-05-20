@@ -8,9 +8,13 @@ A set of images can be uploaded to the database as pre-trained references. These
 
 ### Capabilities
 
-- XREAL SDK can detect and track images that are fixed in place, such as a painting on a wall or a book on the table. It can also track moving images, such as a rotating billboard or a poster held by someone walking around.
-- Upon initiating tracking with XREAL SDK, the system delivers continuous estimations for the position and orientation of the tracked image. It is advisable to configure the size in Unity to match the printed tracked image. The transformation estimates for the image are continually updated, leading to enhanced tracking accuracy, particularly for static images, as XREAL SDK accumulates data from various angles over time.
-- XREAL SDK allows developers to add up to 5 unique images to its reference image library. However, the number of images that can be tracked simultaneously in real-time is limited to 2 for optimal performance. Attempting to track more than 1 image concurrently may result in reduced real-time responsiveness of the application. It is important to note that XREAL SDK will not track multiple instances of the same image, even if they are physically present in the environment.
+- XREAL SDK supports detection and tracking of both stationary images (e.g., a painting on a wall or a book on a table) and moving images (e.g., a handheld poster or a rotating billboard).
+- Once tracking is initiated, the SDK continuously provides pose estimations (position and orientation) of the tracked image. To ensure accurate alignment of virtual content with the physical image, it is critical that the physical size specified in Unity exactly matches the actual dimensions of the printed image. Even a small discrepancy (e.g., 1 cm) can cause noticeable depth errors—resulting in virtual objects appearing unnaturally in front of or behind the tracked image. Therefore, developers must carefully measure the printed image and input the precise size in Unity to achieve correct visual anchoring and stable tracking results.
+- Developers can add up to 5 unique reference images to the image library. However, the SDK supports real-time tracking of up to 1 image simultaneously. Attempting to track more than 1 image at the same time may degrade performance. The SDK does not support tracking multiple instances of the same reference image within a scene.
+
+**Best Practices:**
+
+For reliable tracking performance, the image must be of sufficient size and occupy a noticeable portion of the display field. For instance, a 40 cm × 40 cm square image should ideally be viewed from approximately 40 cm away. Images that are too small or appear too small within the user’s field of view may not be tracked accurately or stably. 
 
 ### Requirements
 
