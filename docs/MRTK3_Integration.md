@@ -8,6 +8,12 @@ Thanks to XREAL SDK 3.0.0's integration with XR Hands, developers can seamlessly
 - [XREAL SDK 3.0.0](https://developer.xreal.com/download)
 - XR Hands
 
+:::info
+If you want to skip all these environment setup steps and get a ready-to-use project, you can refer to **[this repository](https://github.com/dengxian-xreal/MixedRealityToolkit-Unity-XREALSDK)**.
+Simply clone it and you're good to go.
+:::
+
+
 ## Integration Steps
 
 ### 1. SDK Import
