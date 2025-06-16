@@ -8,7 +8,7 @@ Please note that XR Streaming is no longer built into Nebula.
 
 As of 2024.06.14, it has been renamed to CloudXR. 
 
-You can download it from here or download it later from Google Play.
+You can download it here.
 
 
 When using ONE series devices, there is a known issue in CloudXR SDK 4.0.1 that causes crashes. NVIDIA has confirmed they will not fix this issue. We have reverted to **CloudXR 3.2** and found it to be compatible with ONE series glasses. Please use CloudXR 3.2 as the server.
