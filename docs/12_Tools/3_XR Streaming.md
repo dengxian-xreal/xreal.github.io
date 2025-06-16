@@ -10,25 +10,36 @@ As of 2024.06.14, it has been renamed to CloudXR.
 
 You can download it from here or download it later from Google Play.
 
+
+When using ONE series devices, there is a known issue in CloudXR SDK 4.0.1 that causes crashes. NVIDIA has confirmed they will not fix this issue. We have reverted to **CloudXR 3.2** and found it to be compatible with ONE series glasses. Please use CloudXR 3.2 as the server.
+
 :::
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+
 <Tabs>
+
+  
+  <TabItem value="CloudXR v3.2" label="CloudXR v3.2">
+   [CloudXR_20250616.apk](https://public-resource.xreal.com/download/Application/cloudxr_2025-06-16_153622-3.0.0.16-release.apk)
+   Compatible with MyGlasses 1.8.1.
+   
+  </TabItem>
+
+
   <TabItem value="CloudXR v4.0" label="CloudXR v4.0" default>
 
  [CloudXR_20250314.apk](https://public-resource.xreal.com/download/Application/cloudxr_2025-03-04_103403-3.0.0.14-release.apk)
- Compatible with MyGlasses 1.7.0.
+ Compatible with MyGlasses 1.7.0. 
+ 
+
 
 [CloudXR_20241216.apk](https://public-resource.xreal.com/download/Application/cloudxr_2024-12-16_155919-2.4.0.13-release.apk)
 Compatible with MyGlasses 1.5.0.
+</TabItem>
 
-
-  </TabItem>
-  <TabItem value="CloudXR v3.2" label="CloudXR v3.2">
-   [XRStreaming.apk](https://nreal-public.nreal.ai/download/Application/XRStreaming.apk)
-  </TabItem>
 </Tabs>
 
 ### **Environment Requirements**
@@ -60,12 +71,11 @@ Please see the following for detailed setup instructions:
 
 1. Install both [Steam](https://store.steampowered.com/about/) and [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) on your PC;
 
-2. Download [CloudXR-Setup-v4.0.zip](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v4.0.zip) (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.5.0);
+2. Download  [CloudXR-Setup-v3.2.exe](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe), (NVIDIA CloudXR SDK server, for BeamPro MyGlasses v1.8.1);
 
    :::tip
-
    [CouldXR-Setup-v3.1.exe](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v3.1.exe), for Nebula v2.3.4;   
-   [CloudXR-Setup-v3.2.exe](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v3.2.exe), for Nebula v3.0.0;
+   [CloudXR-Setup-v4.0.zip](https://public-resource.xreal.com/download/CloudXR-Setup/CloudXR-Setup-v4.0.zip) ,for BeamPro MyGlasses v1.5.0;
    :::
 
 3. Unzip downloaded **CloudXR-Setup-v4.0.zip,** choose CloudXR Server as following and install CloudXR Server on your PC 
