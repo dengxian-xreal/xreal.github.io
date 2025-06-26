@@ -6,10 +6,7 @@ toc_max_heading_level: 5
 
 #### **1 Which Unity version is supported by XREAL SDK?**
 
-Unity 2021.3.x and above. The LTS(long term support) Unity version is recommended.
-
-
-
+Refer to: [Getting Started with XREAL SDK](01_Getting%20Started%20with%20XREAL%20SDK.md)
 
 #### **2 The app is not being able to be opened through MyGlasses, showing "Currently, your app is not supported on this device"**
 Please add the following permission in the **AndroidManifest.xml**:
@@ -80,3 +77,39 @@ https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manua
 
 ![image-20241202141736565](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241202141736565.png)
 
+#### **6 Notes for Developers Using Samsung S24 for AR App Development**
+
+##### 1. Device Compatibility
+
+- **XREAL SDK 3.0.0** is confirmed to be compatible with the Samsung S24.
+- Currently, we only test and guarantee compatibility on Samsung flagship models. Compatibility with other Android devices is not guaranteed.
+
+##### 2. Required App
+
+- Developers must install the **ControlGlasses app** on their Android device; otherwise, AR applications will not run properly.
+- **Download link**: Download the version-matching ControlGlasses from the corresponding [SDK release notes](https://docs.xreal.com/category/release-note).
+
+##### 3. Runtime Behavior
+
+- Once the AR glasses are connected to the S24, the ControlGlasses app will automatically launch and switch the glasses to **3D mode** (split screen, with one half displayed per eye—this is normal).
+- Developers can choose to:
+  - Configure the app to auto-launch (takes effect after reconnecting the glasses)
+  - Or manually start the app from the phone
+
+##### 4. Important Setting
+
+- Make sure to **disable Samsung DeX mode** during development, as it may affect app display and behavior.
+
+#### **7 Capturing Debug Logs with ADB Logcat**
+
+1. Check the WiFi IP address of your Android device / Beam Pro;  
+2. Connect the device to your PC via USB
+3. Open command prompt, enter the command: `adb tcpip 5555 `
+4. Execute command: `adb connect [IP address]`. This IP address is the WiFi IP of your device; 
+5. Disconnect your Android device; 
+6. Terminate all XREAL applications; 
+  	* `adb shell ps|findstr [package keywords]` (If you use Mac: adb shell ps|grep) to retrieve the target package name
+  	* `adb shell am force-stop [package name] `
+7. Execute: `adb logcat > logcat.txt` in terminal
+8. Connect the AR glasses to your device, launch the server application, and reproduce the issue
+9. Press Ctrl + C to stop log capture and provide the logcat.txt file
