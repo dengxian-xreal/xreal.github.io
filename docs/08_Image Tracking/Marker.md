@@ -28,7 +28,9 @@ XREAL Markers have been recognized for their innovative design, winning the pres
 
 > Developers who don’t have Marker cards can download and print this PDF file for use.
 
-[XREAL Markers Print.pdf](../assets/XREAL%20Markers%20Print.pdf)
+[XREAL Markers Print.pdf](https://public-resource.xreal.com/download/Application/XREALMarkersPrint.pdf)
+
+
 
 Usage Instructions:
 
@@ -36,6 +38,7 @@ Usage Instructions:
 * When printing, do not enlarge the image; print at 100% scale.
 * Cut out the Marker along the black border and attach it to a rigid cardboard.
 * Within the camera’s recognition range, only one card of the same color should appear.
+* The marker should be used within a distance of 80 cm for optimal recognition.
 
 ## Developer Guide
 

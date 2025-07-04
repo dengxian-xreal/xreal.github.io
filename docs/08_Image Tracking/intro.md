@@ -14,7 +14,7 @@ A set of images can be uploaded to the database as pre-trained references. These
 
 **Best Practices:**
 
-For reliable tracking performance, the image must be of sufficient size and occupy a noticeable portion of the display field. For instance, a 40 cm × 40 cm square image should ideally be viewed from approximately 40 cm away. Images that are too small or appear too small within the user’s field of view may not be tracked accurately or stably. 
+For reliable tracking performance, the image should be of sufficient size and occupy a noticeable portion of the display field. For example, a 40 cm × 40 cm image is ideally viewed from a distance of around 40 cm. To ensure stable detection and tracking, the distance between the camera and the image should generally not exceed 1.5 times the image’s physical size. Images that are too small or appear too small within the user’s field of view may not be tracked accurately or stably.
 
 ### Requirements
 
