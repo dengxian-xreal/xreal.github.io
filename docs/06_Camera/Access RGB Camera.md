@@ -1,5 +1,15 @@
 # Access RGB Camera
 
+## Overview
+
+The RGB camera is a feature that allows you to access the RGB camera images from the XREAL glasses.
+
+You can use this feature to:
+
+- Record a video with the RGB camera
+- Access the RGB camera images in real time
+- For glasses without RGB accessories, you can also refer to this section to achieve the effect of recording virtual content
+
 ## Device Compatibility
 
 Currently, only the RGB camera accessory **Eye** for the **XREAL One series** glasses supports this feature.
@@ -67,11 +77,6 @@ You can simply transform the `Video` gameObject to a prefab and use it in your s
 - **Application and Mic Audio:** Captures both the application's audio and microphone input, combining in-app sounds with user or environmental audio.
 - **None:** Disables all audio capture, resulting in a video with no sound.
 
-:::tip
-
-Please note that when you choose **Mic Audio** or **Application and Mic Audio**, you need to add the permission of “android.permission.RECORD_AUDIO” to your “AndroidManifest.xml” file in “Assets/Plugin”.
-
-:::
 
 **Capture Side**
 
@@ -85,7 +90,16 @@ Please note that when you choose **Mic Audio** or **Application and Mic Audio**,
 
 ### Build and Run the Sample App
 
-- Audio record needs the permission of “android.permission.RECORD_AUDIO”, Add it to your “AndroidManifest.xml” file in “Assets/Plugin”.
+:::warning
+
+
+You need to add the following two permissions to your Project Setting, otherwise the screen recording will not work.
+
+- RECORD_AUDIO
+- FOREGROUND_SERVICE_MEDIA_PROJECTION
+
+:::
+
 - The **Previewer** is used to preview live images in real time, for debugging purposes. Click the **APP** key of the controller to show or hide it.
 - Click the **Start** button to start video capture.
 - Click the **Stop** button to stop video capture. It will save the video file to **“Application.persistentDataPath”** path.
