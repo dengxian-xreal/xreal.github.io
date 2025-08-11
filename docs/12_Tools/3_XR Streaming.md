@@ -26,6 +26,10 @@ import TabItem from '@theme/TabItem';
    [CloudXR_20250616.apk](https://public-resource.xreal.com/download/Application/cloudxr_2025-06-16_153622-3.0.0.16-release.apk)
    Compatible with MyGlasses 1.8.1.
    
+   [CloudXR_20250807.apk](https://public-resource.xreal.com/download/Application/cloudxr_2025-08-07_181414-3.0.1.17-release.apk)
+   Compatible with MyGlasses 1.9.0.
+ 
+   
   </TabItem>
 
 
