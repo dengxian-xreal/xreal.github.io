@@ -37,13 +37,16 @@ The RGB camera supports YUV_420_888 format.
 For the YUV_420_888 format, use the code below to access and display the Y, U, and V textures:
 
 ```
-var yuvTextures = m_RGBCameraTexture.GetYUVFormatTextures();
+
+var yuvTextures = m_RGBCameraTexture.GetYUVFormatTextures ();
+
 if (yuvTextures[0] != null)
 {
-    m_YUVImage.material.SetTexture("_MainTex", yuvTextures[0]);
+    m_YUVImage. texture = yuvTextures[0];
     m_YUVImage.material.SetTexture("_UTex", yuvTextures[1]);
     m_YUVImage.material.SetTexture("_VTex", yuvTextures[2]);
 }
+
 ```
 
 ### How to record a video with RGB Camera
