@@ -42,7 +42,7 @@ var yuvTextures = m_RGBCameraTexture.GetYUVFormatTextures ();
 
 if (yuvTextures[0] != null)
 {
-    m_YUVImage. texture = yuvTextures[0];
+    m_YUVImage.texture = yuvTextures[0];
     m_YUVImage.material.SetTexture("_UTex", yuvTextures[1]);
     m_YUVImage.material.SetTexture("_VTex", yuvTextures[2]);
 }
