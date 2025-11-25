@@ -51,7 +51,7 @@ const config = {
           rehypePlugins: [require('rehype-katex')],
           versions: {
               current: {
-                  label: '3.0.0',
+                  label: '3.1.0',
                   path: '/',
                   badge: true
               }
@@ -105,7 +105,7 @@ const config = {
       announcementBar: {
         id: 'New SDK',
         content:
-          'XREAL SDK 3.0.0 released!🥳Now with support for Unity XRI and AR Foundation. <a target="_blank" rel="noopener noreferrer" href="/Release Note/XREAL SDK 3.0.0">📃Check the release notes</a>.',
+          'XREAL SDK 3.1.0 released! 🎉 Read about the latest improvements and upgrade steps. <a target="_blank" rel="noopener noreferrer" href="/Release Note/XREAL SDK 3.1.0">📃Check the release notes</a>.',
         backgroundColor: '#f7e6f7',
         textColor: '#000',
         isCloseable: false,

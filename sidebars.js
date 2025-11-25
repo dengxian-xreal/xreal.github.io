@@ -44,6 +44,8 @@ const sidebars = {
         "title": "Release Notes"
       },
       "items": [
+        "Release Note/SDK Upgrade Playbook",
+        "Release Note/XREAL SDK 3.1.0",
         "Release Note/XREAL SDK 3.0.0"
       ]
     },

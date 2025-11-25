@@ -130,7 +130,7 @@ You could either configure your project automatically via XR Plugin Management *
 
 Access these settings via `Edit > Project Settings > XR Plug-in Management > XREAL`:
 
-![image-20241226190639916](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20241226190639916.png)
+![image-20251125174154295](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20251125174154295.png)
 
 * `Stereo Rendering Mode`
   * **Multi-view**: This mode renders the left and right eye views in a single pass, reducing the overhead and potentially increasing performance. To understand Single Pass Stereo rendering in detail, go to [Single Pass Stereo Rendering](https://docs.unity3d.com/Manual/SinglePassStereoRendering.html) topics in Unity’s documentation.
@@ -159,6 +159,9 @@ Access these settings via `Edit > Project Settings > XR Plug-in Management > XRE
   ![Dual Screen Display](https://xreal.gitbook.io/~gitbook/image?url=https%3A%2F%2F3927673004-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyXoV7SMVFQhr75lOIoQv%252Fuploads%252FURzr2zc46xi9SY7CjA7z%252FCleanShot%25202024-03-12%2520at%252011.07.45.gif%3Falt%3Dmedia%26token%3Dfae8be23-1475-4633-9f12-6871c42388a1&width=768&dpr=4&quality=100&sign=58fec834f79e26dc2c1bdbf91f1b67a3efa81afca32b46d529c0107107e6f72a)
 
   For more detailed information about dual-screen display, see [Dual Screen Display](../Tools/DualScreenDisplay).
+
+* `Enable Auto Logcat`: When enabled, the app will automatically save the current Logcat output each time it starts.
+The log file will be stored at: `Android/data/<package_name>/cache/auto_log/logcat_yyyy-MMdd-HHmmss.log`. This option is disabled by default. It is recommended to enable it during debugging to make it easier to capture logs and troubleshoot issues.
 
 * `Support Devices`: 
   * **XREAL_DEVICE_CATEGORY_REALITY**: Glasses with 6DoF tracking capabilities, such as the XREAL Air 2 Ultra.
@@ -237,3 +240,12 @@ To disable the splash screen, you must have a Unity Pro license. Once you have t
 #### 6. Composition Layers with Layer Order Less Than 0 Not Visible in URP
 
   In URP, HDR must be disabled. The reason for this is that when HDR is enabled, Unity uses R11G11B10 textures instead of R8G8B8A8_UNorm. Consequently, the Alpha Blend of the Composition Layer does not function correctly, although the Layer Order feature remains operational.
+
+
+#### 7. Missing prefab in HelloMR
+
+![image-20251125151115532](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20251125151115532.png)
+
+To resolve this issue, you need to import Hands Interaction Demo.
+
+![Unity 2025-11-25 15.03.55](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/Unity%202025-11-25%2015.03.55.png)
