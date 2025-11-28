@@ -1,8 +1,3 @@
----
-id: Tools/ControlGlasses
-sidebar_label: ControlGlasses
-slug: /Tools/ControlGlasses
----
 
 # ControlGlasses User Guide
 
