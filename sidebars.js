@@ -124,7 +124,8 @@ const sidebars = {
         "Tools/First Person View",
         "Tools/Emulator",
         "Tools/XR Streaming",
-        "Tools/Dual Screen Display"
+        "Tools/Dual Screen Display",
+        "Tools/ControlGlasses"
       ]
     },
     {

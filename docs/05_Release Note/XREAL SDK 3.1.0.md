@@ -5,7 +5,7 @@
 
 **Download** [**XREAL SDK 3.1.0 for Unity**](https://public-resource.xreal.com/download/XREALSDK_Release_3.1.0.20251125/com.xreal.xr.tar.gz)
 
-**Download** [**Control Glasses 3.1.0**](https://public-resource.xreal.com/download/XREALSDK_Release_3.1.0.20251124/ControlGlasses-3.1.0.20251118115716-release.apk)
+**Download** [**Control Glasses 3.1.0**](https://public-resource.xreal.com/download/XREALSDK_Release_3.1.0.20251124/ControlGlasses-3.1.0.20251118115716-release.apk) — [Why do I need ControlGlasses?](../Tools/ControlGlasses)
 
 :::
 
@@ -39,5 +39,4 @@
 * To use the new 6DoF tracking capabilities, you must update the glasses firmware
   * BeamPro: update MyGlasses to 1.11.0, then connect the glasses to BeamPro to trigger the automatic firmware update
   * S25: connect the glasses to a PC and update the firmware via the OTA website: https://www.xreal.com/ota/
-
 
