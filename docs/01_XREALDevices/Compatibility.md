@@ -9,6 +9,10 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
+<TabItem value="MyGlasses 1.11.0 & ControlGlasses 3.1.0" label="MyGlasses 1.11.0 & ControlGlasses 3.1.0">
+  ![image-20251202103724780](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20251202103724780.png)
+  </TabItem>
+
   <TabItem value="MyGlasses 1.7.0 & ControlGlasses 1.1.0" label="MyGlasses 1.7.0 & ControlGlasses 1.1.0">
   ![image-20250303161933651](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20250303161933651.png)
   </TabItem>
@@ -34,7 +38,7 @@ XREAL SDK runs on multiple Android devices and different types of XREAL glasses 
 
 | Features                            | XREAL One Series  (with RGB Camera)         | XREAL Air/Air 2/Air 2 Pro | XREAL Air 2 Ultra |
 | :---------------------------------- | :-------------------- | :------------------------ | :---------------- |
-| Head Tracking                       | 3DoF                  | 3DoF                      | 6DoF              |
+| Head Tracking                       | 6DoF                  | 3DoF                      | 6DoF              |
 | Plane Tracking                      | No                   | No                        | Yes               |
 | Image Tracking                      | No                   | No                        | Yes               |
 | Hand Tracking                       | No                   | No                        | Yes               |
@@ -61,5 +65,5 @@ Moreover, compatibility with **Air 2 Ultra** also means that features such as ha
 | Brand   | Chip                                   | Model Name         | Model Number | Android Version |
 | :------ | :------------------------------------- | :----------------- | :----------- | :-------------- |
 | Samsung | Qualcomm Snapdragon 8 Gen 3            | galaxy S24         | SM-S9210     | Android 14      |
-
+| Samsung | Qualcomm Snapdragon 8 Elite (3 nm)     | galaxy S25         | SM-S931U     | Android 15      |
 ---
