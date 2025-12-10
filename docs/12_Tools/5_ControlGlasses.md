@@ -83,3 +83,5 @@ Built for faster developer iteration:
    - The selected AR application launches automatically.
 
 This greatly streamlines the testing workflow.
+
+Similar debugging method in BeamPro: please refer to [How to enable developer mode on BeamPro](../14_Frequently%20Asked%20Questions.md#8-how-to-enable-developer-mode-on-beampro)

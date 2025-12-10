@@ -113,3 +113,8 @@ https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manua
 7. Execute: `adb logcat > logcat.txt` in terminal
 8. Connect the AR glasses to your device, launch the server application, and reproduce the issue
 9. Press Ctrl + C to stop log capture and provide the logcat.txt file
+
+
+#### **8 How to enable developer mode on BeamPro**
+
+In BeamPro, you can enable developer mode by clicking the glasses icon 10 times in the top left corner of MyGlasses without connecting the glasses. This will open the developer mode, enter the developer debugging page, and select "select other MR App" to specify the application here.
