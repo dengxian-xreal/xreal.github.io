@@ -85,17 +85,3 @@ Built for faster developer iteration:
 This greatly streamlines the testing workflow.
 
 Similar debugging method in BeamPro: please refer to [How to enable developer mode on BeamPro](../14_Frequently%20Asked%20Questions.md#8-how-to-enable-developer-mode-on-beampro)
-
-## Error Codes
-
-| Code | Issue | Notes |
-| --- | --- | --- |
-| 1 | Ping failed | Phone does not expose the network interface, current solution incompatible |
-| 2 | `GetGlassesStartupState` failure | Capture logs for deeper analysis |
-| 3 | `nativeGlassesInit` failure | Capture logs for deeper analysis |
-| 4 | USB disconnected | Glasses are unplugged or the connection is loose |
-| 5 | Audio/Camera permission missing | Grant app permissions in system settings |
-| 6 | USB permission denied | Replug the glasses and allow the USB dialog |
-| 7 | Second display not detected | Phone DP link failed to enumerate |
-| 8 | 3D mode switch failure | Capture logs for deeper analysis |
-| 9 | 3D resolution mismatch | System output resolution conflicts with glasses so MR app cannot launch |
