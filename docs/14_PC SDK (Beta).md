@@ -41,11 +41,19 @@ With the Windows/macOS PC SDK, you can connect XREAL glasses directly to a PC to
 
 The PC SDK configuration is **the same on Windows and macOS**:
 
-- [com.xreal.xr](https://public-resource.xreal.com/download/XREALSDK_PreView_3.1.1_20260113/com.xreal.xr.tar.gz)
-- [com.xreal.xr.experimental](https://public-resource.xreal.com/download/XREALSDK_PreView_3.1.1_20260113/com.xreal.xr.experimental.tar.gz)
+- [com.xreal.xr](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.1.20260113/20260113_173436_3.1.1/com.xreal.xr.tar.gz)
+- [com.xreal.xr.experimental](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.1.20260113/20260113_173436_3.1.1/com.xreal.xr.experimental.tar.gz)
 - [com.cysharp.unitask](https://github.com/Cysharp/UniTask?tab=readme-ov-file#install-via-git-url)
 
-## Unity Project Setup 
+## Getting Started with the PC SDK
+
+:::tip Want to skip environment setup?
+If you run into setup issues (or just want a ready-to-run project), clone the [XREALSDKForPC template repo](https://github.com/dengxian-xreal/XREALSDKForPC). If you run into any issues, feel free to open an issue in that repo and we’ll help you there.
+
+Then download `com.xreal.xr` and `com.xreal.xr.experimental` (the tarballs linked above) and place them in the **project root** (the same folder level as `Assets/`). The project is preconfigured and should work once you open it in Unity.
+
+![image-20260116152034334](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20260116152034334.png)
+:::
 
 1. Add packages
    - Open **Window → Package Manager**
@@ -73,7 +81,7 @@ The PC SDK configuration is **the same on Windows and macOS**:
 If your project uses **URP**:
 
 - Replace the materials in the sample scene as needed
-- Add `XREALRenderFeature` to your Renderer Features, and keep it as the **last** feature
+- Add `XREAL Embedding Render Feature` to your Renderer Features, and keep it as the **last** feature
  ![image-20260113175849554](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20260113175849554.png)
 ## Input System
 
