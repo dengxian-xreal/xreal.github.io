@@ -142,7 +142,6 @@ const sidebars = {
       ]
     },
 
-    "pc-sdk-beta",
     "Frequently Asked Questions",
     {
       "type": "category",
