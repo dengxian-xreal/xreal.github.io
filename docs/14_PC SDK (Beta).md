@@ -41,8 +41,8 @@ With the Windows/macOS PC SDK, you can connect XREAL glasses directly to a PC to
 
 The PC SDK configuration is **the same on Windows and macOS**:
 
-- [com.xreal.xr](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.1.20260113/20260113_173436_3.1.1/com.xreal.xr.tar.gz)
-- [com.xreal.xr.experimental](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.1.20260113/20260113_173436_3.1.1/com.xreal.xr.experimental.tar.gz)
+- [com.xreal.xr.3.1.1.20260113](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.1.20260113/20260113_173436_3.1.1/com.xreal.xr.tar.gz)
+- [com.xreal.xr.experimental.3.1.1.20260113](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.1.20260113/20260113_173436_3.1.1/com.xreal.xr.experimental.tar.gz)
 - [com.cysharp.unitask](https://github.com/Cysharp/UniTask?tab=readme-ov-file#install-via-git-url)
 
 ## Getting Started with the PC SDK
