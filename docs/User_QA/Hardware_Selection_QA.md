@@ -20,8 +20,8 @@ Format per entry:
 ## 2026-01-31 — Fixed Wraparound Video (Pinned Instructor)
 
 ### User / Contact
-- **From:** Tony Di Carlo <tony@dicarlo.us>
-- **CC:** Jorge M Ramirez Perez <ramirezperezjorgeman@gmail.com>
+- **From:** Tony Di Carlo `tony@dicarlo.us`
+- **CC:** Jorge M Ramirez Perez `ramirezperezjorgeman@gmail.com`
 - **Original subject:** Fixed Wraparound Video
 - **Phone (provided):** (562) 212 0310
 

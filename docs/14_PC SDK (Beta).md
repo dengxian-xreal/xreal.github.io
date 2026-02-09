@@ -43,8 +43,8 @@ The PC SDK configuration is **the same on Windows and macOS**:
 
 
 
-- [com.xreal.xr.3.1.2.20260113](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.2.20260206/20260206_185349_3.1.2_Preview/com.xreal.xr.tar.gz)
-- [com.xreal.xr.experimental.3.1.1.20260113](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.2.20260206/20260206_185349_3.1.2_Preview/com.xreal.xr.experimental.tar.gz)
+- [com.xreal.xr.3.1.2.20260206](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.2.20260206/20260206_185349_3.1.2_Preview/com.xreal.xr.tar.gz)
+- [com.xreal.xr.experimental.3.1.2.20260206](https://public-resource.xreal.com/download/XREALSDK_Preview_3.1.2.20260206/20260206_185349_3.1.2_Preview/com.xreal.xr.experimental.tar.gz)
 - [com.cysharp.unitask](https://github.com/Cysharp/UniTask?tab=readme-ov-file#install-via-git-url)
 
 ## Getting Started with the PC SDK
