@@ -50,4 +50,4 @@ This document applies to **iOS**.
 7. Add **XREAL Embedding Render Feature** to your renderer. If you have multiple renderer features, **XREAL Renderer Feature** should be the last one.
    ![image-20260209115921896](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20260209115921896.png)
 8. **Export the Unity Project to Xcode and Add Signing** Build the Unity project into an Xcode project as usual. After adding the required signing settings in Xcode, the app can be installed on the iPhone for testing.
-9. If you use **Unity 6**, disable **HDR**.
+9. If you use **Unity 6**, disable **HDR**.![image-20260520190930805](https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20260520190930805.png)
