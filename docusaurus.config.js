@@ -103,11 +103,11 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       announcementBar: {
-        id: 'New SDK',
+        id: 'android-16-compatibility-notice',
         content:
-          'XREAL SDK 3.1.0 released! 🎉 Read about the latest improvements and upgrade steps. <a target="_blank" rel="noopener noreferrer" href="/Release Note/XREAL SDK 3.1.0">📃Check the release notes</a>.',
-        backgroundColor: '#f7e6f7',
-        textColor: '#000',
+          '⚠️ Android 16 Compatibility Notice: Compatibility issues are under investigation. Please do not upgrade your development devices to Android 16.',
+        backgroundColor: '#fff3cd',
+        textColor: '#664d03',
         isCloseable: false,
       },
       navbar: {
