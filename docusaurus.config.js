@@ -105,7 +105,7 @@ const config = {
       announcementBar: {
         id: 'android-16-compatibility-notice',
         content:
-          '⚠️ Android 16 Compatibility Notice: Compatibility issues are under investigation. Please do not upgrade your development devices to Android 16. <a href="/Frequently%20Asked%20Questions#android-16-samsung-workaround">View the workaround</a>.',
+          '⚠️ Android 16 Compatibility Notice: Compatibility issues are under investigation. Please do not upgrade your development devices to Android 16.',
         backgroundColor: '#fff3cd',
         textColor: '#664d03',
         isCloseable: false,

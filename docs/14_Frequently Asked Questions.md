@@ -131,26 +131,3 @@ Recommended flow:
 2. Request Camera permission at runtime and confirm that the user has granted it.
 3. Request USB permission through `UsbManager.requestPermission()`.
 4. Open the device only after USB permission is granted.
-
-#### **10 Can XREAL SDK apps use AR Foundation on Beam Pro? Should I enable ARCore or Google Play Services for AR?**
-
-XREAL SDK can be used with Unity AR Foundation for supported AR features such as plane detection, image tracking, spatial anchors, and depth meshing, depending on the SDK version and device capability.
-
-Beam Pro does not support Google Play Services for AR. Do not enable or depend on ARCore or Google Play Services for AR when building for Beam Pro. Google Play Services for AR has its own device compatibility list, and Beam Pro should not rely on Google Play Services for AR in either China-region or overseas-region configurations.
-
-Recommended setup:
-
-1. Use XREAL SDK with Unity AR Foundation.
-2. Enable the XREAL XR Plug-in in Unity XR Plug-in Management.
-3. Do not enable ARCore XR Plugin.
-4. Remove or replace plugins that depend on Google Play Services for AR or ARCore if they are not supported in your target environment.
-
-#### **11 How to resolve Android 16 compatibility issues on Samsung phones?** {#android-16-samsung-workaround}
-
-When using a Samsung phone with Android 16, the latest ControlGlasses app, and the latest XREAL Unity SDK, configure both the phone and SDK as follows:
-
-1. On the Samsung phone, go to **Settings > Connected devices > Samsung DeX > Connected display**.
-2. Select **Mirrored**.
-3. In Unity, open **XREAL Settings** and disable **Support Multi Resume**.
-
-Support Multi Resume launches the MR app's Activity on the secondary display. Android 16 restricts this behavior, preventing the MR app from starting. Disabling Support Multi Resume keeps the Activity on the mirrored display so the MR app can launch.
