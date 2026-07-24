@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-2.4.1 docs-doc-page docs-doc-id-Getting Started with NRSDK" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.3.2">
+<title data-rh="true">Getting Started with NRSDK | XREAL SDK</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://xreal.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://xreal.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://xreal.github.io/2.4.1/Getting Started with NRSDK"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="2.4.1"><meta data-rh="true" name="docusaurus_tag" content="docs-default-2.4.1"><meta data-rh="true" name="docsearch:version" content="2.4.1"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-2.4.1"><meta data-rh="true" property="og:title" content="Getting Started with NRSDK | XREAL SDK"><meta data-rh="true" name="description" content="Start developing your NRSDK Unity apps on Android phone."><meta data-rh="true" property="og:description" content="Start developing your NRSDK Unity apps on Android phone."><link data-rh="true" rel="icon" href="/img/Glasses.ico"><link data-rh="true" rel="canonical" href="https://xreal.github.io/2.4.1/Getting Started with NRSDK"><link data-rh="true" rel="alternate" href="https://xreal.github.io/2.4.1/Getting Started with NRSDK" hreflang="en"><link data-rh="true" rel="alternate" href="https://xreal.github.io/2.4.1/Getting Started with NRSDK" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="XREAL SDK RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="XREAL SDK Atom Feed">
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.13b999dd.css">
+<script src="/assets/js/runtime~main.1066a567.js" defer="defer"></script>
+<script src="/assets/js/main.c4ae77ec.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="announcementBar_mb4j" style="background-color:#fff3cd;color:#664d03" role="banner"><div class="content_knG7 announcementBarContent_xLdY">⚠️ Android 16 Compatibility Notice: Compatibility issues are under investigation. Please do not upgrade your development devices to Android 16.</div></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="NRSDK Logo" class="themedComponent_mlkZ themedComponent--light_NVdE" style="height:25px"><img src="/img/logo.png" alt="NRSDK Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU" style="height:25px"></div><b class="navbar__title text--truncate">XREAL SDK</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/2.4.1/">Docs</a><div class="navbar__item dropdown dropdown--hoverable"><a aria-current="page" class="navbar__link active" aria-haspopup="true" aria-expanded="false" role="button" href="/2.4.1/">2.4.1</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/">3.1.0</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/2.4.1/Getting Started with NRSDK">2.4.1</a></li></ul></div></div><div class="navbar__items navbar__items--right"><a href="https://developer.xreal.com/download" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">SDK Download</a><a href="https://developer.xreal.com/reference/nrsdk/overview" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">API Reference</a><a href="https://github.com/nreal-ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input"><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/2.4.1/">NRSDK Overview</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/category/xreal-devices">XREAL Devices</a><button aria-label="Expand sidebar category &#x27;XREAL Devices&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/2.4.1/Getting Started with NRSDK">Getting Started with NRSDK</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/2.4.1/Sample Code">Sample Code</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/2.4.1/Tutorials">Tutorials</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/category/release-note">Release Note</a><button aria-label="Expand sidebar category &#x27;Release Note&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/category/input-and-camera">Input and Camera</a><button aria-label="Expand sidebar category &#x27;Input and Camera&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/2.4.1/Hand Tracking">Hand Tracking</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/Image Tracking/intro">Image Tracking</a><button aria-label="Expand sidebar category &#x27;Image Tracking&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/Plane Detection/Overview">Plane Detection (Tutorial)</a><button aria-label="Expand sidebar category &#x27;Plane Detection (Tutorial)&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/Depth Mesh/Overview">Depth Mesh</a><button aria-label="Expand sidebar category &#x27;Depth Mesh&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/Spatial Anchor/intro">Spatial Anchor</a><button aria-label="Expand sidebar category &#x27;Spatial Anchor&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/category/tools">Tools</a><button aria-label="Expand sidebar category &#x27;Tools&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/category/rendering">Rendering</a><button aria-label="Expand sidebar category &#x27;Rendering&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/category/miscellaneous">Miscellaneous</a><button aria-label="Expand sidebar category &#x27;Miscellaneous&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/2.4.1/Frequently Asked Questions">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/2.4.1/category/design-guide">Design Guide</a><button aria-label="Expand sidebar category &#x27;Design Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="theme-doc-version-banner alert alert--warning margin-bottom--md" role="alert"><div>This is documentation for <!-- -->XREAL SDK<!-- --> <b>2.4.1</b>, which is no longer actively maintained.</div><div class="margin-top--md">For up-to-date documentation, see the <b><a href="/">latest version</a></b> (<!-- -->3.1.0<!-- -->).</div></div><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Getting Started with NRSDK</span><meta itemprop="position" content="1"></li></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Version: 2.4.1</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Getting Started with NRSDK</h1>
+<p>Start developing your NRSDK Unity apps on Android phone.</p>
+<p>This quickstart guide will help you set up your development environment and test out the sample app “Hello MR” using NRSDK.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>If you want to skip all these environment setup steps and get a ready-to-use project, you can refer to <strong><a href="https://github.com/dengxian-xreal/NRSDKTemplate" target="_blank" rel="noopener noreferrer">this repository</a></strong>.
+Simply clone it and you&#x27;re good to go.</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-pre-requisites">1. Pre-requisites<a href="#1-pre-requisites" class="hash-link" aria-label="Direct link to 1. Pre-requisites" title="Direct link to 1. Pre-requisites">​</a></h3>
+<p><strong>Hardware Checklist</strong></p>
+<ul>
+<li>
+<p>A supported Android Phone. Please review the<a href="/XREALDevices/compatibility"> Device Compatibility</a> list to ensure your phone model is compatible with the glasses and NRSDK.</p>
+</li>
+<li>
+<p>A pair of <strong>XREAL</strong> glasses.</p>
+</li>
+<li>
+<p><strong>Android Debug Bridge</strong> <a href="https://developer.android.com/studio/command-line/adb" target="_blank" rel="noopener noreferrer">(adb)</a>. Wireless ADB is not required but <strong>strongly recommended</strong>, so that repetitive plug in/out can be avoided.</p>
+</li>
+</ul>
+<p><strong>Software Checklist</strong></p>
+<ul>
+<li>
+<p><a href="https://unity3d.com/get-unity/download" target="_blank" rel="noopener noreferrer">Unity</a> (recommended versions) with Android Build Support enabled:</p>
+<ul>
+<li>2021.3.X LTS</li>
+<li>2022.3.X LTS</li>
+<li>6000.0.x LTS</li>
+</ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>Start from NRSDK 2.2.1, gradle version must be 6.7.1 or higher to avoid build errors. If you are using Unity 2022 or later, the included Gradle version is sufficient. For versions earlier than 2022, you will need to download the appropriate Gradle file and set it in Unity-&gt; Settings-&gt; External tools.</p><p><img decoding="async" loading="lazy" src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240807174108770.png" alt="image-20240807174108770" class="img_ev3q"></p><p>Additionally, we have identified that some versions of Unity 2022 may experience crashes due to insufficient TLS. This issue was resolved in version 2022.3.24f1 (Corrected crashes due to excessive use of thread local data slots). Therefore, if you are using Unity 2022, we recommend using version 3.24 or later.</p></div></div>
+</li>
+<li>
+<p>Latest <a href="https://developer.xreal.com/download" target="_blank" rel="noopener noreferrer">NRSDK for Unity</a></p>
+<p>The SDK is downloaded as <code>NRSDKForUnity_x.x.x.unitypackage</code></p>
+</li>
+<li>
+<p>Android SDK 10.0 (API Level 29) or later, installed using the SDK Manager in <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer">Android Studio</a></p>
+</li>
+<li>
+<p><a href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener noreferrer">Visual Studio</a> (if you prefer other development environments that’s fine too)</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-creating-a-unity-project">2. Creating a Unity Project<a href="#2-creating-a-unity-project" class="hash-link" aria-label="Direct link to 2. Creating a Unity Project" title="Direct link to 2. Creating a Unity Project">​</a></h3>
+<p>We’re going to create a new Unity project and integrate NRSDK later on. To create a new Unity project:</p>
+<ul>
+<li>
+<p>Open Unity Hub and create a new 3D project.</p>
+</li>
+<li>
+<p>Import NRSDK for Unity</p>
+<ul>
+<li>
+<p>Select <code>Assets&gt;Import Package&gt;Custom</code> Package.</p>
+</li>
+<li>
+<p>Select the <code>NRSDKForUnity_x.x.x.unitypackage</code> that you downloaded.</p>
+</li>
+<li>
+<p>In the <strong>Importing</strong> Package dialog, make sure that all package options are selected and click <strong>Import</strong>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-configure-project-settings">3. Configure Project Settings<a href="#3-configure-project-settings" class="hash-link" aria-label="Direct link to 3. Configure Project Settings" title="Direct link to 3. Configure Project Settings">​</a></h3>
+<p>You could either configure your project automatically via NRSDK <strong>Project Tips</strong> tool or configure manually. These two ways are equivalent.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="project-tips-tool"><strong>Project Tips tool</strong><a href="#project-tips-tool" class="hash-link" aria-label="Direct link to project-tips-tool" title="Direct link to project-tips-tool">​</a></h4>
+<ul>
+<li>Go to NRSDK -&gt; Project Tips in Unity menu</li>
+</ul>
+<p>​	<img decoding="async" loading="lazy" src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812153433565.png" alt="image-20240812153433565" class="img_ev3q"></p>
+<ul>
+<li>Click <strong>Accept All</strong> in the popup window</li>
+</ul>
+<figure class="my-custom-figure"><img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240729152419937.png" alt="Your Image Description" class="center-image"><figcaption>Project Tips</figcaption></figure>
+<ul>
+<li>Wait for Unity to process. The <strong>Project Tips</strong> window should appear as empty when finished.</li>
+</ul>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240729152752977.png" class="center-image scale-image">
+<ul>
+<li>
+<p>Close the Project Tips window</p>
+</li>
+<li>
+<p>Most of the settings have been completed here, but <code>OpenGL ES3</code> and <code>Write Permission</code> still need to be manually configured. Please refer to the manual configuration path below for specific settings.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="manual-configuration"><strong>Manual Configuration</strong><a href="#manual-configuration" class="hash-link" aria-label="Direct link to manual-configuration" title="Direct link to manual-configuration">​</a></h4>
+<ul>
+<li>
+<p>Go to <strong>File &gt; Build Settings</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Android</strong> and click <strong>Switch Platform</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Build Settings</strong> window, click <strong>Player Settings</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Inspector</strong> window, configure player settings as follows:</p>
+</li>
+</ul>
+<table><thead><tr><th><strong>Setting</strong></th><th><strong>Value</strong></th></tr></thead><tbody><tr><td><code>Player Settings &gt; Resolution and Presentation &gt; Default Orientation</code></td><td>Portrait</td></tr><tr><td><code>Player Settings &gt; Other Settings &gt; Auto Graphics API</code></td><td>false</td></tr><tr><td><code>Player Settings &gt; Other Settings &gt; Graphics APIs</code></td><td>OpenGL ES3</td></tr><tr><td><code>Player Settings &gt; Other Settings &gt; Package Name</code></td><td>Create a unique app ID using a Java package name format. For example, use <strong>com.xreal.helloMR</strong></td></tr><tr><td><code>Player Settings &gt; Other Settings &gt; Minimum API Level</code></td><td>Android 10.0 or higher</td></tr><tr><td><code>Player Settings &gt; Other Settings &gt; Target API Level</code></td><td>Automatic (highest installed)</td></tr><tr><td><code>Player Settings &gt; Other Settings &gt; Write Permission</code></td><td>External(SDCard)</td></tr><tr><td><code>Project Settings &gt; Quality &gt; VSync Count</code></td><td>Don&#x27;t Sync</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-configure-compatible-devices">4. Configure Compatible Devices<a href="#4-configure-compatible-devices" class="hash-link" aria-label="Direct link to 4. Configure Compatible Devices" title="Direct link to 4. Configure Compatible Devices">​</a></h3>
+<p>You could specify Target Devices in <code>Assets/NRSDK/NRProjectConfig.</code> Be aware that <strong>all the NRSDK features supported by XREAL Air are supported by XREAL Light</strong> . By default, both <code>Support XREAL Light</code>(VISION) and <code>Support XREAL Air</code>(REALITY) are selected.</p>
+<figure class="my-custom-figure"><img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165059951.png" alt="Your Image Description" class="center-image"><figcaption>NR Project Config</figcaption></figure>
+<p>By selecting VISION, NRSDK will automatically attempt to adapt to XREAL Air, XREAL Air 2 or XREAL Air 2 Pro even if you had implemented NRSDK features that are based on RGB Camera (plane detection, image tracking, hand tracking, recording, etc. See <a href="/XREALDevices/compatibility">Device Compatibility</a> for details). However, be aware that the actual behavior of the adapted application may differ from your initial intent.</p>
+<p>If you only want the application to run on a specific device (Light/Air), you may arbitrarily specify a single target device. In this way, NRSDK will not try to adapt automatically, and the app will not run on unsupported devices.</p>
+<ul>
+<li>support Multi Resume: This feature allows for different displays on the main screen (phone) and the secondary screen (glasses). When the AR app is sent to the background, the glasses continue to display the AR application, while the phone screen can show any 2D app. Essentially, this is dual-screen display functionality. This option is enabled by default, and after adding this feature, it requires permission on the phone upon first use.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-configure-ar-features">5. Configure AR Features<a href="#5-configure-ar-features" class="hash-link" aria-label="Direct link to 5. Configure AR Features" title="Direct link to 5. Configure AR Features">​</a></h3>
+<ul>
+<li>Find and click <code>Assets/NRSDK/NRKernalSessionConfig</code> in Unity project folder, make sure the plane tracking, image tracking is configured properly as the following default configuration:</li>
+</ul>
+<figure class="my-custom-figure"><img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165211017.png" alt="Your Image Description" class="center-image"><figcaption>NRKernalSessionConfig</figcaption></figure>
+<ul>
+<li>Force Kill While Glass Switch Mode: Unselect this option to ensure your app will not be killed when users switch the mode between 2D and 3D mode.</li>
+</ul>
+<p>Please note that <strong>Plane Finding Mode</strong> and <strong>Image Tracking Mode</strong> will implicitly be <strong>Disable</strong> when <code>Support XREAL Air</code> is selected in <strong>Step 4:  Configure Compatible Devices,</strong> regardless of your configuration here in the inspector.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-find-hello-mr-sample-scene">6. Find Hello MR Sample Scene<a href="#6-find-hello-mr-sample-scene" class="hash-link" aria-label="Direct link to 6. Find Hello MR Sample Scene" title="Direct link to 6. Find Hello MR Sample Scene">​</a></h3>
+<ul>
+<li>
+<p>Find the <strong>HelloMR</strong> sample scene in the Unity Project window by selecting <code>Assets &gt; NRSDK &gt; Demos &gt; HelloMR.</code></p>
+</li>
+<li>
+<p>Double click <code>HelloMR </code>to open the scene</p>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165524197.png" alt="Your Image Description" class="center-image">
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-remove-extra-libraries-to-downsize-your-apk">7. Remove Extra Libraries to Downsize Your APK<a href="#7-remove-extra-libraries-to-downsize-your-apk" class="hash-link" aria-label="Direct link to 7. Remove Extra Libraries to Downsize Your APK" title="Direct link to 7. Remove Extra Libraries to Downsize Your APK">​</a></h3>
+<figure class="my-custom-figure"><img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165559734.png" class="center-image"><figcaption>NR Library Strip Config</figcaption></figure>
+<p>Beginning with NRSDK version 2.2.0, we have introduced a new Loader mode. This mode enables the SDK libraries to be loaded from our server, known as Nebula, which can significantly reduce the APK size. However, developers are required to manually deselect any unnecessary libraries. For instance, if your application only requires the meshing feature, you can remove the other libraries by checking them off in the <code>NRLibraryStripConfig</code>. This action will help to reduce the size of your APK.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-building-nrsdk-app-for-android">8. Building NRSDK App for Android<a href="#8-building-nrsdk-app-for-android" class="hash-link" aria-label="Direct link to 8. Building NRSDK App for Android" title="Direct link to 8. Building NRSDK App for Android">​</a></h3>
+<ol>
+<li>
+<p>Access the <strong>Build Settings</strong> in <strong>Menu -&gt; File -&gt;</strong> <strong>Build Settings</strong>. Click the button &quot;<code>Add Open Scene</code>&quot; and make sure the current scene is checked.</p>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165638159.png" alt="Your Image Description" class="center-image">
+</li>
+<li>
+<p>Click <strong>Player Settings</strong>. Customize the <strong>Company Name</strong> and <strong>Product Name.</strong></p>
+</li>
+<li>
+<p>(Optional) Navigate to the <strong>Android</strong>&gt; <strong>Other Settings</strong> panel to specify your build settings. As you have prepared <strong>Step 3. Configure Project Settings,</strong> you may leave the current configuration as it is. It is worth noting some of the other settings:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p><strong>Multithreaded Rendering</strong>: Enable this option to use multithreaded rendering. In most cases, both enabling and disabling this option is supported by NRSDK. However, for the scenes that contains <strong>Overlay</strong> content, you should disable multithreaded rendering. And When developing URP projects, if <a href="/tools/single-pass-stereo-rendering">single pass rendering</a> is not used, it is best to also turn off Multithreaded rendering, otherwise tearing may occur.</p>
+</li>
+<li>
+<p><strong>Scripting Backend:</strong> You must choose <strong>IL2CPP</strong> when building for ARM64 architecture. Note that starting from NRSDK 2.2, ARMv7 architecture is no longer supported.</p>
+<img src="https://pub-8dffc52979c34362aa2dbe3a43f0792a.r2.dev/image-20240812165720474.png" alt="Your Image Description" class="center-image">
+</li>
+</ul>
+<ol start="4">
+<li>In <strong>Build Settings</strong> window, click <strong>Build.</strong></li>
+<li>Select the destination folder and wait until the building is finished.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-deploy-to-xreal-device">9. Deploy to XREAL Device<a href="#9-deploy-to-xreal-device" class="hash-link" aria-label="Direct link to 9. Deploy to XREAL Device" title="Direct link to 9. Deploy to XREAL Device">​</a></h3>
+<ul>
+<li>Connect your Phone / Beam Pro to your Mac / Windows PC.</li>
+<li>Install your app through WiFi <strong>Android Debug Bridge</strong> <a href="https://developer.android.com/studio/command-line/adb" target="_blank" rel="noopener noreferrer">(adb)</a> or type-C cable after the build is successful.</li>
+<li>Disconnect the device with your PC, and then connect it to the glasses.</li>
+<li>Open Nebula(Android phone) or MyGlasses(Beam Pro), then find your app then click to open it .</li>
+<li>Move around until NRSDK finds a horizontal plane and the detected plane will be covered with green grid.</li>
+<li>Click the Trigger button to put an XREAL logo object on it.</li>
+<li>(Optional) Use <strong>Android Logcat</strong> to view logged messages. We recommend using WiFi <strong>Android Debug Bridge</strong> <a href="https://developer.android.com/studio/command-line/adb" target="_blank" rel="noopener noreferrer">(adb)</a> to connect to your PC so that you do not have to be connected through the data cable most of the time.</li>
+<li>Enable developer options and USB debugging on your Phone / Beam Pro. <strong>Android Debug Bridge</strong> <a href="https://developer.android.com/studio/command-line/adb" target="_blank" rel="noopener noreferrer">(adb)</a> is enabled as default and does not require manual setting.</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/2.4.1/XREALDevices/XREAL Glasses"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">XREAL Glasses</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/2.4.1/Sample Code"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Sample Code</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-pre-requisites" class="table-of-contents__link toc-highlight">1. Pre-requisites</a></li><li><a href="#2-creating-a-unity-project" class="table-of-contents__link toc-highlight">2. Creating a Unity Project</a></li><li><a href="#3-configure-project-settings" class="table-of-contents__link toc-highlight">3. Configure Project Settings</a></li><li><a href="#4-configure-compatible-devices" class="table-of-contents__link toc-highlight">4. Configure Compatible Devices</a></li><li><a href="#5-configure-ar-features" class="table-of-contents__link toc-highlight">5. Configure AR Features</a></li><li><a href="#6-find-hello-mr-sample-scene" class="table-of-contents__link toc-highlight">6. Find Hello MR Sample Scene</a></li><li><a href="#7-remove-extra-libraries-to-downsize-your-apk" class="table-of-contents__link toc-highlight">7. Remove Extra Libraries to Downsize Your APK</a></li><li><a href="#8-building-nrsdk-app-for-android" class="table-of-contents__link toc-highlight">8. Building NRSDK App for Android</a></li><li><a href="#9-deploy-to-xreal-device" class="table-of-contents__link toc-highlight">9. Deploy to XREAL Device</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.reddit.com/r/XREAL/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Reddit</a></li><li class="footer__item"><a href="https://discord.com/invite/jZ5MqFe9t4" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/nreal-ai" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 XREAL, Inc.</div></div></div></footer></div>
+</body>
+</html>
